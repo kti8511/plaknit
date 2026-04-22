@@ -1,7 +1,7 @@
 import json
 import csv
 from collections import Counter, defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
 
@@ -183,7 +183,29 @@ def make_dashboard():
     avg_unit = total_payment / total_qty if total_qty else 0
 
     top_payment = sorted(data, key=lambda item: item.get("payment", 0), reverse=True)[:12]
-    top_qty = sorted(data, key=lambda item: item.get("qty", 0), reverse=True)[:12]
+    all_dates = [
+        datetime.fromisoformat(day["date"]).date()
+        for item in data
+        for day in item.get("daily", [])
+        if day.get("date")
+    ]
+    latest_date = max(all_dates) if all_dates else None
+    week_start = latest_date - timedelta(days=latest_date.weekday()) if latest_date else None
+    week_end = week_start + timedelta(days=6) if week_start else None
+    weekly_qty = defaultdict(int)
+    for item in data:
+        name = item.get("standard_name") or item.get("name") or ""
+        for day in item.get("daily", []):
+            if not day.get("date") or not week_start:
+                continue
+            sold_date = datetime.fromisoformat(day["date"]).date()
+            if week_start <= sold_date <= week_end:
+                weekly_qty[name] += int(day.get("qty") or 0)
+    top_qty = sorted(
+        [{"name": name, "qty": qty} for name, qty in weekly_qty.items() if qty],
+        key=lambda item: item["qty"],
+        reverse=True,
+    )[:12]
     unmatched_rows = wb_summary["unmatched_rows"]
 
     by_product = defaultdict(lambda: {"qty": 0, "payment": 0, "gross": 0, "rows": 0, "received_qty": 0, "main_sold_qty": 0, "stock_qty": 0})
@@ -224,8 +246,9 @@ def make_dashboard():
 
     chart_labels = [item["date"] for item in daily_rows]
     chart_values = [item["payment"] for item in daily_rows]
-    qty_labels = [item.get("standard_name") or item.get("name") or "" for item in top_qty[:8]]
+    qty_labels = [item.get("name") or "" for item in top_qty[:8]]
     qty_values = [item.get("qty", 0) for item in top_qty[:8]]
+    qty_week_label = f"{week_start:%Y-%m-%d} ~ {week_end:%Y-%m-%d}" if week_start and week_end else "주간"
 
     table_data = json.dumps(data, ensure_ascii=False)
     product_data = json.dumps(product_rows, ensure_ascii=False)
@@ -236,6 +259,7 @@ def make_dashboard():
             "paymentValues": chart_values,
             "qtyLabels": qty_labels,
             "qtyValues": qty_values,
+            "qtyWeekLabel": qty_week_label,
         },
         ensure_ascii=False,
     )
@@ -704,15 +728,15 @@ def make_dashboard():
         labels: charts.paymentLabels,
         datasets: [{{ label: '일자별 매출', data: charts.paymentValues, borderColor: '#1f5f99', backgroundColor: 'rgba(31,95,153,.12)', fill: true, tension: .25 }}]
       }},
-      options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ display: false }} }}, scales: {{ x: {{ ticks: {{ maxRotation: 45, minRotation: 0 }} }}, y: {{ ticks: {{ callback: value => fmt.format(value) }} }} }} }}
+      options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ display: false }} }}, scales: {{ x: {{ ticks: {{ maxRotation: 45, minRotation: 0, callback: function(value, index) {{ return index % 3 === 0 ? this.getLabelForValue(value) : ''; }} }} }}, y: {{ ticks: {{ callback: value => fmt.format(value) }} }} }} }}
     }});
     new Chart(document.getElementById('qtyChart'), {{
       type: 'bar',
       data: {{
         labels: charts.qtyLabels,
-        datasets: [{{ label: '판매수량', data: charts.qtyValues, backgroundColor: '#0f766e', borderRadius: 4 }}]
+        datasets: [{{ label: `주간 판매수량 (${{charts.qtyWeekLabel}})`, data: charts.qtyValues, backgroundColor: '#0f766e', borderRadius: 4 }}]
       }},
-      options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ display: false }} }}, scales: {{ x: {{ ticks: {{ maxRotation: 45, minRotation: 0 }} }}, y: {{ ticks: {{ callback: value => fmt.format(value) }} }} }} }}
+      options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ display: true }} }}, scales: {{ x: {{ ticks: {{ maxRotation: 45, minRotation: 0 }} }}, y: {{ ticks: {{ callback: value => fmt.format(value) }} }} }} }}
     }});
     dailyChart = new Chart(document.getElementById('dailyChart'), {{
       type: 'line',
