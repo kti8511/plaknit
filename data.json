@@ -3,4 +3,4 @@
   {"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"XL","qty":23,"gross":1817000,"payment":1049480,"avg_unit":45630,"orders":22,"source_type":"단품","daily":[{"date":"2026-01-08","qty":3,"gross":237000,"payment":158405,"orders":3},{"date":"2026-01-09","qty":5,"gross":395000,"payment":211600,"orders":4},{"date":"2026-02-03","qty":1,"gross":79000,"payment":52300,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK00XL","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_XL","received_qty":0,"stock_qty":46},
   {"retailer":"자사몰","mall_no":"493","name":"퀵드라이 셔링 티셔츠 세이지","color":"","size":"M","qty":13,"gross":767000,"payment":562521,"avg_unit":43271,"orders":13,"source_type":"단품","daily":[{"date":"2026-03-26","qty":1,"gross":59000,"payment":42925,"orders":1},{"date":"2026-04-01","qty":2,"gross":118000,"payment":86384,"orders":2},{"date":"2026-04-15","qty":1,"gross":59000,"payment":44700,"orders":1}],"match_status":"매칭됨","match_sku":"PE2TSW01SAG0000M","standard_name":"퀵드라이 셔링 티셔츠_세이지_M","received_qty":26,"stock_qty":12}
 
-]
+ ]
