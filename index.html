@@ -8,554 +8,258 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root {
-  --bg: #0d0f14;
-  --surface: #13161e;
-  --surface2: #1a1e2a;
-  --border: #252936;
-  --border2: #2e3447;
-  --ink: #e8ecf4;
-  --ink2: #8b94ad;
-  --ink3: #525c75;
-  --accent: #4f7aff;
-  --accent2: #7c3aed;
-  --teal: #06d6a0;
-  --amber: #fbbf24;
-  --red: #f43f5e;
-  --green: #06d6a0;
-  --glow: rgba(79,122,255,0.15);
+  --navy:      #1e2535;
+  --navy2:     #2b3548;
+  --bg:        #f0f2f6;
+  --panel:     #ffffff;
+  --border:    #e2e6ed;
+  --border2:   #d0d5df;
+  --ink:       #1e2535;
+  --ink2:      #4a5568;
+  --ink3:      #8a94a6;
+  --blue:      #3b82f6;
+  --blue2:     #2563eb;
+  --blue-soft: #eff6ff;
+  --teal:      #10b981;
+  --teal-soft: #ecfdf5;
+  --amber:     #f59e0b;
+  --amber-soft:#fffbeb;
+  --red:       #ef4444;
+  --red-soft:  #fef2f2;
+  --shadow:    0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Pretendard', -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;}
 
-/* Background grid */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: 0;
-}
+/* HEADER */
+header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
+.header-top{display:flex;align-items:center;height:52px;padding:0 20px;gap:0;}
+.logo-area{display:flex;align-items:center;gap:10px;min-width:156px;border-right:1px solid rgba(255,255,255,0.1);padding-right:20px;margin-right:4px;height:100%;}
+.logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#6366f1);display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;flex-shrink:0;}
+.logo-text{font-size:13px;font-weight:700;color:#fff;letter-spacing:-0.2px;line-height:1.3;}
+.logo-sub{font-size:10px;color:rgba(255,255,255,0.4);font-weight:400;letter-spacing:0.5px;}
+.header-nav{display:flex;align-items:center;height:100%;flex:1;overflow-x:auto;}
+.nav-item{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;height:100%;padding:0 18px;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s;white-space:nowrap;}
+.nav-item:hover{background:rgba(255,255,255,0.05);}
+.nav-item.active{border-bottom-color:var(--blue);}
+.nav-label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:6px;}
+.nav-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.nav-sub{font-size:10px;color:rgba(255,255,255,0.38);margin-top:1px;}
+.header-right{margin-left:auto;flex-shrink:0;}
+.status-chip{display:flex;align-items:center;gap:5px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:4px 10px;font-size:11px;color:#6ee7b7;font-family:'DM Mono',monospace;}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#10b981;box-shadow:0 0 6px #10b981;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* Header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(13,15,20,0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 28px;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  gap: 20px;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.logo {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: -0.5px;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(79,122,255,0.4);
-}
-.brand-text h1 {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--ink);
-}
-.brand-text .sub {
-  font-size: 11px;
-  color: var(--ink3);
-  margin-top: 1px;
-  font-family: 'DM Mono', monospace;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.live-badge {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(6,214,160,0.1);
-  border: 1px solid rgba(6,214,160,0.25);
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 11px;
-  color: var(--teal);
-  font-family: 'DM Mono', monospace;
-}
-.live-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 8px var(--teal);
-  animation: pulse 2s infinite;
-}
-@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+/* MAIN */
+main{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}
+.page-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px;}
+.page-title{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-0.4px;}
+.page-date{font-size:12px;color:var(--ink3);margin-top:3px;}
 
-/* Main layout */
-main {
-  position: relative;
-  z-index: 1;
-  padding: 24px 28px 48px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px;}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px;box-shadow:var(--shadow);transition:box-shadow 0.15s,transform 0.15s;}
+.kpi:hover{box-shadow:var(--shadow-md);transform:translateY(-1px);}
+.kpi-label{font-size:11px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
+.kpi-value{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-0.5px;font-family:'DM Mono',monospace;}
+.kpi-value.blue{color:var(--blue2);}
+.kpi-value.green{color:var(--teal);}
+.kpi-value.amber{color:var(--amber);}
+.kpi-note{font-size:11px;color:var(--ink3);margin-top:5px;}
+.kpi-bar{height:3px;border-radius:2px;margin-top:10px;background:var(--border);overflow:hidden;}
+.kpi-bar div{height:100%;border-radius:2px;}
 
-/* KPI cards */
-.kpis {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.kpi {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 18px 16px;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.kpi:hover {
-  border-color: var(--border2);
-  transform: translateY(-1px);
-}
-.kpi::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.kpi:hover::before { opacity: 1; }
-.kpi .label {
-  font-size: 11px;
-  color: var(--ink3);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.kpi .value {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--ink);
-  font-family: 'DM Mono', monospace;
-}
-.kpi .note {
-  font-size: 11px;
-  color: var(--ink3);
-  margin-top: 6px;
-}
-.kpi.highlight .value { color: var(--teal); }
-.kpi.warn .value { color: var(--amber); }
+/* PANEL */
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:var(--shadow);}
+.panel-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.panel-title{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:-0.2px;}
+.panel-meta{font-size:11px;color:var(--ink3);font-family:'DM Mono',monospace;}
 
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 20px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 4px;
-  width: fit-content;
-}
-.tab-btn {
-  height: 36px;
-  border: none;
-  background: transparent;
-  padding: 0 18px;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--ink3);
-  cursor: pointer;
-  border-radius: 9px;
-  transition: all 0.15s;
-  font-family: 'Pretendard', sans-serif;
-  white-space: nowrap;
-}
-.tab-btn:hover { color: var(--ink2); background: var(--surface2); }
-.tab-btn.active {
-  color: var(--ink);
-  background: var(--surface2);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
+/* LAYOUT */
+.grid2{display:grid;grid-template-columns:1.3fr 0.7fr;gap:12px;margin-bottom:12px;}
+.grid2-eq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.chart-box{position:relative;height:200px;}
+.chart-box canvas{width:100%!important;height:100%!important;}
 
-/* Grid layout */
-.grid2 {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.grid2-eq {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
+/* RANK */
+.rank-list{display:flex;flex-direction:column;}
+.rank-row{display:grid;grid-template-columns:22px minmax(0,1fr) 90px 80px;align-items:center;gap:8px;padding:5px 6px;border-radius:6px;transition:background 0.12s;}
+.rank-row:hover{background:var(--bg);}
+.rank-n{font-size:11px;color:var(--ink3);font-family:'DM Mono',monospace;}
+.rank-name{font-size:12px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rank-bar{height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+.rank-bar div{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--blue),#818cf8);}
+.rank-val{font-size:12px;color:var(--ink);text-align:right;font-family:'DM Mono',monospace;font-weight:600;}
 
-/* Panel */
-.panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
-}
-.panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.panel-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.2px;
-}
-.panel-badge {
-  font-size: 11px;
-  color: var(--ink3);
-  font-family: 'DM Mono', monospace;
-}
+/* MINI CARDS */
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.mini{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px 12px;}
+.mini-label{font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+.mini-value{font-size:15px;font-weight:700;color:var(--ink);margin-top:4px;font-family:'DM Mono',monospace;}
 
-/* Charts */
-.charts-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.chart-wrap { position: relative; height: 220px; }
-.chart-wrap canvas { width: 100% !important; height: 100% !important; }
+/* SUMMARY STRIP */
+.sum-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;}
+.sum-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}
+.sum-label{font-size:11px;color:var(--ink3);font-weight:500;}
+.sum-value{font-size:19px;font-weight:800;color:var(--ink);margin-top:3px;font-family:'DM Mono',monospace;}
 
-/* Rank list */
-.rank-list { display: flex; flex-direction: column; gap: 2px; }
-.rank-row {
-  display: grid;
-  grid-template-columns: 20px minmax(0,1fr) 100px 90px;
-  gap: 8px;
-  align-items: center;
-  padding: 7px 8px;
-  border-radius: 8px;
-  transition: background 0.15s;
-}
-.rank-row:hover { background: var(--surface2); }
-.rank-num { font-size: 11px; color: var(--ink3); font-family: 'DM Mono', monospace; }
-.rank-name { font-size: 12px; color: var(--ink2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.rank-bar { height: 4px; background: var(--border2); border-radius: 99px; overflow: hidden; }
-.rank-bar div { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
-.rank-value { font-size: 12px; color: var(--ink); text-align: right; font-family: 'DM Mono', monospace; font-weight: 500; }
+/* TOOLBAR */
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+.toolbar input,.toolbar select{height:34px;border:1px solid var(--border2);border-radius:7px;background:var(--panel);color:var(--ink);font-size:13px;padding:0 10px;font-family:'Pretendard',sans-serif;outline:none;min-width:140px;transition:border-color 0.15s,box-shadow 0.15s;}
+.toolbar input:focus,.toolbar select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,0.1);}
+.toolbar input::placeholder{color:var(--ink3);}
+.btn-sm{height:34px;padding:0 14px;background:var(--panel);border:1px solid var(--border2);border-radius:7px;font-size:12px;font-weight:600;color:var(--ink2);cursor:pointer;font-family:'Pretendard',sans-serif;transition:all 0.15s;white-space:nowrap;}
+.btn-sm:hover{background:var(--bg);color:var(--ink);}
 
-/* Status mini cards */
-.mini-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 8px;
-  margin-top: 12px;
-}
-.mini {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px;
-}
-.mini .label { font-size: 10px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.6px; }
-.mini .value { font-size: 15px; font-weight: 700; color: var(--ink); margin-top: 4px; font-family: 'DM Mono', monospace; }
+/* TABLE */
+.table-wrap{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}
+thead{position:sticky;top:0;z-index:2;}
+th{background:#f8fafc;color:var(--ink3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}
+td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#fafbfd;}
+.num{text-align:right;font-family:'DM Mono',monospace;font-size:12px;}
+.td-main{color:var(--ink);font-weight:600;}
+.td-mono{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--ink3);}
 
-/* Toolbar */
-.toolbar {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-}
-.toolbar input, .toolbar select {
-  height: 36px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--ink);
-  font-size: 13px;
-  padding: 0 12px;
-  font-family: 'Pretendard', sans-serif;
-  min-width: 160px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-.toolbar input:focus, .toolbar select:focus { border-color: var(--accent); }
-.toolbar input[type="date"] { min-width: 140px; }
-.toolbar input::placeholder { color: var(--ink3); }
-.btn-ghost {
-  height: 36px;
-  padding: 0 14px;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--ink2);
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: 'Pretendard', sans-serif;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-.btn-ghost:hover { background: var(--surface2); border-color: var(--border2); color: var(--ink); }
+/* BADGE */
+.badge{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:5px;font-size:11px;font-weight:600;white-space:nowrap;}
+.badge-blue{background:var(--blue-soft);color:var(--blue2);}
+.badge-green{background:var(--teal-soft);color:#059669;}
+.badge-amber{background:var(--amber-soft);color:#b45309;}
+.badge-red{background:var(--red-soft);color:#dc2626;}
+.badge-gray{background:#f1f5f9;color:var(--ink3);}
 
-/* Summary strip */
-.summary-strip {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.strip-card {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 14px;
-}
-.strip-card .label { font-size: 11px; color: var(--ink3); }
-.strip-card .value { font-size: 18px; font-weight: 700; color: var(--ink); margin-top: 4px; font-family: 'DM Mono', monospace; }
+/* TAB PANEL */
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
 
-/* Table */
-.table-wrap {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: auto;
-  max-height: 480px;
-  background: var(--surface);
-}
-table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: 12.5px; }
-thead { position: sticky; top: 0; z-index: 2; }
-th {
-  background: var(--surface2);
-  color: var(--ink3);
-  font-weight: 600;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  padding: 10px 10px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  white-space: nowrap;
-}
-td {
-  padding: 9px 10px;
-  border-bottom: 1px solid var(--border);
-  color: var(--ink2);
-  vertical-align: middle;
-}
-tr:last-child td { border-bottom: none; }
-tr:hover td { background: rgba(255,255,255,0.02); }
-.num { text-align: right; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--ink); }
-.td-main { color: var(--ink); font-weight: 500; font-size: 12.5px; }
+.foot{font-size:11px;color:var(--ink3);margin-top:10px;line-height:1.7;}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
 
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  height: 22px;
-  padding: 0 8px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.badge-matched { background: rgba(6,214,160,0.1); color: var(--teal); border: 1px solid rgba(6,214,160,0.2); }
-.badge-unmatched { background: rgba(244,63,94,0.1); color: var(--red); border: 1px solid rgba(244,63,94,0.2); }
-.badge-source { background: rgba(79,122,255,0.1); color: var(--accent); border: 1px solid rgba(79,122,255,0.2); }
-.badge-set { background: rgba(251,191,36,0.1); color: var(--amber); border: 1px solid rgba(251,191,36,0.2); }
-
-/* Footer note */
-.foot { font-size: 11px; color: var(--ink3); margin-top: 12px; line-height: 1.6; }
-
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--ink3); }
-
-/* option */
-option { background: var(--surface2); }
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .kpis { grid-template-columns: repeat(3,1fr); }
-  .grid2, .grid2-eq { grid-template-columns: 1fr; }
-  .charts-row { grid-template-columns: 1fr; }
-}
-@media (max-width: 700px) {
-  main, header { padding-left: 14px; padding-right: 14px; }
-  .kpis { grid-template-columns: 1fr 1fr; }
-}
+@media(max-width:1200px){.kpis{grid-template-columns:repeat(3,1fr);}.grid2,.grid2-eq,.charts-row{grid-template-columns:1fr;}}
+@media(max-width:680px){main,.header-top{padding-left:12px;padding-right:12px;}.kpis{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="header-inner">
-    <div class="brand">
-      <div class="logo">PD</div>
-      <div class="brand-text">
-        <h1>상품DATA 운영 대시보드</h1>
-        <div class="sub">자사몰 2026년 판매 데이터 기준 · 상품DATA 표준명 통합</div>
+  <div class="header-top">
+    <div class="logo-area">
+      <div class="logo-icon">PD</div>
+      <div>
+        <div class="logo-text">상품DATA</div>
+        <div class="logo-sub">운영 대시보드</div>
       </div>
     </div>
+    <nav class="header-nav">
+      <div class="nav-item active" data-tab="overview">
+        <div class="nav-label"><span class="nav-dot" style="background:#3b82f6"></span>요약</div>
+        <div class="nav-sub">KPI · 상위 상품</div>
+      </div>
+      <div class="nav-item" data-tab="calendar">
+        <div class="nav-label"><span class="nav-dot" style="background:#6366f1"></span>일자별 매출</div>
+        <div class="nav-sub">날짜별 트래킹</div>
+      </div>
+      <div class="nav-item" data-tab="retailer">
+        <div class="nav-label"><span class="nav-dot" style="background:#10b981"></span>유통사별 매출</div>
+        <div class="nav-sub">채널별 현황</div>
+      </div>
+      <div class="nav-item" data-tab="detail">
+        <div class="nav-label"><span class="nav-dot" style="background:#f59e0b"></span>상품별 매출</div>
+        <div class="nav-sub">SKU 상세 분석</div>
+      </div>
+    </nav>
     <div class="header-right">
-      <div class="live-badge">
+      <div class="status-chip">
         <div class="live-dot"></div>
-        LIVE · 2026-04-22 12:45
+        2026-04-22 12:45
       </div>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- KPI Cards -->
+  <div class="page-hd">
+    <div>
+      <div class="page-title">상품DATA 운영 대시보드</div>
+      <div class="page-date">자사몰 2026년 판매 데이터 기준 · 상품DATA 표준명으로 통합</div>
+    </div>
+  </div>
+
   <section class="kpis">
-    <div class="kpi highlight">
-      <div class="label">자사몰 판매수량</div>
-      <div class="value">903</div>
-      <div class="note">세트 분해 반영</div>
-    </div>
-    <div class="kpi">
-      <div class="label">자사몰 실판매금액</div>
-      <div class="value">34,057,980</div>
-      <div class="note">결제금액 배분액</div>
-    </div>
-    <div class="kpi">
-      <div class="label">평균 판매단가</div>
-      <div class="value">37,716</div>
-      <div class="note">실판매금액 / 수량</div>
-    </div>
-    <div class="kpi warn">
-      <div class="label">평균 할인율</div>
-      <div class="value">42.1%</div>
-      <div class="note">정상가 기준</div>
-    </div>
-    <div class="kpi highlight">
-      <div class="label">매칭률</div>
-      <div class="value">100.0%</div>
-      <div class="note">356/356 상품옵션</div>
-    </div>
-    <div class="kpi">
-      <div class="label">미매칭</div>
-      <div class="value">0</div>
-      <div class="note">검토 필요 항목</div>
-    </div>
+    <div class="kpi"><div class="kpi-label">자사몰 판매수량</div><div class="kpi-value blue">903</div><div class="kpi-note">세트 분해 반영</div><div class="kpi-bar"><div style="width:75%;background:var(--blue)"></div></div></div>
+    <div class="kpi"><div class="kpi-label">자사몰 실판매금액</div><div class="kpi-value">34,057,980</div><div class="kpi-note">결제금액 배분액</div><div class="kpi-bar"><div style="width:58%;background:#6366f1"></div></div></div>
+    <div class="kpi"><div class="kpi-label">평균 판매단가</div><div class="kpi-value">37,716</div><div class="kpi-note">실판매금액 / 수량</div><div class="kpi-bar"><div style="width:48%;background:#8b5cf6"></div></div></div>
+    <div class="kpi"><div class="kpi-label">평균 할인율</div><div class="kpi-value amber">42.1%</div><div class="kpi-note">정상가 기준</div><div class="kpi-bar"><div style="width:42%;background:var(--amber)"></div></div></div>
+    <div class="kpi"><div class="kpi-label">매칭률</div><div class="kpi-value green">100.0%</div><div class="kpi-note">356/356 상품옵션</div><div class="kpi-bar"><div style="width:100%;background:var(--teal)"></div></div></div>
+    <div class="kpi"><div class="kpi-label">미매칭</div><div class="kpi-value">0</div><div class="kpi-note">검토 필요 항목</div><div class="kpi-bar"><div style="width:0%;background:var(--red)"></div></div></div>
   </section>
 
-  <!-- Tabs -->
-  <nav class="tabs">
-    <button class="tab-btn active" data-tab="overview">요약</button>
-    <button class="tab-btn" data-tab="calendar">일자별 매출</button>
-    <button class="tab-btn" data-tab="retailer">유통사별 매출</button>
-    <button class="tab-btn" data-tab="detail">상품별 매출</button>
-  </nav>
-
-  <!-- Overview Tab -->
+  <!-- OVERVIEW -->
   <div id="overview" class="tab-panel active">
     <div class="grid2">
       <div class="panel">
-        <div class="panel-header">
-          <span class="panel-title">판매 추이</span>
-          <span class="panel-badge">월별 집계</span>
-        </div>
+        <div class="panel-hd"><span class="panel-title">판매 추이</span><span class="panel-meta">월별 집계</span></div>
         <div class="charts-row">
-          <div class="chart-wrap"><canvas id="paymentChart"></canvas></div>
-          <div class="chart-wrap"><canvas id="qtyChart"></canvas></div>
+          <div class="chart-box"><canvas id="paymentChart"></canvas></div>
+          <div class="chart-box"><canvas id="qtyChart"></canvas></div>
         </div>
       </div>
       <div class="panel">
-        <div class="panel-header">
-          <span class="panel-title">결제금액 상위 상품</span>
-          <span class="panel-badge">TOP 12</span>
-        </div>
+        <div class="panel-hd"><span class="panel-title">결제금액 상위 상품</span><span class="panel-meta">TOP 12</span></div>
         <div class="rank-list" id="rankList"></div>
       </div>
     </div>
     <div class="grid2-eq">
       <div class="panel">
-        <div class="panel-header"><span class="panel-title">업데이트 상태</span></div>
+        <div class="panel-hd"><span class="panel-title">업데이트 상태</span></div>
         <div class="mini-grid">
-          <div class="mini"><div class="label">상품DATA 품번 수</div><div class="value">1,007</div></div>
-          <div class="mini"><div class="label">자사몰 집계행</div><div class="value">356</div></div>
-          <div class="mini"><div class="label">총 재고수량</div><div class="value">77,132</div></div>
-          <div class="mini"><div class="label">단품</div><div class="value">799</div></div>
-          <div class="mini"><div class="label">세트분해</div><div class="value">96</div></div>
-          <div class="mini"><div class="label">팩분해</div><div class="value">8</div></div>
-          <div class="mini"><div class="label">정상가 기준 금액</div><div class="value">58,855,200</div></div>
-          <div class="mini"><div class="label">자사몰 주문수</div><div class="value">475</div></div>
-          <div class="mini"><div class="label">매칭 완료</div><div class="value" style="color:var(--teal)">356/356</div></div>
+          <div class="mini"><div class="mini-label">상품DATA 품번</div><div class="mini-value">1,007</div></div>
+          <div class="mini"><div class="mini-label">자사몰 집계행</div><div class="mini-value">356</div></div>
+          <div class="mini"><div class="mini-label">총 재고수량</div><div class="mini-value">77,132</div></div>
+          <div class="mini"><div class="mini-label">단품</div><div class="mini-value">799</div></div>
+          <div class="mini"><div class="mini-label">세트분해</div><div class="mini-value">96</div></div>
+          <div class="mini"><div class="mini-label">팩분해</div><div class="mini-value">8</div></div>
+          <div class="mini"><div class="mini-label">정상가 기준 금액</div><div class="mini-value">58,855,200</div></div>
+          <div class="mini"><div class="mini-label">자사몰 주문수</div><div class="mini-value">475</div></div>
+          <div class="mini"><div class="mini-label">매칭 완료</div><div class="mini-value" style="color:var(--teal)">100%</div></div>
         </div>
         <div class="foot">신규 유통사 파일 추가 시 같은 구조로 유통사별 금액을 보존하고 통합 테이블에 추가할 수 있습니다.</div>
       </div>
       <div class="panel">
-        <div class="panel-header"><span class="panel-title">미매칭 검토</span></div>
-        <div class="table-wrap" style="max-height:260px">
+        <div class="panel-hd"><span class="panel-title">미매칭 검토</span></div>
+        <div class="table-wrap" style="max-height:240px">
           <table>
             <thead><tr><th>상품번호</th><th>표준상품명</th><th class="num">수량</th><th class="num">금액</th></tr></thead>
-            <tbody><tr><td colspan="4" style="color:var(--ink3);text-align:center;padding:24px">미매칭 항목 없음</td></tr></tbody>
+            <tbody><tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:28px">✓ 미매칭 항목 없음</td></tr></tbody>
           </table>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Calendar Tab -->
+  <!-- CALENDAR -->
   <div id="calendar" class="tab-panel">
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">일자별 매출</span></div>
+      <div class="panel-hd"><span class="panel-title">일자별 매출</span></div>
       <div class="toolbar">
         <input id="dateStart" type="date"/>
         <input id="dateEnd" type="date"/>
-        <button class="btn-ghost" id="clearDate">전체 초기화</button>
+        <button class="btn-sm" id="clearDate">전체 초기화</button>
       </div>
-      <div class="summary-strip">
-        <div class="strip-card"><div class="label">선택 기간 매출</div><div class="value" id="dayPayment">0</div></div>
-        <div class="strip-card"><div class="label">선택 기간 주문수</div><div class="value" id="dayOrders">0</div></div>
-        <div class="strip-card"><div class="label">선택 기간 판매수량</div><div class="value" id="dayQty">0</div></div>
+      <div class="sum-strip">
+        <div class="sum-card"><div class="sum-label">선택 기간 매출</div><div class="sum-value" id="dayPayment">0</div></div>
+        <div class="sum-card"><div class="sum-label">선택 기간 주문수</div><div class="sum-value" id="dayOrders">0</div></div>
+        <div class="sum-card"><div class="sum-label">선택 기간 판매수량</div><div class="sum-value" id="dayQty">0</div></div>
       </div>
-      <div class="chart-wrap" style="height:200px;margin-bottom:14px"><canvas id="dailyChart"></canvas></div>
-      <div class="table-wrap" style="max-height:360px">
+      <div class="chart-box" style="height:180px;margin-bottom:14px"><canvas id="dailyChart"></canvas></div>
+      <div class="table-wrap" style="max-height:340px">
         <table>
           <thead><tr><th>일자</th><th class="num">매출</th><th class="num">정상가</th><th class="num">주문수</th><th class="num">판매수량</th><th class="num">객단가</th></tr></thead>
           <tbody id="dailyRows"></tbody>
@@ -564,21 +268,19 @@ option { background: var(--surface2); }
     </div>
   </div>
 
-  <!-- Retailer Tab -->
+  <!-- RETAILER -->
   <div id="retailer" class="tab-panel">
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">유통사별 매출</span></div>
+      <div class="panel-hd"><span class="panel-title">유통사별 매출</span></div>
       <div class="toolbar">
-        <input id="retailerStart" type="date"/>
-        <input id="retailerEnd" type="date"/>
         <select id="retailerFilter">
           <option value="">전체 유통사</option>
           <option>자사몰</option><option>무신사</option><option>29cm</option>
           <option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option>
         </select>
-        <button class="btn-ghost" id="clearRetailer">전체 초기화</button>
+        <button class="btn-sm" id="clearRetailer">초기화</button>
       </div>
-      <div class="chart-wrap" style="height:200px;margin-bottom:14px"><canvas id="retailerChart"></canvas></div>
+      <div class="chart-box" style="height:180px;margin-bottom:14px"><canvas id="retailerChart"></canvas></div>
       <div class="table-wrap" style="max-height:360px">
         <table>
           <thead><tr><th>유통사</th><th class="num">매출</th><th class="num">정상가</th><th class="num">주문수</th><th class="num">판매수량</th><th class="num">객단가</th></tr></thead>
@@ -589,40 +291,20 @@ option { background: var(--surface2); }
     </div>
   </div>
 
-  <!-- Detail Tab -->
+  <!-- DETAIL -->
   <div id="detail" class="tab-panel">
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">상품별 매출</span></div>
+      <div class="panel-hd"><span class="panel-title">상품별 매출</span></div>
       <div class="toolbar">
-        <input id="q" placeholder="상품명, 상품번호, 색상 검색"/>
-        <input id="productStart" type="date"/>
-        <input id="productEnd" type="date"/>
-        <select id="productRetailer">
-          <option value="">전체 유통사</option>
-          <option>자사몰</option><option>무신사</option><option>29cm</option>
-          <option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option>
-        </select>
-        <select id="status">
-          <option value="">전체 매칭</option><option>매칭됨</option><option>미매칭</option>
-        </select>
-        <select id="sourceType">
-          <option value="">전체 구분</option><option>단품</option><option>세트분해</option><option>팩분해</option>
-        </select>
-        <select id="sortBy">
-          <option value="payment">금액순</option><option value="qty">수량순</option><option value="name">상품명순</option>
-        </select>
+        <input id="q" placeholder="상품명 · 상품번호 검색"/>
+        <select id="productRetailer"><option value="">전체 유통사</option><option>자사몰</option><option>무신사</option><option>29cm</option><option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option></select>
+        <select id="status"><option value="">전체 매칭</option><option>매칭됨</option><option>미매칭</option></select>
+        <select id="sourceType"><option value="">전체 구분</option><option>단품</option><option>세트분해</option><option>팩분해</option></select>
+        <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="name">상품명순</option></select>
       </div>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th>유통사</th><th>상품번호</th><th>표준상품명</th><th>자사몰상품명</th>
-              <th>구분</th><th>매칭</th>
-              <th class="num">판매수량</th><th class="num">정상가금액</th>
-              <th class="num">실판매금액</th><th class="num">평균단가</th>
-              <th class="num">할인율</th><th class="num">판매율</th><th class="num">재고소진율</th>
-            </tr>
-          </thead>
+          <thead><tr><th>유통사</th><th>상품번호</th><th>표준상품명</th><th>자사몰상품명</th><th>구분</th><th>매칭</th><th class="num">판매수량</th><th class="num">정상가금액</th><th class="num">실판매금액</th><th class="num">평균단가</th><th class="num">할인율</th><th class="num">판매율</th><th class="num">재고소진율</th></tr></thead>
           <tbody id="detailRows"></tbody>
         </table>
       </div>
@@ -631,298 +313,123 @@ option { background: var(--surface2); }
 </main>
 
 <script>
-// ─── RAW DATA ────────────────────────────────────────────────
-const rawRows = [{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"L","qty":26,"gross":2054000,"payment":1300113,"avg_unit":50004,"orders":25,"source_rows":25,"source_type":"단품","daily":[{"date":"2026-01-03","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-05","qty":1,"gross":79000,"payment":115800,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-08","qty":3,"gross":237000,"payment":158700,"orders":3},{"date":"2026-01-09","qty":2,"gross":158000,"payment":105800,"orders":2},{"date":"2026-01-12","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-14","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":105800,"orders":2},{"date":"2026-01-16","qty":1,"gross":79000,"payment":45469,"orders":1},{"date":"2026-01-17","qty":1,"gross":79000,"payment":47605,"orders":1},{"date":"2026-01-21","qty":1,"gross":79000,"payment":52338,"orders":1},{"date":"2026-01-22","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":43326,"orders":1},{"date":"2026-01-31","qty":2,"gross":158000,"payment":95340,"orders":2},{"date":"2026-02-03","qty":1,"gross":79000,"payment":52300,"orders":1},{"date":"2026-02-05","qty":2,"gross":158000,"payment":100600,"orders":1},{"date":"2026-03-13","qty":1,"gross":79000,"payment":39500,"orders":1},{"date":"2026-03-17","qty":1,"gross":79000,"payment":36935,"orders":1},{"date":"2026-03-18","qty":1,"gross":79000,"payment":39500,"orders":1},{"date":"2026-03-19","qty":1,"gross":79000,"payment":39500,"orders":1}],"match_status":"매칭됨","match_row":812,"match_sku":"PD4PLM01BLK000L","match_product":"ESSENTIAL HEAT 기모 러닝팬츠 L","match_count":1,"match_key":"ESSENTIAL HEAT 기모 러닝팬츠 / / L","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_L","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":27},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"XL","qty":23,"gross":1817000,"payment":1049480,"avg_unit":45630,"orders":22,"source_rows":22,"source_type":"단품","daily":[{"date":"2026-01-06","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":47605,"orders":1},{"date":"2026-01-08","qty":3,"gross":237000,"payment":158405,"orders":3},{"date":"2026-01-09","qty":5,"gross":395000,"payment":211600,"orders":4},{"date":"2026-01-10","qty":3,"gross":237000,"payment":105807,"orders":3},{"date":"2026-01-13","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-14","qty":3,"gross":237000,"payment":149097,"orders":3},{"date":"2026-01-16","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-17","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":54900,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-28","qty":1,"gross":79000,"payment":50400,"orders":1},{"date":"2026-01-31","qty":1,"gross":79000,"payment":55066,"orders":1}],"match_status":"매칭됨","match_row":814,"match_sku":"PD4PLM01BLK00XL","match_product":"ESSENTIAL HEAT 기모 러닝팬츠 XL","match_count":1,"match_key":"ESSENTIAL HEAT 기모 러닝팬츠 / / XL","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_XL","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":46},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"M","qty":18,"gross":1422000,"payment":836849,"avg_unit":46492,"orders":18,"source_rows":18,"source_type":"단품","daily":[{"date":"2026-01-02","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-07","qty":2,"gross":158000,"payment":52900,"orders":2},{"date":"2026-01-08","qty":3,"gross":237000,"payment":163700,"orders":3},{"date":"2026-01-10","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-11","qty":1,"gross":79000,"payment":54752,"orders":1},{"date":"2026-01-13","qty":1,"gross":79000,"payment":48539,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":82929,"orders":2},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":50000,"orders":1},{"date":"2026-02-02","qty":1,"gross":79000,"payment":50441,"orders":1},{"date":"2026-02-03","qty":1,"gross":79000,"payment":42770,"orders":1},{"date":"2026-02-05","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-03-06","qty":1,"gross":79000,"payment":42500,"orders":1},{"date":"2026-03-09","qty":1,"gross":79000,"payment":39318,"orders":1}],"match_status":"매칭됨","match_row":813,"match_sku":"PD4PLM01BLK000M","match_product":"ESSENTIAL HEAT 기모 러닝팬츠 M","match_count":1,"match_key":"ESSENTIAL HEAT 기모 러닝팬츠 / / M","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_M","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":24},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 후드","color":"","size":"XL","qty":17,"gross":1343000,"payment":835870,"avg_unit":49169,"orders":17,"source_rows":17,"source_type":"세트분해","daily":[{"date":"2026-01-06","qty":1,"gross":79000,"payment":47638,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-01-08","qty":2,"gross":158000,"payment":102800,"orders":2},{"date":"2026-01-09","qty":2,"gross":158000,"payment":109650,"orders":2},{"date":"2026-01-10","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-11","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-12","qty":2,"gross":158000,"payment":107562,"orders":2},{"date":"2026-01-14","qty":1,"gross":79000,"payment":52520,"orders":1},{"date":"2026-01-19","qty":2,"gross":158000,"payment":110000,"orders":2},{"date":"2026-01-21","qty":1,"gross":79000,"payment":55500,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-31","qty":2,"gross":158000,"payment":94900,"orders":2}],"match_status":"매칭됨","match_row":818,"match_sku":"PD4THM01BLK00XL","match_product":"ESSENTIAL HEAT 기모 러닝 후드 XL","match_count":1,"standard_name":"ESSENTIAL HEAT 기모 러닝 후드_XL","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":37},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 팬츠","color":"","size":"L","qty":18,"gross":1422000,"payment":821055,"avg_unit":45614,"orders":18,"source_rows":18,"source_type":"세트분해","daily":[{"date":"2026-01-08","qty":2,"gross":158000,"payment":102800,"orders":2},{"date":"2026-01-09","qty":2,"gross":158000,"payment":109650,"orders":2},{"date":"2026-01-11","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-12","qty":2,"gross":158000,"payment":103939,"orders":2},{"date":"2026-01-14","qty":1,"gross":79000,"payment":52519,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-19","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-21","qty":1,"gross":79000,"payment":55500,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-27","qty":2,"gross":158000,"payment":105000,"orders":2},{"date":"2026-01-31","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-03-07","qty":1,"gross":79000,"payment":39247,"orders":1}],"match_status":"매칭됨","match_row":812,"match_sku":"PD4PLM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_L","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":27},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 팬츠","color":"","size":"M","qty":14,"gross":1106000,"payment":668442,"avg_unit":47746,"orders":13,"source_rows":13,"source_type":"세트분해","daily":[{"date":"2026-01-07","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-08","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-01-09","qty":3,"gross":237000,"payment":165000,"orders":2},{"date":"2026-01-10","qty":1,"gross":79000,"payment":50062,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":105371,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":57500,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-31","qty":1,"gross":79000,"payment":49432,"orders":1},{"date":"2026-02-02","qty":1,"gross":79000,"payment":49327,"orders":1},{"date":"2026-02-03","qty":1,"gross":79000,"payment":49950,"orders":1},{"date":"2026-03-06","qty":1,"gross":79000,"payment":39000,"orders":1}],"match_status":"매칭됨","match_row":813,"match_sku":"PD4PLM01BLK000M","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_M","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":24},{"retailer":"자사몰","mall_no":"493","name":"퀵드라이 셔링 티셔츠 세이지","color":"","size":"M","qty":13,"gross":767000,"payment":562521,"avg_unit":43271,"orders":13,"source_rows":13,"source_type":"단품","daily":[{"date":"2026-03-26","qty":1,"gross":59000,"payment":42925,"orders":1},{"date":"2026-03-28","qty":2,"gross":118000,"payment":85957,"orders":2},{"date":"2026-03-29","qty":1,"gross":59000,"payment":43597,"orders":1},{"date":"2026-03-31","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-01","qty":2,"gross":118000,"payment":86384,"orders":2},{"date":"2026-04-02","qty":1,"gross":59000,"payment":31899,"orders":1},{"date":"2026-04-10","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-11","qty":1,"gross":59000,"payment":42267,"orders":1},{"date":"2026-04-13","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-15","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-04-16","qty":1,"gross":59000,"payment":43192,"orders":1}],"match_status":"매칭됨","match_row":996,"match_sku":"PE2TSW01SAG0000M","standard_name":"퀵드라이 셔링 티셔츠_세이지_M","match_level":"상품명+옵션","received_qty":26,"main_sold_qty":8,"stock_qty":12},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 후드","color":"","size":"L","qty":15,"gross":1185000,"payment":541463,"avg_unit":36098,"orders":15,"source_rows":15,"source_type":"세트분해","daily":[{"date":"2026-01-07","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-12","qty":1,"gross":79000,"payment":46439,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":57500,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-02-02","qty":2,"gross":158000,"payment":49327,"orders":2},{"date":"2026-03-06","qty":1,"gross":79000,"payment":39000,"orders":1},{"date":"2026-03-07","qty":1,"gross":79000,"payment":39247,"orders":1}],"match_status":"매칭됨","match_row":816,"match_sku":"PD4THM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝 후드_L","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":48},{"retailer":"자사몰","mall_no":"413","name":"ESSENTIAL HEAT 기모 러닝 하프집","color":"","size":"XL","qty":13,"gross":975000,"payment":533697,"avg_unit":41054,"orders":13,"source_rows":13,"source_type":"단품","daily":[{"date":"2026-01-06","qty":1,"gross":75000,"payment":45225,"orders":1},{"date":"2026-01-07","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-08","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-11","qty":1,"gross":75000,"payment":33750,"orders":1},{"date":"2026-01-14","qty":3,"gross":225000,"payment":130866,"orders":3},{"date":"2026-01-15","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-16","qty":1,"gross":75000,"payment":43166,"orders":1},{"date":"2026-01-22","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-31","qty":1,"gross":75000,"payment":40500,"orders":1},{"date":"2026-02-06","qty":1,"gross":75000,"payment":37500,"orders":1},{"date":"2026-02-18","qty":1,"gross":75000,"payment":32500,"orders":1}],"match_status":"매칭됨","match_row":836,"match_sku":"PD4TZM01BLK00XL","standard_name":"ESSENTIAL HEAT 기모 러닝 하프집_XL","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":190},{"retailer":"자사몰","mall_no":"413","name":"ESSENTIAL HEAT 기모 러닝 하프집","color":"","size":"L","qty":13,"gross":975000,"payment":519250,"avg_unit":39942,"orders":12,"source_rows":12,"source_type":"단품","daily":[{"date":"2026-01-09","qty":1,"gross":75000,"payment":45446,"orders":1},{"date":"2026-01-11","qty":2,"gross":150000,"payment":78190,"orders":1},{"date":"2026-01-15","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-17","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-19","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-25","qty":1,"gross":75000,"payment":41132,"orders":1},{"date":"2026-01-31","qty":1,"gross":75000,"payment":42760,"orders":1},{"date":"2026-02-01","qty":1,"gross":75000,"payment":38402,"orders":1},{"date":"2026-02-03","qty":1,"gross":75000,"payment":35260,"orders":1},{"date":"2026-03-06","qty":1,"gross":75000,"payment":40500,"orders":1},{"date":"2026-03-17","qty":1,"gross":75000,"payment":35065,"orders":1},{"date":"2026-03-19","qty":1,"gross":75000,"payment":37500,"orders":1}],"match_status":"매칭됨","match_row":834,"match_sku":"PD4TZM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝 하프집_L","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":219},{"retailer":"자사몰","mall_no":"493","name":"퀵드라이 셔링 티셔츠 세이지","color":"","size":"S","qty":11,"gross":649000,"payment":507620,"avg_unit":46147,"orders":11,"source_rows":11,"source_type":"단품","daily":[{"date":"2026-03-26","qty":1,"gross":59000,"payment":50200,"orders":1},{"date":"2026-03-27","qty":1,"gross":59000,"payment":37760,"orders":1},{"date":"2026-03-28","qty":1,"gross":59000,"payment":49792,"orders":1},{"date":"2026-03-30","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-03-31","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-04-01","qty":1,"gross":59000,"payment":44468,"orders":1},{"date":"2026-04-02","qty":2,"gross":118000,"payment":94400,"orders":2},{"date":"2026-04-03","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-06","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-15","qty":1,"gross":59000,"payment":47200,"orders":1}],"match_status":"매칭됨","match_row":997,"match_sku":"PE2TSW01SAG000S","standard_name":"퀵드라이 셔링 티셔츠_세이지_S","match_level":"상품명+옵션","received_qty":24,"main_sold_qty":10,"stock_qty":14},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"2XL","qty":8,"gross":632000,"payment":419725,"avg_unit":52466,"orders":8,"source_rows":8,"source_type":"단품","daily":[{"date":"2026-01-08","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":110800,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":56800,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":56825,"orders":1},{"date":"2026-02-08","qty":1,"gross":79000,"payment":55300,"orders":1},{"date":"2026-02-19","qty":1,"gross":79000,"payment":47600,"orders":1},{"date":"2026-03-20","qty":1,"gross":79000,"payment":39500,"orders":1}],"match_status":"매칭됨","match_row":815,"match_sku":"PD4PLM01BLK02XL","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_2XL","match_level":"상품명+옵션","received_qty":0,"main_sold_qty":0,"stock_qty":22}];
+const rawRows=[{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"L","qty":26,"gross":2054000,"payment":1300113,"avg_unit":50004,"orders":25,"source_type":"단품","daily":[{"date":"2026-01-03","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-05","qty":1,"gross":79000,"payment":115800,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-08","qty":3,"gross":237000,"payment":158700,"orders":3},{"date":"2026-01-09","qty":2,"gross":158000,"payment":105800,"orders":2},{"date":"2026-01-12","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-14","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":105800,"orders":2},{"date":"2026-01-16","qty":1,"gross":79000,"payment":45469,"orders":1},{"date":"2026-01-17","qty":1,"gross":79000,"payment":47605,"orders":1},{"date":"2026-01-21","qty":1,"gross":79000,"payment":52338,"orders":1},{"date":"2026-01-22","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":43326,"orders":1},{"date":"2026-01-31","qty":2,"gross":158000,"payment":95340,"orders":2},{"date":"2026-02-03","qty":1,"gross":79000,"payment":52300,"orders":1},{"date":"2026-02-05","qty":2,"gross":158000,"payment":100600,"orders":1},{"date":"2026-03-13","qty":1,"gross":79000,"payment":39500,"orders":1},{"date":"2026-03-17","qty":1,"gross":79000,"payment":36935,"orders":1},{"date":"2026-03-18","qty":1,"gross":79000,"payment":39500,"orders":1},{"date":"2026-03-19","qty":1,"gross":79000,"payment":39500,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_L","received_qty":0,"stock_qty":27},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"XL","qty":23,"gross":1817000,"payment":1049480,"avg_unit":45630,"orders":22,"source_type":"단품","daily":[{"date":"2026-01-06","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":47605,"orders":1},{"date":"2026-01-08","qty":3,"gross":237000,"payment":158405,"orders":3},{"date":"2026-01-09","qty":5,"gross":395000,"payment":211600,"orders":4},{"date":"2026-01-10","qty":3,"gross":237000,"payment":105807,"orders":3},{"date":"2026-01-13","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-14","qty":3,"gross":237000,"payment":149097,"orders":3},{"date":"2026-01-16","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-17","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":54900,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":57900,"orders":1},{"date":"2026-01-28","qty":1,"gross":79000,"payment":50400,"orders":1},{"date":"2026-01-31","qty":1,"gross":79000,"payment":55066,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK00XL","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_XL","received_qty":0,"stock_qty":46},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"M","qty":18,"gross":1422000,"payment":836849,"avg_unit":46492,"orders":18,"source_type":"단품","daily":[{"date":"2026-01-02","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-07","qty":2,"gross":158000,"payment":52900,"orders":2},{"date":"2026-01-08","qty":3,"gross":237000,"payment":163700,"orders":3},{"date":"2026-01-10","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-11","qty":1,"gross":79000,"payment":54752,"orders":1},{"date":"2026-01-13","qty":1,"gross":79000,"payment":48539,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":82929,"orders":2},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":50000,"orders":1},{"date":"2026-02-02","qty":1,"gross":79000,"payment":50441,"orders":1},{"date":"2026-02-03","qty":1,"gross":79000,"payment":42770,"orders":1},{"date":"2026-02-05","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-03-06","qty":1,"gross":79000,"payment":42500,"orders":1},{"date":"2026-03-09","qty":1,"gross":79000,"payment":39318,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK000M","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_M","received_qty":0,"stock_qty":24},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 후드","color":"","size":"XL","qty":17,"gross":1343000,"payment":835870,"avg_unit":49169,"orders":17,"source_type":"세트분해","daily":[{"date":"2026-01-06","qty":1,"gross":79000,"payment":47638,"orders":1},{"date":"2026-01-07","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-01-08","qty":2,"gross":158000,"payment":102800,"orders":2},{"date":"2026-01-09","qty":2,"gross":158000,"payment":109650,"orders":2},{"date":"2026-01-10","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-11","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-12","qty":2,"gross":158000,"payment":107562,"orders":2},{"date":"2026-01-14","qty":1,"gross":79000,"payment":52520,"orders":1},{"date":"2026-01-19","qty":2,"gross":158000,"payment":110000,"orders":2},{"date":"2026-01-21","qty":1,"gross":79000,"payment":55500,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-31","qty":2,"gross":158000,"payment":94900,"orders":2}],"match_status":"매칭됨","match_sku":"PD4THM01BLK00XL","standard_name":"ESSENTIAL HEAT 기모 러닝 후드_XL","received_qty":0,"stock_qty":37},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 팬츠","color":"","size":"L","qty":18,"gross":1422000,"payment":821055,"avg_unit":45614,"orders":18,"source_type":"세트분해","daily":[{"date":"2026-01-08","qty":2,"gross":158000,"payment":102800,"orders":2},{"date":"2026-01-09","qty":2,"gross":158000,"payment":109650,"orders":2},{"date":"2026-01-11","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-12","qty":2,"gross":158000,"payment":103939,"orders":2},{"date":"2026-01-14","qty":1,"gross":79000,"payment":52519,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-19","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-21","qty":1,"gross":79000,"payment":55500,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-27","qty":2,"gross":158000,"payment":105000,"orders":2},{"date":"2026-01-31","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-03-07","qty":1,"gross":79000,"payment":39247,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_L","received_qty":0,"stock_qty":27},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 팬츠","color":"","size":"M","qty":14,"gross":1106000,"payment":668442,"avg_unit":47746,"orders":13,"source_type":"세트분해","daily":[{"date":"2026-01-07","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-08","qty":1,"gross":79000,"payment":50300,"orders":1},{"date":"2026-01-09","qty":3,"gross":237000,"payment":165000,"orders":2},{"date":"2026-01-10","qty":1,"gross":79000,"payment":50062,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":105371,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":57500,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-31","qty":1,"gross":79000,"payment":49432,"orders":1},{"date":"2026-02-02","qty":1,"gross":79000,"payment":49327,"orders":1},{"date":"2026-02-03","qty":1,"gross":79000,"payment":49950,"orders":1},{"date":"2026-03-06","qty":1,"gross":79000,"payment":39000,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK000M","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_M","received_qty":0,"stock_qty":24},{"retailer":"자사몰","mall_no":"493","name":"퀵드라이 셔링 티셔츠 세이지","color":"","size":"M","qty":13,"gross":767000,"payment":562521,"avg_unit":43271,"orders":13,"source_type":"단품","daily":[{"date":"2026-03-26","qty":1,"gross":59000,"payment":42925,"orders":1},{"date":"2026-03-28","qty":2,"gross":118000,"payment":85957,"orders":2},{"date":"2026-03-29","qty":1,"gross":59000,"payment":43597,"orders":1},{"date":"2026-03-31","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-01","qty":2,"gross":118000,"payment":86384,"orders":2},{"date":"2026-04-02","qty":1,"gross":59000,"payment":31899,"orders":1},{"date":"2026-04-10","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-11","qty":1,"gross":59000,"payment":42267,"orders":1},{"date":"2026-04-13","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-15","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-04-16","qty":1,"gross":59000,"payment":43192,"orders":1}],"match_status":"매칭됨","match_sku":"PE2TSW01SAG0000M","standard_name":"퀵드라이 셔링 티셔츠_세이지_M","received_qty":26,"stock_qty":12},{"retailer":"자사몰","mall_no":"436","name":"ESSENTIAL HEAT 기모 러닝 후드","color":"","size":"L","qty":15,"gross":1185000,"payment":541463,"avg_unit":36098,"orders":15,"source_type":"세트분해","daily":[{"date":"2026-01-07","qty":1,"gross":79000,"payment":0,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-12","qty":1,"gross":79000,"payment":46439,"orders":1},{"date":"2026-01-15","qty":2,"gross":158000,"payment":52500,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":57500,"orders":1},{"date":"2026-01-25","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-26","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":52500,"orders":1},{"date":"2026-02-01","qty":1,"gross":79000,"payment":47450,"orders":1},{"date":"2026-02-02","qty":2,"gross":158000,"payment":49327,"orders":2},{"date":"2026-03-06","qty":1,"gross":79000,"payment":39000,"orders":1},{"date":"2026-03-07","qty":1,"gross":79000,"payment":39247,"orders":1}],"match_status":"매칭됨","match_sku":"PD4THM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝 후드_L","received_qty":0,"stock_qty":48},{"retailer":"자사몰","mall_no":"413","name":"ESSENTIAL HEAT 기모 러닝 하프집","color":"","size":"XL","qty":13,"gross":975000,"payment":533697,"avg_unit":41054,"orders":13,"source_type":"단품","daily":[{"date":"2026-01-06","qty":1,"gross":75000,"payment":45225,"orders":1},{"date":"2026-01-07","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-08","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-11","qty":1,"gross":75000,"payment":33750,"orders":1},{"date":"2026-01-14","qty":3,"gross":225000,"payment":130866,"orders":3},{"date":"2026-01-15","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-16","qty":1,"gross":75000,"payment":43166,"orders":1},{"date":"2026-01-22","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-31","qty":1,"gross":75000,"payment":40500,"orders":1},{"date":"2026-02-06","qty":1,"gross":75000,"payment":37500,"orders":1},{"date":"2026-02-18","qty":1,"gross":75000,"payment":32500,"orders":1}],"match_status":"매칭됨","match_sku":"PD4TZM01BLK00XL","standard_name":"ESSENTIAL HEAT 기모 러닝 하프집_XL","received_qty":0,"stock_qty":190},{"retailer":"자사몰","mall_no":"413","name":"ESSENTIAL HEAT 기모 러닝 하프집","color":"","size":"L","qty":13,"gross":975000,"payment":519250,"avg_unit":39942,"orders":12,"source_type":"단품","daily":[{"date":"2026-01-09","qty":1,"gross":75000,"payment":45446,"orders":1},{"date":"2026-01-11","qty":2,"gross":150000,"payment":78190,"orders":1},{"date":"2026-01-15","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-17","qty":1,"gross":75000,"payment":45195,"orders":1},{"date":"2026-01-19","qty":1,"gross":75000,"payment":39900,"orders":1},{"date":"2026-01-25","qty":1,"gross":75000,"payment":41132,"orders":1},{"date":"2026-01-31","qty":1,"gross":75000,"payment":42760,"orders":1},{"date":"2026-02-01","qty":1,"gross":75000,"payment":38402,"orders":1},{"date":"2026-02-03","qty":1,"gross":75000,"payment":35260,"orders":1},{"date":"2026-03-06","qty":1,"gross":75000,"payment":40500,"orders":1},{"date":"2026-03-17","qty":1,"gross":75000,"payment":35065,"orders":1},{"date":"2026-03-19","qty":1,"gross":75000,"payment":37500,"orders":1}],"match_status":"매칭됨","match_sku":"PD4TZM01BLK000L","standard_name":"ESSENTIAL HEAT 기모 러닝 하프집_L","received_qty":0,"stock_qty":219},{"retailer":"자사몰","mall_no":"493","name":"퀵드라이 셔링 티셔츠 세이지","color":"","size":"S","qty":11,"gross":649000,"payment":507620,"avg_unit":46147,"orders":11,"source_type":"단품","daily":[{"date":"2026-03-26","qty":1,"gross":59000,"payment":50200,"orders":1},{"date":"2026-03-27","qty":1,"gross":59000,"payment":37760,"orders":1},{"date":"2026-03-28","qty":1,"gross":59000,"payment":49792,"orders":1},{"date":"2026-03-30","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-03-31","qty":1,"gross":59000,"payment":44700,"orders":1},{"date":"2026-04-01","qty":1,"gross":59000,"payment":44468,"orders":1},{"date":"2026-04-02","qty":2,"gross":118000,"payment":94400,"orders":2},{"date":"2026-04-03","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-06","qty":1,"gross":59000,"payment":47200,"orders":1},{"date":"2026-04-15","qty":1,"gross":59000,"payment":47200,"orders":1}],"match_status":"매칭됨","match_sku":"PE2TSW01SAG000S","standard_name":"퀵드라이 셔링 티셔츠_세이지_S","received_qty":24,"stock_qty":14},{"retailer":"자사몰","mall_no":"411","name":"ESSENTIAL HEAT 기모 러닝팬츠","color":"","size":"2XL","qty":8,"gross":632000,"payment":419725,"avg_unit":52466,"orders":8,"source_type":"단품","daily":[{"date":"2026-01-08","qty":1,"gross":79000,"payment":52900,"orders":1},{"date":"2026-01-11","qty":2,"gross":158000,"payment":110800,"orders":2},{"date":"2026-01-22","qty":1,"gross":79000,"payment":56800,"orders":1},{"date":"2026-01-27","qty":1,"gross":79000,"payment":56825,"orders":1},{"date":"2026-02-08","qty":1,"gross":79000,"payment":55300,"orders":1},{"date":"2026-02-19","qty":1,"gross":79000,"payment":47600,"orders":1},{"date":"2026-03-20","qty":1,"gross":79000,"payment":39500,"orders":1}],"match_status":"매칭됨","match_sku":"PD4PLM01BLK02XL","standard_name":"ESSENTIAL HEAT 기모 러닝팬츠_2XL","received_qty":0,"stock_qty":22}];
 
-// ─── UTILITIES ───────────────────────────────────────────────
-const fmt = n => Math.round(n).toLocaleString('ko-KR');
-const pct = n => n.toFixed(1) + '%';
+const fmt=n=>Math.round(n).toLocaleString('ko-KR');
+const pct=n=>n.toFixed(1)+'%';
 
-// ─── DERIVED DATA ────────────────────────────────────────────
-// Aggregate daily
-const dailyMap = {};
-rawRows.forEach(r => {
-  r.daily.forEach(d => {
-    if (!dailyMap[d.date]) dailyMap[d.date] = {date:d.date,payment:0,gross:0,orders:0,qty:0};
-    dailyMap[d.date].payment += d.payment;
-    dailyMap[d.date].gross += d.gross;
-    dailyMap[d.date].orders += d.orders;
-    dailyMap[d.date].qty += d.qty;
-  });
+// Daily agg
+const dMap={};
+rawRows.forEach(r=>r.daily.forEach(d=>{
+  if(!dMap[d.date])dMap[d.date]={date:d.date,payment:0,gross:0,orders:0,qty:0};
+  dMap[d.date].payment+=d.payment;dMap[d.date].gross+=d.gross;
+  dMap[d.date].orders+=d.orders;dMap[d.date].qty+=d.qty;
+}));
+const dailyAll=Object.values(dMap).sort((a,b)=>a.date.localeCompare(b.date));
+
+// Retailer agg
+const rMap={};
+rawRows.forEach(r=>{
+  if(!rMap[r.retailer])rMap[r.retailer]={retailer:r.retailer,payment:0,gross:0,orders:0,qty:0};
+  rMap[r.retailer].payment+=r.payment;rMap[r.retailer].gross+=r.gross;
+  rMap[r.retailer].orders+=r.orders;rMap[r.retailer].qty+=r.qty;
 });
-const dailyAll = Object.values(dailyMap).sort((a,b)=>a.date.localeCompare(b.date));
+const retailerAll=Object.values(rMap);
 
-// Aggregate retailer
-const retailerMap = {};
-rawRows.forEach(r => {
-  if (!retailerMap[r.retailer]) retailerMap[r.retailer]={retailer:r.retailer,payment:0,gross:0,orders:0,qty:0};
-  retailerMap[r.retailer].payment+=r.payment;
-  retailerMap[r.retailer].gross+=r.gross;
-  retailerMap[r.retailer].orders+=r.orders;
-  retailerMap[r.retailer].qty+=r.qty;
-});
-const retailerAll = Object.values(retailerMap);
+// Chart defaults
+Chart.defaults.color='#8a94a6';
+Chart.defaults.font.family="'Pretendard',sans-serif";
+Chart.defaults.font.size=11;
+const ttip={backgroundColor:'#1e2535',borderColor:'#2b3548',borderWidth:1,titleColor:'#fff',bodyColor:'#c8d0e0',padding:10,callbacks:{label:ctx=>' '+fmt(ctx.raw)}};
+const scl={x:{grid:{color:'#e2e6ed'},ticks:{maxRotation:45}},y:{grid:{color:'#e2e6ed'},ticks:{callback:v=>fmt(v)}}};
 
-// ─── CHART DEFAULTS ──────────────────────────────────────────
-Chart.defaults.color = '#525c75';
-Chart.defaults.font.family = "'DM Mono', monospace";
-Chart.defaults.font.size = 11;
-
-function chartOpts(label, color) {
-  return {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        backgroundColor: '#1a1e2a',
-        borderColor: '#2e3447',
-        borderWidth: 1,
-        titleColor: '#e8ecf4',
-        bodyColor: '#8b94ad',
-        padding: 10,
-        callbacks: {
-          label: ctx => ' ' + fmt(ctx.raw)
-        }
-      }
-    },
-    scales: {
-      x: { grid: { color: '#1f2330' }, ticks: { maxRotation: 45 } },
-      y: {
-        grid: { color: '#1f2330' },
-        ticks: { callback: v => fmt(v) }
-      }
-    }
-  };
-}
-
-// ─── OVERVIEW CHARTS ─────────────────────────────────────────
-(function buildOverviewCharts() {
-  // Monthly aggregate
-  const monthly = {};
-  rawRows.forEach(r => {
-    r.daily.forEach(d => {
-      const m = d.date.slice(0,7);
-      if (!monthly[m]) monthly[m] = {payment:0,qty:0};
-      monthly[m].payment += d.payment;
-      monthly[m].qty += d.qty;
-    });
-  });
-  const months = Object.keys(monthly).sort();
-  const labels = months.map(m => m.slice(5)+'월');
-
-  new Chart(document.getElementById('paymentChart'), {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        data: months.map(m => monthly[m].payment),
-        backgroundColor: 'rgba(79,122,255,0.25)',
-        borderColor: '#4f7aff',
-        borderWidth: 1.5,
-        borderRadius: 4,
-      }]
-    },
-    options: { ...chartOpts(), plugins: { ...chartOpts().plugins, title: { display: true, text: '월별 매출', color: '#8b94ad', padding: { bottom: 8 } } } }
-  });
-
-  new Chart(document.getElementById('qtyChart'), {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        data: months.map(m => monthly[m].qty),
-        backgroundColor: 'rgba(6,214,160,0.2)',
-        borderColor: '#06d6a0',
-        borderWidth: 1.5,
-        borderRadius: 4,
-      }]
-    },
-    options: { ...chartOpts(), plugins: { ...chartOpts().plugins, title: { display: true, text: '월별 판매수량', color: '#8b94ad', padding: { bottom: 8 } } } }
-  });
+// Overview charts
+(function(){
+  const m={};
+  rawRows.forEach(r=>r.daily.forEach(d=>{const k=d.date.slice(0,7);if(!m[k])m[k]={p:0,q:0};m[k].p+=d.payment;m[k].q+=d.qty;}));
+  const keys=Object.keys(m).sort();
+  const lbl=keys.map(k=>k.slice(5)+'월');
+  new Chart(document.getElementById('paymentChart'),{type:'bar',data:{labels:lbl,datasets:[{data:keys.map(k=>m[k].p),backgroundColor:'rgba(59,130,246,0.18)',borderColor:'#3b82f6',borderWidth:1.5,borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ttip,title:{display:true,text:'월별 매출',color:'#4a5568',padding:{bottom:8}}},scales:scl}});
+  new Chart(document.getElementById('qtyChart'),{type:'bar',data:{labels:lbl,datasets:[{data:keys.map(k=>m[k].q),backgroundColor:'rgba(16,185,129,0.15)',borderColor:'#10b981',borderWidth:1.5,borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ttip,title:{display:true,text:'월별 판매수량',color:'#4a5568',padding:{bottom:8}}},scales:scl}});
 })();
 
-// ─── RANK LIST ───────────────────────────────────────────────
-(function buildRank() {
-  const top = [...rawRows].sort((a,b)=>b.payment-a.payment).slice(0,12);
-  const max = top[0].payment;
-  const el = document.getElementById('rankList');
-  el.innerHTML = top.map((r,i) => `
-    <div class="rank-row">
-      <div class="rank-num">${String(i+1).padStart(2,'0')}</div>
-      <div class="rank-name" title="${r.standard_name}">${r.standard_name}</div>
-      <div class="rank-bar"><div style="width:${(r.payment/max*100).toFixed(1)}%"></div></div>
-      <div class="rank-value">${fmt(r.payment)}</div>
-    </div>
-  `).join('');
+// Rank
+(function(){
+  const top=[...rawRows].sort((a,b)=>b.payment-a.payment).slice(0,12);
+  const mx=top[0].payment;
+  document.getElementById('rankList').innerHTML=top.map((r,i)=>`<div class="rank-row"><div class="rank-n">${String(i+1).padStart(2,'0')}</div><div class="rank-name" title="${r.standard_name}">${r.standard_name}</div><div class="rank-bar"><div style="width:${(r.payment/mx*100).toFixed(1)}%"></div></div><div class="rank-val">${fmt(r.payment)}</div></div>`).join('');
 })();
 
-// ─── DAILY TAB ───────────────────────────────────────────────
-let dailyChartInst = null;
-
-function renderDaily() {
-  const s = document.getElementById('dateStart').value;
-  const e = document.getElementById('dateEnd').value;
-  const filtered = dailyAll.filter(d => (!s || d.date >= s) && (!e || d.date <= e));
-
-  const totPay = filtered.reduce((a,d)=>a+d.payment,0);
-  const totOrd = filtered.reduce((a,d)=>a+d.orders,0);
-  const totQty = filtered.reduce((a,d)=>a+d.qty,0);
-  document.getElementById('dayPayment').textContent = fmt(totPay);
-  document.getElementById('dayOrders').textContent = fmt(totOrd);
-  document.getElementById('dayQty').textContent = fmt(totQty);
-
-  // Chart
-  if (dailyChartInst) dailyChartInst.destroy();
-  dailyChartInst = new Chart(document.getElementById('dailyChart'), {
-    type: 'line',
-    data: {
-      labels: filtered.map(d => d.date.slice(5)),
-      datasets: [{
-        data: filtered.map(d => d.payment),
-        borderColor: '#4f7aff',
-        backgroundColor: 'rgba(79,122,255,0.08)',
-        borderWidth: 1.5,
-        fill: true,
-        tension: 0.4,
-        pointRadius: 2,
-        pointHoverRadius: 5,
-      }]
-    },
-    options: chartOpts()
-  });
-
-  // Table
-  const tbody = document.getElementById('dailyRows');
-  if (!filtered.length) {
-    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--ink3);padding:24px">데이터 없음</td></tr>';
-    return;
-  }
-  tbody.innerHTML = filtered.map(d => `
-    <tr>
-      <td class="td-main" style="font-family:'DM Mono',monospace">${d.date}</td>
-      <td class="num">${fmt(d.payment)}</td>
-      <td class="num">${fmt(d.gross)}</td>
-      <td class="num">${fmt(d.orders)}</td>
-      <td class="num">${fmt(d.qty)}</td>
-      <td class="num">${d.orders ? fmt(d.payment/d.orders) : '-'}</td>
-    </tr>
-  `).join('');
+// Daily
+let dcInst=null;
+function renderDaily(){
+  const s=document.getElementById('dateStart').value,e=document.getElementById('dateEnd').value;
+  const f=dailyAll.filter(d=>(!s||d.date>=s)&&(!e||d.date<=e));
+  document.getElementById('dayPayment').textContent=fmt(f.reduce((a,d)=>a+d.payment,0));
+  document.getElementById('dayOrders').textContent=fmt(f.reduce((a,d)=>a+d.orders,0));
+  document.getElementById('dayQty').textContent=fmt(f.reduce((a,d)=>a+d.qty,0));
+  if(dcInst)dcInst.destroy();
+  dcInst=new Chart(document.getElementById('dailyChart'),{type:'line',data:{labels:f.map(d=>d.date.slice(5)),datasets:[{data:f.map(d=>d.payment),borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,0.07)',borderWidth:1.5,fill:true,tension:0.4,pointRadius:2,pointHoverRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ttip},scales:scl}});
+  document.getElementById('dailyRows').innerHTML=!f.length?'<tr><td colspan="6" style="text-align:center;color:var(--ink3);padding:24px">데이터 없음</td></tr>':f.map(d=>`<tr><td class="td-main td-mono">${d.date}</td><td class="num">${fmt(d.payment)}</td><td class="num">${fmt(d.gross)}</td><td class="num">${fmt(d.orders)}</td><td class="num">${fmt(d.qty)}</td><td class="num">${d.orders?fmt(d.payment/d.orders):'-'}</td></tr>`).join('');
 }
+document.getElementById('dateStart').addEventListener('change',renderDaily);
+document.getElementById('dateEnd').addEventListener('change',renderDaily);
+document.getElementById('clearDate').addEventListener('click',()=>{document.getElementById('dateStart').value='';document.getElementById('dateEnd').value='';renderDaily();});
 
-document.getElementById('dateStart').addEventListener('change', renderDaily);
-document.getElementById('dateEnd').addEventListener('change', renderDaily);
-document.getElementById('clearDate').addEventListener('click', () => {
-  document.getElementById('dateStart').value = '';
-  document.getElementById('dateEnd').value = '';
-  renderDaily();
-});
-
-// ─── RETAILER TAB ────────────────────────────────────────────
-let retailerChartInst = null;
-
-function renderRetailer() {
-  const filtered = retailerAll;
-  if (retailerChartInst) retailerChartInst.destroy();
-  retailerChartInst = new Chart(document.getElementById('retailerChart'), {
-    type: 'bar',
-    data: {
-      labels: filtered.map(r => r.retailer),
-      datasets: [{
-        data: filtered.map(r => r.payment),
-        backgroundColor: filtered.map((_,i) => `hsl(${220+i*30},70%,55%)`),
-        borderRadius: 4,
-      }]
-    },
-    options: chartOpts()
-  });
-
-  const tbody = document.getElementById('retailerRows');
-  tbody.innerHTML = filtered.map(r => `
-    <tr>
-      <td class="td-main"><span class="badge badge-source">${r.retailer}</span></td>
-      <td class="num">${fmt(r.payment)}</td>
-      <td class="num">${fmt(r.gross)}</td>
-      <td class="num">${fmt(r.orders)}</td>
-      <td class="num">${fmt(r.qty)}</td>
-      <td class="num">${r.orders ? fmt(r.payment/r.orders) : '-'}</td>
-    </tr>
-  `).join('');
+// Retailer
+let rcInst=null;
+function renderRetailer(){
+  const colors=['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
+  if(rcInst)rcInst.destroy();
+  rcInst=new Chart(document.getElementById('retailerChart'),{type:'bar',data:{labels:retailerAll.map(r=>r.retailer),datasets:[{data:retailerAll.map(r=>r.payment),backgroundColor:retailerAll.map((_,i)=>colors[i%colors.length]+'33'),borderColor:retailerAll.map((_,i)=>colors[i%colors.length]),borderWidth:1.5,borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ttip},scales:scl}});
+  document.getElementById('retailerRows').innerHTML=retailerAll.map(r=>`<tr><td class="td-main"><span class="badge badge-blue">${r.retailer}</span></td><td class="num">${fmt(r.payment)}</td><td class="num">${fmt(r.gross)}</td><td class="num">${fmt(r.orders)}</td><td class="num">${fmt(r.qty)}</td><td class="num">${r.orders?fmt(r.payment/r.orders):'-'}</td></tr>`).join('');
 }
+document.getElementById('clearRetailer').addEventListener('click',renderRetailer);
 
-document.getElementById('clearRetailer').addEventListener('click', renderRetailer);
-
-// ─── DETAIL TAB ──────────────────────────────────────────────
-function renderDetail() {
-  const q = (document.getElementById('q').value || '').toLowerCase();
-  const pRetailer = document.getElementById('productRetailer').value;
-  const status = document.getElementById('status').value;
-  const srcType = document.getElementById('sourceType').value;
-  const sortBy = document.getElementById('sortBy').value;
-
-  let rows = [...rawRows];
-  if (q) rows = rows.filter(r =>
-    (r.standard_name||'').toLowerCase().includes(q) ||
-    (r.mall_no||'').includes(q) ||
-    (r.color||'').toLowerCase().includes(q)
-  );
-  if (pRetailer) rows = rows.filter(r => r.retailer === pRetailer);
-  if (status) rows = rows.filter(r => r.match_status === status);
-  if (srcType) rows = rows.filter(r => r.source_type === srcType);
-
-  if (sortBy === 'payment') rows.sort((a,b)=>b.payment-a.payment);
-  else if (sortBy === 'qty') rows.sort((a,b)=>b.qty-a.qty);
+// Detail
+function renderDetail(){
+  const q=(document.getElementById('q').value||'').toLowerCase();
+  const pR=document.getElementById('productRetailer').value;
+  const st=document.getElementById('status').value;
+  const sc=document.getElementById('sourceType').value;
+  const sb=document.getElementById('sortBy').value;
+  let rows=[...rawRows];
+  if(q)rows=rows.filter(r=>(r.standard_name||'').toLowerCase().includes(q)||(r.mall_no||'').includes(q));
+  if(pR)rows=rows.filter(r=>r.retailer===pR);
+  if(st)rows=rows.filter(r=>r.match_status===st);
+  if(sc)rows=rows.filter(r=>r.source_type===sc);
+  if(sb==='payment')rows.sort((a,b)=>b.payment-a.payment);
+  else if(sb==='qty')rows.sort((a,b)=>b.qty-a.qty);
   else rows.sort((a,b)=>(a.standard_name||'').localeCompare(b.standard_name||''));
-
-  const tbody = document.getElementById('detailRows');
-  if (!rows.length) {
-    tbody.innerHTML = '<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:24px">검색 결과 없음</td></tr>';
-    return;
-  }
-  tbody.innerHTML = rows.map(r => {
-    const discRate = r.gross > 0 ? (1 - r.payment/r.gross)*100 : 0;
-    const saleRate = (r.received_qty > 0) ? (r.qty/r.received_qty*100) : 0;
-    const stockRate = (r.received_qty > 0) ? ((r.received_qty - r.stock_qty)/r.received_qty*100) : 0;
-    const srcBadge = r.source_type === '단품' ? 'badge-source' : 'badge-set';
-    const matchBadge = r.match_status === '매칭됨' ? 'badge-matched' : 'badge-unmatched';
-    return `
-    <tr>
-      <td><span class="badge badge-source">${r.retailer}</span></td>
-      <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--ink3)">${r.mall_no}</td>
-      <td class="td-main">${r.standard_name||'-'}</td>
-      <td style="font-size:12px;color:var(--ink3)">${r.name}${r.color?' '+r.color:''} ${r.size}</td>
-      <td><span class="badge ${srcBadge}">${r.source_type}</span></td>
-      <td><span class="badge ${matchBadge}">${r.match_status}</span></td>
-      <td class="num">${fmt(r.qty)}</td>
-      <td class="num">${fmt(r.gross)}</td>
-      <td class="num" style="color:var(--teal)">${fmt(r.payment)}</td>
-      <td class="num">${fmt(r.avg_unit)}</td>
-      <td class="num" style="color:${discRate>50?'var(--red)':discRate>30?'var(--amber)':'var(--ink)'}">${pct(discRate)}</td>
-      <td class="num">${saleRate>0?pct(saleRate):'-'}</td>
-      <td class="num">${stockRate>0?pct(stockRate):'-'}</td>
-    </tr>`;
+  const tbody=document.getElementById('detailRows');
+  if(!rows.length){tbody.innerHTML='<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';return;}
+  tbody.innerHTML=rows.map(r=>{
+    const disc=r.gross>0?(1-r.payment/r.gross)*100:0;
+    const sale=r.received_qty>0?r.qty/r.received_qty*100:0;
+    const stkOut=r.received_qty>0?(r.received_qty-r.stock_qty)/r.received_qty*100:0;
+    const srcB=r.source_type==='단품'?'badge-blue':r.source_type==='세트분해'?'badge-amber':'badge-gray';
+    const mB=r.match_status==='매칭됨'?'badge-green':'badge-red';
+    return `<tr><td><span class="badge badge-blue">${r.retailer}</span></td><td class="td-mono">${r.mall_no}</td><td class="td-main" style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${r.standard_name}">${r.standard_name||'-'}</td><td style="font-size:12px;color:var(--ink3);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name} ${r.size}</td><td><span class="badge ${srcB}">${r.source_type}</span></td><td><span class="badge ${mB}">${r.match_status}</span></td><td class="num">${fmt(r.qty)}</td><td class="num">${fmt(r.gross)}</td><td class="num" style="color:var(--blue2);font-weight:600">${fmt(r.payment)}</td><td class="num">${fmt(r.avg_unit)}</td><td class="num" style="color:${disc>50?'var(--red)':disc>30?'var(--amber)':'var(--ink2)'}">${pct(disc)}</td><td class="num">${sale>0?pct(sale):'-'}</td><td class="num">${stkOut>0?pct(stkOut):'-'}</td></tr>`;
   }).join('');
 }
-
-['q','productRetailer','status','sourceType','sortBy','productStart','productEnd'].forEach(id => {
-  document.getElementById(id).addEventListener('input', renderDetail);
-  document.getElementById(id).addEventListener('change', renderDetail);
+['q','productRetailer','status','sourceType','sortBy'].forEach(id=>{
+  document.getElementById(id).addEventListener('input',renderDetail);
+  document.getElementById(id).addEventListener('change',renderDetail);
 });
 
-// ─── TABS ────────────────────────────────────────────────────
-document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+// Nav
+document.querySelectorAll('.nav-item[data-tab]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
     btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-    if (btn.dataset.tab === 'calendar') renderDaily();
-    if (btn.dataset.tab === 'retailer') renderRetailer();
-    if (btn.dataset.tab === 'detail') renderDetail();
+    const tab=btn.dataset.tab;
+    document.getElementById(tab).classList.add('active');
+    if(tab==='calendar')renderDaily();
+    if(tab==='retailer')renderRetailer();
+    if(tab==='detail')renderDetail();
   });
 });
-
-// init
 renderDaily();
 </script>
 </body>
