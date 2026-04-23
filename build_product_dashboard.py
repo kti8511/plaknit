@@ -38,6 +38,24 @@ with DATA_FILE.open(encoding="utf-8") as f:
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 rows_json = json.dumps(rows, ensure_ascii=False)
 
+# 2026 플래니트 예산.xlsx > 2025 실매출 > 월별 합계(row 32) 기준.
+# GitHub Actions 환경에서도 재생성 가능하도록 기준값은 스크립트에 고정한다.
+PREV_YEAR_MONTHLY = [
+    {"month": "01", "sales2025": 16573021},
+    {"month": "02", "sales2025": 15125056},
+    {"month": "03", "sales2025": 16677513},
+    {"month": "04", "sales2025": 36350375},
+    {"month": "05", "sales2025": 43723980},
+    {"month": "06", "sales2025": 48364959},
+    {"month": "07", "sales2025": 45331462},
+    {"month": "08", "sales2025": 53199752},
+    {"month": "09", "sales2025": 45022043},
+    {"month": "10", "sales2025": 19962162},
+    {"month": "11", "sales2025": 23431013},
+    {"month": "12", "sales2025": 20800000},
+]
+prev_year_monthly_json = json.dumps(PREV_YEAR_MONTHLY, ensure_ascii=False)
+
 # 유통사 목록 (고정)
 RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온"]
 
@@ -234,6 +252,16 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <div class="rank-list" id="rankList"></div>
       </div>
     </div>
+    <div class="panel" style="margin-bottom:12px">
+      <div class="panel-hd"><span class="panel-title">월별 전년 대비 매출 신장률</span><span class="panel-meta">2026 vs 2025 실매출</span></div>
+      <div class="chart-box" style="height:190px;margin-bottom:12px"><canvas id="monthlyGrowthChart"></canvas></div>
+      <div class="table-wrap" style="max-height:240px">
+        <table>
+          <thead><tr><th>월</th><th class="num">2026 매출</th><th class="num">2025 매출</th><th class="num">신장률</th></tr></thead>
+          <tbody id="monthlyGrowthRows"></tbody>
+        </table>
+      </div>
+    </div>
     <div class="grid2-eq">
       <div class="panel">
         <div class="panel-hd"><span class="panel-title">업데이트 상태</span></div>
@@ -327,6 +355,11 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <select id="sourceType"><option value="">전체 구분</option><option>단품</option><option>세트분해</option><option>팩분해</option></select>
         <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="name">상품명순</option></select>
       </div>
+      <div class="sum-strip">
+        <div class="sum-card"><div class="sum-label">전체 출고가능 재고</div><div class="sum-value" id="detailStockQty">0</div></div>
+        <div class="sum-card"><div class="sum-label">전체 재고 소진율</div><div class="sum-value" id="detailStockRate">-</div></div>
+        <div class="sum-card"><div class="sum-label">주간 상품 판매율</div><div class="sum-value" id="detailWeeklyRate">-</div></div>
+      </div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -353,18 +386,32 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 <script>
 const rawRows = {rows_json};
 const RETAILERS = {json.dumps(RETAILERS, ensure_ascii=False)};
+const PREV_YEAR_MONTHLY = {prev_year_monthly_json};
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
 const fmtD = s => s.slice(5); // "2026-01-03" → "01-03"
+function validDiscount(gross, payment) {{
+  gross = Number(gross || 0);
+  payment = Number(payment || 0);
+  if (gross <= 0 || payment < 0 || payment > gross) return null;
+  return (1 - payment / gross) * 100;
+}}
+function discountText(gross, payment) {{
+  const d = validDiscount(gross, payment);
+  return d === null ? '-' : pct(d);
+}}
 
 // ── 전체 집계 ─────────────────────────────────────────────
 const totalQty     = rawRows.reduce((a,r)=>a+r.qty, 0);
 const totalPayment = rawRows.reduce((a,r)=>a+r.payment, 0);
 const totalGross   = rawRows.reduce((a,r)=>a+r.gross, 0);
+const validDiscRows= rawRows.filter(r => validDiscount(r.gross, r.payment) !== null);
+const validGross   = validDiscRows.reduce((a,r)=>a+r.gross, 0);
+const validPayment = validDiscRows.reduce((a,r)=>a+r.payment, 0);
 const totalOrders  = rawRows.reduce((a,r)=>a+r.orders, 0);
 const avgUnit      = totalQty ? Math.round(totalPayment/totalQty) : 0;
-const avgDisc      = totalGross ? (1-totalPayment/totalGross)*100 : 0;
+const avgDisc      = validGross ? (1-validPayment/validGross)*100 : null;
 const matched      = rawRows.filter(r=>r.match_status==='매칭됨').length;
 const unmatched    = rawRows.length - matched;
 const matchRate    = rawRows.length ? matched/rawRows.length*100 : 0;
@@ -373,11 +420,11 @@ const matchRate    = rawRows.length ? matched/rawRows.length*100 : 0;
 document.getElementById('kpiQty').textContent      = fmt(totalQty);
 document.getElementById('kpiPayment').textContent  = fmt(totalPayment);
 document.getElementById('kpiAvgUnit').textContent  = fmt(avgUnit);
-document.getElementById('kpiDisc').textContent     = pct(avgDisc);
+document.getElementById('kpiDisc').textContent     = avgDisc === null ? '-' : pct(avgDisc);
 document.getElementById('kpiMatch').textContent    = pct(matchRate);
 document.getElementById('kpiMatchNote').textContent= matched+'/'+rawRows.length+' 상품';
 document.getElementById('kpiUnmatch').textContent  = unmatched;
-document.getElementById('kpiDiscBar').style.width  = avgDisc.toFixed(1)+'%';
+document.getElementById('kpiDiscBar').style.width  = avgDisc === null ? '0%' : Math.max(0, Math.min(100, avgDisc)).toFixed(1)+'%';
 document.getElementById('kpiMatchBar').style.width = matchRate.toFixed(1)+'%';
 
 // ── 일별 집계 (유통사 필터 포함) ───────────────────────────
@@ -399,11 +446,15 @@ function buildDailyMap(retailerFilter) {{
 // ── 유통사 집계 ────────────────────────────────────────────
 const retailerMap = {{}};
 rawRows.forEach(r => {{
-  if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0}};
+  if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0}};
   retailerMap[r.retailer].payment += r.payment;
   retailerMap[r.retailer].gross   += r.gross;
   retailerMap[r.retailer].orders  += r.orders;
   retailerMap[r.retailer].qty     += r.qty;
+  if (validDiscount(r.gross, r.payment) !== null) {{
+    retailerMap[r.retailer].validPayment += r.payment;
+    retailerMap[r.retailer].validGross += r.gross;
+  }}
 }});
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
 
@@ -437,6 +488,38 @@ const scl  = {{x:{{grid:{{color:'#e2e6ed'}},ticks:{{maxRotation:0}}}},y:{{grid:{
   }});
 
   // ── 최근 7일 상위 상품 ─────────────────────────────────
+  const monthMap = {{}};
+  allDaily.forEach(d => {{
+    const m = d.date.slice(5,7);
+    if (!monthMap[m]) monthMap[m] = 0;
+    monthMap[m] += d.payment;
+  }});
+  const latestMonth = allDaily.length ? allDaily[allDaily.length - 1].date.slice(5,7) : null;
+  const monthlyRows = PREV_YEAR_MONTHLY
+  .filter(row => !latestMonth || row.month <= latestMonth)
+  .map(row => {{
+    const current = monthMap[row.month] || 0;
+    const prev = row.sales2025 || 0;
+    const growth = prev ? (current - prev) / prev * 100 : null;
+    return {{month: row.month, current, prev, growth}};
+  }});
+  new Chart(document.getElementById('monthlyGrowthChart'), {{
+    type:'bar',
+    data:{{
+      labels:monthlyRows.map(r=>r.month+'월'),
+      datasets:[{{data:monthlyRows.map(r=>r.growth ?? 0),backgroundColor:monthlyRows.map(r=>(r.growth ?? 0)>=0?'rgba(16,185,129,.22)':'rgba(239,68,68,.22)'),borderColor:monthlyRows.map(r=>(r.growth ?? 0)>=0?'#10b981':'#ef4444'),borderWidth:1.5,borderRadius:5}}]
+    }},
+    options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:false}},tooltip:{{...ttip,callbacks:{{label:ctx=>' '+pct(ctx.raw)}}}}}},scales:{{x:scl.x,y:{{grid:{{color:'#e2e6ed'}},ticks:{{callback:v=>pct(v)}}}}}}}}
+  }});
+  document.getElementById('monthlyGrowthRows').innerHTML = monthlyRows.map(r=>`
+    <tr>
+      <td class="td-main">${{r.month}}월</td>
+      <td class="num">${{fmt(r.current)}}</td>
+      <td class="num">${{fmt(r.prev)}}</td>
+      <td class="num" style="color:${{(r.growth ?? 0)>=0?'var(--teal)':'var(--red)'}}">${{r.growth===null?'-':pct(r.growth)}}</td>
+    </tr>
+  `).join('');
+
   const allDates = allDaily.map(d=>d.date);
   const cutoff   = allDates.length >= 7 ? allDates[allDates.length-7] : allDates[0];
   const payMap   = {{}};
@@ -546,7 +629,7 @@ function renderRetailer() {{
   }});
 
   document.getElementById('retailerRows').innerHTML = data.map(r=>{{
-    const disc = r.gross>0?(1-r.payment/r.gross)*100:0;
+    const disc = r.validGross>0?(1-r.validPayment/r.validGross)*100:null;
     return `<tr>
       <td class="td-main"><span class="badge badge-blue">${{r.retailer}}</span></td>
       <td class="num">${{fmt(r.payment)}}</td>
@@ -554,7 +637,7 @@ function renderRetailer() {{
       <td class="num">${{fmt(r.orders)}}</td>
       <td class="num">${{fmt(r.qty)}}</td>
       <td class="num">${{r.orders?fmt(r.payment/r.orders):'-'}}</td>
-      <td class="num">${{pct(disc)}}</td>
+      <td class="num">${{disc===null?'-':pct(disc)}}</td>
     </tr>`;
   }}).join('');
 }}
@@ -576,6 +659,18 @@ function renderDetail() {{
   if (pR) rows = rows.filter(r=>r.retailer===pR);
   if (st) rows = rows.filter(r=>r.match_status===st);
   if (sc) rows = rows.filter(r=>r.source_type===sc);
+
+  const detailDates = buildDailyMap(pR).map(d=>d.date);
+  const detailCutoff = detailDates.length >= 7 ? detailDates[detailDates.length-7] : detailDates[0];
+  const filteredQty = rows.reduce((a,r)=>a + Number(r.qty || 0), 0);
+  const filteredStock = rows.reduce((a,r)=>a + Math.max(0, Number(r.stock_qty || 0)), 0);
+  const weeklyQty = rows.reduce((sum,r)=>sum + (r.daily||[]).filter(d=>!detailCutoff || d.date>=detailCutoff).reduce((a,d)=>a + Number(d.qty || 0), 0), 0);
+  const stockRate = filteredQty + filteredStock ? filteredQty / (filteredQty + filteredStock) * 100 : null;
+  const weeklyRate = weeklyQty + filteredStock ? weeklyQty / (weeklyQty + filteredStock) * 100 : null;
+  document.getElementById('detailStockQty').textContent = fmt(filteredStock);
+  document.getElementById('detailStockRate').textContent = stockRate === null ? '-' : pct(stockRate);
+  document.getElementById('detailWeeklyRate').textContent = weeklyRate === null ? '-' : pct(weeklyRate);
+
   if (sb==='payment') rows.sort((a,b)=>b.payment-a.payment);
   else if (sb==='qty') rows.sort((a,b)=>b.qty-a.qty);
   else rows.sort((a,b)=>(a.standard_name||'').localeCompare(b.standard_name||''));
@@ -584,9 +679,10 @@ function renderDetail() {{
   if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
   tbody.innerHTML = rows.map(r=>{{
-    const disc    = r.gross>0?(1-r.payment/r.gross)*100:0;
-    const saleR   = r.received_qty>0? r.qty/r.received_qty*100 : 0;
-    const stockR  = r.received_qty>0? (r.received_qty-r.stock_qty)/r.received_qty*100 : 0;
+    const disc    = validDiscount(r.gross, r.payment);
+    const stockBase = Number(r.stock_qty || 0);
+    const saleR   = r.qty + stockBase > 0 ? r.qty / (r.qty + stockBase) * 100 : 0;
+    const stockR  = saleR;
     const srcB    = r.source_type==='단품'?'badge-blue':r.source_type==='세트분해'?'badge-amber':'badge-indigo';
     const mB      = r.match_status==='매칭됨'?'badge-green':'badge-red';
     const stockQty= r.stock_qty ?? '-';
@@ -604,7 +700,7 @@ function renderDetail() {{
       <td class="num">${{fmt(r.gross)}}</td>
       <td class="num" style="color:var(--blue2);font-weight:600">${{fmt(r.payment)}}</td>
       <td class="num">${{fmt(r.avg_unit)}}</td>
-      <td class="num" style="color:${{disc>50?'var(--red)':disc>30?'var(--amber)':'var(--ink2)'}}">${{pct(disc)}}</td>
+      <td class="num" style="color:${{disc!==null&&disc>50?'var(--red)':disc!==null&&disc>30?'var(--amber)':'var(--ink2)'}}">${{disc===null?'-':pct(disc)}}</td>
     </tr>`;
   }}).join('');
 }}
