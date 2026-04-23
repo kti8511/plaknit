@@ -23852,68 +23852,6 @@
     "stock_qty": 27
   },
   {
-    "retailer": "롯데온",
-    "mall_no": "",
-    "name": "롯데온 전체",
-    "color": "",
-    "size": "",
-    "qty": 0,
-    "gross": 0,
-    "payment": 393960,
-    "avg_unit": 0,
-    "orders": 6,
-    "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-01-07",
-        "qty": 0,
-        "gross": 0,
-        "payment": 59520,
-        "orders": 1
-      },
-      {
-        "date": "2026-01-12",
-        "qty": 0,
-        "gross": 0,
-        "payment": 65140,
-        "orders": 1
-      },
-      {
-        "date": "2026-03-27",
-        "qty": 0,
-        "gross": 0,
-        "payment": 87590,
-        "orders": 1
-      },
-      {
-        "date": "2026-03-28",
-        "qty": 0,
-        "gross": 0,
-        "payment": 69230,
-        "orders": 1
-      },
-      {
-        "date": "2026-03-30",
-        "qty": 0,
-        "gross": 0,
-        "payment": 67640,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-04",
-        "qty": 0,
-        "gross": 0,
-        "payment": 44840,
-        "orders": 1
-      }
-    ],
-    "match_status": "미매칭",
-    "match_sku": "",
-    "standard_name": "롯데온 전체",
-    "received_qty": 0,
-    "stock_qty": 0
-  },
-  {
     "retailer": "글로리어스워커",
     "mall_no": "4002",
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
@@ -49885,47 +49823,6 @@
     "stock_qty": 86
   },
   {
-    "retailer": "애슬러",
-    "mall_no": "",
-    "name": "애슬러 전체",
-    "color": "",
-    "size": "",
-    "qty": 0,
-    "gross": 0,
-    "payment": 145610,
-    "avg_unit": 0,
-    "orders": 3,
-    "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-03-18",
-        "qty": 0,
-        "gross": 0,
-        "payment": 37910,
-        "orders": 1
-      },
-      {
-        "date": "2026-03-28",
-        "qty": 0,
-        "gross": 0,
-        "payment": 69230,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 0,
-        "gross": 0,
-        "payment": 38470,
-        "orders": 1
-      }
-    ],
-    "match_status": "미매칭",
-    "match_sku": "",
-    "standard_name": "애슬러 전체",
-    "received_qty": 0,
-    "stock_qty": 0
-  },
-  {
     "retailer": "자사몰",
     "mall_no": "444",
     "name": "ICE LITE 벌룬 조거",
@@ -61978,6 +61875,33 @@
     "stock_qty": 54
   },
   {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "퀵드라이 메쉬 윈드브레이커 워시드블랙",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 119000,
+    "payment": 87590,
+    "avg_unit": 87590,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-03-27",
+        "qty": 1,
+        "gross": 119000,
+        "payment": 87590,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1OJM01WBK000L",
+    "standard_name": "퀵드라이 메쉬 윈드브레이커 워시드블랙 L",
+    "received_qty": 52,
+    "stock_qty": 50
+  },
+  {
     "retailer": "29cm",
     "mall_no": "3544302",
     "name": "ESSENTIAL HEAT 기모 러닝 후드",
@@ -66750,6 +66674,33 @@
     "stock_qty": 43
   },
   {
+    "retailer": "애슬러",
+    "mall_no": "",
+    "name": "미상",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 69230,
+    "avg_unit": 0,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-03-28",
+        "qty": 0,
+        "gross": 0,
+        "payment": 69230,
+        "orders": 1
+      }
+    ],
+    "match_status": "미매칭",
+    "match_sku": "",
+    "standard_name": "미상",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
     "retailer": "자사몰",
     "mall_no": "475",
     "name": "타이다잉 러닝삭스 블루",
@@ -67831,6 +67782,33 @@
     "stock_qty": 12
   },
   {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "퀵드라이 메쉬 러닝쇼츠 워시드카키",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 89000,
+    "payment": 67640,
+    "avg_unit": 67640,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-03-30",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 67640,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1PSM01WKH000L",
+    "standard_name": "퀵드라이 메쉬 러닝쇼츠 워시드카키 L",
+    "received_qty": 74,
+    "stock_qty": 71
+  },
+  {
     "retailer": "자사몰",
     "mall_no": "255",
     "name": "퀵드라이 세미오버핏 백로고 티셔츠",
@@ -68052,6 +68030,74 @@
     "standard_name": "TECH SWEAT 피그먼트 후드집업 차콜 L",
     "received_qty": 39,
     "stock_qty": 36
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "퀵드라이 그린퓨처 티셔츠",
+    "color": "",
+    "size": "",
+    "qty": 2,
+    "gross": 84000,
+    "payment": 61579,
+    "avg_unit": 30789,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-01-12",
+        "qty": 1,
+        "gross": 42000,
+        "payment": 32570,
+        "orders": 1
+      },
+      {
+        "date": "2026-03-28",
+        "qty": 1,
+        "gross": 42000,
+        "payment": 29009,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM08KGR02XL",
+    "standard_name": "_채코제에디션퀵드라이 그린퓨처 티셔츠_카키그레이-2XL",
+    "received_qty": 0,
+    "stock_qty": 51
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ICE LITE 루즈핏 카고쇼츠",
+    "color": "",
+    "size": "",
+    "qty": 2,
+    "gross": 158400,
+    "payment": 72791,
+    "avg_unit": 36395,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-01-12",
+        "qty": 1,
+        "gross": 79200,
+        "payment": 32570,
+        "orders": 1
+      },
+      {
+        "date": "2026-03-28",
+        "qty": 1,
+        "gross": 79200,
+        "payment": 40221,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2PSM01BEG000L",
+    "standard_name": "ICE LITE 루즈핏 카고쇼츠_베이지-L",
+    "received_qty": 0,
+    "stock_qty": 102
   },
   {
     "retailer": "무신사",
@@ -71218,6 +71264,33 @@
     "standard_name": "퀵드라이 투톤 그래픽 나시_BLACK_XL",
     "received_qty": 0,
     "stock_qty": 70
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 75000,
+    "payment": 59520,
+    "avg_unit": 59520,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-01-07",
+        "qty": 1,
+        "gross": 75000,
+        "payment": 59520,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD4PLM01BLK000L",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠 L",
+    "received_qty": 0,
+    "stock_qty": 27
   },
   {
     "retailer": "자사몰",
@@ -79089,6 +79162,33 @@
     "stock_qty": 50
   },
   {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 세이지",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 44840,
+    "avg_unit": 44840,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-04",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 44840,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSW01SAG0000L",
+    "standard_name": "퀵드라이 셔링 티셔츠 세이지 L",
+    "received_qty": 22,
+    "stock_qty": 19
+  },
+  {
     "retailer": "자사몰",
     "mall_no": "470",
     "name": "퀵드라이 메쉬 윈드브레이커 워시드카키",
@@ -80837,6 +80937,33 @@
     "stock_qty": 110
   },
   {
+    "retailer": "애슬러",
+    "mall_no": "",
+    "name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 54900,
+    "payment": 38470,
+    "avg_unit": 38470,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 54900,
+        "payment": 38470,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM03BLK000L",
+    "standard_name": "ICE LITE 초냉감 PLNT 오버핏 반팔티_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 142
+  },
+  {
     "retailer": "29cm",
     "mall_no": "2502299",
     "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
@@ -80862,6 +80989,33 @@
     "standard_name": "ICE LITE 벌룬 조거_BLACK_L",
     "received_qty": 0,
     "stock_qty": 282
+  },
+  {
+    "retailer": "애슬러",
+    "mall_no": "",
+    "name": "퀵드라이 9 탱크",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 59800,
+    "payment": 37910,
+    "avg_unit": 37910,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-03-18",
+        "qty": 1,
+        "gross": 59800,
+        "payment": 37910,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PC2STM01BLK000L",
+    "standard_name": "퀵드라이 9 탱크_BLACK_L",
+    "received_qty": 0,
+    "stock_qty": 83
   },
   {
     "retailer": "자사몰",
