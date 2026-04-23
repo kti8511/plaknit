@@ -56,6 +56,25 @@ PREV_YEAR_MONTHLY = [
 ]
 prev_year_monthly_json = json.dumps(PREV_YEAR_MONTHLY, ensure_ascii=False)
 
+HISTORICAL_MONTHLY = {
+    "2024": [
+        {"month": "01", "sales": 28809285},
+        {"month": "02", "sales": 36138277},
+        {"month": "03", "sales": 40961929},
+        {"month": "04", "sales": 58001498},
+        {"month": "05", "sales": 73659807},
+        {"month": "06", "sales": 92094266},
+        {"month": "07", "sales": 91388596},
+        {"month": "08", "sales": 57406405},
+        {"month": "09", "sales": 53437759},
+        {"month": "10", "sales": 29647346},
+        {"month": "11", "sales": 24042161},
+        {"month": "12", "sales": 30710000},
+    ],
+    "2025": [{"month": r["month"], "sales": r["sales2025"]} for r in PREV_YEAR_MONTHLY],
+}
+historical_monthly_json = json.dumps(HISTORICAL_MONTHLY, ensure_ascii=False)
+
 # 유통사 목록 (고정)
 RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온"]
 
@@ -202,6 +221,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <div class="nav-label"><span class="nav-dot" style="background:#3b82f6"></span>요약</div>
         <div class="nav-sub">KPI · 최근 트렌드</div>
       </div>
+      <div class="nav-item" data-tab="compare">
+        <div class="nav-label"><span class="nav-dot" style="background:#06b6d4"></span>매출 비교</div>
+        <div class="nav-sub">연도 · 월별 대비</div>
+      </div>
       <div class="nav-item" data-tab="calendar">
         <div class="nav-label"><span class="nav-dot" style="background:#6366f1"></span>일자별 매출</div>
         <div class="nav-sub">날짜별 트래킹</div>
@@ -277,6 +300,37 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
           </table>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- COMPARE TAB -->
+  <div id="compare" class="tab-panel">
+    <div class="panel">
+      <div class="panel-hd"><span class="panel-title">매출 비교</span><span class="panel-meta">2024 · 2025 · 2026 월별 대비</span></div>
+      <div class="toolbar">
+        <select id="compareBaseYear"></select>
+        <select id="compareTargetYear"></select>
+        <select id="compareMonth">
+          <option value="">전체 월</option>
+          <option value="01">1월</option><option value="02">2월</option><option value="03">3월</option>
+          <option value="04">4월</option><option value="05">5월</option><option value="06">6월</option>
+          <option value="07">7월</option><option value="08">8월</option><option value="09">9월</option>
+          <option value="10">10월</option><option value="11">11월</option><option value="12">12월</option>
+        </select>
+      </div>
+      <div class="sum-strip">
+        <div class="sum-card"><div class="sum-label" id="compareBaseLabel">기준연도 매출</div><div class="sum-value" id="compareBaseSales">0</div></div>
+        <div class="sum-card"><div class="sum-label" id="compareTargetLabel">비교연도 매출</div><div class="sum-value" id="compareTargetSales">0</div></div>
+        <div class="sum-card"><div class="sum-label">대비 신장률</div><div class="sum-value" id="compareGrowth">-</div></div>
+      </div>
+      <div class="chart-box" style="height:260px;margin-bottom:14px"><canvas id="compareChart"></canvas></div>
+      <div class="table-wrap" style="max-height:360px">
+        <table>
+          <thead><tr><th>월</th><th class="num" id="compareBaseHead">기준연도</th><th class="num" id="compareTargetHead">비교연도</th><th class="num">차이</th><th class="num">신장률</th></tr></thead>
+          <tbody id="compareRows"></tbody>
+        </table>
+      </div>
+      <div class="foot">2024/2025는 예산 파일의 실매출 월합계 기준이며, 2026은 현재 업로드된 일별 판매 데이터 기준입니다.</div>
     </div>
   </div>
 
@@ -387,6 +441,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 const rawRows = {rows_json};
 const RETAILERS = {json.dumps(RETAILERS, ensure_ascii=False)};
 const PREV_YEAR_MONTHLY = {prev_year_monthly_json};
+const HISTORICAL_MONTHLY = {historical_monthly_json};
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
@@ -457,6 +512,27 @@ rawRows.forEach(r => {{
   }}
 }});
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
+
+function buildMonthlySalesByYear() {{
+  const byYear = {{}};
+  Object.entries(HISTORICAL_MONTHLY).forEach(([year, rows]) => {{
+    byYear[year] = {{}};
+    rows.forEach(r => byYear[year][r.month] = Number(r.sales || 0));
+  }});
+  rawRows.forEach(r => {{
+    (r.daily || []).forEach(d => {{
+      const year = d.date.slice(0,4);
+      const month = d.date.slice(5,7);
+      if (!byYear[year]) byYear[year] = {{}};
+      byYear[year][month] = (byYear[year][month] || 0) + Number(d.payment || 0);
+    }});
+  }});
+  return byYear;
+}}
+
+const monthlyByYear = buildMonthlySalesByYear();
+const compareYears = Object.keys(monthlyByYear).sort();
+let compareChartInst = null;
 
 // ── Chart 기본값 ───────────────────────────────────────────
 Chart.defaults.color = '#8a94a6';
@@ -562,6 +638,83 @@ const scl  = {{x:{{grid:{{color:'#e2e6ed'}},ticks:{{maxRotation:0}}}},y:{{grid:{
 }})();
 
 // ── CALENDAR TAB ───────────────────────────────────────────
+// 매출 비교 탭
+function initCompareControls() {{
+  const base = document.getElementById('compareBaseYear');
+  const target = document.getElementById('compareTargetYear');
+  const options = compareYears.map(y => `<option value="${{y}}">${{y}}년</option>`).join('');
+  base.innerHTML = options;
+  target.innerHTML = options;
+  base.value = compareYears.includes('2026') ? '2026' : compareYears[compareYears.length - 1];
+  target.value = compareYears.includes('2025') ? '2025' : compareYears[0];
+}}
+
+function compareValue(year, month) {{
+  return Number(monthlyByYear[year]?.[month] || 0);
+}}
+
+function renderCompare() {{
+  const baseYear = document.getElementById('compareBaseYear').value;
+  const targetYear = document.getElementById('compareTargetYear').value;
+  const selectedMonth = document.getElementById('compareMonth').value;
+  const months = selectedMonth
+    ? [selectedMonth]
+    : Array.from(new Set([
+        ...Object.keys(monthlyByYear[baseYear] || {{}}),
+        ...Object.keys(monthlyByYear[targetYear] || {{}})
+      ])).sort();
+
+  const rows = months.map(month => {{
+    const base = compareValue(baseYear, month);
+    const target = compareValue(targetYear, month);
+    const diff = base - target;
+    const growth = target ? diff / target * 100 : null;
+    return {{month, base, target, diff, growth}};
+  }});
+
+  const baseTotal = rows.reduce((a,r)=>a+r.base,0);
+  const targetTotal = rows.reduce((a,r)=>a+r.target,0);
+  const totalGrowth = targetTotal ? (baseTotal - targetTotal) / targetTotal * 100 : null;
+  const scope = selectedMonth ? `${{Number(selectedMonth)}}월` : '전체 월';
+
+  document.getElementById('compareBaseLabel').textContent = `${{baseYear}}년 ${{scope}} 매출`;
+  document.getElementById('compareTargetLabel').textContent = `${{targetYear}}년 ${{scope}} 매출`;
+  document.getElementById('compareBaseHead').textContent = `${{baseYear}}년`;
+  document.getElementById('compareTargetHead').textContent = `${{targetYear}}년`;
+  document.getElementById('compareBaseSales').textContent = fmt(baseTotal);
+  document.getElementById('compareTargetSales').textContent = fmt(targetTotal);
+  document.getElementById('compareGrowth').textContent = totalGrowth === null ? '-' : pct(totalGrowth);
+  document.getElementById('compareGrowth').style.color = (totalGrowth ?? 0) >= 0 ? 'var(--teal)' : 'var(--red)';
+
+  if (compareChartInst) compareChartInst.destroy();
+  compareChartInst = new Chart(document.getElementById('compareChart'), {{
+    type:'bar',
+    data:{{
+      labels:rows.map(r=>Number(r.month)+'월'),
+      datasets:[
+        {{label:`${{baseYear}}년`,data:rows.map(r=>r.base),backgroundColor:'rgba(59,130,246,.22)',borderColor:'#3b82f6',borderWidth:1.5,borderRadius:5}},
+        {{label:`${{targetYear}}년`,data:rows.map(r=>r.target),backgroundColor:'rgba(16,185,129,.18)',borderColor:'#10b981',borderWidth:1.5,borderRadius:5}}
+      ]
+    }},
+    options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:true,position:'bottom'}},tooltip:ttip}},scales:scl}}
+  }});
+
+  document.getElementById('compareRows').innerHTML = rows.map(r=>`
+    <tr>
+      <td class="td-main">${{Number(r.month)}}월</td>
+      <td class="num">${{fmt(r.base)}}</td>
+      <td class="num">${{fmt(r.target)}}</td>
+      <td class="num" style="color:${{r.diff>=0?'var(--teal)':'var(--red)'}}">${{fmt(r.diff)}}</td>
+      <td class="num" style="color:${{(r.growth ?? 0)>=0?'var(--teal)':'var(--red)'}}">${{r.growth===null?'-':pct(r.growth)}}</td>
+    </tr>
+  `).join('');
+}}
+
+initCompareControls();
+['compareBaseYear','compareTargetYear','compareMonth'].forEach(id=>{{
+  document.getElementById(id).addEventListener('change',renderCompare);
+}});
+
 let dcInst = null;
 let calRetailer = '';
 
@@ -717,6 +870,7 @@ document.querySelectorAll('.nav-item[data-tab]').forEach(btn=>{{
     btn.classList.add('active');
     const tab = btn.dataset.tab;
     document.getElementById(tab).classList.add('active');
+    if(tab==='compare')   renderCompare();
     if(tab==='calendar')  renderDaily();
     if(tab==='retailer')  renderRetailer();
     if(tab==='detail')    renderDetail();
