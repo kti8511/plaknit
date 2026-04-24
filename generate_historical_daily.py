@@ -10,6 +10,7 @@ import openpyxl
 OUT_FILE = Path("historical_daily.json")
 
 FILE_2025 = Path(r"F:/★ 2025 일일판매정리(12월).xlsx")
+FILE_2025_MAIN = Path(r"\\192.168.0.4\woojoo\플래니트\1.매출정리, 프로모션\★ 2025 일일판매정리_1104.xlsx")
 FILE_2024 = Path(r"\\192.168.0.4\woojoo\플래니트\1.매출정리, 프로모션\2024 일일판매정리\★2024_일일판매정리_24.12.31.xlsx")
 FILE_2023 = Path(r"\\192.168.0.4\woojoo\플래니트\1.매출정리, 프로모션\2023 일일판매정리\★2023_일일판매정리.xlsx")
 
@@ -206,6 +207,7 @@ def main():
     data = {}
     merge_year_data(data, parse_2023_sheet(FILE_2023))
     merge_year_data(data, parse_2024_style_sheet(FILE_2024, "일별매출정리", 2024, date(2024, 1, 1)))
+    merge_year_data(data, parse_2024_style_sheet(FILE_2025_MAIN, "일별매출정리", 2025, date(2025, 1, 1)))
     merge_year_data(data, parse_2024_style_sheet(FILE_2025, "일별매출정리", 2025, date(2025, 12, 1)))
 
     OUT_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
