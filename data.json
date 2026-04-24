@@ -64842,33 +64842,6 @@
     "stock_qty": 43
   },
   {
-    "retailer": "롯데온",
-    "mall_no": "",
-    "name": "미상",
-    "color": "",
-    "size": "",
-    "qty": 0,
-    "gross": 0,
-    "payment": 69230,
-    "avg_unit": 0,
-    "orders": 1,
-    "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-03-28",
-        "qty": 0,
-        "gross": 0,
-        "payment": 69230,
-        "orders": 1
-      }
-    ],
-    "match_status": "미매칭",
-    "match_sku": "",
-    "standard_name": "미상",
-    "received_qty": 0,
-    "stock_qty": 0
-  },
-  {
     "retailer": "자사몰",
     "mall_no": "475",
     "name": "타이다잉 러닝삭스 블루",
