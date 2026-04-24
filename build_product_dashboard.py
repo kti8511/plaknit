@@ -30,13 +30,20 @@ data.json 구조:
 import json, datetime, pathlib
 
 DATA_FILE = pathlib.Path("data.json")
+HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
 OUT_FILE  = pathlib.Path("index.html")
 
 with DATA_FILE.open(encoding="utf-8") as f:
     rows = json.load(f)
 
+historical_daily = {}
+if HISTORICAL_DAILY_FILE.exists():
+    with HISTORICAL_DAILY_FILE.open(encoding="utf-8") as f:
+        historical_daily = json.load(f)
+
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 rows_json = json.dumps(rows, ensure_ascii=False)
+historical_daily_json = json.dumps(historical_daily, ensure_ascii=False)
 
 # 2026 플래니트 예산.xlsx > 2025 실매출 > 월별 합계(row 32) 기준.
 # GitHub Actions 환경에서도 재생성 가능하도록 기준값은 스크립트에 고정한다.
@@ -74,6 +81,18 @@ HISTORICAL_MONTHLY = {
     "2025": [{"month": r["month"], "sales": r["sales2025"]} for r in PREV_YEAR_MONTHLY],
 }
 historical_monthly_json = json.dumps(HISTORICAL_MONTHLY, ensure_ascii=False)
+
+historical_daily_monthly = {}
+for year, items in historical_daily.items():
+    month_map = {}
+    for item in items:
+        month = item["date"][5:7]
+        month_map[month] = month_map.get(month, 0) + int(item.get("payment", 0))
+    historical_daily_monthly[year] = [
+        {"month": month, "sales": month_map[month]}
+        for month in sorted(month_map)
+    ]
+historical_daily_monthly_json = json.dumps(historical_daily_monthly, ensure_ascii=False)
 
 # 유통사 목록 (고정)
 RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온"]
@@ -352,6 +371,12 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       </div>
 
       <div class="toolbar">
+        <select id="calYear">
+          <option value="2026">2026년</option>
+          <option value="2025">2025년</option>
+          <option value="2024">2024년</option>
+          <option value="2023">2023년</option>
+        </select>
         <input id="dateStart" type="date"/>
         <input id="dateEnd" type="date"/>
         <button class="btn-sm" id="clearDate">전체 초기화</button>
@@ -376,6 +401,12 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
     <div class="panel">
       <div class="panel-hd"><span class="panel-title">유통사별 매출</span></div>
       <div class="toolbar">
+        <select id="retailerYear">
+          <option value="2026">2026년</option>
+          <option value="2025">2025년</option>
+          <option value="2024">2024년</option>
+          <option value="2023">2023년</option>
+        </select>
         <select id="retailerFilter">
           <option value="">전체 유통사</option>
           <option>자사몰</option><option>무신사</option><option>29cm</option>
@@ -442,6 +473,8 @@ const rawRows = {rows_json};
 const RETAILERS = {json.dumps(RETAILERS, ensure_ascii=False)};
 const PREV_YEAR_MONTHLY = {prev_year_monthly_json};
 const HISTORICAL_MONTHLY = {historical_monthly_json};
+const HISTORICAL_DAILY = {historical_daily_json};
+const HISTORICAL_DAILY_MONTHLY = {historical_daily_monthly_json};
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
@@ -498,6 +531,14 @@ function buildDailyMap(retailerFilter) {{
   return Object.values(m).sort((a,b)=>a.date.localeCompare(b.date));
 }}
 
+function buildHistoricalDailyMap(yearFilter, retailerFilter) {{
+  const rows = HISTORICAL_DAILY[yearFilter] || [];
+  return rows.map(r => {{
+    const payment = retailerFilter ? Number((r.retailers || {{}})[retailerFilter] || 0) : Number(r.payment || 0);
+    return {{date:r.date,payment,gross:0,orders:0,qty:0}};
+  }}).filter(r => !retailerFilter || r.payment !== 0);
+}}
+
 // ── 유통사 집계 ────────────────────────────────────────────
 const retailerMap = {{}};
 rawRows.forEach(r => {{
@@ -513,11 +554,28 @@ rawRows.forEach(r => {{
 }});
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
 
+function buildHistoricalRetailerSummary(yearFilter) {{
+  const totals = {{}};
+  (HISTORICAL_DAILY[yearFilter] || []).forEach(day => {{
+    Object.entries(day.retailers || {{}}).forEach(([retailer, payment]) => {{
+      if (!totals[retailer]) totals[retailer] = {{retailer, payment:0, gross:0, orders:0, qty:0, validPayment:0, validGross:0}};
+      totals[retailer].payment += Number(payment || 0);
+    }});
+  }});
+  return Object.values(totals).sort((a,b)=>b.payment-a.payment);
+}}
+
 function buildMonthlySalesByYear() {{
   const byYear = {{}};
   Object.entries(HISTORICAL_MONTHLY).forEach(([year, rows]) => {{
     byYear[year] = {{}};
     rows.forEach(r => byYear[year][r.month] = Number(r.sales || 0));
+  }});
+  Object.entries(HISTORICAL_DAILY_MONTHLY).forEach(([year, rows]) => {{
+    if (!byYear[year]) byYear[year] = {{}};
+    rows.forEach(r => {{
+      if (!byYear[year][r.month]) byYear[year][r.month] = Number(r.sales || 0);
+    }});
   }});
   rawRows.forEach(r => {{
     (r.daily || []).forEach(d => {{
@@ -717,16 +775,17 @@ initCompareControls();
 
 let dcInst = null;
 let calRetailer = '';
+let calYear = '2026';
 
 function renderDaily() {{
   const s = document.getElementById('dateStart').value;
   const e = document.getElementById('dateEnd').value;
-  const allDaily = buildDailyMap(calRetailer);
+  const allDaily = calYear === '2026' ? buildDailyMap(calRetailer) : buildHistoricalDailyMap(calYear, calRetailer);
   const f = allDaily.filter(d=>(!s||d.date>=s)&&(!e||d.date<=e));
 
   document.getElementById('dayPayment').textContent = fmt(f.reduce((a,d)=>a+d.payment,0));
-  document.getElementById('dayOrders').textContent  = fmt(f.reduce((a,d)=>a+d.orders,0));
-  document.getElementById('dayQty').textContent     = fmt(f.reduce((a,d)=>a+d.qty,0));
+  document.getElementById('dayOrders').textContent  = calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.orders,0)) : '-';
+  document.getElementById('dayQty').textContent     = calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.qty,0)) : '-';
 
   if (dcInst) dcInst.destroy();
   dcInst = new Chart(document.getElementById('dailyChart'),{{
@@ -740,10 +799,10 @@ function renderDaily() {{
     : f.map(d=>`<tr>
         <td class="td-main td-mono">${{d.date}}</td>
         <td class="num">${{fmt(d.payment)}}</td>
-        <td class="num">${{fmt(d.gross)}}</td>
-        <td class="num">${{fmt(d.orders)}}</td>
-        <td class="num">${{fmt(d.qty)}}</td>
-        <td class="num">${{d.orders?fmt(d.payment/d.orders):'-'}}</td>
+        <td class="num">${{calYear === '2026' ? fmt(d.gross) : '-'}}</td>
+        <td class="num">${{calYear === '2026' ? fmt(d.orders) : '-'}}</td>
+        <td class="num">${{calYear === '2026' ? fmt(d.qty) : '-'}}</td>
+        <td class="num">${{calYear === '2026' && d.orders ? fmt(d.payment/d.orders) : '-'}}</td>
       </tr>`).join('');
 }}
 
@@ -756,9 +815,15 @@ document.querySelectorAll('#calRetailerTabs .sub-tab').forEach(btn => {{
     renderDaily();
   }});
 }});
+document.getElementById('calYear').addEventListener('change', e => {{
+  calYear = e.target.value;
+  renderDaily();
+}});
 document.getElementById('dateStart').addEventListener('change', renderDaily);
 document.getElementById('dateEnd').addEventListener('change', renderDaily);
 document.getElementById('clearDate').addEventListener('click', () => {{
+  document.getElementById('calYear').value = '2026';
+  calYear = '2026';
   document.getElementById('dateStart').value = '';
   document.getElementById('dateEnd').value = '';
   renderDaily();
@@ -766,10 +831,12 @@ document.getElementById('clearDate').addEventListener('click', () => {{
 
 // ── RETAILER TAB ───────────────────────────────────────────
 let rcInst = null;
+let retailerYear = '2026';
 function renderRetailer() {{
   const colors = ['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#ec4899'];
   const filterVal = document.getElementById('retailerFilter').value;
-  const data = filterVal ? retailerAll.filter(r=>r.retailer===filterVal) : retailerAll;
+  const baseData = retailerYear === '2026' ? retailerAll : buildHistoricalRetailerSummary(retailerYear);
+  const data = filterVal ? baseData.filter(r=>r.retailer===filterVal) : baseData;
 
   if (rcInst) rcInst.destroy();
   rcInst = new Chart(document.getElementById('retailerChart'),{{
@@ -782,21 +849,28 @@ function renderRetailer() {{
   }});
 
   document.getElementById('retailerRows').innerHTML = data.map(r=>{{
-    const disc = r.validGross>0?(1-r.validPayment/r.validGross)*100:null;
+    const disc = retailerYear === '2026' && r.validGross>0?(1-r.validPayment/r.validGross)*100:null;
     return `<tr>
       <td class="td-main"><span class="badge badge-blue">${{r.retailer}}</span></td>
       <td class="num">${{fmt(r.payment)}}</td>
-      <td class="num">${{fmt(r.gross)}}</td>
-      <td class="num">${{fmt(r.orders)}}</td>
-      <td class="num">${{fmt(r.qty)}}</td>
-      <td class="num">${{r.orders?fmt(r.payment/r.orders):'-'}}</td>
+      <td class="num">${{retailerYear === '2026' ? fmt(r.gross) : '-'}}</td>
+      <td class="num">${{retailerYear === '2026' ? fmt(r.orders) : '-'}}</td>
+      <td class="num">${{retailerYear === '2026' ? fmt(r.qty) : '-'}}</td>
+      <td class="num">${{retailerYear === '2026' && r.orders?fmt(r.payment/r.orders):'-'}}</td>
       <td class="num">${{disc===null?'-':pct(disc)}}</td>
     </tr>`;
   }}).join('');
 }}
+document.getElementById('retailerYear').addEventListener('change', e => {{
+  retailerYear = e.target.value;
+  renderRetailer();
+}});
 document.getElementById('retailerFilter').addEventListener('change', renderRetailer);
 document.getElementById('clearRetailer').addEventListener('click', ()=>{{
-  document.getElementById('retailerFilter').value=''; renderRetailer();
+  document.getElementById('retailerYear').value='2026';
+  retailerYear = '2026';
+  document.getElementById('retailerFilter').value='';
+  renderRetailer();
 }});
 
 // ── DETAIL TAB ─────────────────────────────────────────────
