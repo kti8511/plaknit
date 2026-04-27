@@ -701,6 +701,41 @@ const scl  = {{x:{{grid:{{color:'#e2e6ed'}},ticks:{{maxRotation:0}}}},y:{{grid:{
     options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:false}},tooltip:ttip,title:{{display:true,text:'일별 판매수량',color:'#4a5568',padding:{{bottom:8}}}}}},scales:scl}}
   }});
 
+  const retailerPalette = ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#06b6d4','#64748b'];
+  const recentDates = recent3.map(d => d.date);
+  const retailerLineData = RETAILERS.map((retailer, idx) => {{
+    const retailerDailyMap = Object.fromEntries(
+      buildDailyMap(retailer).map(d => [d.date, Number(d.payment || 0)])
+    );
+    return {{
+      label: retailer,
+      data: recentDates.map(date => retailerDailyMap[date] || 0),
+      borderColor: retailerPalette[idx % retailerPalette.length],
+      backgroundColor: retailerPalette[idx % retailerPalette.length],
+      borderWidth: 2,
+      pointRadius: 2,
+      pointHoverRadius: 5,
+      tension: 0.35,
+      fill: false
+    }};
+  }}).filter(ds => ds.data.some(v => v !== 0));
+
+  new Chart(document.getElementById('recentRetailerChart'), {{
+    type:'line',
+    data:{{labels, datasets:retailerLineData}},
+    options:{{
+      responsive:true,
+      maintainAspectRatio:false,
+      interaction:{{mode:'index',intersect:false}},
+      plugins:{{
+        legend:{{display:true, position:'bottom', labels:{{usePointStyle:true, boxWidth:8, boxHeight:8}}}},
+        tooltip:ttip,
+        title:{{display:true,text:'유통사별 일별 매출',color:'#4a5568',padding:{{bottom:8}}}}
+      }},
+      scales:scl
+    }}
+  }});
+
   // ── 최근 7일 상위 상품 ─────────────────────────────────
   const monthMap = {{}};
   allDaily.forEach(d => {{
