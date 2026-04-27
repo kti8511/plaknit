@@ -12491,11 +12491,11 @@
     "name": "퀵드라이 셔링 티셔츠 세이지",
     "color": "",
     "size": "M",
-    "qty": 16,
-    "gross": 944000,
-    "payment": 742824,
-    "avg_unit": 46426,
-    "orders": 13,
+    "qty": 19,
+    "gross": 1121000,
+    "payment": 855225,
+    "avg_unit": 45012,
+    "orders": 16,
     "source_type": "단품",
     "daily": [
       {
@@ -12594,6 +12594,27 @@
         "qty": 1,
         "gross": 59000,
         "payment": 29486,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 43707,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 36092,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 32602,
         "orders": 1
       }
     ],
@@ -16945,11 +16966,11 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "XL",
-    "qty": 14,
-    "gross": 1106000,
-    "payment": 577706,
-    "avg_unit": 41264,
-    "orders": 5,
+    "qty": 15,
+    "gross": 1185000,
+    "payment": 621360,
+    "avg_unit": 41424,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -16992,6 +17013,13 @@
         "qty": 3,
         "gross": 237000,
         "payment": 88458,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 43654,
         "orders": 1
       }
     ],
@@ -41272,11 +41300,11 @@
     "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
     "color": "차콜",
     "size": "XL",
-    "qty": 3,
-    "gross": 159200,
-    "payment": 187510,
-    "avg_unit": 62503,
-    "orders": 3,
+    "qty": 4,
+    "gross": 205100,
+    "payment": 215589,
+    "avg_unit": 53897,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -41298,6 +41326,13 @@
         "qty": 0,
         "gross": 39800,
         "payment": 0,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 45900,
+        "payment": 28079,
         "orders": 1
       }
     ],
@@ -43200,11 +43235,11 @@
     "name": "퀵드라이 투인원 러닝쇼츠 그레이",
     "color": "",
     "size": "L",
-    "qty": 3,
-    "gross": 267000,
-    "payment": 178793,
-    "avg_unit": 59597,
-    "orders": 3,
+    "qty": 5,
+    "gross": 445000,
+    "payment": 293902,
+    "avg_unit": 58780,
+    "orders": 5,
     "source_type": "단품",
     "daily": [
       {
@@ -43226,6 +43261,20 @@
         "qty": 1,
         "gross": 89000,
         "payment": 43707,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 65930,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 49179,
         "orders": 1
       }
     ],
@@ -49625,7 +49674,7 @@
     "qty": 3,
     "gross": 237000,
     "payment": 146084,
-    "avg_unit": 48694,
+    "avg_unit": 48695,
     "orders": 3,
     "source_type": "단품",
     "daily": [
@@ -49649,6 +49698,13 @@
         "gross": 79000,
         "payment": 43707,
         "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0
       }
     ],
     "match_status": "매칭됨",
@@ -53346,11 +53402,11 @@
     "name": "퀵드라이 세미 오버핏 티셔츠",
     "color": "블랙",
     "size": "XXL",
-    "qty": 3,
-    "gross": 179400,
-    "payment": 125108,
-    "avg_unit": 41702,
-    "orders": 4,
+    "qty": 5,
+    "gross": 255400,
+    "payment": 181408,
+    "avg_unit": 36282,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -53380,6 +53436,13 @@
         "gross": 0,
         "payment": 0,
         "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 2,
+        "gross": 76000,
+        "payment": 56300,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
@@ -54245,11 +54308,11 @@
     "name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜",
     "color": "",
     "size": "XL",
-    "qty": 2,
-    "gross": 138000,
-    "payment": 119948,
-    "avg_unit": 59974,
-    "orders": 2,
+    "qty": 3,
+    "gross": 207000,
+    "payment": 162158,
+    "avg_unit": 54053,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -54264,6 +54327,13 @@
         "qty": 1,
         "gross": 69000,
         "payment": 59841,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 42210,
         "orders": 1
       }
     ],
@@ -54531,11 +54601,11 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "2XL",
-    "qty": 2,
-    "gross": 158000,
-    "payment": 112577,
-    "avg_unit": 56288,
-    "orders": 2,
+    "qty": 3,
+    "gross": 237000,
+    "payment": 156231,
+    "avg_unit": 52077,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -54550,6 +54620,13 @@
         "qty": 1,
         "gross": 79000,
         "payment": 67324,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 43654,
         "orders": 1
       }
     ],
@@ -60925,11 +61002,11 @@
     "name": "퀵드라이 세미 오버핏 티셔츠",
     "color": "화이트",
     "size": "M",
-    "qty": 2,
-    "gross": 119600,
-    "payment": 87415,
-    "avg_unit": 43707,
-    "orders": 1,
+    "qty": 3,
+    "gross": 157600,
+    "payment": 115565,
+    "avg_unit": 38522,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -60937,6 +61014,13 @@
         "qty": 2,
         "gross": 119600,
         "payment": 87415,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 38000,
+        "payment": 28150,
         "orders": 1
       }
     ],
@@ -62231,11 +62315,11 @@
     "name": "퀵드라이 그린퓨처 티셔츠",
     "color": "화이트",
     "size": "L",
-    "qty": 2,
-    "gross": 119600,
-    "payment": 81775,
-    "avg_unit": 40887,
-    "orders": 2,
+    "qty": 3,
+    "gross": 159400,
+    "payment": 111258,
+    "avg_unit": 37086,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -62250,6 +62334,13 @@
         "qty": 1,
         "gross": 59800,
         "payment": 50050,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 29483,
         "orders": 1
       }
     ],
@@ -63949,11 +64040,11 @@
     "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
     "color": "라이트그레이",
     "size": "XL",
-    "qty": 1,
-    "gross": 39800,
-    "payment": 71128,
-    "avg_unit": 71128,
-    "orders": 1,
+    "qty": 2,
+    "gross": 85700,
+    "payment": 99207,
+    "avg_unit": 49604,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -63961,6 +64052,13 @@
         "qty": 1,
         "gross": 39800,
         "payment": 71128,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 45900,
+        "payment": 28079,
         "orders": 1
       }
     ],
@@ -66009,11 +66107,11 @@
     "name": "퀵드라이 피그먼트 오버핏 반팔티",
     "color": "차콜",
     "size": "3XL",
-    "qty": 1,
-    "gross": 45900,
-    "payment": 67324,
-    "avg_unit": 67324,
-    "orders": 1,
+    "qty": 2,
+    "gross": 100800,
+    "payment": 97659,
+    "avg_unit": 48830,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -66021,6 +66119,13 @@
         "qty": 1,
         "gross": 45900,
         "payment": 67324,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 54900,
+        "payment": 30335,
         "orders": 1
       }
     ],
@@ -69101,11 +69206,11 @@
     "name": "퀵드라이 우먼즈 베이직 티셔츠 라벤더",
     "color": "",
     "size": "S",
-    "qty": 1,
-    "gross": 43000,
-    "payment": 60107,
-    "avg_unit": 60107,
-    "orders": 1,
+    "qty": 2,
+    "gross": 86000,
+    "payment": 91961,
+    "avg_unit": 45980,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -69113,6 +69218,13 @@
         "qty": 1,
         "gross": 43000,
         "payment": 60107,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 43000,
+        "payment": 31854,
         "orders": 1
       }
     ],
@@ -69236,11 +69348,11 @@
     "name": "TECH SWEAT 피그먼트 스웻쇼츠 레드",
     "color": "",
     "size": "XL",
-    "qty": 1,
-    "gross": 69000,
-    "payment": 59841,
-    "avg_unit": 59841,
-    "orders": 1,
+    "qty": 2,
+    "gross": 138000,
+    "payment": 102051,
+    "avg_unit": 51026,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -69248,6 +69360,13 @@
         "qty": 1,
         "gross": 69000,
         "payment": 59841,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 42210,
         "orders": 1
       }
     ],
@@ -76329,11 +76448,11 @@
     "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
     "color": "블랙",
     "size": "2XL",
-    "qty": 2,
-    "gross": 79600,
-    "payment": 47726,
-    "avg_unit": 23863,
-    "orders": 3,
+    "qty": 4,
+    "gross": 175600,
+    "payment": 106453,
+    "avg_unit": 26613,
+    "orders": 5,
     "source_type": "단품",
     "daily": [
       {
@@ -76349,6 +76468,13 @@
         "gross": 0,
         "payment": 0,
         "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 2,
+        "gross": 96000,
+        "payment": 58727,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
@@ -81945,11 +82071,11 @@
     "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
     "color": "블랙",
     "size": "3XL",
-    "qty": 1,
-    "gross": 39000,
-    "payment": 35161,
-    "avg_unit": 35161,
-    "orders": 1,
+    "qty": 2,
+    "gross": 87000,
+    "payment": 61685,
+    "avg_unit": 30842,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -81957,6 +82083,13 @@
         "qty": 1,
         "gross": 39000,
         "payment": 35161,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 48000,
+        "payment": 26524,
         "orders": 1
       }
     ],
@@ -89427,11 +89560,11 @@
     "name": "퀵드라이 세미오버핏 아치로고 티셔츠",
     "color": "블랙",
     "size": "XL",
-    "qty": 1,
-    "gross": 39800,
-    "payment": 20400,
-    "avg_unit": 20400,
-    "orders": 1,
+    "qty": 2,
+    "gross": 79600,
+    "payment": 44746,
+    "avg_unit": 22373,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -89439,6 +89572,13 @@
         "qty": 1,
         "gross": 39800,
         "payment": 20400,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 24346,
         "orders": 1
       }
     ],
@@ -92450,11 +92590,11 @@
     "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
     "color": "화이트",
     "size": "2XL",
-    "qty": 0,
-    "gross": 0,
-    "payment": 0,
-    "avg_unit": 0,
-    "orders": 1,
+    "qty": 2,
+    "gross": 96000,
+    "payment": 58727,
+    "avg_unit": 29364,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -92463,6 +92603,13 @@
         "gross": 0,
         "payment": 0,
         "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 2,
+        "gross": 96000,
+        "payment": 58727,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
@@ -93806,5 +93953,329 @@
     "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
     "received_qty": 0,
     "stock_qty": 86
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 43707,
+    "avg_unit": 43707,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 43707,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트 L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ICE LITE 릴렉스드 조거",
+    "color": "블랙",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 75800,
+    "payment": 56152,
+    "avg_unit": 56152,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 75800,
+        "payment": 56152,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "ICE LITE 릴렉스드 조거_블랙-XXL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ICE LITE 릴렉스드 조거",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 75800,
+    "payment": 56152,
+    "avg_unit": 56152,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 75800,
+        "payment": 56152,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "ICE LITE 릴렉스드 조거_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 마운틴 세미오버핏 반팔티",
+    "color": "다크그레이",
+    "size": "XL",
+    "qty": 1,
+    "gross": 39800,
+    "payment": 29483,
+    "avg_unit": 29483,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 29483,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 나시",
+    "color": "오렌지",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 39000,
+    "payment": 28891,
+    "avg_unit": 28891,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 39000,
+        "payment": 28891,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 나시_오렌지-XXL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 나시",
+    "color": "화이트",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 39000,
+    "payment": 28891,
+    "avg_unit": 28891,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 39000,
+        "payment": 28891,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 나시_화이트-XXL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ICE LITE 러닝캡 블랙",
+    "color": "",
+    "size": "",
+    "qty": -1,
+    "gross": -49000,
+    "payment": -36300,
+    "avg_unit": 36300,
+    "orders": 0,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": -1,
+        "gross": -49000,
+        "payment": -36300,
+        "orders": 0
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "ICE LITE 러닝캡 블랙",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜",
+    "color": "",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 69000,
+    "payment": 42210,
+    "avg_unit": 42210,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 42210,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜 2XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 헤비쭈리 쇼츠",
+    "color": "멜란지그레이",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 32602,
+    "avg_unit": 32602,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 32602,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 헤비쭈리 쇼츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 32602,
+    "avg_unit": 32602,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 32602,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)",
+    "color": "차콜",
+    "size": "L",
+    "qty": 1,
+    "gross": 48000,
+    "payment": 26524,
+    "avg_unit": 26524,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 48000,
+        "payment": 26524,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)_차콜-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (블랙)",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 48000,
+    "payment": 26524,
+    "avg_unit": 26524,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 48000,
+        "payment": 26524,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (블랙)_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]

@@ -541,6 +541,8 @@ function buildDailyMap(retailerFilter) {{
       if (retailerFilter && r.retailer !== retailerFilter) return;
       if (!m[day.date]) m[day.date] = {{date:day.date,payment:0,gross:0,orders:0,qty:0}};
       m[day.date].payment += Number(r.payment || 0);
+      if (r.orders !== undefined) m[day.date].orders = Number(r.orders || 0);
+      if (r.qty !== undefined) m[day.date].qty = Number(r.qty || 0);
     }});
   }});
   return Object.values(m).sort((a,b)=>a.date.localeCompare(b.date));
@@ -571,6 +573,25 @@ MANUAL_SALES.forEach(day => {{
   (day.retailers || []).forEach(r => {{
     if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0}};
     retailerMap[r.retailer].payment += Number(r.payment || 0);
+  }});
+}});
+MANUAL_SALES.forEach(day => {{
+  (day.retailers || []).forEach(r => {{
+    if (r.orders === undefined && r.qty === undefined) return;
+    let existingOrders = 0;
+    let existingQty = 0;
+    rawRows.forEach(row => {{
+      if (row.retailer !== r.retailer) return;
+      (row.daily || []).forEach(d => {{
+        if (d.date === day.date) {{
+          existingOrders += Number(d.orders || 0);
+          existingQty += Number(d.qty || 0);
+        }}
+      }});
+    }});
+    if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0}};
+    if (r.orders !== undefined) retailerMap[r.retailer].orders += Number(r.orders || 0) - existingOrders;
+    if (r.qty !== undefined) retailerMap[r.retailer].qty += Number(r.qty || 0) - existingQty;
   }});
 }});
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
