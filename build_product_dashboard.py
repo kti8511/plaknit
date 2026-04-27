@@ -218,6 +218,8 @@ table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
 thead{{position:sticky;top:0;z-index:2;}}
 th{{background:#f8fafc;color:var(--ink3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}}
 td{{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:middle;}}
+.table-filter-row td{{position:sticky;top:37px;background:#fff;z-index:1;padding:6px 8px;}}
+.table-filter-row input,.table-filter-row select{{width:100%;height:28px;border:1px solid var(--border);border-radius:6px;padding:0 7px;font-size:11px;color:var(--ink2);background:#fff;}}
 tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 .num{{text-align:right;font-family:'DM Mono',monospace;font-size:12px;}}
 .td-main{{color:var(--ink);font-weight:600;}} .td-mono{{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--ink3);}}
@@ -285,7 +287,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
     <div class="kpi"><div class="kpi-label">평균 판매단가</div><div class="kpi-value" id="kpiAvgUnit">-</div><div class="kpi-note">실판매금액 / 수량</div><div class="kpi-bar"><div id="kpiAvgBar" style="width:48%;background:#8b5cf6"></div></div></div>
     <div class="kpi"><div class="kpi-label">평균 할인율</div><div class="kpi-value amber" id="kpiDisc">-</div><div class="kpi-note">정상가 기준</div><div class="kpi-bar"><div id="kpiDiscBar" style="width:0%;background:var(--amber)"></div></div></div>
     <div class="kpi"><div class="kpi-label">매칭률</div><div class="kpi-value green" id="kpiMatch">-</div><div class="kpi-note" id="kpiMatchNote">-</div><div class="kpi-bar"><div id="kpiMatchBar" style="width:0%;background:var(--teal)"></div></div></div>
-    <div class="kpi"><div class="kpi-label">미매칭</div><div class="kpi-value" id="kpiUnmatch">-</div><div class="kpi-note">검토 필요 항목</div><div class="kpi-bar"><div style="width:0%;background:var(--red)"></div></div></div>
+    <div class="kpi kpi-link" data-tab-jump="overview" data-focus="unmatched"><div class="kpi-label">미매칭</div><div class="kpi-value" id="kpiUnmatch">-</div><div class="kpi-note">검토 필요 항목</div><div class="kpi-bar"><div style="width:0%;background:var(--red)"></div></div></div>
   </section>
 
   <!-- OVERVIEW TAB -->
@@ -324,7 +326,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <div class="foot">data.json 업데이트 시 GitHub Actions가 자동으로 대시보드를 재생성합니다.</div>
       </div>
       <div class="panel">
-        <div class="panel-hd"><span class="panel-title">미매칭 검토</span></div>
+        <div class="panel-hd"><span class="panel-title" id="unmatchedSection">미매칭 검토</span></div>
         <div class="table-wrap" style="max-height:240px">
           <table>
             <thead><tr><th>유통사</th><th>상품번호</th><th>상품명</th><th class="num">수량</th><th class="num">금액</th></tr></thead>
@@ -444,9 +446,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       <div class="panel-hd"><span class="panel-title">상품별 매출</span></div>
       <div class="toolbar">
         <input id="q" placeholder="상품명 · 상품번호 검색"/>
-        <select id="status"><option value="">전체 매칭</option><option>매칭됨</option><option>미매칭</option></select>
-        <select id="sourceType"><option value="">전체 구분</option><option>단품</option><option>세트분해</option><option>팩분해</option></select>
-        <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="name">상품명순</option></select>
+        <select id="seasonFilter"><option value="">전체 시즌</option></select>
+        <select id="categoryLargeFilter"><option value="">전체 복종(대)</option></select>
+        <select id="categorySmallFilter"><option value="">전체 복종(소)</option></select>
+        <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="weeklyRate">판매율순</option><option value="name">상품명순</option></select>
       </div>
       <div class="sum-strip">
         <div class="sum-card"><div class="sum-label">전체 출고가능 재고</div><div class="sum-value" id="detailStockQty">0</div></div>
@@ -462,7 +465,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
           <thead>
             <tr>
               <th>알림</th><th>바코드</th><th>표준상품명</th><th>유통사</th>
-              <th>구분</th><th>매칭</th>
+              <th>시즌</th><th>복종</th>
               <th class="num">판매수량</th>
               <th class="num">주간 판매율</th>
               <th class="num">현재고</th>
@@ -473,6 +476,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
               <th class="num">할인율</th>
             </tr>
           </thead>
+          <tbody id="detailFilterRows"></tbody>
           <tbody id="detailRows"></tbody>
         </table>
       </div>
@@ -492,6 +496,9 @@ const MANUAL_SALES = {manual_sales_json};
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
 const fmtD = s => s.slice(5); // "2026-01-03" → "01-03"
+function uniqSorted(values) {{
+  return Array.from(new Set(values.filter(v => v !== undefined && v !== null && String(v).trim() !== '').map(v => String(v).trim()))).sort((a,b)=>a.localeCompare(b));
+}}
 function validDiscount(gross, payment) {{
   gross = Number(gross || 0);
   payment = Number(payment || 0);
@@ -988,15 +995,29 @@ document.getElementById('clearRetailer').addEventListener('click', ()=>{{
 }});
 
 // ── DETAIL TAB ─────────────────────────────────────────────
+function initDetailFilters() {{
+  const fill = (id, label, values) => {{
+    const el = document.getElementById(id);
+    const current = el.value;
+    el.innerHTML = `<option value="">${{label}}</option>` + values.map(v=>`<option value="${{v}}">${{v}}</option>`).join('');
+    if (values.includes(current)) el.value = current;
+  }};
+  fill('seasonFilter', '전체 시즌', uniqSorted(rawRows.map(r=>r.season)));
+  fill('categoryLargeFilter', '전체 복종(대)', uniqSorted(rawRows.map(r=>r.category_large)));
+  fill('categorySmallFilter', '전체 복종(소)', uniqSorted(rawRows.map(r=>r.category_small)));
+}}
+
 function renderDetail() {{
   const q   = (document.getElementById('q').value||'').toLowerCase();
-  const st  = document.getElementById('status').value;
-  const sc  = document.getElementById('sourceType').value;
+  const seasonFilter = document.getElementById('seasonFilter').value;
+  const categoryLargeFilter = document.getElementById('categoryLargeFilter').value;
+  const categorySmallFilter = document.getElementById('categorySmallFilter').value;
   const sb  = document.getElementById('sortBy').value;
 
   let baseRows = [...rawRows];
-  if (st) baseRows = baseRows.filter(r=>r.match_status===st);
-  if (sc) baseRows = baseRows.filter(r=>r.source_type===sc);
+  if (seasonFilter) baseRows = baseRows.filter(r=>r.season===seasonFilter);
+  if (categoryLargeFilter) baseRows = baseRows.filter(r=>r.category_large===categoryLargeFilter);
+  if (categorySmallFilter) baseRows = baseRows.filter(r=>r.category_small===categorySmallFilter);
 
   const grouped = {{}};
   baseRows.forEach(r=>{{
@@ -1006,8 +1027,9 @@ function renderDetail() {{
       match_sku:r.match_sku || '',
       standard_name:r.standard_name || r.name || '-',
       retailers:new Set(),
-      sourceTypes:new Set(),
-      matchStatuses:new Set(),
+      seasons:new Set(),
+      categoryLarge:new Set(),
+      categorySmall:new Set(),
       qty:0,
       gross:0,
       payment:0,
@@ -1021,8 +1043,9 @@ function renderDetail() {{
     }};
     const g = grouped[key];
     g.retailers.add(r.retailer || '-');
-    g.sourceTypes.add(r.source_type || '-');
-    g.matchStatuses.add(r.match_status || '-');
+    g.seasons.add(r.season || '-');
+    g.categoryLarge.add(r.category_large || '-');
+    g.categorySmall.add(r.category_small || '-');
     g.qty += Number(r.qty || 0);
     g.gross += Number(r.gross || 0);
     g.payment += Number(r.payment || 0);
@@ -1048,8 +1071,9 @@ function renderDetail() {{
     return {{
       ...g,
       retailers:Array.from(g.retailers),
-      sourceTypes:Array.from(g.sourceTypes),
-      matchStatuses:Array.from(g.matchStatuses),
+      seasons:Array.from(g.seasons),
+      categoryLarge:Array.from(g.categoryLarge),
+      categorySmall:Array.from(g.categorySmall),
       daily:Object.values(g.dailyMap).sort((a,b)=>a.date.localeCompare(b.date)),
       avg_unit
     }};
@@ -1093,17 +1117,62 @@ function renderDetail() {{
 
   if (sb==='payment') rows.sort((a,b)=>b.payment-a.payment);
   else if (sb==='qty') rows.sort((a,b)=>b.qty-a.qty);
+  else if (sb==='weeklyRate') rows.sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
   else rows.sort((a,b)=>(a.standard_name||'').localeCompare(b.standard_name||''));
 
   const tbody = document.getElementById('detailRows');
+  const filterBody = document.getElementById('detailFilterRows');
+  filterBody.innerHTML = `<tr class="table-filter-row">
+    <td><select id="tableAlertFilter"><option value="">전체</option><option value="확인">확인</option><option value="정상">정상</option><option value="재고확인">재고확인</option></select></td>
+    <td><input id="tableSkuFilter" placeholder="바코드"></td>
+    <td><input id="tableNameFilter" placeholder="상품명"></td>
+    <td><input id="tableRetailerFilter" placeholder="유통사"></td>
+    <td><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
+    <td><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
+    <td colspan="8"></td>
+  </tr>`;
+
+  const tableFilters = {{
+    alert:'',
+    sku:'',
+    name:'',
+    retailer:'',
+    season:'',
+    category:''
+  }};
+  const applyTableFilters = () => {{
+    tableFilters.alert = document.getElementById('tableAlertFilter').value;
+    tableFilters.sku = (document.getElementById('tableSkuFilter').value||'').toLowerCase();
+    tableFilters.name = (document.getElementById('tableNameFilter').value||'').toLowerCase();
+    tableFilters.retailer = (document.getElementById('tableRetailerFilter').value||'').toLowerCase();
+    tableFilters.season = document.getElementById('tableSeasonFilter').value;
+    tableFilters.category = document.getElementById('tableCategoryFilter').value;
+    drawDetailRows(rows.filter(r=>{{
+      const alertText = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
+      if (tableFilters.alert && alertText !== tableFilters.alert) return false;
+      if (tableFilters.sku && !(r.match_sku||'').toLowerCase().includes(tableFilters.sku)) return false;
+      if (tableFilters.name && !(r.standard_name||'').toLowerCase().includes(tableFilters.name)) return false;
+      if (tableFilters.retailer && !r.retailers.join(',').toLowerCase().includes(tableFilters.retailer)) return false;
+      if (tableFilters.season && !r.seasons.includes(tableFilters.season)) return false;
+      if (tableFilters.category && !r.categoryLarge.concat(r.categorySmall).includes(tableFilters.category)) return false;
+      return true;
+    }}));
+  }};
+  ['tableAlertFilter','tableSkuFilter','tableNameFilter','tableRetailerFilter','tableSeasonFilter','tableCategoryFilter'].forEach(id=>{{
+    const el = document.getElementById(id);
+    el.addEventListener('input', applyTableFilters);
+    el.addEventListener('change', applyTableFilters);
+  }});
+
   if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
-  tbody.innerHTML = rows.map(r=>{{
+  function drawDetailRows(displayRows) {{
+  if (!displayRows.length) {{
+    tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
+    return;
+  }}
+  tbody.innerHTML = displayRows.map(r=>{{
     const disc    = r.validGross > 0 && r.validPayment <= r.validGross ? (1 - r.validPayment / r.validGross) * 100 : null;
-    const srcText = r.sourceTypes.join(',');
-    const matchText = r.matchStatuses.includes('미매칭') ? '미매칭' : '매칭됨';
-    const srcB    = srcText.includes('단품')?'badge-blue':srcText.includes('세트분해')?'badge-amber':'badge-indigo';
-    const mB      = matchText==='매칭됨'?'badge-green':'badge-red';
     const stockQty= r.stock_qty ?? '-';
     const alertB  = !r.stock_known ? 'badge-amber' : r.reorder_reasons.length ? 'badge-red' : 'badge-green';
     const alertT  = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
@@ -1112,8 +1181,8 @@ function renderDetail() {{
       <td class="td-mono">${{r.match_sku || '-'}}</td>
       <td class="td-main" style="max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
       <td style="font-size:12px;color:var(--ink3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${{r.retailers.join(', ')}}</td>
-      <td><span class="badge ${{srcB}}">${{srcText}}</span></td>
-      <td><span class="badge ${{mB}}">${{matchText}}</span></td>
+      <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
+      <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
       <td class="num">${{fmt(r.qty)}}</td>
       <td class="num" style="color:${{r.weekly_rate>=7?'var(--red)':r.weekly_rate>=4?'var(--amber)':'var(--ink2)'}}">${{r.weekly_rate>0?pct(r.weekly_rate):'-'}}</td>
       <td class="num">${{stockQty!=='-'?fmt(stockQty):'-'}}</td>
@@ -1124,8 +1193,11 @@ function renderDetail() {{
       <td class="num" style="color:${{disc!==null&&disc>50?'var(--red)':disc!==null&&disc>30?'var(--amber)':'var(--ink2)'}}">${{disc===null?'-':pct(disc)}}</td>
     </tr>`;
   }}).join('');
+  }}
+  drawDetailRows(rows);
 }}
-['q','status','sourceType','sortBy'].forEach(id=>{{
+initDetailFilters();
+['q','seasonFilter','categoryLargeFilter','categorySmallFilter','sortBy'].forEach(id=>{{
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
 }});
@@ -1149,7 +1221,12 @@ document.querySelectorAll('.nav-item[data-tab]').forEach(btn=>{{
 }});
 
 document.querySelectorAll('[data-tab-jump]').forEach(el=>{{
-  el.addEventListener('click',()=>activateTab(el.dataset.tabJump));
+  el.addEventListener('click',()=>{{
+    activateTab(el.dataset.tabJump);
+    if (el.dataset.focus === 'unmatched') {{
+      setTimeout(()=>document.getElementById('unmatchedSection')?.scrollIntoView({{behavior:'smooth',block:'start'}}), 50);
+    }}
+  }});
 }});
 
 // init
