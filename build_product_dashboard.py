@@ -278,8 +278,8 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 
   <!-- KPI -->
   <section class="kpis" id="kpiSection">
-    <div class="kpi"><div class="kpi-label">?? ????</div><div class="kpi-value blue" id="kpiQty">-</div><div class="kpi-note">?? 7? ? ??? ??</div><div class="kpi-bar"><div id="kpiQtyBar" style="width:75%;background:var(--blue)"></div></div></div>
-    <div class="kpi"><div class="kpi-label">?? ?????</div><div class="kpi-value" id="kpiPayment">-</div><div class="kpi-note">?? 7? ???? ??</div><div class="kpi-bar"><div id="kpiPaymentBar" style="width:58%;background:#6366f1"></div></div></div>
+    <div class="kpi"><div class="kpi-label">주간 판매수량</div><div class="kpi-value blue" id="kpiQty">-</div><div class="kpi-note">최근 7일 전 유통사 합산</div><div class="kpi-bar"><div id="kpiQtyBar" style="width:75%;background:var(--blue)"></div></div></div>
+    <div class="kpi"><div class="kpi-label">주간 실판매금액</div><div class="kpi-value" id="kpiPayment">-</div><div class="kpi-note">최근 7일 결제금액 합산</div><div class="kpi-bar"><div id="kpiPaymentBar" style="width:58%;background:#6366f1"></div></div></div>
     <div class="kpi"><div class="kpi-label">평균 판매단가</div><div class="kpi-value" id="kpiAvgUnit">-</div><div class="kpi-note">실판매금액 / 수량</div><div class="kpi-bar"><div id="kpiAvgBar" style="width:48%;background:#8b5cf6"></div></div></div>
     <div class="kpi"><div class="kpi-label">평균 할인율</div><div class="kpi-value amber" id="kpiDisc">-</div><div class="kpi-note">정상가 기준</div><div class="kpi-bar"><div id="kpiDiscBar" style="width:0%;background:var(--amber)"></div></div></div>
     <div class="kpi"><div class="kpi-label">매칭률</div><div class="kpi-value green" id="kpiMatch">-</div><div class="kpi-note" id="kpiMatchNote">-</div><div class="kpi-bar"><div id="kpiMatchBar" style="width:0%;background:var(--teal)"></div></div></div>
