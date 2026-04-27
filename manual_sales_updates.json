@@ -38,6 +38,20 @@
   },
   {
     "date": "2026-04-26",
-    "retailers": []
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 0,
+        "items": [],
+        "orders": 5,
+        "qty": 10
+      },
+      {
+        "retailer": "무신사",
+        "payment": 0,
+        "items": [],
+        "qty": 29
+      }
+    ]
   }
 ]
