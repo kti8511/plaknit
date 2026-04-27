@@ -94812,5 +94812,174 @@
     "standard_name": "채코제에디션퀵드라이 그린퓨처 티셔츠",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 베이직 조거팬츠",
+    "color": "",
+    "size": "",
+    "qty": 2,
+    "gross": 102600,
+    "payment": 102600,
+    "avg_unit": 51300,
+    "orders": 2,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 51300,
+        "payment": 51300,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 51300,
+        "payment": 51300,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 베이직 조거팬츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 세이지",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 45060,
+    "payment": 45060,
+    "avg_unit": 45060,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 45060,
+        "payment": 45060,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 세이지",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 55800,
+    "payment": 55800,
+    "avg_unit": 55800,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 55800,
+        "payment": 55800,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌룬 쇼츠",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 8416,
+    "payment": 8416,
+    "avg_unit": 8416,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 8416,
+        "payment": 8416,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 벌룬 쇼츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 36000,
+    "payment": 36000,
+    "avg_unit": 36000,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 36000,
+        "payment": 36000,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠 블랙",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 66600,
+    "payment": 66600,
+    "avg_unit": 66600,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 66600,
+        "payment": 66600,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]

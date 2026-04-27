@@ -16,7 +16,14 @@
   },
   {
     "date": "2026-04-24",
-    "retailers": []
+    "retailers": [
+      {
+        "retailer": "29cm",
+        "payment": 0,
+        "items": [],
+        "qty": 4
+      }
+    ]
   },
   {
     "date": "2026-04-25",
@@ -33,6 +40,12 @@
         "payment": 0,
         "items": [],
         "qty": 18
+      },
+      {
+        "retailer": "29cm",
+        "payment": 0,
+        "items": [],
+        "qty": 1
       }
     ]
   },
@@ -51,6 +64,12 @@
         "payment": 0,
         "items": [],
         "qty": 29
+      },
+      {
+        "retailer": "29cm",
+        "payment": 0,
+        "items": [],
+        "qty": 2
       }
     ]
   }
