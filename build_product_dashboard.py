@@ -444,11 +444,6 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       <div class="panel-hd"><span class="panel-title">상품별 매출</span></div>
       <div class="toolbar">
         <input id="q" placeholder="상품명 · 상품번호 검색"/>
-        <select id="productRetailer">
-          <option value="">전체 유통사</option>
-          <option>자사몰</option><option>무신사</option><option>29cm</option>
-          <option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option>
-        </select>
         <select id="status"><option value="">전체 매칭</option><option>매칭됨</option><option>미매칭</option></select>
         <select id="sourceType"><option value="">전체 구분</option><option>단품</option><option>세트분해</option><option>팩분해</option></select>
         <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="name">상품명순</option></select>
@@ -458,16 +453,20 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <div class="sum-card"><div class="sum-label">전체 재고 소진율</div><div class="sum-value" id="detailStockRate">-</div></div>
         <div class="sum-card"><div class="sum-label">주간 상품 판매율</div><div class="sum-value" id="detailWeeklyRate">-</div></div>
       </div>
+      <div class="panel" style="margin-bottom:12px;background:#fff7ed;border-color:#fed7aa">
+        <div class="panel-hd"><span class="panel-title">리오더 알림</span><span class="panel-meta" id="reorderSummary">-</span></div>
+        <div class="rank-list" id="reorderAlerts"></div>
+      </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>유통사</th><th>상품번호</th><th>표준상품명</th><th>자사몰상품명</th>
+              <th>알림</th><th>바코드</th><th>표준상품명</th><th>유통사</th>
               <th>구분</th><th>매칭</th>
               <th class="num">판매수량</th>
-              <th class="num">판매율</th>
+              <th class="num">주간 판매율</th>
               <th class="num">현재고</th>
-              <th class="num">재고소진율</th>
+              <th class="num">전체 재고 소진율</th>
               <th class="num">정상가금액</th>
               <th class="num">실판매금액</th>
               <th class="num">평균단가</th>
@@ -991,18 +990,77 @@ document.getElementById('clearRetailer').addEventListener('click', ()=>{{
 // ── DETAIL TAB ─────────────────────────────────────────────
 function renderDetail() {{
   const q   = (document.getElementById('q').value||'').toLowerCase();
-  const pR  = document.getElementById('productRetailer').value;
   const st  = document.getElementById('status').value;
   const sc  = document.getElementById('sourceType').value;
   const sb  = document.getElementById('sortBy').value;
 
-  let rows = [...rawRows];
-  if (q)  rows = rows.filter(r=>(r.standard_name||'').toLowerCase().includes(q)||(r.mall_no||'').includes(q));
-  if (pR) rows = rows.filter(r=>r.retailer===pR);
-  if (st) rows = rows.filter(r=>r.match_status===st);
-  if (sc) rows = rows.filter(r=>r.source_type===sc);
+  let baseRows = [...rawRows];
+  if (st) baseRows = baseRows.filter(r=>r.match_status===st);
+  if (sc) baseRows = baseRows.filter(r=>r.source_type===sc);
 
-  const detailDates = buildDailyMap(pR).map(d=>d.date);
+  const grouped = {{}};
+  baseRows.forEach(r=>{{
+    const key = r.match_sku || r.standard_name || `${{r.name}}_${{r.color}}_${{r.size}}`;
+    if (!grouped[key]) grouped[key] = {{
+      key,
+      match_sku:r.match_sku || '',
+      standard_name:r.standard_name || r.name || '-',
+      retailers:new Set(),
+      sourceTypes:new Set(),
+      matchStatuses:new Set(),
+      qty:0,
+      gross:0,
+      payment:0,
+      orders:0,
+      validGross:0,
+      validPayment:0,
+      stock_qty:0,
+      received_qty:0,
+      stock_known:false,
+      dailyMap:{{}}
+    }};
+    const g = grouped[key];
+    g.retailers.add(r.retailer || '-');
+    g.sourceTypes.add(r.source_type || '-');
+    g.matchStatuses.add(r.match_status || '-');
+    g.qty += Number(r.qty || 0);
+    g.gross += Number(r.gross || 0);
+    g.payment += Number(r.payment || 0);
+    g.orders += Number(r.orders || 0);
+    if (validDiscount(r.gross, r.payment) !== null) {{
+      g.validGross += Number(r.gross || 0);
+      g.validPayment += Number(r.payment || 0);
+    }}
+    g.stock_qty = Math.max(g.stock_qty, Number(r.stock_qty || 0));
+    g.received_qty = Math.max(g.received_qty, Number(r.received_qty || 0));
+    if (r.stock_barcode || r.stock_name) g.stock_known = true;
+    (r.daily || []).forEach(d=>{{
+      if (!g.dailyMap[d.date]) g.dailyMap[d.date] = {{date:d.date,qty:0,gross:0,payment:0,orders:0}};
+      g.dailyMap[d.date].qty += Number(d.qty || 0);
+      g.dailyMap[d.date].gross += Number(d.gross || 0);
+      g.dailyMap[d.date].payment += Number(d.payment || 0);
+      g.dailyMap[d.date].orders += Number(d.orders || 0);
+    }});
+  }});
+
+  let rows = Object.values(grouped).map(g=>{{
+    const avg_unit = g.qty ? g.payment / g.qty : 0;
+    return {{
+      ...g,
+      retailers:Array.from(g.retailers),
+      sourceTypes:Array.from(g.sourceTypes),
+      matchStatuses:Array.from(g.matchStatuses),
+      daily:Object.values(g.dailyMap).sort((a,b)=>a.date.localeCompare(b.date)),
+      avg_unit
+    }};
+  }});
+
+  if (q) rows = rows.filter(r=>
+    (r.standard_name||'').toLowerCase().includes(q) ||
+    (r.match_sku||'').toLowerCase().includes(q)
+  );
+
+  const detailDates = buildDailyMap('').map(d=>d.date);
   const detailCutoff = detailDates.length >= 7 ? detailDates[detailDates.length-7] : detailDates[0];
   const filteredQty = rows.reduce((a,r)=>a + Number(r.qty || 0), 0);
   const filteredStock = rows.reduce((a,r)=>a + Math.max(0, Number(r.stock_qty || 0)), 0);
@@ -1013,6 +1071,26 @@ function renderDetail() {{
   document.getElementById('detailStockRate').textContent = stockRate === null ? '-' : pct(stockRate);
   document.getElementById('detailWeeklyRate').textContent = weeklyRate === null ? '-' : pct(weeklyRate);
 
+  rows.forEach(r=>{{
+    const stockBase = Number(r.stock_qty || 0);
+    const weekly = (r.daily||[]).filter(d=>!detailCutoff || d.date>=detailCutoff).reduce((a,d)=>a + Number(d.qty || 0), 0);
+    r.weekly_qty = weekly;
+    r.weekly_rate = weekly + stockBase > 0 ? weekly / (weekly + stockBase) * 100 : 0;
+    r.stock_rate = r.qty + stockBase > 0 ? r.qty / (r.qty + stockBase) * 100 : 0;
+    r.reorder_reasons = [];
+    if (r.stock_known && r.weekly_rate >= 7) r.reorder_reasons.push('주간 판매율 7% 이상');
+    if (r.stock_known && r.stock_rate >= 20) r.reorder_reasons.push('재고 소진율 20% 이상');
+  }});
+
+  const reorderRows = rows
+    .filter(r=>r.reorder_reasons.length)
+    .sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate)
+    .slice(0, 8);
+  document.getElementById('reorderSummary').textContent = `${{rows.filter(r=>r.reorder_reasons.length).length}}개 상품`;
+  document.getElementById('reorderAlerts').innerHTML = reorderRows.length
+    ? reorderRows.map(r=>`<div class="rank-item"><div><div class="rank-name">${{r.standard_name}}</div><div class="rank-meta">${{r.reorder_reasons.join(' · ')}} · 현재고 ${{fmt(r.stock_qty)}} · 주간 ${{fmt(r.weekly_qty)}}개</div></div><div class="rank-value">${{pct(r.weekly_rate)}}</div></div>`).join('')
+    : '<div style="padding:14px;color:var(--ink3)">현재 기준 리오더 알림 상품 없음</div>';
+
   if (sb==='payment') rows.sort((a,b)=>b.payment-a.payment);
   else if (sb==='qty') rows.sort((a,b)=>b.qty-a.qty);
   else rows.sort((a,b)=>(a.standard_name||'').localeCompare(b.standard_name||''));
@@ -1021,24 +1099,25 @@ function renderDetail() {{
   if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
   tbody.innerHTML = rows.map(r=>{{
-    const disc    = validDiscount(r.gross, r.payment);
-    const stockBase = Number(r.stock_qty || 0);
-    const saleR   = r.qty + stockBase > 0 ? r.qty / (r.qty + stockBase) * 100 : 0;
-    const stockR  = saleR;
-    const srcB    = r.source_type==='단품'?'badge-blue':r.source_type==='세트분해'?'badge-amber':'badge-indigo';
-    const mB      = r.match_status==='매칭됨'?'badge-green':'badge-red';
+    const disc    = r.validGross > 0 && r.validPayment <= r.validGross ? (1 - r.validPayment / r.validGross) * 100 : null;
+    const srcText = r.sourceTypes.join(',');
+    const matchText = r.matchStatuses.includes('미매칭') ? '미매칭' : '매칭됨';
+    const srcB    = srcText.includes('단품')?'badge-blue':srcText.includes('세트분해')?'badge-amber':'badge-indigo';
+    const mB      = matchText==='매칭됨'?'badge-green':'badge-red';
     const stockQty= r.stock_qty ?? '-';
+    const alertB  = !r.stock_known ? 'badge-amber' : r.reorder_reasons.length ? 'badge-red' : 'badge-green';
+    const alertT  = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
     return `<tr>
-      <td><span class="badge badge-blue">${{r.retailer}}</span></td>
-      <td class="td-mono">${{r.mall_no}}</td>
+      <td><span class="badge ${{alertB}}" title="${{r.reorder_reasons.join(' / ')}}">${{alertT}}</span></td>
+      <td class="td-mono">${{r.match_sku || '-'}}</td>
       <td class="td-main" style="max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
-      <td style="font-size:12px;color:var(--ink3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${{r.name}} ${{r.color}} ${{r.size}}</td>
-      <td><span class="badge ${{srcB}}">${{r.source_type}}</span></td>
-      <td><span class="badge ${{mB}}">${{r.match_status}}</span></td>
+      <td style="font-size:12px;color:var(--ink3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${{r.retailers.join(', ')}}</td>
+      <td><span class="badge ${{srcB}}">${{srcText}}</span></td>
+      <td><span class="badge ${{mB}}">${{matchText}}</span></td>
       <td class="num">${{fmt(r.qty)}}</td>
-      <td class="num">${{saleR>0?pct(saleR):'-'}}</td>
+      <td class="num" style="color:${{r.weekly_rate>=7?'var(--red)':r.weekly_rate>=4?'var(--amber)':'var(--ink2)'}}">${{r.weekly_rate>0?pct(r.weekly_rate):'-'}}</td>
       <td class="num">${{stockQty!=='-'?fmt(stockQty):'-'}}</td>
-      <td class="num" style="color:${{stockR>80?'var(--red)':stockR>50?'var(--amber)':'var(--ink2)'}}">${{stockR>0?pct(stockR):'-'}}</td>
+      <td class="num" style="color:${{r.stock_rate>=20?'var(--red)':r.stock_rate>=12?'var(--amber)':'var(--ink2)'}}">${{r.stock_rate>0?pct(r.stock_rate):'-'}}</td>
       <td class="num">${{fmt(r.gross)}}</td>
       <td class="num" style="color:var(--blue2);font-weight:600">${{fmt(r.payment)}}</td>
       <td class="num">${{fmt(r.avg_unit)}}</td>
@@ -1046,7 +1125,7 @@ function renderDetail() {{
     </tr>`;
   }}).join('');
 }}
-['q','productRetailer','status','sourceType','sortBy'].forEach(id=>{{
+['q','status','sourceType','sortBy'].forEach(id=>{{
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
 }});
