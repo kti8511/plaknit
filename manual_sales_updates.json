@@ -3,20 +3,136 @@
     "date": "2026-04-23",
     "retailers": [
       {
+        "retailer": "???",
+        "payment": 389500,
+        "items": [
+          {
+            "name": "???? ????? ??? ???",
+            "qty": 4
+          },
+          {
+            "name": "???? ????? ??? ??",
+            "qty": 2
+          },
+          {
+            "name": "???? ????? ??? ???",
+            "qty": 1
+          },
+          {
+            "name": "???? ??? ???? ???",
+            "qty": 3
+          },
+          {
+            "name": "???? ??? ???? ???",
+            "qty": 2
+          },
+          {
+            "name": "ICE LITE ?? ??",
+            "qty": 3
+          },
+          {
+            "name": "???? ?? ??? ???",
+            "qty": 1
+          },
+          {
+            "name": "???? ????? ??? ???",
+            "qty": 1
+          },
+          {
+            "name": "???? ???? ??",
+            "qty": 1
+          }
+        ],
+        "qty": 18
+      },
+      {
+        "retailer": "???",
+        "payment": 503630,
+        "items": [
+          {
+            "name": "ICE LITE ?? ??",
+            "qty": 3
+          },
+          {
+            "name": "ICE LITE 2 in 1 ??",
+            "qty": 2
+          },
+          {
+            "name": "KINTERRA ???? ??? ??? ???",
+            "qty": 8
+          },
+          {
+            "name": "ICE LITE ??? ????? ???",
+            "qty": 2
+          },
+          {
+            "name": "???? ?? ??? ???",
+            "qty": 2
+          },
+          {
+            "name": "ICE LITE ?? ??",
+            "qty": 1
+          },
+          {
+            "name": "[2PACK] ???? ????? ???? ???",
+            "qty": 1
+          },
+          {
+            "name": "[2PACK] ???? ????? ??? ???",
+            "qty": 1
+          },
+          {
+            "name": "???? ?? ??? ???",
+            "qty": 1
+          },
+          {
+            "name": "??? ?? ????",
+            "qty": 4
+          },
+          {
+            "name": "ICE LITE ??? ???",
+            "qty": -1
+          },
+          {
+            "name": "???? ?? ??? ???",
+            "qty": -1
+          },
+          {
+            "name": "[2PACK] TECH SWEAT 7?? ?? ???",
+            "qty": -1
+          }
+        ],
+        "qty": 22
+      },
+      {
         "retailer": "4XR",
         "payment": 65800,
         "items": [
           {
-            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+            "name": "KINTERRA ???? ??? ??? ???",
             "qty": 2
           }
-        ]
+        ],
+        "qty": 2
       }
     ]
   },
   {
     "date": "2026-04-24",
     "retailers": [
+      {
+        "retailer": "???",
+        "payment": 0,
+        "items": [],
+        "orders": 8,
+        "qty": 13
+      },
+      {
+        "retailer": "???",
+        "payment": 0,
+        "items": [],
+        "qty": 16
+      },
       {
         "retailer": "29cm",
         "payment": 0,
@@ -35,14 +151,14 @@
     "date": "2026-04-25",
     "retailers": [
       {
-        "retailer": "자사몰",
+        "retailer": "???",
         "payment": 0,
         "items": [],
         "orders": 4,
         "qty": 9
       },
       {
-        "retailer": "무신사",
+        "retailer": "???",
         "payment": 0,
         "items": [],
         "qty": 18
@@ -60,7 +176,7 @@
         "qty": 7
       },
       {
-        "retailer": "글로리어스워커",
+        "retailer": "???????",
         "payment": 0,
         "items": [],
         "qty": 1
@@ -71,14 +187,14 @@
     "date": "2026-04-26",
     "retailers": [
       {
-        "retailer": "자사몰",
+        "retailer": "???",
         "payment": 0,
         "items": [],
         "orders": 5,
         "qty": 10
       },
       {
-        "retailer": "무신사",
+        "retailer": "???",
         "payment": 0,
         "items": [],
         "qty": 29

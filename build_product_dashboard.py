@@ -278,8 +278,8 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 
   <!-- KPI -->
   <section class="kpis" id="kpiSection">
-    <div class="kpi"><div class="kpi-label">전체 판매수량</div><div class="kpi-value blue" id="kpiQty">-</div><div class="kpi-note">전 유통사 합산</div><div class="kpi-bar"><div id="kpiQtyBar" style="width:75%;background:var(--blue)"></div></div></div>
-    <div class="kpi"><div class="kpi-label">전체 실판매금액</div><div class="kpi-value" id="kpiPayment">-</div><div class="kpi-note">결제금액 합산</div><div class="kpi-bar"><div id="kpiPaymentBar" style="width:58%;background:#6366f1"></div></div></div>
+    <div class="kpi"><div class="kpi-label">?? ????</div><div class="kpi-value blue" id="kpiQty">-</div><div class="kpi-note">?? 7? ? ??? ??</div><div class="kpi-bar"><div id="kpiQtyBar" style="width:75%;background:var(--blue)"></div></div></div>
+    <div class="kpi"><div class="kpi-label">?? ?????</div><div class="kpi-value" id="kpiPayment">-</div><div class="kpi-note">?? 7? ???? ??</div><div class="kpi-bar"><div id="kpiPaymentBar" style="width:58%;background:#6366f1"></div></div></div>
     <div class="kpi"><div class="kpi-label">평균 판매단가</div><div class="kpi-value" id="kpiAvgUnit">-</div><div class="kpi-note">실판매금액 / 수량</div><div class="kpi-bar"><div id="kpiAvgBar" style="width:48%;background:#8b5cf6"></div></div></div>
     <div class="kpi"><div class="kpi-label">평균 할인율</div><div class="kpi-value amber" id="kpiDisc">-</div><div class="kpi-note">정상가 기준</div><div class="kpi-bar"><div id="kpiDiscBar" style="width:0%;background:var(--amber)"></div></div></div>
     <div class="kpi"><div class="kpi-label">매칭률</div><div class="kpi-value green" id="kpiMatch">-</div><div class="kpi-note" id="kpiMatchNote">-</div><div class="kpi-bar"><div id="kpiMatchBar" style="width:0%;background:var(--teal)"></div></div></div>
@@ -499,6 +499,15 @@ function discountText(gross, payment) {{
 }}
 
 // ── 전체 집계 ─────────────────────────────────────────────
+function shiftDate(dateStr, days) {{
+  const dt = new Date(dateStr + 'T00:00:00');
+  dt.setDate(dt.getDate() + days);
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, '0');
+  const d = String(dt.getDate()).padStart(2, '0');
+  return `${{y}}-${{m}}-${{d}}`;
+}}
+
 const totalQty     = rawRows.reduce((a,r)=>a+r.qty, 0);
 const totalPayment = rawRows.reduce((a,r)=>a+r.payment, 0);
 const totalGross   = rawRows.reduce((a,r)=>a+r.gross, 0);
@@ -508,22 +517,27 @@ const validPayment = validDiscRows.reduce((a,r)=>a+r.payment, 0);
 const totalOrders  = rawRows.reduce((a,r)=>a+r.orders, 0);
 const avgUnit      = totalQty ? Math.round(totalPayment/totalQty) : 0;
 const avgDisc      = validGross ? (1-validPayment/validGross)*100 : null;
-const matched      = rawRows.filter(r=>r.match_status==='매칭됨').length;
+const matched      = rawRows.filter(r => !String(r.match_status || '').includes('?')).length;
 const unmatched    = rawRows.length - matched;
 const matchRate    = rawRows.length ? matched/rawRows.length*100 : 0;
+const allDailyForKpi = buildDailyMap(null);
+const latestKpiDate = allDailyForKpi.length ? allDailyForKpi[allDailyForKpi.length - 1].date : null;
+const weeklyCutoff = latestKpiDate ? shiftDate(latestKpiDate, -6) : null;
+const weeklyDaily = latestKpiDate ? allDailyForKpi.filter(d => d.date >= weeklyCutoff && d.date <= latestKpiDate) : [];
+const weeklyQty = weeklyDaily.reduce((a,d)=>a + Number(d.qty || 0), 0);
+const weeklyPayment = weeklyDaily.reduce((a,d)=>a + Number(d.payment || 0), 0);
 
-// KPI 세팅
-document.getElementById('kpiQty').textContent      = fmt(totalQty);
-document.getElementById('kpiPayment').textContent  = fmt(totalPayment);
+// KPI ???
+document.getElementById('kpiQty').textContent      = fmt(weeklyQty);
+document.getElementById('kpiPayment').textContent  = fmt(weeklyPayment);
 document.getElementById('kpiAvgUnit').textContent  = fmt(avgUnit);
 document.getElementById('kpiDisc').textContent     = avgDisc === null ? '-' : pct(avgDisc);
 document.getElementById('kpiMatch').textContent    = pct(matchRate);
-document.getElementById('kpiMatchNote').textContent= matched+'/'+rawRows.length+' 상품';
+document.getElementById('kpiMatchNote').textContent= matched+'/'+rawRows.length+' ???';
 document.getElementById('kpiUnmatch').textContent  = unmatched;
 document.getElementById('kpiDiscBar').style.width  = avgDisc === null ? '0%' : Math.max(0, Math.min(100, avgDisc)).toFixed(1)+'%';
 document.getElementById('kpiMatchBar').style.width = matchRate.toFixed(1)+'%';
 
-// ── 일별 집계 (유통사 필터 포함) ───────────────────────────
 function buildDailyMap(retailerFilter) {{
   const m = {{}};
   rawRows.forEach(r => {{
@@ -541,8 +555,19 @@ function buildDailyMap(retailerFilter) {{
       if (retailerFilter && r.retailer !== retailerFilter) return;
       if (!m[day.date]) m[day.date] = {{date:day.date,payment:0,gross:0,orders:0,qty:0}};
       m[day.date].payment += Number(r.payment || 0);
-      if (r.orders !== undefined) m[day.date].orders = Number(r.orders || 0);
-      if (r.qty !== undefined) m[day.date].qty = Number(r.qty || 0);
+      let existingOrders = 0;
+      let existingQty = 0;
+      rawRows.forEach(row => {{
+        if (row.retailer !== r.retailer) return;
+        (row.daily || []).forEach(d => {{
+          if (d.date === day.date) {{
+            existingOrders += Number(d.orders || 0);
+            existingQty += Number(d.qty || 0);
+          }}
+        }});
+      }});
+      if (r.orders !== undefined) m[day.date].orders += Number(r.orders || 0) - existingOrders;
+      if (r.qty !== undefined) m[day.date].qty += Number(r.qty || 0) - existingQty;
     }});
   }});
   return Object.values(m).sort((a,b)=>a.date.localeCompare(b.date));
