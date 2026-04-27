@@ -5,11 +5,11 @@
     "name": "ICE LITE 카고 조거",
     "color": "",
     "size": "",
-    "qty": 69,
-    "gross": 159600,
-    "payment": 2782218,
-    "avg_unit": 40322,
-    "orders": 1,
+    "qty": 71,
+    "gross": 265740,
+    "payment": 2888358,
+    "avg_unit": 40681,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -774,6 +774,13 @@
         "gross": 79800,
         "payment": 29088,
         "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 2,
+        "gross": 106140,
+        "payment": 106140,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
@@ -1585,11 +1592,11 @@
     "name": "ICE LITE 벌룬 조거",
     "color": "",
     "size": "",
-    "qty": 69,
-    "gross": 524800,
-    "payment": 2414359,
-    "avg_unit": 34990,
-    "orders": 1,
+    "qty": 71,
+    "gross": 603810,
+    "payment": 2493369,
+    "avg_unit": 35118,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -2354,6 +2361,13 @@
         "gross": 328000,
         "payment": 168292,
         "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 2,
+        "gross": 79010,
+        "payment": 79010,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
@@ -4703,11 +4717,11 @@
     "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
     "color": "",
     "size": "",
-    "qty": 35,
-    "gross": 302520,
-    "payment": 1609458,
-    "avg_unit": 45985,
-    "orders": 4,
+    "qty": 44,
+    "gross": 387720,
+    "payment": 1694658,
+    "avg_unit": 38515,
+    "orders": 13,
     "source_type": "단품",
     "daily": [
       {
@@ -5486,6 +5500,13 @@
         "gross": 29520,
         "payment": 29520,
         "orders": 3
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 9,
+        "gross": 85200,
+        "payment": 85200,
+        "orders": 9
       }
     ],
     "match_status": "매칭됨",
@@ -13011,11 +13032,11 @@
     "name": "ICE LITE 세미오버핏 셔켓",
     "color": "",
     "size": "",
-    "qty": 14,
-    "gross": 75800,
-    "payment": 664507,
-    "avg_unit": 47464,
-    "orders": 1,
+    "qty": 15,
+    "gross": 123490,
+    "payment": 712197,
+    "avg_unit": 47480,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -13772,6 +13793,13 @@
         "qty": 1,
         "gross": 75800,
         "payment": 33658,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 47690,
+        "payment": 47690,
         "orders": 1
       }
     ],
@@ -69764,11 +69792,11 @@
     "name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
     "color": "",
     "size": "",
-    "qty": 62,
-    "gross": 0,
-    "payment": 58375,
-    "avg_unit": 941,
-    "orders": 1,
+    "qty": 63,
+    "gross": 28290,
+    "payment": 86665,
+    "avg_unit": 1376,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -70525,6 +70553,13 @@
         "qty": 1,
         "gross": 0,
         "payment": 29088,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 28290,
+        "payment": 28290,
         "orders": 1
       }
     ],
@@ -94462,6 +94497,87 @@
     "match_status": "매칭완료",
     "match_sku": "",
     "standard_name": "ICE LITE 루즈핏 카고쇼츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "[2PACK]ICE LITE 카고 조거",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 93850,
+    "payment": 93850,
+    "avg_unit": 93850,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 93850,
+        "payment": 93850,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "[2PACK]ICE LITE 카고 조거",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 헤비포켓 쇼츠",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 38710,
+    "payment": 38710,
+    "avg_unit": 38710,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 38710,
+        "payment": 38710,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 헤비포켓 쇼츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 38040,
+    "payment": 38040,
+    "avg_unit": 38040,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 38040,
+        "payment": 38040,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트",
     "received_qty": 0,
     "stock_qty": 0
   }
