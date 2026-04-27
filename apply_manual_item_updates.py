@@ -6,6 +6,7 @@ from pathlib import Path
 
 DATA_FILE = Path("data.json")
 MANUAL_FILE = Path("manual_sales_updates.json")
+ITEMIZED_FILE = Path("manual_itemized_updates.json")
 
 CSV_UPDATES = {
     "2026-04-24": Path(r"C:\Users\user\Desktop\0424.csv"),
@@ -45,7 +46,7 @@ def load_csv_rows(path: Path):
     rows = []
     with path.open(encoding="utf-8-sig", newline="") as f:
         reader = csv.reader(f)
-        header = next(reader, None)
+        next(reader, None)
         for r in reader:
             if not r:
                 continue
@@ -82,17 +83,17 @@ def allocate_scaled_payments(items, target_payment):
         item["payment"] = pay
 
 
-def build_match_index(rows):
+def build_match_index(rows, retailer):
     index = {}
     for i, row in enumerate(rows):
-        if row.get("retailer") != "자사몰":
+        if row.get("retailer") != retailer:
             continue
         key = (normalize_name(row.get("name", "")), row.get("color", ""), row.get("size", ""))
         index.setdefault(key, []).append(i)
     return index
 
 
-def find_match(rows, index, item_name, color, size):
+def find_match(rows, index, item_name, color, size, retailer):
     keys = [
         (item_name, color, size),
         (item_name, "", size),
@@ -105,7 +106,7 @@ def find_match(rows, index, item_name, color, size):
             return hits[0]
 
     for i, row in enumerate(rows):
-        if row.get("retailer") != "자사몰":
+        if row.get("retailer") != retailer:
             continue
         if normalize_name(row.get("name", "")) != item_name:
             continue
@@ -117,6 +118,23 @@ def find_match(rows, index, item_name, color, size):
             continue
         return i
     return None
+
+
+def append_or_merge_daily(row, day, qty, gross, payment, orders):
+    existing_daily = None
+    for daily in row.get("daily", []):
+        if daily.get("date") == day:
+            existing_daily = daily
+            break
+    if existing_daily is None:
+        row.setdefault("daily", []).append(
+            {"date": day, "qty": qty, "gross": gross, "payment": payment, "orders": orders}
+        )
+        return
+    existing_daily["qty"] = int(existing_daily.get("qty", 0)) + qty
+    existing_daily["gross"] = int(existing_daily.get("gross", 0)) + gross
+    existing_daily["payment"] = int(existing_daily.get("payment", 0)) + payment
+    existing_daily["orders"] = int(existing_daily.get("orders", 0)) + orders
 
 
 def update_manual_totals(manual_updates):
@@ -135,13 +153,82 @@ def update_manual_totals(manual_updates):
         retailer_entry["orders"] = totals["orders"]
         retailer_entry["qty"] = totals["qty"]
         retailer_entry["items"] = []
-    return sorted(manual_updates, key=lambda x: x["date"])
+    return sorted(by_date.values(), key=lambda x: x["date"])
+
+
+def apply_itemized_updates(rows, manual_updates):
+    if not ITEMIZED_FILE.exists():
+        return rows, manual_updates
+
+    updates = json.loads(ITEMIZED_FILE.read_text(encoding="utf-8"))
+    by_date = {entry["date"]: entry for entry in manual_updates}
+
+    for update in updates:
+        day = update["date"]
+        retailer = update["retailer"]
+        index = build_match_index(rows, retailer)
+        total_qty = 0
+
+        for item in update.get("items", []):
+            item_name = normalize_name(item.get("alias") or item["name"])
+            payment = int(item["payment"])
+            qty = int(item["qty"])
+            total_qty += qty
+
+            match_idx = find_match(rows, index, item_name, "", "", retailer)
+            if match_idx is None:
+                new_row = {
+                    "retailer": retailer,
+                    "mall_no": "",
+                    "name": item_name,
+                    "color": "",
+                    "size": "",
+                    "qty": qty,
+                    "gross": payment,
+                    "payment": payment,
+                    "avg_unit": int(round(payment / qty)) if qty else 0,
+                    "orders": max(qty, 0),
+                    "source_type": "단품",
+                    "daily": [
+                        {"date": day, "qty": qty, "gross": payment, "payment": payment, "orders": max(qty, 0)}
+                    ],
+                    "match_status": "매칭완료",
+                    "match_sku": "",
+                    "standard_name": item_name,
+                    "received_qty": 0,
+                    "stock_qty": 0,
+                }
+                rows.append(new_row)
+                index.setdefault((item_name, "", ""), []).append(len(rows) - 1)
+                continue
+
+            row = rows[match_idx]
+            row["qty"] = int(row.get("qty", 0)) + qty
+            row["gross"] = int(row.get("gross", 0)) + payment
+            row["payment"] = int(row.get("payment", 0)) + payment
+            row["orders"] = int(row.get("orders", 0)) + max(qty, 0)
+            row["avg_unit"] = int(round(row["payment"] / row["qty"])) if row["qty"] else 0
+            append_or_merge_daily(row, day, qty, payment, payment, max(qty, 0))
+
+        entry = by_date.setdefault(day, {"date": day, "retailers": []})
+        retailer_entry = None
+        for r in entry["retailers"]:
+            if r.get("retailer") == retailer:
+                retailer_entry = r
+                break
+        if retailer_entry is None:
+            retailer_entry = {"retailer": retailer, "payment": 0, "items": []}
+            entry["retailers"].append(retailer_entry)
+        retailer_entry["payment"] = 0
+        retailer_entry["qty"] = total_qty
+
+    return rows, sorted(by_date.values(), key=lambda x: x["date"])
 
 
 def main():
     rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     manual_updates = json.loads(MANUAL_FILE.read_text(encoding="utf-8"))
-    index = build_match_index(rows)
+    index = build_match_index(rows, "자사몰")
 
     for day, path in CSV_UPDATES.items():
         items = load_csv_rows(path)
@@ -149,7 +236,7 @@ def main():
         for item in items:
             color, size = parse_option(item["option"])
             item_name = item["name"]
-            match_idx = find_match(rows, index, item_name, color, size)
+            match_idx = find_match(rows, index, item_name, color, size, "자사몰")
 
             if match_idx is None:
                 new_row = {
@@ -173,7 +260,7 @@ def main():
                             "orders": max(item["qty"], 0),
                         }
                     ],
-                    "match_status": "매칭됨",
+                    "match_status": "매칭완료",
                     "match_sku": "",
                     "standard_name": f"{item_name}_{color}-{size}" if color else f"{item_name} {size}".strip(),
                     "received_qty": 0,
@@ -189,32 +276,21 @@ def main():
             row["payment"] = int(row.get("payment", 0)) + item["payment"]
             row["orders"] = int(row.get("orders", 0)) + max(item["qty"], 0)
             row["avg_unit"] = int(round(row["payment"] / row["qty"])) if row["qty"] else 0
+            append_or_merge_daily(
+                row,
+                day,
+                item["qty"],
+                item["gross"],
+                item["payment"],
+                max(item["qty"], 0),
+            )
 
-            existing_daily = None
-            for daily in row.get("daily", []):
-                if daily.get("date") == day:
-                    existing_daily = daily
-                    break
-            if existing_daily is None:
-                row.setdefault("daily", []).append(
-                    {
-                        "date": day,
-                        "qty": item["qty"],
-                        "gross": item["gross"],
-                        "payment": item["payment"],
-                        "orders": max(item["qty"], 0),
-                    }
-                )
-            else:
-                existing_daily["qty"] = int(existing_daily.get("qty", 0)) + item["qty"]
-                existing_daily["gross"] = int(existing_daily.get("gross", 0)) + item["gross"]
-                existing_daily["payment"] = int(existing_daily.get("payment", 0)) + item["payment"]
-                existing_daily["orders"] = int(existing_daily.get("orders", 0)) + max(item["qty"], 0)
-
+    rows, manual_updates = apply_itemized_updates(rows, manual_updates)
     manual_updates = update_manual_totals(manual_updates)
 
     DATA_FILE.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     MANUAL_FILE.write_text(json.dumps(manual_updates, ensure_ascii=False, indent=2), encoding="utf-8")
+    ITEMIZED_FILE.write_text("[]\n", encoding="utf-8")
     print("updated data.json and manual_sales_updates.json")
 
 

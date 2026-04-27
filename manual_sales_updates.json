@@ -123,6 +123,12 @@
         "items": [],
         "orders": 8,
         "qty": 13
+      },
+      {
+        "retailer": "무신사",
+        "payment": 0,
+        "items": [],
+        "qty": 16
       }
     ]
   },
