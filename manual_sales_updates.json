@@ -58,6 +58,12 @@
         "payment": 0,
         "items": [],
         "qty": 7
+      },
+      {
+        "retailer": "글로리어스워커",
+        "payment": 0,
+        "items": [],
+        "qty": 1
       }
     ]
   },

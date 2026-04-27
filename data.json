@@ -95197,5 +95197,32 @@
     "standard_name": "ICE LITE ??? ???_?????-2XL",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "???????",
+    "mall_no": "",
+    "name": "???? ????? ??? ??",
+    "color": "??",
+    "size": "XL",
+    "qty": 1,
+    "gross": 63200,
+    "payment": 63200,
+    "avg_unit": 63200,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 63200,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "???? ????? ??? ??_??-XL",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]
