@@ -22,6 +22,12 @@
         "payment": 0,
         "items": [],
         "qty": 4
+      },
+      {
+        "retailer": "4XR",
+        "payment": 0,
+        "items": [],
+        "qty": 1
       }
     ]
   },
@@ -46,6 +52,12 @@
         "payment": 0,
         "items": [],
         "qty": 1
+      },
+      {
+        "retailer": "4XR",
+        "payment": 0,
+        "items": [],
+        "qty": 7
       }
     ]
   },

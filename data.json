@@ -94981,5 +94981,221 @@
     "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "ICE LITE ??? ???",
+    "color": "??",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 38900,
+    "payment": 38900,
+    "avg_unit": 38900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 38900,
+        "payment": 38900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "ICE LITE ??? ???_??-2XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "TECH SWEAT 7?? ?? ???",
+    "color": "??????",
+    "size": "XXXL(36~38)",
+    "qty": 1,
+    "gross": 40900,
+    "payment": 40900,
+    "avg_unit": 40900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 40900,
+        "payment": 40900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 7?? ?? ???_??????-XXXL(36~38)",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "ICE LITE ????",
+    "color": "??",
+    "size": "3XL(36~38)",
+    "qty": 1,
+    "gross": 40900,
+    "payment": 40900,
+    "avg_unit": 40900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 40900,
+        "payment": 40900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "ICE LITE ????_??-3XL(36~38)",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "???? ????? ???",
+    "color": "??",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 40900,
+    "payment": 40900,
+    "avg_unit": 40900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 40900,
+        "payment": 40900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "???? ????? ???_??-3XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "???? ????? ???",
+    "color": "??",
+    "size": "L",
+    "qty": 1,
+    "gross": 40900,
+    "payment": 40900,
+    "avg_unit": 40900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 40900,
+        "payment": 40900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "???? ????? ???_??-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "?????? ??? ???????",
+    "color": "??",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 34950,
+    "payment": 34950,
+    "avg_unit": 34950,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 34950,
+        "payment": 34950,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "?????? ??? ???????_??-3XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "?????? ??? ???????",
+    "color": "???",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 34950,
+    "payment": 34950,
+    "avg_unit": 34950,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 34950,
+        "payment": 34950,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "?????? ??? ???????_???-3XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "ICE LITE ??? ???",
+    "color": "?????",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 38900,
+    "payment": 38900,
+    "avg_unit": 38900,
+    "orders": 1,
+    "source_type": "??",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 38900,
+        "payment": 38900,
+        "orders": 1
+      }
+    ],
+    "match_status": "????",
+    "match_sku": "",
+    "standard_name": "ICE LITE ??? ???_?????-2XL",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]
