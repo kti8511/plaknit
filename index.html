@@ -163,7 +163,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </div>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-04-27 07:41</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-04-27 16:52</div>
     </div>
   </div>
 </header>
@@ -423,7 +423,8 @@ const validPayment = validDiscRows.reduce((a,r)=>a+r.payment, 0);
 const totalOrders  = rawRows.reduce((a,r)=>a+r.orders, 0);
 const avgUnit      = totalQty ? Math.round(totalPayment/totalQty) : 0;
 const avgDisc      = validGross ? (1-validPayment/validGross)*100 : null;
-const matched      = rawRows.filter(r => !String(r.match_status || '').includes('?')).length;
+const isMatchedRow = r => !String(r.match_status || '').includes('?');
+const matched      = rawRows.filter(isMatchedRow).length;
 const unmatched    = rawRows.length - matched;
 const matchRate    = rawRows.length ? matched/rawRows.length*100 : 0;
 const allDailyForKpi = buildDailyMap(null);
@@ -704,7 +705,7 @@ const scl  = {x:{grid:{color:'#e2e6ed'},ticks:{maxRotation:0}},y:{grid:{color:'#
   `;
 
   // 미매칭
-  const um = rawRows.filter(r=>r.match_status!=='매칭됨');
+  const um = rawRows.filter(r=>!isMatchedRow(r));
   document.getElementById('unmatchedRows').innerHTML = um.length
     ? um.map(r=>`<tr><td><span class="badge badge-blue">${r.retailer}</span></td><td class="td-mono">${r.mall_no}</td><td class="td-main">${r.standard_name||r.name}</td><td class="num">${fmt(r.qty)}</td><td class="num">${fmt(r.payment)}</td></tr>`).join('')
     : '<tr><td colspan="5" style="text-align:center;color:var(--ink3);padding:28px">✓ 미매칭 항목 없음</td></tr>';
