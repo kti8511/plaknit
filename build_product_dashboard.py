@@ -31,6 +31,7 @@ import json, datetime, pathlib
 
 DATA_FILE = pathlib.Path("data.json")
 HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
+MANUAL_SALES_FILE = pathlib.Path("manual_sales_updates.json")
 OUT_FILE  = pathlib.Path("index.html")
 
 with DATA_FILE.open(encoding="utf-8") as f:
@@ -41,9 +42,15 @@ if HISTORICAL_DAILY_FILE.exists():
     with HISTORICAL_DAILY_FILE.open(encoding="utf-8") as f:
         historical_daily = json.load(f)
 
+manual_sales_updates = []
+if MANUAL_SALES_FILE.exists():
+    with MANUAL_SALES_FILE.open(encoding="utf-8") as f:
+        manual_sales_updates = json.load(f)
+
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 rows_json = json.dumps(rows, ensure_ascii=False)
 historical_daily_json = json.dumps(historical_daily, ensure_ascii=False)
+manual_sales_json = json.dumps(manual_sales_updates, ensure_ascii=False)
 
 # 2026 플래니트 예산.xlsx > 2025 실매출 > 월별 합계(row 32) 기준.
 # GitHub Actions 환경에서도 재생성 가능하도록 기준값은 스크립트에 고정한다.
@@ -475,6 +482,7 @@ const PREV_YEAR_MONTHLY = {prev_year_monthly_json};
 const HISTORICAL_MONTHLY = {historical_monthly_json};
 const HISTORICAL_DAILY = {historical_daily_json};
 const HISTORICAL_DAILY_MONTHLY = {historical_daily_monthly_json};
+const MANUAL_SALES = {manual_sales_json};
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
@@ -528,6 +536,13 @@ function buildDailyMap(retailerFilter) {{
       m[d.date].qty     += d.qty;
     }});
   }});
+  MANUAL_SALES.forEach(day => {{
+    (day.retailers || []).forEach(r => {{
+      if (retailerFilter && r.retailer !== retailerFilter) return;
+      if (!m[day.date]) m[day.date] = {{date:day.date,payment:0,gross:0,orders:0,qty:0}};
+      m[day.date].payment += Number(r.payment || 0);
+    }});
+  }});
   return Object.values(m).sort((a,b)=>a.date.localeCompare(b.date));
 }}
 
@@ -551,6 +566,12 @@ rawRows.forEach(r => {{
     retailerMap[r.retailer].validPayment += r.payment;
     retailerMap[r.retailer].validGross += r.gross;
   }}
+}});
+MANUAL_SALES.forEach(day => {{
+  (day.retailers || []).forEach(r => {{
+    if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0}};
+    retailerMap[r.retailer].payment += Number(r.payment || 0);
+  }});
 }});
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
 
@@ -584,6 +605,13 @@ function buildMonthlySalesByYear() {{
       if (!byYear[year]) byYear[year] = {{}};
       byYear[year][month] = (byYear[year][month] || 0) + Number(d.payment || 0);
     }});
+  }});
+  MANUAL_SALES.forEach(day => {{
+    const year = day.date.slice(0,4);
+    const month = day.date.slice(5,7);
+    const payment = (day.retailers || []).reduce((sum, r) => sum + Number(r.payment || 0), 0);
+    if (!byYear[year]) byYear[year] = {{}};
+    byYear[year][month] = (byYear[year][month] || 0) + payment;
   }});
   return byYear;
 }}
