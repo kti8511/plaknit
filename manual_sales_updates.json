@@ -135,8 +135,29 @@
       },
       {
         "retailer": "29cm",
-        "payment": 0,
-        "items": [],
+        "payment": 203460,
+        "items": [
+          {
+            "name": "[헤비쭈리] TECH SWEAT 베이직 조거팬츠",
+            "qty": 1,
+            "payment": 51300
+          },
+          {
+            "name": "[헤비쭈리] TECH SWEAT 베이직 조거팬츠",
+            "qty": 1,
+            "payment": 51300
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 45060
+          },
+          {
+            "name": "[헤비쭈리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+            "qty": 1,
+            "payment": 55800
+          }
+        ],
         "qty": 4
       },
       {
@@ -165,8 +186,14 @@
       },
       {
         "retailer": "29cm",
-        "payment": 0,
-        "items": [],
+        "payment": 8416,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌룬 쇼츠",
+            "qty": 1,
+            "payment": 8416
+          }
+        ],
         "qty": 1
       },
       {
@@ -176,9 +203,15 @@
         "qty": 7
       },
       {
-        "retailer": "???????",
-        "payment": 0,
-        "items": [],
+        "retailer": "글로리어스워커",
+        "payment": 63200,
+        "items": [
+          {
+            "name": "Quickdry Ventilation Running Top",
+            "qty": 1,
+            "payment": 63200
+          }
+        ],
         "qty": 1
       }
     ]
@@ -201,8 +234,19 @@
       },
       {
         "retailer": "29cm",
-        "payment": 0,
-        "items": [],
+        "payment": 102600,
+        "items": [
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
+            "qty": 1,
+            "payment": 36000
+          },
+          {
+            "name": "퀵드라이 투인원 러닝쇼츠 블랙",
+            "qty": 1,
+            "payment": 66600
+          }
+        ],
         "qty": 2
       }
     ]

@@ -98299,205 +98299,6 @@
     "category_small": ""
   },
   {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "[헤비쮸리] TECH SWEAT 베이직 조거팬츠",
-    "color": "",
-    "size": "",
-    "qty": 2,
-    "gross": 102600,
-    "payment": 102600,
-    "avg_unit": 51300,
-    "orders": 2,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-24",
-        "qty": 1,
-        "gross": 51300,
-        "payment": 51300,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-24",
-        "qty": 1,
-        "gross": 51300,
-        "payment": 51300,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "[헤비쮸리] TECH SWEAT 베이직 조거팬츠",
-    "received_qty": 0,
-    "stock_qty": 1651,
-    "stock_barcode": "",
-    "stock_name": "TECH SWEAT 베이직 조거팬츠_BLACK_M",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "퀵드라이 셔링 티셔츠 세이지",
-    "color": "",
-    "size": "",
-    "qty": 1,
-    "gross": 45060,
-    "payment": 45060,
-    "avg_unit": 45060,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-24",
-        "qty": 1,
-        "gross": 45060,
-        "payment": 45060,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "퀵드라이 셔링 티셔츠 세이지",
-    "received_qty": 0,
-    "stock_qty": 171,
-    "stock_barcode": "",
-    "stock_name": "퀵드라이 셔링 티셔츠 세이지 L",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-    "color": "",
-    "size": "",
-    "qty": 1,
-    "gross": 55800,
-    "payment": 55800,
-    "avg_unit": 55800,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-24",
-        "qty": 1,
-        "gross": 55800,
-        "payment": 55800,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-    "received_qty": 0,
-    "stock_qty": 129,
-    "stock_barcode": "",
-    "stock_name": "TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_VINTAGE CHARCOAL_M",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "TECH SWEAT 벌룬 쇼츠",
-    "color": "",
-    "size": "",
-    "qty": 1,
-    "gross": 8416,
-    "payment": 8416,
-    "avg_unit": 8416,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-25",
-        "qty": 1,
-        "gross": 8416,
-        "payment": 8416,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "TECH SWEAT 벌룬 쇼츠",
-    "received_qty": 0,
-    "stock_qty": 155,
-    "stock_barcode": "",
-    "stock_name": "TECH SWEAT 벌룬 쇼츠_BLACK_M",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
-    "color": "",
-    "size": "",
-    "qty": 1,
-    "gross": 36000,
-    "payment": 36000,
-    "avg_unit": 36000,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-26",
-        "qty": 1,
-        "gross": 36000,
-        "payment": 36000,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
-    "received_qty": 0,
-    "stock_qty": 114,
-    "stock_barcode": "",
-    "stock_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 L",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "29cm",
-    "mall_no": "",
-    "name": "퀵드라이 투인원 러닝쇼츠 블랙",
-    "color": "",
-    "size": "",
-    "qty": 1,
-    "gross": 66600,
-    "payment": 66600,
-    "avg_unit": 66600,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-26",
-        "qty": 1,
-        "gross": 66600,
-        "payment": 66600,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙",
-    "received_qty": 0,
-    "stock_qty": 171,
-    "stock_barcode": "",
-    "stock_name": "퀵드라이 투인원 러닝쇼츠 블랙 XL",
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
     "retailer": "4XR",
     "mall_no": "",
     "name": "ICE LITE 오버핏 맨투맨",
@@ -98738,36 +98539,6 @@
     "category_small": ""
   },
   {
-    "retailer": "???????",
-    "mall_no": "",
-    "name": "???? ????? ??? ??",
-    "color": "??",
-    "size": "XL",
-    "qty": 1,
-    "gross": 63200,
-    "payment": 63200,
-    "avg_unit": 63200,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-25",
-        "qty": 1,
-        "gross": 63200,
-        "payment": 63200,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "???? ????? ??? ??_??-XL",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
     "retailer": "무신사",
     "mall_no": "",
     "name": "ICE LITE 쿨메쉬 베이직 나시",
@@ -98820,5 +98591,221 @@
     "standard_name": "퀵드라이 피그먼트 오버핏 반팔티_라이트그레이-3XL",
     "received_qty": 0,
     "stock_qty": 99
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "2185959",
+    "name": "[헤비쭈리] TECH SWEAT 베이직 조거팬츠",
+    "color": "멜란지그레이",
+    "size": "L",
+    "qty": 1,
+    "gross": 51300,
+    "payment": 51300,
+    "avg_unit": 51300,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 51300,
+        "payment": 51300,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB4PLM01MGR000L",
+    "standard_name": "TECH SWEAT 베이직 조거팬츠_M/GREY_L",
+    "received_qty": 0,
+    "stock_qty": 309
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "2185959",
+    "name": "[헤비쭈리] TECH SWEAT 베이직 조거팬츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 51300,
+    "payment": 51300,
+    "avg_unit": 51300,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 51300,
+        "payment": 51300,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB4PLM01BLK000L",
+    "standard_name": "TECH SWEAT 베이직 조거팬츠_BLACK_L",
+    "received_qty": 0,
+    "stock_qty": 303
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "3865269",
+    "name": "퀵드라이 셔링 티셔츠 세이지",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 45060,
+    "payment": 45060,
+    "avg_unit": 45060,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 45060,
+        "payment": 45060,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSW01SAG0000M",
+    "standard_name": "퀵드라이 셔링 티셔츠 세이지 M",
+    "received_qty": 0,
+    "stock_qty": 12
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "2186335",
+    "name": "[헤비쭈리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "color": "빈티지차콜",
+    "size": "L",
+    "qty": 1,
+    "gross": 55800,
+    "payment": 55800,
+    "avg_unit": 55800,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-24",
+        "qty": 1,
+        "gross": 55800,
+        "payment": 55800,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB4PLM02BLK000L",
+    "standard_name": "TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_VINTAGE CHARCOAL_L",
+    "received_qty": 0,
+    "stock_qty": 61
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "1918667",
+    "name": "TECH SWEAT 벌룬 쇼츠",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 1,
+    "gross": 8416,
+    "payment": 8416,
+    "avg_unit": 8416,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 8416,
+        "payment": 8416,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB2PSM01BLK00XL",
+    "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_XL",
+    "received_qty": 0,
+    "stock_qty": 67
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "3865263",
+    "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
+    "color": "",
+    "size": "S",
+    "qty": 1,
+    "gross": 36000,
+    "payment": 36000,
+    "avg_unit": 36000,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 36000,
+        "payment": 36000,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSW02WHT000S",
+    "standard_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 S",
+    "received_qty": 0,
+    "stock_qty": 36
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "3843126",
+    "name": "퀵드라이 투인원 러닝쇼츠 블랙",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 66600,
+    "payment": 66600,
+    "avg_unit": 66600,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-26",
+        "qty": 1,
+        "gross": 66600,
+        "payment": 66600,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1PSM02BLK000M",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙 M",
+    "received_qty": 0,
+    "stock_qty": 55
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "4008",
+    "name": "Quickdry Ventilation Running Top",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 1,
+    "gross": 63200,
+    "payment": 63200,
+    "avg_unit": 63200,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 63200,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1TMM01BLK00XL",
+    "standard_name": "퀵드라이 벤틸레이텘 러닝탑 블랙 XL",
+    "received_qty": 0,
+    "stock_qty": 43
   }
 ]
