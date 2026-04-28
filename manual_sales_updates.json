@@ -281,6 +281,48 @@
           }
         ],
         "qty": 32
+      },
+      {
+        "retailer": "자사몰",
+        "payment": 388600,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
+            "qty": 1,
+            "payment": 79000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙",
+            "qty": 1,
+            "payment": 59000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 화이트",
+            "qty": 1,
+            "payment": 59000
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜",
+            "qty": 1,
+            "payment": 59000
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 1,
+            "payment": 75800
+          },
+          {
+            "name": "스포츠 쿠션업 PLNT 크루삭스",
+            "qty": 1,
+            "payment": 8800
+          },
+          {
+            "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)",
+            "qty": 1,
+            "payment": 48000
+          }
+        ],
+        "qty": 7
       }
     ]
   }

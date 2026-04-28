@@ -42048,11 +42048,11 @@
     "name": "스포츠 쿠션업 PLNT 크루삭스",
     "color": "화이트",
     "size": "",
-    "qty": 7,
-    "gross": 525000,
-    "payment": 189741,
-    "avg_unit": 27105,
-    "orders": 5,
+    "qty": 8,
+    "gross": 533800,
+    "payment": 198541,
+    "avg_unit": 24818,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -42089,13 +42089,20 @@
         "gross": 75000,
         "payment": 47900,
         "orders": 1
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 8800,
+        "payment": 8800,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
     "match_sku": "PC4AAM02WHT000F",
     "standard_name": "스포츠 쿠션업 PLNT 크루삭스_WHITE_Free",
     "received_qty": 0,
-    "stock_qty": 154,
+    "stock_qty": 171,
     "stock_barcode": "PC4AAM02WHT000F",
     "stock_name": "스포츠 쿠션업 PLNT 크루삭스_WHITE_Free",
     "season": "4",
@@ -43992,11 +43999,11 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "2XL",
-    "qty": 3,
-    "gross": 237000,
-    "payment": 180408,
-    "avg_unit": 60136,
-    "orders": 3,
+    "qty": 4,
+    "gross": 316000,
+    "payment": 259408,
+    "avg_unit": 64852,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -44012,13 +44019,20 @@
         "gross": 158000,
         "payment": 134648,
         "orders": 2
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE1TMM01GRY000L",
-    "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
+    "match_sku": "PE1TMM01GRY02XL",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 2XL",
     "received_qty": 48,
-    "stock_qty": 33,
+    "stock_qty": 29,
     "stock_barcode": "PE1TMM01GRY000L",
     "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
     "season": "1",
@@ -44116,11 +44130,11 @@
     "name": "퀵드라이 셔링 티셔츠 블랙",
     "color": "",
     "size": "M",
-    "qty": 4,
-    "gross": 295000,
-    "payment": 179160,
-    "avg_unit": 44790,
-    "orders": 5,
+    "qty": 5,
+    "gross": 354000,
+    "payment": 238160,
+    "avg_unit": 47632,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -44157,13 +44171,20 @@
         "gross": 59000,
         "payment": 0,
         "orders": 1
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 59000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE2TSW01BLK0000L",
-    "standard_name": "퀵드라이 셔링 티셔츠 블랙 L",
+    "match_sku": "PE2TSW01BLK0000M",
+    "standard_name": "퀵드라이 셔링 티셔츠 블랙 M",
     "received_qty": 34,
-    "stock_qty": 29,
+    "stock_qty": 49,
     "stock_barcode": "PE2TSW01BLK0000L",
     "stock_name": "퀵드라이 셔링 티셔츠 블랙 L",
     "season": "2",
@@ -50924,11 +50945,11 @@
     "name": "퀵드라이 셔링 티셔츠 화이트",
     "color": "",
     "size": "M",
-    "qty": 5,
-    "gross": 295000,
-    "payment": 144203,
-    "avg_unit": 28840,
-    "orders": 5,
+    "qty": 6,
+    "gross": 354000,
+    "payment": 203203,
+    "avg_unit": 33867,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -50951,13 +50972,20 @@
         "gross": 177000,
         "payment": 71590,
         "orders": 3
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 59000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE2TSW01WHT0000L",
-    "standard_name": "퀵드라이 셔링 티셔츠 화이트 L",
+    "match_sku": "PE2TSW01WHT0000M",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트 M",
     "received_qty": 34,
-    "stock_qty": 33,
+    "stock_qty": 46,
     "stock_barcode": "PE2TSW01WHT0000L",
     "stock_name": "퀵드라이 셔링 티셔츠 화이트 L",
     "season": "2",
@@ -78829,11 +78857,11 @@
     "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)",
     "color": "차콜",
     "size": "XL",
-    "qty": 1,
-    "gross": 48000,
-    "payment": 48650,
-    "avg_unit": 48650,
-    "orders": 1,
+    "qty": 2,
+    "gross": 96000,
+    "payment": 96650,
+    "avg_unit": 48325,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -78842,13 +78870,20 @@
         "gross": 48000,
         "payment": 48650,
         "orders": 1
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 48000,
+        "payment": 48000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
     "match_sku": "PB1TLM01CHL00XL",
     "standard_name": "KINTERRA 베이직 릴렉스 롱슬리브_CHARCOAL_XL",
     "received_qty": 0,
-    "stock_qty": 36,
+    "stock_qty": 37,
     "stock_barcode": "PB1TLM01CHL00XL",
     "stock_name": "KINTERRA 베이직 릴렉스 롱슬리브_CHARCOAL_XL",
     "season": "1",
@@ -80329,11 +80364,11 @@
     "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜",
     "color": "",
     "size": "XL",
-    "qty": 1,
-    "gross": 59800,
-    "payment": 43707,
-    "avg_unit": 43707,
-    "orders": 1,
+    "qty": 2,
+    "gross": 118800,
+    "payment": 102707,
+    "avg_unit": 51354,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -80342,13 +80377,20 @@
         "gross": 59800,
         "payment": 43707,
         "orders": 1
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 59000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PC2STM01BLK00XL",
-    "standard_name": "퀵드라이 9 탱크_BLACK_XL",
+    "match_sku": "PE2TSM03CHA00XL",
+    "standard_name": "퀵드라이 RUNNER'S FEET 티셔츠 차콜 XL",
     "received_qty": 0,
-    "stock_qty": 69,
+    "stock_qty": 55,
     "stock_barcode": "PC2STM01BLK00XL",
     "stock_name": "퀵드라이 9 탱크_BLACK_XL",
     "season": "2",
@@ -95941,11 +95983,11 @@
     "name": "ICE LITE 와이드 카고팬츠",
     "color": "블랙",
     "size": "2XL",
-    "qty": 0,
-    "gross": 0,
-    "payment": 0,
-    "avg_unit": 0,
-    "orders": 1,
+    "qty": 1,
+    "gross": 75800,
+    "payment": 75800,
+    "avg_unit": 75800,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -95954,13 +95996,20 @@
         "gross": 0,
         "payment": 0,
         "orders": 1
+      },
+      {
+        "date": "2026-04-27",
+        "qty": 1,
+        "gross": 75800,
+        "payment": 75800,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PD2PLM01BLK000L",
-    "standard_name": "ICE LITE 와이드 카고팬츠_블랙-L",
+    "match_sku": "PD2PLM01BLK02XL",
+    "standard_name": "ICE LITE 와이드 카고팬츠_블랙-2XL",
     "received_qty": 0,
-    "stock_qty": 132,
+    "stock_qty": 19,
     "stock_barcode": "PD2PLM01BLK000L",
     "stock_name": "ICE LITE 와이드 카고팬츠_블랙-L",
     "season": "2",
@@ -97863,10 +97912,10 @@
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "",
-    "standard_name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)_차콜-L",
+    "match_sku": "PB1TLM01CHL000L",
+    "standard_name": "KINTERRA 베이직 릴렉스 롱슬리브_CHARCOAL_L",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 9,
     "season": "",
     "category_large": "",
     "category_small": ""
