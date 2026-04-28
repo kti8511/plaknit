@@ -98367,15 +98367,15 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "ICE LITE ??? ???",
-    "color": "??",
+    "name": "ICE LITE 오버핏 맨투맨",
+    "color": "차콜",
     "size": "2XL",
     "qty": 1,
     "gross": 38900,
     "payment": 38900,
     "avg_unit": 38900,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-24",
@@ -98385,11 +98385,11 @@
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "ICE LITE ??? ???_??-2XL",
+    "match_status": "매칭됨",
+    "match_sku": "PB1TMM02CHA0XXL",
+    "standard_name": "ICE LITE 오버핏 맨투맨_CHARCOAL_XXL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 87,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98397,29 +98397,29 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "TECH SWEAT 7?? ?? ???",
-    "color": "??????",
-    "size": "XXXL(36~38)",
+    "name": "TECH SWEAT 7\" 카고 반바지",
+    "color": "멜란지그레이",
+    "size": "XXXL",
     "qty": 1,
-    "gross": 40900,
-    "payment": 40900,
-    "avg_unit": 40900,
+    "gross": 46900,
+    "payment": 46900,
+    "avg_unit": 46900,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
         "qty": 1,
-        "gross": 40900,
-        "payment": 40900,
+        "gross": 46900,
+        "payment": 46900,
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "TECH SWEAT 7?? ?? ???_??????-XXXL(36~38)",
+    "match_status": "매칭됨",
+    "match_sku": "PB2PSM02MGRXXXL",
+    "standard_name": "TECH SWEAT 7\" 카고 반바지_M/GREY_XXXL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 36,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98427,59 +98427,29 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "ICE LITE ????",
-    "color": "??",
-    "size": "3XL(36~38)",
-    "qty": 1,
-    "gross": 40900,
-    "payment": 40900,
-    "avg_unit": 40900,
-    "orders": 1,
-    "source_type": "??",
-    "daily": [
-      {
-        "date": "2026-04-25",
-        "qty": 1,
-        "gross": 40900,
-        "payment": 40900,
-        "orders": 1
-      }
-    ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "ICE LITE ????_??-3XL(36~38)",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "season": "",
-    "category_large": "",
-    "category_small": ""
-  },
-  {
-    "retailer": "4XR",
-    "mall_no": "",
-    "name": "???? ????? ???",
-    "color": "??",
+    "name": "ICE LITE 멀티쇼츠",
+    "color": "블랙",
     "size": "3XL",
     "qty": 1,
-    "gross": 40900,
-    "payment": 40900,
-    "avg_unit": 40900,
+    "gross": 46900,
+    "payment": 46900,
+    "avg_unit": 46900,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
         "qty": 1,
-        "gross": 40900,
-        "payment": 40900,
+        "gross": 46900,
+        "payment": 46900,
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "???? ????? ???_??-3XL",
+    "match_status": "매칭됨",
+    "match_sku": "PB2PSM06BLKXXXL",
+    "standard_name": "ICE LITE 멀티쇼츠_BLACK_XXXL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 47,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98487,29 +98457,59 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "???? ????? ???",
-    "color": "??",
+    "name": "퀵드라이 세미오버핏 티셔츠",
+    "color": "블랙",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 35900,
+    "payment": 35900,
+    "avg_unit": 35900,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-25",
+        "qty": 1,
+        "gross": 35900,
+        "payment": 35900,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB4TSM01BLK03XL",
+    "standard_name": "퀵드라이 세미오버핏 티셔츠_BLACK_3XL",
+    "received_qty": 0,
+    "stock_qty": 78,
+    "season": "",
+    "category_large": "",
+    "category_small": ""
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "퀵드라이 세미오버핏 티셔츠",
+    "color": "블랙",
     "size": "L",
     "qty": 1,
-    "gross": 40900,
-    "payment": 40900,
-    "avg_unit": 40900,
+    "gross": 33900,
+    "payment": 33900,
+    "avg_unit": 33900,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
         "qty": 1,
-        "gross": 40900,
-        "payment": 40900,
+        "gross": 33900,
+        "payment": 33900,
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "???? ????? ???_??-L",
+    "match_status": "매칭됨",
+    "match_sku": "PB4TSM01BLK000L",
+    "standard_name": "퀵드라이 세미오버핏 티셔츠_BLACK_L",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 97,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98517,15 +98517,15 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "?????? ??? ???????",
-    "color": "??",
+    "name": "채코제에디션 초냉감 트래블러티셔츠",
+    "color": "블랙",
     "size": "3XL",
     "qty": 1,
     "gross": 34950,
     "payment": 34950,
     "avg_unit": 34950,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
@@ -98535,11 +98535,11 @@
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "?????? ??? ???????_??-3XL",
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM02BLK03XL",
+    "standard_name": "채코제에디션 초냉감 트래블러티셔츠블랙-3XL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 44,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98547,15 +98547,15 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "?????? ??? ???????",
-    "color": "???",
+    "name": "채코제에디션 초냉감 트래블러티셔츠",
+    "color": "화이트",
     "size": "3XL",
     "qty": 1,
     "gross": 34950,
     "payment": 34950,
     "avg_unit": 34950,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
@@ -98565,11 +98565,11 @@
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "?????? ??? ???????_???-3XL",
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM02WHT03XL",
+    "standard_name": "채코제에디션 초냉감 트래블러티셔츠화이트-3XL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 34,
     "season": "",
     "category_large": "",
     "category_small": ""
@@ -98577,15 +98577,15 @@
   {
     "retailer": "4XR",
     "mall_no": "",
-    "name": "ICE LITE ??? ???",
-    "color": "?????",
+    "name": "ICE LITE 오버핏 맨투맨",
+    "color": "라이트카키",
     "size": "2XL",
     "qty": 1,
     "gross": 38900,
     "payment": 38900,
     "avg_unit": 38900,
     "orders": 1,
-    "source_type": "??",
+    "source_type": "단품",
     "daily": [
       {
         "date": "2026-04-25",
@@ -98595,11 +98595,11 @@
         "orders": 1
       }
     ],
-    "match_status": "????",
-    "match_sku": "",
-    "standard_name": "ICE LITE ??? ???_?????-2XL",
+    "match_status": "매칭됨",
+    "match_sku": "PB1TMM02LKH0XXL",
+    "standard_name": "ICE LITE 오버핏 맨투맨_L/KHAKI_XXL",
     "received_qty": 0,
-    "stock_qty": 0,
+    "stock_qty": 94,
     "season": "",
     "category_large": "",
     "category_small": ""
