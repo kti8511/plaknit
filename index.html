@@ -163,7 +163,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </div>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-04-28 01:38</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-04-28 10:48</div>
     </div>
   </div>
 </header>
@@ -447,6 +447,7 @@ document.getElementById('kpiMatchBar').style.width = matchRate.toFixed(1)+'%';
 
 function buildDailyMap(retailerFilter) {
   const m = {};
+  const existingByDateRetailer = {};
   rawRows.forEach(r => {
     if (retailerFilter && r.retailer !== retailerFilter) return;
     (r.daily||[]).forEach(d => {
@@ -455,26 +456,23 @@ function buildDailyMap(retailerFilter) {
       m[d.date].gross   += d.gross;
       m[d.date].orders  += d.orders;
       m[d.date].qty     += d.qty;
+      const key = d.date + '|' + (r.retailer || '');
+      if (!existingByDateRetailer[key]) existingByDateRetailer[key] = {payment:0,gross:0,orders:0,qty:0};
+      existingByDateRetailer[key].payment += Number(d.payment || 0);
+      existingByDateRetailer[key].gross += Number(d.gross || 0);
+      existingByDateRetailer[key].orders += Number(d.orders || 0);
+      existingByDateRetailer[key].qty += Number(d.qty || 0);
     });
   });
   MANUAL_SALES.forEach(day => {
     (day.retailers || []).forEach(r => {
       if (retailerFilter && r.retailer !== retailerFilter) return;
       if (!m[day.date]) m[day.date] = {date:day.date,payment:0,gross:0,orders:0,qty:0};
-      m[day.date].payment += Number(r.payment || 0);
-      let existingOrders = 0;
-      let existingQty = 0;
-      rawRows.forEach(row => {
-        if (row.retailer !== r.retailer) return;
-        (row.daily || []).forEach(d => {
-          if (d.date === day.date) {
-            existingOrders += Number(d.orders || 0);
-            existingQty += Number(d.qty || 0);
-          }
-        });
-      });
-      if (r.orders !== undefined) m[day.date].orders += Number(r.orders || 0) - existingOrders;
-      if (r.qty !== undefined) m[day.date].qty += Number(r.qty || 0) - existingQty;
+      const existing = existingByDateRetailer[day.date + '|' + (r.retailer || '')] || {payment:0,gross:0,orders:0,qty:0};
+      m[day.date].payment += Math.max(0, Number(r.payment || 0) - existing.payment);
+      if (r.gross !== undefined) m[day.date].gross += Math.max(0, Number(r.gross || 0) - existing.gross);
+      if (r.orders !== undefined) m[day.date].orders += Number(r.orders || 0) - existing.orders;
+      if (r.qty !== undefined) m[day.date].qty += Number(r.qty || 0) - existing.qty;
     });
   });
   return Object.values(m).sort((a,b)=>a.date.localeCompare(b.date));
@@ -490,12 +488,21 @@ function buildHistoricalDailyMap(yearFilter, retailerFilter) {
 
 // ── 유통사 집계 ────────────────────────────────────────────
 const retailerMap = {};
+const retailerExisting = {};
 rawRows.forEach(r => {
   if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0};
   retailerMap[r.retailer].payment += r.payment;
   retailerMap[r.retailer].gross   += r.gross;
   retailerMap[r.retailer].orders  += r.orders;
   retailerMap[r.retailer].qty     += r.qty;
+  (r.daily || []).forEach(d => {
+    const key = d.date + '|' + (r.retailer || '');
+    if (!retailerExisting[key]) retailerExisting[key] = {payment:0,gross:0,orders:0,qty:0};
+    retailerExisting[key].payment += Number(d.payment || 0);
+    retailerExisting[key].gross += Number(d.gross || 0);
+    retailerExisting[key].orders += Number(d.orders || 0);
+    retailerExisting[key].qty += Number(d.qty || 0);
+  });
   if (validDiscount(r.gross, r.payment) !== null) {
     retailerMap[r.retailer].validPayment += r.payment;
     retailerMap[r.retailer].validGross += r.gross;
@@ -504,26 +511,11 @@ rawRows.forEach(r => {
 MANUAL_SALES.forEach(day => {
   (day.retailers || []).forEach(r => {
     if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0};
-    retailerMap[r.retailer].payment += Number(r.payment || 0);
-  });
-});
-MANUAL_SALES.forEach(day => {
-  (day.retailers || []).forEach(r => {
-    if (r.orders === undefined && r.qty === undefined) return;
-    let existingOrders = 0;
-    let existingQty = 0;
-    rawRows.forEach(row => {
-      if (row.retailer !== r.retailer) return;
-      (row.daily || []).forEach(d => {
-        if (d.date === day.date) {
-          existingOrders += Number(d.orders || 0);
-          existingQty += Number(d.qty || 0);
-        }
-      });
-    });
-    if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0};
-    if (r.orders !== undefined) retailerMap[r.retailer].orders += Number(r.orders || 0) - existingOrders;
-    if (r.qty !== undefined) retailerMap[r.retailer].qty += Number(r.qty || 0) - existingQty;
+    const existing = retailerExisting[day.date + '|' + (r.retailer || '')] || {payment:0,gross:0,orders:0,qty:0};
+    retailerMap[r.retailer].payment += Math.max(0, Number(r.payment || 0) - existing.payment);
+    if (r.gross !== undefined) retailerMap[r.retailer].gross += Math.max(0, Number(r.gross || 0) - existing.gross);
+    if (r.orders !== undefined) retailerMap[r.retailer].orders += Number(r.orders || 0) - existing.orders;
+    if (r.qty !== undefined) retailerMap[r.retailer].qty += Number(r.qty || 0) - existing.qty;
   });
 });
 const retailerAll = Object.values(retailerMap).sort((a,b)=>b.payment-a.payment);
@@ -559,10 +551,20 @@ function buildMonthlySalesByYear() {
       byYear[year][month] = (byYear[year][month] || 0) + Number(d.payment || 0);
     });
   });
+  const monthlyExisting = {};
+  rawRows.forEach(r => {
+    (r.daily || []).forEach(d => {
+      const key = d.date + '|' + (r.retailer || '');
+      monthlyExisting[key] = (monthlyExisting[key] || 0) + Number(d.payment || 0);
+    });
+  });
   MANUAL_SALES.forEach(day => {
     const year = day.date.slice(0,4);
     const month = day.date.slice(5,7);
-    const payment = (day.retailers || []).reduce((sum, r) => sum + Number(r.payment || 0), 0);
+    const payment = (day.retailers || []).reduce((sum, r) => {
+      const existing = monthlyExisting[day.date + '|' + (r.retailer || '')] || 0;
+      return sum + Math.max(0, Number(r.payment || 0) - existing);
+    }, 0);
     if (!byYear[year]) byYear[year] = {};
     byYear[year][month] = (byYear[year][month] || 0) + payment;
   });
