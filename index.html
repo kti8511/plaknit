@@ -214,7 +214,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </div>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-04-29 13:35</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-04-29 14:50</div>
     </div>
   </div>
 </header>
@@ -1262,6 +1262,15 @@ initDetailFilters();
 
 // TODO LIST -------------------------------------------------------------
 const TODO_KEY = 'plaknitTodoProjects.v1';
+const TODO_SUPABASE_REST = 'https://ucncftctvblshhdykwcl.supabase.co/rest/v1';
+const TODO_SUPABASE_PROJECT = 'https://ucncftctvblshhdykwcl.supabase.co';
+const TODO_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjbmNmdGN0dmJsc2hoZHlrd2NsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTU1NzIsImV4cCI6MjA5Mjk3MTU3Mn0.E4MEqRCk1p3lzXA6l3cPf6CwaKpN8RFQJuENK9mkW38';
+const TODO_SUPABASE_BUCKET = 'todo-files';
+const TODO_HEADERS = {
+  apikey: TODO_SUPABASE_KEY,
+  Authorization: `Bearer ${TODO_SUPABASE_KEY}`,
+  'Content-Type': 'application/json'
+};
 let todoEditId = null;
 let todoItems = [];
 const todoStatusText = {todo:'할 일', progress:'진행중', done:'완료', delay:'지연'};
@@ -1290,6 +1299,93 @@ function loadTodoItems() {
 }
 function saveTodoItems() {
   localStorage.setItem(TODO_KEY, JSON.stringify(todoItems));
+}
+function todoFromServer(row) {
+  return {
+    id: row.id,
+    project: row.project || '미지정 프로젝트',
+    task: row.task || '미지정 태스크',
+    owner: row.owner || '',
+    status: row.status || 'todo',
+    start: row.start_date || '',
+    end: row.end_date || '',
+    doneDate: row.done_date || '',
+    memo: row.memo || '',
+    fileName: row.file_name || '',
+    filePath: row.file_path || ''
+  };
+}
+function todoToServer(item) {
+  return {
+    project: item.project || '미지정 프로젝트',
+    task: item.task || '미지정 태스크',
+    owner: item.owner || '',
+    status: item.status || 'todo',
+    start_date: item.start || null,
+    end_date: item.end || null,
+    done_date: item.doneDate || null,
+    memo: item.memo || '',
+    file_name: item.fileName || '',
+    file_path: item.filePath || ''
+  };
+}
+async function fetchTodoRemote() {
+  const res = await fetch(`${TODO_SUPABASE_REST}/todos?select=*&order=created_at.asc`, {
+    headers: TODO_HEADERS
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return (await res.json()).map(todoFromServer);
+}
+async function refreshTodoFromSupabase() {
+  try {
+    const remote = await fetchTodoRemote();
+    todoItems = remote;
+    saveTodoItems();
+    renderTodo();
+  } catch (e) {
+    console.warn('Supabase todo load failed. Local fallback is active.', e);
+  }
+}
+async function uploadTodoFile(file) {
+  if (!file) return {fileName:'', filePath:''};
+  const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+  const path = `${Date.now()}-${safeName}`;
+  const res = await fetch(`${TODO_SUPABASE_PROJECT}/storage/v1/object/${TODO_SUPABASE_BUCKET}/${path}`, {
+    method: 'POST',
+    headers: {
+      apikey: TODO_SUPABASE_KEY,
+      Authorization: `Bearer ${TODO_SUPABASE_KEY}`,
+      'x-upsert': 'true',
+      'Content-Type': file.type || 'application/octet-stream'
+    },
+    body: file
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return {
+    fileName: file.name,
+    filePath: `${TODO_SUPABASE_PROJECT}/storage/v1/object/public/${TODO_SUPABASE_BUCKET}/${path}`
+  };
+}
+async function saveTodoRemote(item, isEdit) {
+  const payload = todoToServer(item);
+  const url = isEdit
+    ? `${TODO_SUPABASE_REST}/todos?id=eq.${encodeURIComponent(item.id)}`
+    : `${TODO_SUPABASE_REST}/todos`;
+  const res = await fetch(url, {
+    method: isEdit ? 'PATCH' : 'POST',
+    headers: {...TODO_HEADERS, Prefer:'return=representation'},
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  const rows = await res.json();
+  return rows[0] ? todoFromServer(rows[0]) : item;
+}
+async function deleteTodoRemote(id) {
+  const res = await fetch(`${TODO_SUPABASE_REST}/todos?id=eq.${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+    headers: TODO_HEADERS
+  });
+  if (!res.ok) throw new Error(await res.text());
 }
 function todoStatusClass(status) {
   if (status === 'done') return 'done';
@@ -1364,12 +1460,18 @@ function renderTodoList() {
       <td>${item.project}</td><td class="td-main">${item.task}</td><td>${item.owner || '-'}</td>
       <td><span class="badge ${item.status==='delay'?'badge-red':item.status==='done'?'badge-blue':item.status==='progress'?'badge-green':'badge-gray'}">${todoStatusText[item.status] || item.status}</span></td>
       <td>${item.start || '-'}</td><td>${item.end || '-'}</td><td>${item.doneDate || '-'}</td>
-      <td>${item.fileName || '-'}</td><td style="max-width:220px;white-space:normal">${item.memo || '-'}</td>
+      <td>${item.filePath ? `<a href="${item.filePath}" target="_blank" rel="noopener">${item.fileName || 'file'}</a>` : (item.fileName || '-')}</td><td style="max-width:220px;white-space:normal">${item.memo || '-'}</td>
       <td><div class="todo-row-actions"><button data-edit="${item.id}">수정</button><button data-delete="${item.id}">삭제</button></div></td>
     </tr>`).join('');
   body.querySelectorAll('[data-edit]').forEach(btn=>btn.addEventListener('click',()=>openTodoForm(btn.dataset.edit)));
-  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',()=>{
-    todoItems = todoItems.filter(i=>i.id !== btn.dataset.delete);
+  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',async ()=>{
+    const id = btn.dataset.delete;
+    try {
+      await deleteTodoRemote(id);
+    } catch(e) {
+      console.warn('Supabase todo delete failed. Local delete applied.', e);
+    }
+    todoItems = todoItems.filter(i=>i.id !== id);
     saveTodoItems();
     renderTodo();
   }));
@@ -1466,6 +1568,39 @@ function importTodoFile(file) {
   };
   reader.readAsText(file, 'utf-8');
 }
+async function submitTodo() {
+  const file = document.getElementById('todoFile').files[0];
+  const prevItem = todoEditId ? todoItems.find(i=>i.id===todoEditId) : null;
+  const item = {
+    id: todoEditId || String(Date.now()),
+    project: document.getElementById('todoProject').value.trim() || '미지정 프로젝트',
+    task: document.getElementById('todoTask').value.trim() || '미지정 태스크',
+    owner: document.getElementById('todoOwner').value.trim(),
+    status: document.getElementById('todoStatus').value,
+    start: document.getElementById('todoStart').value || todayISO(),
+    end: document.getElementById('todoEnd').value || todayISO(),
+    doneDate: document.getElementById('todoDoneDate').value,
+    memo: document.getElementById('todoMemo').value.trim(),
+    fileName: file ? file.name : (prevItem?.fileName || ''),
+    filePath: prevItem?.filePath || ''
+  };
+  let saved = item;
+  try {
+    if (file) {
+      const uploaded = await uploadTodoFile(file);
+      item.fileName = uploaded.fileName;
+      item.filePath = uploaded.filePath;
+    }
+    saved = await saveTodoRemote(item, Boolean(todoEditId));
+  } catch(e) {
+    console.warn('Supabase todo save failed. Local save applied.', e);
+  }
+  if (todoEditId) todoItems = todoItems.map(i=>i.id===todoEditId ? saved : i);
+  else todoItems.push(saved);
+  saveTodoItems();
+  closeTodoForm();
+  renderTodo();
+}
 document.querySelectorAll('[data-todo-view]').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('[data-todo-view]').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.todo-board').forEach(b=>b.classList.remove('active'));
@@ -1474,7 +1609,7 @@ document.querySelectorAll('[data-todo-view]').forEach(btn=>btn.addEventListener(
 }));
 document.getElementById('todoAddProject').addEventListener('click',()=>openTodoForm());
 document.getElementById('todoAddTask').addEventListener('click',()=>openTodoForm());
-document.getElementById('todoSave').addEventListener('click',()=>{saveTodoItems(); alert('저장되었습니다.');});
+document.getElementById('todoSave').addEventListener('click',async ()=>{saveTodoItems(); await refreshTodoFromSupabase(); alert('저장 및 동기화가 완료되었습니다.');});
 document.getElementById('todoCsv').addEventListener('click',exportTodoCsv);
 document.getElementById('todoImportBtn').addEventListener('click',()=>document.getElementById('todoImportFile').click());
 document.getElementById('todoImportFile').addEventListener('change',e=>{if(e.target.files[0]) importTodoFile(e.target.files[0]);});
@@ -1483,6 +1618,7 @@ document.getElementById('todoCancel').addEventListener('click',closeTodoForm);
 document.getElementById('todoFile').addEventListener('change',e=>{document.getElementById('todoFileName').textContent = e.target.files[0]?.name || '첨부 파일 없음';});
 todoItems = loadTodoItems();
 renderTodo();
+refreshTodoFromSupabase();
 
 // ?? NAV TABS ???????????????????????????????????????????????
 function activateTab(tab) {
