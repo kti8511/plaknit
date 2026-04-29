@@ -1390,10 +1390,25 @@ function addDaysISO(base, days) {{
   d.setDate(d.getDate() + days);
   return `${{d.getFullYear()}}-${{String(d.getMonth()+1).padStart(2,'0')}}-${{String(d.getDate()).padStart(2,'0')}}`;
 }}
+function isLegacySampleTodo(item) {{
+  const project = String(item?.project || '');
+  const task = String(item?.task || '');
+  return String(item?.id || '').startsWith('sample-') ||
+    project === 'REXY 2 개발' ||
+    project === 'SEERSUCKER 개발' ||
+    project === '개발편직(경편)' ||
+    task.includes('원사 입고') ||
+    task.includes('Seersucker 개발') ||
+    task.includes('air hole 트리코트');
+}}
 function loadTodoItems() {{
   try {{
     const saved = JSON.parse(localStorage.getItem(TODO_KEY) || '[]');
-    if (Array.isArray(saved) && saved.length) return saved;
+    if (Array.isArray(saved) && saved.length) {{
+      const cleaned = saved.filter(item => !isLegacySampleTodo(item));
+      if (cleaned.length !== saved.length) localStorage.setItem(TODO_KEY, JSON.stringify(cleaned));
+      return cleaned;
+    }}
   }} catch(e) {{}}
   return [];
 }}
