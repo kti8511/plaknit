@@ -3,7 +3,7 @@
     "date": "2026-04-23",
     "retailers": [
       {
-        "retailer": "???",
+        "retailer": "자사몰",
         "payment": 389500,
         "items": [
           {
@@ -46,7 +46,7 @@
         "qty": 18
       },
       {
-        "retailer": "???",
+        "retailer": "무신사",
         "payment": 503630,
         "items": [
           {
@@ -121,14 +121,14 @@
     "date": "2026-04-24",
     "retailers": [
       {
-        "retailer": "???",
+        "retailer": "자사몰",
         "payment": 0,
         "items": [],
         "orders": 8,
         "qty": 13
       },
       {
-        "retailer": "???",
+        "retailer": "무신사",
         "payment": 0,
         "items": [],
         "qty": 16
@@ -172,14 +172,14 @@
     "date": "2026-04-25",
     "retailers": [
       {
-        "retailer": "???",
+        "retailer": "자사몰",
         "payment": 0,
         "items": [],
         "orders": 4,
         "qty": 9
       },
       {
-        "retailer": "???",
+        "retailer": "무신사",
         "payment": 0,
         "items": [],
         "qty": 18
@@ -220,14 +220,14 @@
     "date": "2026-04-26",
     "retailers": [
       {
-        "retailer": "???",
+        "retailer": "자사몰",
         "payment": 0,
         "items": [],
         "orders": 5,
         "qty": 10
       },
       {
-        "retailer": "???",
+        "retailer": "무신사",
         "payment": 0,
         "items": [],
         "qty": 29

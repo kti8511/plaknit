@@ -623,6 +623,11 @@ const MANUAL_SALES = {manual_sales_json};
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
 const fmtD = s => s.slice(5); // "2026-01-03" → "01-03"
+const num = v => Number.isFinite(Number(v)) ? Number(v) : 0;
+const rowGross = r => num(r.gross ?? r.gross_sales);
+const rowPayment = r => num(r.payment ?? r.payment_sales);
+const rowQty = r => num(r.qty);
+const rowOrders = r => num(r.orders);
 function uniqSorted(values) {{
   return Array.from(new Set(values.filter(v => v !== undefined && v !== null && String(v).trim() !== '').map(v => String(v).trim()))).sort((a,b)=>a.localeCompare(b));
 }}
@@ -753,10 +758,12 @@ const retailerMap = {{}};
 const retailerExisting = {{}};
 rawRows.forEach(r => {{
   if (!retailerMap[r.retailer]) retailerMap[r.retailer] = {{retailer:r.retailer,payment:0,gross:0,orders:0,qty:0,validPayment:0,validGross:0}};
-  retailerMap[r.retailer].payment += r.payment;
-  retailerMap[r.retailer].gross   += r.gross;
-  retailerMap[r.retailer].orders  += r.orders;
-  retailerMap[r.retailer].qty     += r.qty;
+  const gross = rowGross(r);
+  const payment = rowPayment(r);
+  retailerMap[r.retailer].payment += payment;
+  retailerMap[r.retailer].gross   += gross;
+  retailerMap[r.retailer].orders  += rowOrders(r);
+  retailerMap[r.retailer].qty     += rowQty(r);
   (r.daily || []).forEach(d => {{
     const key = d.date + '|' + (r.retailer || '');
     if (!retailerExisting[key]) retailerExisting[key] = {{payment:0,gross:0,orders:0,qty:0}};
@@ -765,9 +772,9 @@ rawRows.forEach(r => {{
     retailerExisting[key].orders += Number(d.orders || 0);
     retailerExisting[key].qty += Number(d.qty || 0);
   }});
-  if (validDiscount(r.gross, r.payment) !== null) {{
-    retailerMap[r.retailer].validPayment += r.payment;
-    retailerMap[r.retailer].validGross += r.gross;
+  if (validDiscount(gross, payment) !== null) {{
+    retailerMap[r.retailer].validPayment += payment;
+    retailerMap[r.retailer].validGross += gross;
   }}
 }});
 MANUAL_SALES.forEach(day => {{
