@@ -1395,13 +1395,7 @@ function loadTodoItems() {{
     const saved = JSON.parse(localStorage.getItem(TODO_KEY) || '[]');
     if (Array.isArray(saved) && saved.length) return saved;
   }} catch(e) {{}}
-  const t = todayISO();
-  return [
-    {{id:'sample-1',project:'REXY 2 개발',task:'원사 입고 일정 확인 중',owner:'양윤석',status:'progress',start:addDaysISO(t,-1),end:addDaysISO(t,2),doneDate:'',memo:'원사 입고 일정 확인',fileName:''}},
-    {{id:'sample-2',project:'REXY 2 개발',task:'원사 입고 후 편직',owner:'이선교',status:'todo',start:addDaysISO(t,4),end:addDaysISO(t,8),doneDate:'',memo:'입고 후 편직 진행',fileName:''}},
-    {{id:'sample-3',project:'SEERSUCKER 개발',task:'Seersucker 개발',owner:'이선교',status:'progress',start:t,end:addDaysISO(t,5),doneDate:'',memo:'시글로벌 생지',fileName:''}},
-    {{id:'sample-4',project:'개발편직(경편)',task:'용출사 없이 air hole 트리코트 개발',owner:'황효진, 이선교',status:'progress',start:addDaysISO(t,-2),end:addDaysISO(t,2),doneDate:'',memo:'마감 임박 확인',fileName:''}}
-  ];
+  return [];
 }}
 function saveTodoItems() {{
   localStorage.setItem(TODO_KEY, JSON.stringify(todoItems));
