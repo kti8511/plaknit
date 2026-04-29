@@ -141,6 +141,9 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .todo-stat.blue{border-color:#3b82f6;background:#eff6ff;} .todo-stat.green b{color:#10b981;} .todo-stat.red b{color:#ef4444;} .todo-stat.gray b{color:#94a3b8;}
 .todo-form{display:none;background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px;}
 .todo-form.active{display:block;}
+.todo-form-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;}
+.todo-form-title{font-size:15px;font-weight:800;color:var(--ink);}
+.todo-form-sub{font-size:12px;color:var(--ink3);margin-top:3px;}
 .todo-form-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:10px;}
 .todo-form textarea{grid-column:1/-1;min-height:78px;resize:vertical;}
 .todo-form input,.todo-form select,.todo-form textarea{border:1px solid var(--line);border-radius:7px;padding:9px 10px;font:inherit;background:#fff;}
@@ -152,6 +155,8 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .gantt-row{display:grid;grid-template-columns:210px 1fr;min-height:48px;border-bottom:1px solid #edf2f7;}
 .gantt-row:last-child{border-bottom:0;}
 .gantt-task-name{padding:12px 14px;font-size:13px;display:flex;gap:8px;align-items:center;min-width:0;}
+.gantt-row{cursor:pointer;}
+.gantt-row:hover .gantt-task-name,.gantt-row:hover .gantt-timeline{background:#f8fafc;}
 .gantt-dot{width:9px;height:9px;border-radius:50%;background:#94a3b8;flex:0 0 auto;}
 .gantt-dot.progress{background:#10b981;} .gantt-dot.done{background:#3b82f6;} .gantt-dot.delay{background:#ef4444;}
 .gantt-timeline{position:relative;background:repeating-linear-gradient(90deg,#fff 0,#fff calc(100% / 30 - 1px),#edf2f7 calc(100% / 30));overflow:hidden;}
@@ -162,8 +167,12 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .calendar-day{min-height:96px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;}
 .calendar-date{font-size:12px;font-weight:800;color:var(--ink2);margin-bottom:6px;}
 .calendar-chip{font-size:11px;border-radius:6px;padding:5px 6px;margin-top:4px;background:#ecfdf5;color:#047857;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.calendar-chip{cursor:pointer;}
+.calendar-chip:hover{filter:brightness(.96);}
 .calendar-chip.delay{background:#fef2f2;color:#dc2626;} .calendar-chip.done{background:#eff6ff;color:#2563eb;}
 .todo-list{width:100%;border-collapse:collapse;}
+.todo-list tbody tr{cursor:pointer;}
+.todo-list tbody tr:hover td{background:#f8fafc;}
 .todo-row-actions{display:flex;gap:6px;justify-content:flex-end;}
 .todo-row-actions button{border:0;background:#eef2ff;color:#1e40af;border-radius:6px;padding:6px 8px;cursor:pointer;font-weight:700;}
 .todo-side{position:sticky;top:86px;}
@@ -214,7 +223,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </div>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-04-29 17:24</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-04-29 18:14</div>
     </div>
   </div>
 </header>
@@ -313,6 +322,12 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
     </div>
 
     <div class="todo-form" id="todoForm">
+      <div class="todo-form-head">
+        <div>
+          <div class="todo-form-title" id="todoFormTitle">프로젝트 등록</div>
+          <div class="todo-form-sub" id="todoFormSub">프로젝트 또는 태스크를 등록합니다.</div>
+        </div>
+      </div>
       <div class="todo-form-grid">
         <input id="todoProject" placeholder="프로젝트명">
         <input id="todoTask" placeholder="태스크명">
@@ -1444,7 +1459,7 @@ function renderTodoGantt() {
       ${items.map(item=>{
         const left = Math.max(0, Math.min(100, daysBetween(range.start, item.start || range.start) / span * 100));
         const width = Math.max(4, Math.min(100-left, (Math.max(1, daysBetween(item.start || range.start, item.end || item.start || range.end)+1) / span * 100)));
-        return `<div class="gantt-row">
+        return `<div class="gantt-row" data-open-todo="${item.id}">
           <div class="gantt-task-name"><span class="gantt-dot ${todoStatusClass(item.status)}"></span><span title="${item.memo || ''}">${item.task}</span></div>
           <div class="gantt-timeline">
             <div class="gantt-today"></div>
@@ -1454,6 +1469,7 @@ function renderTodoGantt() {
       }).join('')}
     </section>
   `).join('') || '<div class="panel">등록된 일정이 없습니다.</div>';
+  el.querySelectorAll('[data-open-todo]').forEach(node=>node.addEventListener('click',()=>openTodoForm(node.dataset.openTodo)));
 }
 function renderTodoCalendar() {
   const grid = document.getElementById('todoCalendarGrid');
@@ -1463,24 +1479,27 @@ function renderTodoCalendar() {
     const dayItems = todoItems.filter(i=>i.start <= day && i.end >= day);
     return `<div class="calendar-day">
       <div class="calendar-date">${fmtD(day)}</div>
-      ${dayItems.slice(0,4).map(i=>`<div class="calendar-chip ${todoStatusClass(i.status)}" title="${i.project} / ${i.task}">${i.task}</div>`).join('')}
+      ${dayItems.slice(0,4).map(i=>`<div class="calendar-chip ${todoStatusClass(i.status)}" data-open-todo="${i.id}" title="${i.project} / ${i.task}">${i.task}</div>`).join('')}
     </div>`;
   }).join('');
+  grid.querySelectorAll('[data-open-todo]').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();openTodoForm(node.dataset.openTodo);}));
 }
 function renderTodoList() {
   const body = document.getElementById('todoRows');
   body.innerHTML = todoItems
     .slice()
     .sort((a,b)=>(a.end||'').localeCompare(b.end||''))
-    .map(item=>`<tr>
+    .map(item=>`<tr data-open-todo="${item.id}">
       <td>${item.project}</td><td class="td-main">${item.task}</td><td>${item.owner || '-'}</td>
       <td><span class="badge ${item.status==='delay'?'badge-red':item.status==='done'?'badge-blue':item.status==='progress'?'badge-green':'badge-gray'}">${todoStatusText[item.status] || item.status}</span></td>
       <td>${item.start || '-'}</td><td>${item.end || '-'}</td><td>${item.doneDate || '-'}</td>
       <td>${item.filePath ? `<a href="${item.filePath}" target="_blank" rel="noopener">${item.fileName || 'file'}</a>` : (item.fileName || '-')}</td><td style="max-width:220px;white-space:normal">${item.memo || '-'}</td>
       <td><div class="todo-row-actions"><button data-edit="${item.id}">수정</button><button data-delete="${item.id}">삭제</button></div></td>
     </tr>`).join('');
-  body.querySelectorAll('[data-edit]').forEach(btn=>btn.addEventListener('click',()=>openTodoForm(btn.dataset.edit)));
-  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',async ()=>{
+  body.querySelectorAll('[data-open-todo]').forEach(row=>row.addEventListener('click',()=>openTodoForm(row.dataset.openTodo)));
+  body.querySelectorAll('a').forEach(link=>link.addEventListener('click',e=>e.stopPropagation()));
+  body.querySelectorAll('[data-edit]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();openTodoForm(btn.dataset.edit);}));
+  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',async e=>{e.stopPropagation();
     const id = btn.dataset.delete;
     try {
       await deleteTodoRemote(id);
@@ -1513,6 +1532,9 @@ function renderTodo() {
 function openTodoForm(id) {
   todoEditId = id || null;
   const item = todoEditId ? todoItems.find(i=>i.id===todoEditId) : null;
+  document.getElementById('todoFormTitle').textContent = item ? '프로젝트 상세/수정' : '프로젝트 등록';
+  document.getElementById('todoFormSub').textContent = item ? `${item.project || '-'} / ${item.task || '-'}` : '프로젝트 또는 태스크를 등록합니다.';
+  document.getElementById('todoSubmit').textContent = item ? '수정 저장' : '등록';
   document.getElementById('todoProject').value = item?.project || '';
   document.getElementById('todoTask').value = item?.task || '';
   document.getElementById('todoOwner').value = item?.owner || '';
@@ -1523,6 +1545,7 @@ function openTodoForm(id) {
   document.getElementById('todoMemo').value = item?.memo || '';
   document.getElementById('todoFileName').textContent = item?.fileName || '첨부 파일 없음';
   document.getElementById('todoForm').classList.add('active');
+  document.getElementById('todoForm').scrollIntoView({behavior:'smooth', block:'start'});
 }
 function closeTodoForm() {
   todoEditId = null;
