@@ -509,6 +509,29 @@ function discountText(gross, payment) {{
   const d = validDiscount(gross, payment);
   return d === null ? '-' : pct(d);
 }}
+function unitPriceBase(row) {{
+  let qty = 0;
+  let payment = 0;
+  const daily = Array.isArray(row.daily) ? row.daily : [];
+  if (daily.length) {{
+    daily.forEach(d => {{
+      const q = Number(d.qty || 0);
+      const p = Number(d.payment || 0);
+      if (q > 0 && p > 0) {{
+        qty += q;
+        payment += p;
+      }}
+    }});
+  }} else {{
+    const q = Number(row.qty || 0);
+    const p = Number(row.payment || 0);
+    if (q > 0 && p > 0) {{
+      qty += q;
+      payment += p;
+    }}
+  }}
+  return {{qty, payment}};
+}}
 
 // ── 전체 집계 ─────────────────────────────────────────────
 function shiftDate(dateStr, days) {{
@@ -527,7 +550,13 @@ const validDiscRows= rawRows.filter(r => validDiscount(r.gross, r.payment) !== n
 const validGross   = validDiscRows.reduce((a,r)=>a+r.gross, 0);
 const validPayment = validDiscRows.reduce((a,r)=>a+r.payment, 0);
 const totalOrders  = rawRows.reduce((a,r)=>a+r.orders, 0);
-const avgUnit      = totalQty ? Math.round(totalPayment/totalQty) : 0;
+const avgUnitBase  = rawRows.reduce((a,r)=>{{
+  const b = unitPriceBase(r);
+  a.qty += b.qty;
+  a.payment += b.payment;
+  return a;
+}}, {{qty:0,payment:0}});
+const avgUnit      = avgUnitBase.qty ? Math.round(avgUnitBase.payment/avgUnitBase.qty) : 0;
 const avgDisc      = validGross ? (1-validPayment/validGross)*100 : null;
 const isMatchedRow = r => !String(r.match_status || '').includes('?');
 const matched      = rawRows.filter(isMatchedRow).length;
@@ -1039,6 +1068,8 @@ function renderDetail() {{
       orders:0,
       validGross:0,
       validPayment:0,
+      avgQty:0,
+      avgPayment:0,
       stock_qty:0,
       received_qty:0,
       stock_known:false,
@@ -1053,6 +1084,9 @@ function renderDetail() {{
     g.gross += Number(r.gross || 0);
     g.payment += Number(r.payment || 0);
     g.orders += Number(r.orders || 0);
+    const avgBase = unitPriceBase(r);
+    g.avgQty += avgBase.qty;
+    g.avgPayment += avgBase.payment;
     if (validDiscount(r.gross, r.payment) !== null) {{
       g.validGross += Number(r.gross || 0);
       g.validPayment += Number(r.payment || 0);
@@ -1070,7 +1104,7 @@ function renderDetail() {{
   }});
 
   let rows = Object.values(grouped).map(g=>{{
-    const avg_unit = g.qty ? g.payment / g.qty : 0;
+    const avg_unit = g.avgQty ? g.avgPayment / g.avgQty : 0;
     return {{
       ...g,
       retailers:Array.from(g.retailers),
