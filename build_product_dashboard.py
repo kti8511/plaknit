@@ -231,6 +231,53 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 .badge-gray{{background:#f1f5f9;color:var(--ink3);}} .badge-indigo{{background:#eef2ff;color:#4338ca;}}
 
 .tab-panel{{display:none;}} .tab-panel.active{{display:block;}}
+.todo-shell{{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px;align-items:start;}}
+.todo-top{{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px;}}
+.todo-title{{font-size:20px;font-weight:800;color:var(--ink);}}
+.todo-sub{{font-size:12px;color:var(--ink3);margin-top:4px;}}
+.todo-view-tabs{{display:flex;gap:6px;background:#e5ebf4;border-radius:8px;padding:4px;}}
+.todo-view-tabs button{{border:0;background:transparent;padding:8px 14px;border-radius:7px;font-weight:700;color:var(--ink2);cursor:pointer;}}
+.todo-view-tabs button.active{{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(15,23,42,.12);}}
+.todo-actions{{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;}}
+.todo-btn{{border:0;border-radius:8px;padding:9px 13px;font-weight:800;cursor:pointer;background:#eef2ff;color:#1e40af;}}
+.todo-btn.primary{{background:#2563eb;color:#fff;}} .todo-btn.dark{{background:#111827;color:#fff;}} .todo-btn.green{{background:#16a34a;color:#fff;}} .todo-btn.subtle{{background:#f1f5f9;color:#475569;}}
+.todo-stats{{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px;}}
+.todo-stat{{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;text-align:center;box-shadow:var(--shadow);}}
+.todo-stat b{{display:block;font-size:24px;color:var(--ink);}} .todo-stat span{{font-size:12px;color:var(--ink2);}}
+.todo-stat.blue{{border-color:#3b82f6;background:#eff6ff;}} .todo-stat.green b{{color:#10b981;}} .todo-stat.red b{{color:#ef4444;}} .todo-stat.gray b{{color:#94a3b8;}}
+.todo-form{{display:none;background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px;}}
+.todo-form.active{{display:block;}}
+.todo-form-grid{{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:10px;}}
+.todo-form textarea{{grid-column:1/-1;min-height:78px;resize:vertical;}}
+.todo-form input,.todo-form select,.todo-form textarea{{border:1px solid var(--line);border-radius:7px;padding:9px 10px;font:inherit;background:#fff;}}
+.todo-form .file-line{{grid-column:1/-1;display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--ink2);font-size:12px;}}
+.todo-board{{display:none;}} .todo-board.active{{display:block;}}
+.gantt-project{{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px;box-shadow:var(--shadow);}}
+.gantt-head{{display:flex;justify-content:space-between;align-items:center;background:#fbfdff;padding:12px 14px;border-bottom:1px solid var(--line);font-weight:800;}}
+.gantt-meta{{font-size:12px;color:var(--ink3);font-weight:600;}}
+.gantt-row{{display:grid;grid-template-columns:210px 1fr;min-height:48px;border-bottom:1px solid #edf2f7;}}
+.gantt-row:last-child{{border-bottom:0;}}
+.gantt-task-name{{padding:12px 14px;font-size:13px;display:flex;gap:8px;align-items:center;min-width:0;}}
+.gantt-dot{{width:9px;height:9px;border-radius:50%;background:#94a3b8;flex:0 0 auto;}}
+.gantt-dot.progress{{background:#10b981;}} .gantt-dot.done{{background:#3b82f6;}} .gantt-dot.delay{{background:#ef4444;}}
+.gantt-timeline{{position:relative;background:repeating-linear-gradient(90deg,#fff 0,#fff calc(100% / 30 - 1px),#edf2f7 calc(100% / 30));overflow:hidden;}}
+.gantt-bar{{position:absolute;top:12px;height:24px;border-radius:6px;background:#34d399;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;min-width:42px;}}
+.gantt-bar.done{{background:#60a5fa;}} .gantt-bar.delay{{background:#f97316;}} .gantt-bar.todo{{background:#cbd5e1;color:#334155;}}
+.gantt-today{{position:absolute;top:0;bottom:0;width:2px;background:#ef4444;left:50%;}}
+.calendar-grid{{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}}
+.calendar-day{{min-height:96px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;}}
+.calendar-date{{font-size:12px;font-weight:800;color:var(--ink2);margin-bottom:6px;}}
+.calendar-chip{{font-size:11px;border-radius:6px;padding:5px 6px;margin-top:4px;background:#ecfdf5;color:#047857;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
+.calendar-chip.delay{{background:#fef2f2;color:#dc2626;}} .calendar-chip.done{{background:#eff6ff;color:#2563eb;}}
+.todo-list{{width:100%;border-collapse:collapse;}}
+.todo-row-actions{{display:flex;gap:6px;justify-content:flex-end;}}
+.todo-row-actions button{{border:0;background:#eef2ff;color:#1e40af;border-radius:6px;padding:6px 8px;cursor:pointer;font-weight:700;}}
+.todo-side{{position:sticky;top:86px;}}
+.todo-deadline{{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:var(--shadow);}}
+.todo-deadline h3{{margin:0 0 10px;font-size:14px;color:#ef4444;}}
+.todo-deadline-item{{border-bottom:1px solid #edf2f7;padding:9px 0;font-size:12px;}}
+.todo-deadline-item:last-child{{border-bottom:0;}} .todo-deadline-item b{{display:block;color:var(--ink);margin-bottom:4px;}} .todo-deadline-item span{{color:#f97316;font-weight:800;}}
+@media (max-width:980px){{.todo-shell{{grid-template-columns:1fr;}}.todo-stats{{grid-template-columns:repeat(2,1fr);}}.todo-form-grid{{grid-template-columns:1fr;}}.gantt-row{{grid-template-columns:1fr;}}.gantt-timeline{{height:50px;}}.todo-side{{position:static;}}}}
 .foot{{font-size:11px;color:var(--ink3);margin-top:10px;line-height:1.7;}}
 ::-webkit-scrollbar{{width:5px;height:5px;}} ::-webkit-scrollbar-track{{background:transparent;}}
 ::-webkit-scrollbar-thumb{{background:var(--border2);border-radius:3px;}}
@@ -250,6 +297,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       <div class="nav-item active" data-tab="overview">
         <div class="nav-label"><span class="nav-dot" style="background:#3b82f6"></span>요약</div>
         <div class="nav-sub">KPI · 최근 트렌드</div>
+      </div>
+      <div class="nav-item" data-tab="todo">
+        <div class="nav-label"><span class="nav-dot" style="background:#8b5cf6"></span>To do list</div>
+        <div class="nav-sub">프로젝트 일정</div>
       </div>
       <div class="nav-item" data-tab="compare">
         <div class="nav-label"><span class="nav-dot" style="background:#06b6d4"></span>매출 비교</div>
@@ -334,6 +385,82 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
           </table>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- TODO TAB -->
+  <div id="todo" class="tab-panel">
+    <div class="todo-top">
+      <div>
+        <div class="todo-title">프로젝트 스케줄</div>
+        <div class="todo-sub" id="todoToday">오늘 기준 프로젝트 일정</div>
+      </div>
+      <div class="todo-actions">
+        <div class="todo-view-tabs">
+          <button class="active" data-todo-view="gantt">간트</button>
+          <button data-todo-view="calendar">캘린더</button>
+          <button data-todo-view="list">리스트</button>
+        </div>
+        <button class="todo-btn primary" id="todoAddProject">+ 프로젝트</button>
+        <button class="todo-btn primary" id="todoAddTask">+ 태스크</button>
+        <button class="todo-btn dark" id="todoSave">저장</button>
+        <button class="todo-btn green" id="todoCsv">CSV</button>
+        <button class="todo-btn subtle" id="todoImportBtn">가져오기</button>
+        <input type="file" id="todoImportFile" accept=".csv,.json" style="display:none">
+      </div>
+    </div>
+
+    <div class="todo-stats">
+      <div class="todo-stat blue"><b id="todoStatAll">0</b><span>전체</span></div>
+      <div class="todo-stat green"><b id="todoStatProgress">0</b><span>진행중</span></div>
+      <div class="todo-stat"><b id="todoStatDone">0</b><span>완료</span></div>
+      <div class="todo-stat red"><b id="todoStatDelay">0</b><span>지연</span></div>
+      <div class="todo-stat gray"><b id="todoStatTodo">0</b><span>할 일</span></div>
+    </div>
+
+    <div class="todo-form" id="todoForm">
+      <div class="todo-form-grid">
+        <input id="todoProject" placeholder="프로젝트명">
+        <input id="todoTask" placeholder="태스크명">
+        <input id="todoOwner" placeholder="담당자">
+        <select id="todoStatus">
+          <option value="todo">할 일</option>
+          <option value="progress">진행중</option>
+          <option value="done">완료</option>
+          <option value="delay">지연</option>
+        </select>
+        <input id="todoStart" type="date" title="시작 일자">
+        <input id="todoEnd" type="date" title="완료 예정일">
+        <input id="todoDoneDate" type="date" title="완료 일자">
+        <input id="todoFile" type="file">
+        <textarea id="todoMemo" placeholder="내용을 입력하세요"></textarea>
+        <div class="file-line">
+          <span id="todoFileName">첨부 파일 없음</span>
+          <button class="todo-btn primary" id="todoSubmit" type="button">등록</button>
+          <button class="todo-btn subtle" id="todoCancel" type="button">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="todo-shell">
+      <div>
+        <div id="todoGantt" class="todo-board active"></div>
+        <div id="todoCalendar" class="todo-board"><div class="calendar-grid" id="todoCalendarGrid"></div></div>
+        <div id="todoList" class="todo-board">
+          <div class="table-wrap">
+            <table class="todo-list">
+              <thead><tr><th>프로젝트</th><th>태스크</th><th>담당자</th><th>상태</th><th>시작</th><th>완료 예정</th><th>완료</th><th>첨부</th><th>내용</th><th></th></tr></thead>
+              <tbody id="todoRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <aside class="todo-side">
+        <div class="todo-deadline">
+          <h3>마감 임박</h3>
+          <div id="todoDeadline"></div>
+        </div>
+      </aside>
     </div>
   </div>
 
@@ -1238,6 +1365,230 @@ initDetailFilters();
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
 }});
+
+// TODO LIST -------------------------------------------------------------
+const TODO_KEY = 'plaknitTodoProjects.v1';
+let todoEditId = null;
+let todoItems = [];
+const todoStatusText = {{todo:'할 일', progress:'진행중', done:'완료', delay:'지연'}};
+
+function todayISO() {{
+  const d = new Date();
+  return `${{d.getFullYear()}}-${{String(d.getMonth()+1).padStart(2,'0')}}-${{String(d.getDate()).padStart(2,'0')}}`;
+}}
+function addDaysISO(base, days) {{
+  const d = new Date(base + 'T00:00:00');
+  d.setDate(d.getDate() + days);
+  return `${{d.getFullYear()}}-${{String(d.getMonth()+1).padStart(2,'0')}}-${{String(d.getDate()).padStart(2,'0')}}`;
+}}
+function loadTodoItems() {{
+  try {{
+    const saved = JSON.parse(localStorage.getItem(TODO_KEY) || '[]');
+    if (Array.isArray(saved) && saved.length) return saved;
+  }} catch(e) {{}}
+  const t = todayISO();
+  return [
+    {{id:'sample-1',project:'REXY 2 개발',task:'원사 입고 일정 확인 중',owner:'양윤석',status:'progress',start:addDaysISO(t,-1),end:addDaysISO(t,2),doneDate:'',memo:'원사 입고 일정 확인',fileName:''}},
+    {{id:'sample-2',project:'REXY 2 개발',task:'원사 입고 후 편직',owner:'이선교',status:'todo',start:addDaysISO(t,4),end:addDaysISO(t,8),doneDate:'',memo:'입고 후 편직 진행',fileName:''}},
+    {{id:'sample-3',project:'SEERSUCKER 개발',task:'Seersucker 개발',owner:'이선교',status:'progress',start:t,end:addDaysISO(t,5),doneDate:'',memo:'시글로벌 생지',fileName:''}},
+    {{id:'sample-4',project:'개발편직(경편)',task:'용출사 없이 air hole 트리코트 개발',owner:'황효진, 이선교',status:'progress',start:addDaysISO(t,-2),end:addDaysISO(t,2),doneDate:'',memo:'마감 임박 확인',fileName:''}}
+  ];
+}}
+function saveTodoItems() {{
+  localStorage.setItem(TODO_KEY, JSON.stringify(todoItems));
+}}
+function todoStatusClass(status) {{
+  if (status === 'done') return 'done';
+  if (status === 'delay') return 'delay';
+  if (status === 'progress') return 'progress';
+  return 'todo';
+}}
+function daysBetween(a,b) {{
+  return Math.round((new Date(b+'T00:00:00') - new Date(a+'T00:00:00')) / 86400000);
+}}
+function todoRange() {{
+  const dates = todoItems.flatMap(i=>[i.start,i.end]).filter(Boolean).sort();
+  const start = dates[0] || todayISO();
+  const end = dates[dates.length-1] || addDaysISO(start,30);
+  return {{start:addDaysISO(start,-2), end:addDaysISO(end,5)}};
+}}
+function renderTodoStats() {{
+  const counts = {{all:todoItems.length,todo:0,progress:0,done:0,delay:0}};
+  todoItems.forEach(i=>counts[i.status] = (counts[i.status] || 0) + 1);
+  document.getElementById('todoStatAll').textContent = counts.all;
+  document.getElementById('todoStatProgress').textContent = counts.progress;
+  document.getElementById('todoStatDone').textContent = counts.done;
+  document.getElementById('todoStatDelay').textContent = counts.delay;
+  document.getElementById('todoStatTodo').textContent = counts.todo;
+  const today = new Date().toLocaleDateString('ko-KR', {{weekday:'long', year:'numeric', month:'long', day:'numeric'}});
+  document.getElementById('todoToday').textContent = `오늘: ${{today}}`;
+}}
+function renderTodoGantt() {{
+  const el = document.getElementById('todoGantt');
+  const range = todoRange();
+  const span = Math.max(1, daysBetween(range.start, range.end));
+  const byProject = {{}};
+  todoItems.forEach(item => {{
+    if (!byProject[item.project]) byProject[item.project] = [];
+    byProject[item.project].push(item);
+  }});
+  el.innerHTML = Object.entries(byProject).map(([project,items])=>`
+    <section class="gantt-project">
+      <div class="gantt-head"><span>▾ ${{project}}</span><span class="gantt-meta">${{items.length}}개</span></div>
+      ${{items.map(item=>{{
+        const left = Math.max(0, Math.min(100, daysBetween(range.start, item.start || range.start) / span * 100));
+        const width = Math.max(4, Math.min(100-left, (Math.max(1, daysBetween(item.start || range.start, item.end || item.start || range.end)+1) / span * 100)));
+        return `<div class="gantt-row">
+          <div class="gantt-task-name"><span class="gantt-dot ${{todoStatusClass(item.status)}}"></span><span title="${{item.memo || ''}}">${{item.task}}</span></div>
+          <div class="gantt-timeline">
+            <div class="gantt-today"></div>
+            <div class="gantt-bar ${{todoStatusClass(item.status)}}" style="left:${{left}}%;width:${{width}}%">${{item.owner || todoStatusText[item.status]}}</div>
+          </div>
+        </div>`;
+      }}).join('')}}
+    </section>
+  `).join('') || '<div class="panel">등록된 일정이 없습니다.</div>';
+}}
+function renderTodoCalendar() {{
+  const grid = document.getElementById('todoCalendarGrid');
+  const start = todayISO();
+  const days = Array.from({{length:35}}, (_,i)=>addDaysISO(start,i));
+  grid.innerHTML = days.map(day=>{{
+    const dayItems = todoItems.filter(i=>i.start <= day && i.end >= day);
+    return `<div class="calendar-day">
+      <div class="calendar-date">${{fmtD(day)}}</div>
+      ${{dayItems.slice(0,4).map(i=>`<div class="calendar-chip ${{todoStatusClass(i.status)}}" title="${{i.project}} / ${{i.task}}">${{i.task}}</div>`).join('')}}
+    </div>`;
+  }}).join('');
+}}
+function renderTodoList() {{
+  const body = document.getElementById('todoRows');
+  body.innerHTML = todoItems
+    .slice()
+    .sort((a,b)=>(a.end||'').localeCompare(b.end||''))
+    .map(item=>`<tr>
+      <td>${{item.project}}</td><td class="td-main">${{item.task}}</td><td>${{item.owner || '-'}}</td>
+      <td><span class="badge ${{item.status==='delay'?'badge-red':item.status==='done'?'badge-blue':item.status==='progress'?'badge-green':'badge-gray'}}">${{todoStatusText[item.status] || item.status}}</span></td>
+      <td>${{item.start || '-'}}</td><td>${{item.end || '-'}}</td><td>${{item.doneDate || '-'}}</td>
+      <td>${{item.fileName || '-'}}</td><td style="max-width:220px;white-space:normal">${{item.memo || '-'}}</td>
+      <td><div class="todo-row-actions"><button data-edit="${{item.id}}">수정</button><button data-delete="${{item.id}}">삭제</button></div></td>
+    </tr>`).join('');
+  body.querySelectorAll('[data-edit]').forEach(btn=>btn.addEventListener('click',()=>openTodoForm(btn.dataset.edit)));
+  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',()=>{{
+    todoItems = todoItems.filter(i=>i.id !== btn.dataset.delete);
+    saveTodoItems();
+    renderTodo();
+  }}));
+}}
+function renderTodoDeadline() {{
+  const target = document.getElementById('todoDeadline');
+  const today = todayISO();
+  const items = todoItems
+    .filter(i=>i.status !== 'done')
+    .map(i=>({{...i, dday:daysBetween(today, i.end || today)}}))
+    .filter(i=>i.dday <= 7)
+    .sort((a,b)=>a.dday-b.dday)
+    .slice(0,8);
+  target.innerHTML = items.length ? items.map(i=>`<div class="todo-deadline-item"><b>${{i.task}}</b><span>D${{i.dday>=0?'-'+i.dday:'+'+Math.abs(i.dday)}}</span><div>${{i.project}}</div></div>`).join('') : '<div class="todo-deadline-item">마감 임박 일정 없음</div>';
+}}
+function renderTodo() {{
+  renderTodoStats();
+  renderTodoGantt();
+  renderTodoCalendar();
+  renderTodoList();
+  renderTodoDeadline();
+}}
+function openTodoForm(id) {{
+  todoEditId = id || null;
+  const item = todoEditId ? todoItems.find(i=>i.id===todoEditId) : null;
+  document.getElementById('todoProject').value = item?.project || '';
+  document.getElementById('todoTask').value = item?.task || '';
+  document.getElementById('todoOwner').value = item?.owner || '';
+  document.getElementById('todoStatus').value = item?.status || 'todo';
+  document.getElementById('todoStart').value = item?.start || todayISO();
+  document.getElementById('todoEnd').value = item?.end || addDaysISO(todayISO(),7);
+  document.getElementById('todoDoneDate').value = item?.doneDate || '';
+  document.getElementById('todoMemo').value = item?.memo || '';
+  document.getElementById('todoFileName').textContent = item?.fileName || '첨부 파일 없음';
+  document.getElementById('todoForm').classList.add('active');
+}}
+function closeTodoForm() {{
+  todoEditId = null;
+  document.getElementById('todoForm').classList.remove('active');
+  document.getElementById('todoFile').value = '';
+}}
+function submitTodo() {{
+  const file = document.getElementById('todoFile').files[0];
+  const item = {{
+    id: todoEditId || String(Date.now()),
+    project: document.getElementById('todoProject').value.trim() || '미지정 프로젝트',
+    task: document.getElementById('todoTask').value.trim() || '미지정 태스크',
+    owner: document.getElementById('todoOwner').value.trim(),
+    status: document.getElementById('todoStatus').value,
+    start: document.getElementById('todoStart').value || todayISO(),
+    end: document.getElementById('todoEnd').value || todayISO(),
+    doneDate: document.getElementById('todoDoneDate').value,
+    memo: document.getElementById('todoMemo').value.trim(),
+    fileName: file ? file.name : (todoEditId ? (todoItems.find(i=>i.id===todoEditId)?.fileName || '') : '')
+  }};
+  if (todoEditId) todoItems = todoItems.map(i=>i.id===todoEditId ? item : i);
+  else todoItems.push(item);
+  saveTodoItems();
+  closeTodoForm();
+  renderTodo();
+}}
+function exportTodoCsv() {{
+  const header = ['project','task','owner','status','start','end','doneDate','fileName','memo'];
+  const lines = [header.join(',')].concat(todoItems.map(i=>header.map(k=>`"${{String(i[k] || '').replaceAll('"','""')}}"`).join(',')));
+  const blob = new Blob([lines.join('\\n')], {{type:'text/csv;charset=utf-8'}});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'plaknit_todo.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}}
+function importTodoFile(file) {{
+  const reader = new FileReader();
+  reader.onload = () => {{
+    try {{
+      if (file.name.toLowerCase().endsWith('.json')) {{
+        const parsed = JSON.parse(reader.result);
+        if (Array.isArray(parsed)) todoItems = parsed;
+      }} else {{
+        const lines = String(reader.result).split(/\\r?\\n/).filter(Boolean);
+        const header = lines.shift().split(',').map(v=>v.replaceAll('"',''));
+        todoItems = lines.map(line=>{{
+          const cols = line.match(/("([^"]|"")*"|[^,]+)/g) || [];
+          const obj = {{id:String(Date.now()+Math.random())}};
+          header.forEach((h,idx)=>obj[h]=String(cols[idx] || '').replace(/^"|"$/g,'').replaceAll('""','"'));
+          return obj;
+        }});
+      }}
+      saveTodoItems();
+      renderTodo();
+    }} catch(e) {{
+      alert('가져오기 파일을 확인해 주세요.');
+    }}
+  }};
+  reader.readAsText(file, 'utf-8');
+}}
+document.querySelectorAll('[data-todo-view]').forEach(btn=>btn.addEventListener('click',()=>{{
+  document.querySelectorAll('[data-todo-view]').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.todo-board').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('todo' + btn.dataset.todoView.charAt(0).toUpperCase() + btn.dataset.todoView.slice(1)).classList.add('active');
+}}));
+document.getElementById('todoAddProject').addEventListener('click',()=>openTodoForm());
+document.getElementById('todoAddTask').addEventListener('click',()=>openTodoForm());
+document.getElementById('todoSave').addEventListener('click',()=>{{saveTodoItems(); alert('저장되었습니다.');}});
+document.getElementById('todoCsv').addEventListener('click',exportTodoCsv);
+document.getElementById('todoImportBtn').addEventListener('click',()=>document.getElementById('todoImportFile').click());
+document.getElementById('todoImportFile').addEventListener('change',e=>{{if(e.target.files[0]) importTodoFile(e.target.files[0]);}});
+document.getElementById('todoSubmit').addEventListener('click',submitTodo);
+document.getElementById('todoCancel').addEventListener('click',closeTodoForm);
+document.getElementById('todoFile').addEventListener('change',e=>{{document.getElementById('todoFileName').textContent = e.target.files[0]?.name || '첨부 파일 없음';}});
+todoItems = loadTodoItems();
+renderTodo();
 
 // ?? NAV TABS ???????????????????????????????????????????????
 function activateTab(tab) {{
