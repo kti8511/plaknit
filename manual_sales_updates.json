@@ -658,6 +658,18 @@
             "payment": -5480
           }
         ]
+      },
+      {
+        "retailer": "롯데온",
+        "payment": 29250,
+        "qty": 1,
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 러닝 나시_BLACK_L",
+            "qty": 1,
+            "payment": 29250
+          }
+        ]
       }
     ]
   }

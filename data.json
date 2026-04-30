@@ -99578,5 +99578,37 @@
     "season": "1",
     "category_large": "T",
     "category_small": "S"
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ICE LITE 초냉감 러닝 나시",
+    "color": "BLACK",
+    "size": "L",
+    "qty": 1,
+    "gross": 29250,
+    "payment": 29250,
+    "avg_unit": 29250,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-29",
+        "qty": 1,
+        "gross": 29250,
+        "payment": 29250,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PC2SSM02BLK000L",
+    "standard_name": "ICE LITE 초냉감 러닝 나시_BLACK_L",
+    "received_qty": 0,
+    "stock_qty": 132,
+    "stock_barcode": "PC2SSM02BLK000L",
+    "stock_name": "ICE LITE 초냉감 러닝 나시_BLACK_L",
+    "season": "2",
+    "category_large": "S",
+    "category_small": "S"
   }
 ]
