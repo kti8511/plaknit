@@ -99121,14 +99121,14 @@
   {
     "retailer": "글로리어스워커",
     "mall_no": "4008",
-    "name": "Quickdry Ventilation Running Top",
-    "color": "블랙",
+    "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
+    "color": "",
     "size": "XL",
-    "qty": 1,
-    "gross": 63200,
-    "payment": 63200,
-    "avg_unit": 63200,
-    "orders": 1,
+    "qty": 2,
+    "gross": 142200,
+    "payment": 142200,
+    "avg_unit": 71100,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -99137,13 +99137,22 @@
         "gross": 63200,
         "payment": 63200,
         "orders": 1
+      },
+      {
+        "date": "2026-04-29",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK00XL",
-    "standard_name": "퀵드라이 벤틸레이텘 러닝탑 블랙 XL",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 XL",
     "received_qty": 0,
-    "stock_qty": 43
+    "stock_qty": 43,
+    "stock_barcode": "PE1TMM01BLK00XL",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 블랙 XL"
   },
   {
     "retailer": "자사몰",
