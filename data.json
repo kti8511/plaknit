@@ -99129,11 +99129,11 @@
     "name": "퀵드라이 셔링 티셔츠 세이지",
     "color": "",
     "size": "M",
-    "qty": 1,
-    "gross": 45060,
-    "payment": 45060,
-    "avg_unit": 45060,
-    "orders": 1,
+    "qty": 2,
+    "gross": 94060,
+    "payment": 86710,
+    "avg_unit": 43355,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -99142,13 +99142,25 @@
         "gross": 45060,
         "payment": 45060,
         "orders": 1
+      },
+      {
+        "date": "2026-04-29",
+        "qty": 1,
+        "gross": 49000,
+        "payment": 41650,
+        "orders": 1
       }
     ],
-    "match_status": "매칭됨",
+    "match_status": "매칭",
     "match_sku": "PE2TSW01SAG0000M",
     "standard_name": "퀵드라이 셔링 티셔츠 세이지 M",
-    "received_qty": 0,
-    "stock_qty": 12
+    "received_qty": 22,
+    "stock_qty": 12,
+    "stock_barcode": "PE2TSW01SAG0000M",
+    "stock_name": "퀵드라이 셔링 티셔츠 세이지 M",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
   },
   {
     "retailer": "29cm",
@@ -99609,6 +99621,102 @@
     "stock_name": "ICE LITE 초냉감 러닝 나시_BLACK_L",
     "season": "2",
     "category_large": "S",
+    "category_small": "S"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "504",
+    "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
+    "color": "",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 66000,
+    "payment": 59400,
+    "avg_unit": 59400,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-29",
+        "qty": 1,
+        "gross": 66000,
+        "payment": 59400,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1TMM01GRY02XL",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 2XL",
+    "received_qty": 48,
+    "stock_qty": 29,
+    "stock_barcode": "PE1TMM01GRY02XL",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 2XL",
+    "season": "1",
+    "category_large": "T",
+    "category_small": "M"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "308",
+    "name": "스포츠 쿠션업 PLNT 크루삭스",
+    "color": "화이트",
+    "size": "",
+    "qty": 4,
+    "gross": 29920,
+    "payment": 29920,
+    "avg_unit": 7480,
+    "orders": 4,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-29",
+        "qty": 4,
+        "gross": 29920,
+        "payment": 29920,
+        "orders": 4
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PC4AAM02WHT000F",
+    "standard_name": "스포츠 쿠션업 PLNT 크루삭스_WHITE_Free",
+    "received_qty": 0,
+    "stock_qty": 171,
+    "stock_barcode": "PC4AAM02WHT000F",
+    "stock_name": "스포츠 쿠션업 PLNT 크루삭스_WHITE_Free",
+    "season": "4",
+    "category_large": "A",
+    "category_small": "A"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "493",
+    "name": "퀵드라이 셔링 티셔츠 세이지",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 49000,
+    "payment": 44100,
+    "avg_unit": 44100,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-29",
+        "qty": 1,
+        "gross": 49000,
+        "payment": 44100,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSW01SAG0000L",
+    "standard_name": "퀵드라이 셔링 티셔츠 세이지 L",
+    "received_qty": 22,
+    "stock_qty": 42,
+    "stock_barcode": "PE2TSW01SAG0000L",
+    "stock_name": "퀵드라이 셔링 티셔츠 세이지 L",
+    "season": "2",
+    "category_large": "T",
     "category_small": "S"
   }
 ]

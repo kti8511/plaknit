@@ -670,6 +670,33 @@
             "payment": 29250
           }
         ]
+      },
+      {
+        "retailer": "29cm",
+        "payment": 175070,
+        "qty": 7,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 그레이 2XL",
+            "qty": 1,
+            "payment": 59400
+          },
+          {
+            "name": "스포츠 쿠션업 PLNT 크루삭스_WHITE_Free",
+            "qty": 4,
+            "payment": 29920
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지 L",
+            "qty": 1,
+            "payment": 44100
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지 M",
+            "qty": 1,
+            "payment": 41650
+          }
+        ]
       }
     ]
   }
