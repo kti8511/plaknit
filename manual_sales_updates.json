@@ -837,6 +837,23 @@
             "payment": -56310
           }
         ]
+      },
+      {
+        "retailer": "29cm",
+        "payment": 86400,
+        "qty": 2,
+        "items": [
+          {
+            "name": "퀵드라이 메쉬 러닝쇼츠 워시드카키 L",
+            "qty": 1,
+            "payment": 62100
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠_BLACK_M",
+            "qty": 1,
+            "payment": 24300
+          }
+        ]
       }
     ]
   },
@@ -917,6 +934,18 @@
             "payment": 2980
           }
         ]
+      },
+      {
+        "retailer": "29cm",
+        "payment": 50150,
+        "qty": 1,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 화이트 M",
+            "qty": 1,
+            "payment": 50150
+          }
+        ]
       }
     ]
   },
@@ -952,7 +981,7 @@
             "payment": 62430
           },
           {
-            "name": "KINTERRA 퀴드라이 러닝 롱슬리브 웜그레이",
+            "name": "KINTERRA 퀵드라이 러닝 롱슬리브 웜그레이",
             "qty": 1,
             "payment": 49000
           },
@@ -995,6 +1024,18 @@
             "name": "TECH SWEAT 벌룬 쇼츠",
             "qty": 2,
             "payment": 17650
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "payment": 50149,
+        "qty": 1,
+        "items": [
+          {
+            "name": "퀵드라이 RUNNER'S FEET 티셔츠 코발트 L",
+            "qty": 1,
+            "payment": 50149
           }
         ]
       }
@@ -1265,6 +1306,18 @@
             "name": "퀵드라이 투톤 그래픽 나시",
             "qty": -1,
             "payment": -26460
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "payment": 50150,
+        "qty": 1,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지 M",
+            "qty": 1,
+            "payment": 50150
           }
         ]
       }

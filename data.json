@@ -100022,11 +100022,11 @@
     "name": "퀵드라이 셔링 티셔츠 세이지",
     "color": "",
     "size": "M",
-    "qty": 2,
-    "gross": 94060,
-    "payment": 86710,
-    "avg_unit": 43355,
-    "orders": 2,
+    "qty": 3,
+    "gross": 153060,
+    "payment": 136860,
+    "avg_unit": 45620,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -100042,9 +100042,16 @@
         "gross": 49000,
         "payment": 41650,
         "orders": 1
+      },
+      {
+        "date": "2026-05-05",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 50150,
+        "orders": 1
       }
     ],
-    "match_status": "매칭",
+    "match_status": "매칭됨",
     "match_sku": "PE2TSW01SAG0000M",
     "standard_name": "퀵드라이 셔링 티셔츠 세이지 M",
     "received_qty": 22,
@@ -101569,5 +101576,133 @@
     "gross_sales": 33250,
     "payment_sales": 33250,
     "avg_unit_price": 33250
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 RUNNER'S FEET 티셔츠 코발트",
+    "color": "코발트",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 50149,
+    "avg_unit": 50149,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-02",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 50149,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSM03CBT000L",
+    "standard_name": "퀵드라이 RUNNER'S FEET 티셔츠 코발트 L",
+    "received_qty": 50,
+    "stock_qty": 38,
+    "stock_barcode": "PE2TSM03CBT000L",
+    "stock_name": "퀵드라이 RUNNER'S FEET 티셔츠 코발트 L",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "P00000TA",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 50150,
+    "avg_unit": 50150,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-01",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 50150,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE2TSW01WHT0000M",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트 M",
+    "received_qty": 34,
+    "stock_qty": 46,
+    "stock_barcode": "PE2TSW01WHT0000M",
+    "stock_name": "퀵드라이 셔링 티셔츠 화이트 M",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "468",
+    "name": "퀵드라이 메쉬 러닝쇼츠 워시드카키",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 69000,
+    "payment": 62100,
+    "avg_unit": 62100,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-30",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 62100,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PE1PSM01WKH000L",
+    "standard_name": "퀵드라이 메쉬 러닝쇼츠 워시드카키 L",
+    "received_qty": 74,
+    "stock_qty": 70,
+    "stock_barcode": "PE1PSM01WKH000L",
+    "stock_name": "퀵드라이 메쉬 러닝쇼츠 워시드카키 L",
+    "season": "1",
+    "category_large": "P",
+    "category_small": "S"
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "211",
+    "name": "퀵드라이 세미오버핏 티셔츠",
+    "color": "블랙",
+    "size": "M",
+    "qty": 1,
+    "gross": 27000,
+    "payment": 24300,
+    "avg_unit": 24300,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-30",
+        "qty": 1,
+        "gross": 27000,
+        "payment": 24300,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB4TSM01BLK000M",
+    "standard_name": "퀵드라이 세미오버핏 티셔츠_BLACK_M",
+    "received_qty": 0,
+    "stock_qty": 79,
+    "stock_barcode": "PB4TSM01BLK000M",
+    "stock_name": "퀵드라이 세미오버핏 티셔츠_BLACK_M",
+    "season": "4",
+    "category_large": "T",
+    "category_small": "S"
   }
 ]
