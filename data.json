@@ -101871,5 +101871,37 @@
     "season": "1",
     "category_large": "T",
     "category_small": "S"
+  },
+  {
+    "retailer": "애슬러",
+    "mall_no": "184932-1777800131868",
+    "name": "ICE LITE 와플메쉬 투인원 쇼츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 71280,
+    "payment": 67280,
+    "avg_unit": 67280,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-03",
+        "qty": 1,
+        "gross": 71280,
+        "payment": 67280,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2PSM02BLK000L",
+    "standard_name": "ICE LITE 와플메쉬 투인원 쇼츠_블랙-L",
+    "received_qty": 155,
+    "stock_qty": 110,
+    "stock_barcode": "PD2PSM02BLK000L",
+    "stock_name": "ICE LITE 와플메쉬 투인원 쇼츠_블랙-L",
+    "season": "2",
+    "category_large": "P",
+    "category_small": "S"
   }
 ]

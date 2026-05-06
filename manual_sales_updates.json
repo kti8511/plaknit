@@ -1140,6 +1140,18 @@
             "payment": 69800
           }
         ]
+      },
+      {
+        "retailer": "애슬러",
+        "payment": 67280,
+        "qty": 1,
+        "items": [
+          {
+            "name": "ICE LITE 와플메쉬 투인원 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 67280
+          }
+        ]
       }
     ]
   },
