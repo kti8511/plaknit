@@ -101704,5 +101704,172 @@
     "season": "4",
     "category_large": "T",
     "category_small": "S"
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "채코제에디션 초냉감 트래블러티셔츠",
+    "color": "블랙",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 34950,
+    "payment": 34950,
+    "avg_unit": 34950,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-04",
+        "qty": 1,
+        "gross": 34950,
+        "payment": 34950,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM02BLK02XL",
+    "standard_name": "채코제에디션 초냉감 트래블러티셔츠블랙-2XL",
+    "received_qty": 0,
+    "stock_qty": 110,
+    "stock_barcode": "PD2TSM02BLK02XL",
+    "stock_name": "채코제에디션 초냉감 트래블러티셔츠블랙-2XL",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "채코제에디션 초냉감 트래블러티셔츠",
+    "color": "화이트",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 34950,
+    "payment": 34950,
+    "avg_unit": 34950,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-04",
+        "qty": 1,
+        "gross": 34950,
+        "payment": 34950,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM02WHT02XL",
+    "standard_name": "채코제에디션 초냉감 트래블러티셔츠화이트-2XL",
+    "received_qty": 0,
+    "stock_qty": 74,
+    "stock_barcode": "PD2TSM02WHT02XL",
+    "stock_name": "채코제에디션 초냉감 트래블러티셔츠화이트-2XL",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "퀵드라이 피그먼트 오버핏 반팔티",
+    "color": "차콜",
+    "size": "3XL",
+    "qty": 2,
+    "gross": 84900,
+    "payment": 84900,
+    "avg_unit": 42450,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-04",
+        "qty": 1,
+        "gross": 42450,
+        "payment": 42450,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-04",
+        "qty": 1,
+        "gross": 42450,
+        "payment": 42450,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PD2TSM04CHA03XL",
+    "standard_name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-3XL",
+    "received_qty": 0,
+    "stock_qty": 199,
+    "stock_barcode": "PD2TSM04CHA03XL",
+    "stock_name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-3XL",
+    "season": "2",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+    "color": "화이트",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 32900,
+    "payment": 32900,
+    "avg_unit": 32900,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-03",
+        "qty": 1,
+        "gross": 32900,
+        "payment": 32900,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB1TSM01WHT0XXL",
+    "standard_name": "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XXL",
+    "received_qty": 38,
+    "stock_qty": 109,
+    "stock_barcode": "PB1TSM01WHT0XXL",
+    "stock_name": "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XXL",
+    "season": "1",
+    "category_large": "T",
+    "category_small": "S"
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+    "color": "블랙",
+    "size": "3XL",
+    "qty": 2,
+    "gross": 69800,
+    "payment": 69800,
+    "avg_unit": 34900,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-03",
+        "qty": 2,
+        "gross": 69800,
+        "payment": 69800,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB1TSM01BLKXXXL",
+    "standard_name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
+    "received_qty": 52,
+    "stock_qty": 25,
+    "stock_barcode": "PB1TSM01BLKXXXL",
+    "stock_name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
+    "season": "1",
+    "category_large": "T",
+    "category_small": "S"
   }
 ]

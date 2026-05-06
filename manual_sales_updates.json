@@ -1123,6 +1123,23 @@
             "payment": -680
           }
         ]
+      },
+      {
+        "retailer": "4XR",
+        "payment": 102700,
+        "qty": 3,
+        "items": [
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XXL",
+            "qty": 1,
+            "payment": 32900
+          },
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
+            "qty": 2,
+            "payment": 69800
+          }
+        ]
       }
     ]
   },
@@ -1196,6 +1213,33 @@
             "name": "ICE LITE 데일리 쇼츠",
             "qty": -2,
             "payment": -60310
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "payment": 154800,
+        "qty": 4,
+        "items": [
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠블랙-2XL",
+            "qty": 1,
+            "payment": 34950
+          },
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠화이트-2XL",
+            "qty": 1,
+            "payment": 34950
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-3XL",
+            "qty": 1,
+            "payment": 42450
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-3XL",
+            "qty": 1,
+            "payment": 42450
           }
         ]
       }
