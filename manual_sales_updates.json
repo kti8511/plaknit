@@ -699,5 +699,83 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-04-30",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 7100,
+        "orders": 5,
+        "qty": 8,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 446000,
+        "orders": 4,
+        "qty": 11,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 589100,
+        "orders": 10,
+        "qty": 15,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-03",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 299100,
+        "orders": 4,
+        "qty": 10,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-04",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 77200,
+        "orders": 2,
+        "qty": 2,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-05",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 473300,
+        "orders": 6,
+        "qty": 12,
+        "items": [],
+        "source": "daily_net_sales_image"
+      }
+    ]
   }
 ]
