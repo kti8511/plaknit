@@ -1457,6 +1457,93 @@
           }
         ],
         "source": "selfmall_product_csv_scaled_to_net_sales"
+      },
+      {
+        "retailer": "무신사",
+        "payment": 673890,
+        "qty": 21,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨",
+            "qty": 3,
+            "payment": 96610
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 2,
+            "payment": 91630
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 2,
+            "payment": 68610
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 2,
+            "payment": 66200
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 2,
+            "payment": 63670
+          },
+          {
+            "name": "[2PACK] TECH SWEAT 헤비쭈리 쇼츠",
+            "qty": 1,
+            "payment": 56910
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 38310
+          },
+          {
+            "name": "ICE LITE 루즈핏카고쇼츠",
+            "qty": 1,
+            "payment": 37460
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 36310
+          },
+          {
+            "name": "초냉감 밸런스 탱크",
+            "qty": 1,
+            "payment": 32000
+          },
+          {
+            "name": "초냉감 트래블러 티셔츠",
+            "qty": 1,
+            "payment": 30420
+          },
+          {
+            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 29470
+          },
+          {
+            "name": "TECH SWEAT 벌룬 쇼츠",
+            "qty": 3,
+            "payment": 29030
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": 1,
+            "payment": 27520
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 0,
+            "payment": -1240
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": -1,
+            "payment": -29020
+          }
+        ]
       }
     ]
   }
