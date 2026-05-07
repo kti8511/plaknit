@@ -1,49 +1,277 @@
 [
   {
+    "date": "2026-04-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 227790,
+        "orders": 4,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "date": "2026-04-02",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 220300,
+        "orders": 4,
+        "qty": 9
+      }
+    ]
+  },
+  {
+    "date": "2026-04-03",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 386740,
+        "orders": 5,
+        "qty": 16
+      }
+    ]
+  },
+  {
+    "date": "2026-04-04",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 139200,
+        "orders": 2,
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "date": "2026-04-05",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 68800,
+        "orders": 1,
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-04-06",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 341720,
+        "orders": 5,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "date": "2026-04-07",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 173400,
+        "orders": 3,
+        "qty": 3
+      }
+    ]
+  },
+  {
+    "date": "2026-04-08",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 68200,
+        "orders": 1,
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-04-09",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 225600,
+        "orders": 4,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 497860,
+        "orders": 6,
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 191600,
+        "orders": 4,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-04-12",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 597800,
+        "orders": 9,
+        "qty": 14
+      }
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 265500,
+        "orders": 4,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-04-14",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 532300,
+        "orders": 8,
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 384500,
+        "orders": 5,
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 360920,
+        "orders": 4,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "date": "2026-04-17",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 375400,
+        "orders": 8,
+        "qty": 11
+      }
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 432200,
+        "orders": 6,
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "date": "2026-04-19",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 389200,
+        "orders": 5,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "date": "2026-04-20",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 548100,
+        "orders": 8,
+        "qty": 17
+      }
+    ]
+  },
+  {
+    "date": "2026-04-21",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 159700,
+        "orders": 3,
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "date": "2026-04-22",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 335300,
+        "orders": 5,
+        "qty": 5
+      }
+    ]
+  },
+  {
     "date": "2026-04-23",
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 389500,
-        "items": [
-          {
-            "name": "???? ????? ??? ???",
-            "qty": 4
-          },
-          {
-            "name": "???? ????? ??? ??",
-            "qty": 2
-          },
-          {
-            "name": "???? ????? ??? ???",
-            "qty": 1
-          },
-          {
-            "name": "???? ??? ???? ???",
-            "qty": 3
-          },
-          {
-            "name": "???? ??? ???? ???",
-            "qty": 2
-          },
-          {
-            "name": "ICE LITE ?? ??",
-            "qty": 3
-          },
-          {
-            "name": "???? ?? ??? ???",
-            "qty": 1
-          },
-          {
-            "name": "???? ????? ??? ???",
-            "qty": 1
-          },
-          {
-            "name": "???? ???? ??",
-            "qty": 1
-          }
-        ],
-        "qty": 18
+        "payment": 291000,
+        "items": [],
+        "qty": 5,
+        "orders": 4
       },
       {
         "retailer": "무신사",
@@ -122,10 +350,10 @@
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 0,
+        "payment": 263600,
         "items": [],
-        "orders": 8,
-        "qty": 13
+        "orders": 4,
+        "qty": 7
       },
       {
         "retailer": "무신사",
@@ -173,10 +401,10 @@
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 0,
+        "payment": 132200,
         "items": [],
-        "orders": 4,
-        "qty": 9
+        "orders": 2,
+        "qty": 4
       },
       {
         "retailer": "무신사",
@@ -221,10 +449,10 @@
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 0,
+        "payment": 118200,
         "items": [],
-        "orders": 5,
-        "qty": 10
+        "orders": 2,
+        "qty": 3
       },
       {
         "retailer": "무신사",
@@ -328,45 +556,10 @@
       },
       {
         "retailer": "자사몰",
-        "payment": 388600,
-        "items": [
-          {
-            "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
-            "qty": 1,
-            "payment": 79000
-          },
-          {
-            "name": "퀵드라이 셔링 티셔츠 블랙",
-            "qty": 1,
-            "payment": 59000
-          },
-          {
-            "name": "퀵드라이 셔링 티셔츠 화이트",
-            "qty": 1,
-            "payment": 59000
-          },
-          {
-            "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜",
-            "qty": 1,
-            "payment": 59000
-          },
-          {
-            "name": "ICE LITE 와이드 카고팬츠",
-            "qty": 1,
-            "payment": 75800
-          },
-          {
-            "name": "스포츠 쿠션업 PLNT 크루삭스",
-            "qty": 1,
-            "payment": 8800
-          },
-          {
-            "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브 (차콜)",
-            "qty": 1,
-            "payment": 48000
-          }
-        ],
-        "qty": 7
+        "payment": 127300,
+        "items": [],
+        "qty": 4,
+        "orders": 3
       },
       {
         "retailer": "29cm",
@@ -453,6 +646,15 @@
         "qty": -1,
         "payment": -65600
       }
+    ],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 99700,
+        "orders": 2,
+        "qty": 3
+      }
     ]
   },
   {
@@ -460,75 +662,10 @@
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 1073900,
-        "qty": 26,
-        "items": [
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 블랙 L",
-            "qty": 6,
-            "payment": 228000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 블랙 M",
-            "qty": 5,
-            "payment": 190000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 블랙 XXL",
-            "qty": 3,
-            "payment": 114000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 화이트 XL",
-            "qty": 2,
-            "payment": 76000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 블랙 3XL",
-            "qty": 2,
-            "payment": 76000
-          },
-          {
-            "name": "퀵드라이 벤틸레이션 러닝탑 블랙 M",
-            "qty": 1,
-            "payment": 79000
-          },
-          {
-            "name": "퀵드라이 셔링 티셔츠 세이지 S",
-            "qty": 1,
-            "payment": 59000
-          },
-          {
-            "name": "퀵드라이 퍼포먼스 롱슬리브 블랙 L",
-            "qty": 1,
-            "payment": 65000
-          },
-          {
-            "name": "타이다잉 러닝삭스 블루",
-            "qty": 1,
-            "payment": 14900
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티 블랙 2XL",
-            "qty": 1,
-            "payment": 48000
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티 화이트 L",
-            "qty": 1,
-            "payment": 48000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 화이트 XXL",
-            "qty": 1,
-            "payment": 38000
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠 화이트 L",
-            "qty": 1,
-            "payment": 38000
-          }
-        ]
+        "payment": 110100,
+        "qty": 4,
+        "items": [],
+        "orders": 2
       },
       {
         "retailer": "글로리어스워커",
@@ -705,9 +842,9 @@
     "retailers": [
       {
         "retailer": "자사몰",
-        "payment": 7100,
+        "payment": 374000,
         "orders": 5,
-        "qty": 8,
+        "qty": 9,
         "items": [],
         "source": "daily_net_sales_image"
       },
