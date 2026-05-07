@@ -1376,6 +1376,18 @@
             "payment": 50150
           }
         ]
+      },
+      {
+        "retailer": "롯데온",
+        "payment": 32310,
+        "qty": 1,
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거_BLACK_L",
+            "qty": 1,
+            "payment": 32310
+          }
+        ]
       }
     ]
   }

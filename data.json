@@ -101903,5 +101903,40 @@
     "season": "2",
     "category_large": "P",
     "category_small": "S"
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ICE LITE 카고 조거",
+    "color": "BLACK",
+    "size": "L",
+    "qty": 1,
+    "gross": 43000,
+    "payment": 32310,
+    "avg_unit": 32310,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-05",
+        "qty": 1,
+        "gross": 43000,
+        "payment": 32310,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭됨",
+    "match_sku": "PB1PLM04BLK000L",
+    "standard_name": "ICE LITE 카고 조거_BLACK_L",
+    "received_qty": 0,
+    "stock_qty": 64,
+    "stock_barcode": "PB1PLM04BLK000L",
+    "stock_name": "ICE LITE 카고 조거_BLACK_L",
+    "season": "1",
+    "category_large": "P",
+    "category_small": "L",
+    "gross_sales": 43000,
+    "payment_sales": 32310,
+    "avg_unit_price": 32310
   }
 ]
