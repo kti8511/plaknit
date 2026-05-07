@@ -1390,5 +1390,74 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-05-06",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 251800,
+        "orders": 11,
+        "qty": 9,
+        "items": [
+          {
+            "name": "스포츠 러닝 크루삭스(가제)_라임",
+            "qty": 2,
+            "payment": 12405
+          },
+          {
+            "name": "스포츠 러닝 크루삭스(가제)_핑크",
+            "qty": 2,
+            "payment": 12405
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 그레이 XL",
+            "qty": 1,
+            "payment": 53259
+          },
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 M",
+            "qty": 1,
+            "payment": 28989
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙 L",
+            "qty": 1,
+            "payment": 39776
+          },
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 블랙 2XL",
+            "qty": 1,
+            "payment": 80225
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 하프집 L",
+            "qty": 1,
+            "payment": 50562
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-2XL",
+            "qty": 1,
+            "payment": 26832
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-M",
+            "qty": 1,
+            "payment": 30944
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙 S",
+            "qty": -1,
+            "payment": -39776
+          },
+          {
+            "name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드 S",
+            "qty": -1,
+            "payment": -43821
+          }
+        ],
+        "source": "selfmall_product_csv_scaled_to_net_sales"
+      }
+    ]
   }
 ]

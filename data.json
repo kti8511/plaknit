@@ -13444,11 +13444,11 @@
     "name": "ESSENTIAL HEAT 기모 러닝 하프집",
     "color": "",
     "size": "L",
-    "qty": 13,
-    "gross": 975000,
-    "payment": 666050,
-    "avg_unit": 51234,
-    "orders": 12,
+    "qty": 14,
+    "gross": 1050000,
+    "payment": 716612,
+    "avg_unit": 51187,
+    "orders": 13,
     "source_type": "단품",
     "daily": [
       {
@@ -13534,6 +13534,13 @@
         "gross": 75000,
         "payment": 44560,
         "orders": 1
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 75000,
+        "payment": 50562,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
@@ -13545,7 +13552,10 @@
     "stock_name": "ESSENTIAL HEAT 기모 러닝 하프집 L",
     "season": "4",
     "category_large": "T",
-    "category_small": "Z"
+    "category_small": "Z",
+    "gross_sales": 1050000,
+    "payment_sales": 716612,
+    "avg_unit_price": 51187
   },
   {
     "retailer": "무신사",
@@ -17672,11 +17682,11 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "XL",
-    "qty": 15,
-    "gross": 1185000,
-    "payment": 655758,
-    "avg_unit": 43717,
-    "orders": 7,
+    "qty": 16,
+    "gross": 1264000,
+    "payment": 709017,
+    "avg_unit": 44314,
+    "orders": 10,
     "source_type": "단품",
     "daily": [
       {
@@ -17734,18 +17744,28 @@
         "gross": -79000,
         "payment": -9256,
         "orders": 0
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 53259,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE1TMM01GRY000L",
-    "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
+    "match_sku": "PE1TMM01GRY00XL",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 XL",
     "received_qty": 48,
-    "stock_qty": 33,
-    "stock_barcode": "PE1TMM01GRY000L",
-    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
+    "stock_qty": 16,
+    "stock_barcode": "PE1TMM01GRY00XL",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 XL",
     "season": "1",
     "category_large": "T",
-    "category_small": "M"
+    "category_small": "M",
+    "gross_sales": 1264000,
+    "payment_sales": 709017,
+    "avg_unit_price": 44314
   },
   {
     "retailer": "자사몰",
@@ -47351,11 +47371,11 @@
     "name": "퀵드라이 셔링 티셔츠 블랙",
     "color": "",
     "size": "L",
-    "qty": 3,
-    "gross": 177000,
-    "payment": 200689,
-    "avg_unit": 66896,
-    "orders": 3,
+    "qty": 4,
+    "gross": 236000,
+    "payment": 240465,
+    "avg_unit": 60116,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -47378,6 +47398,13 @@
         "gross": 59000,
         "payment": 42208,
         "orders": 1
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 39776,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
@@ -47389,7 +47416,10 @@
     "stock_name": "퀵드라이 셔링 티셔츠 블랙 L",
     "season": "2",
     "category_large": "T",
-    "category_small": "S"
+    "category_small": "S",
+    "gross_sales": 236000,
+    "payment_sales": 240465,
+    "avg_unit_price": 60116
   },
   {
     "retailer": "무신사",
@@ -51872,11 +51902,11 @@
     "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트",
     "color": "",
     "size": "M",
-    "qty": 4,
-    "gross": 172000,
-    "payment": 143268,
-    "avg_unit": 35817,
-    "orders": 4,
+    "qty": 5,
+    "gross": 215000,
+    "payment": 172257,
+    "avg_unit": 34451,
+    "orders": 5,
     "source_type": "단품",
     "daily": [
       {
@@ -51899,18 +51929,28 @@
         "gross": 86000,
         "payment": 47726,
         "orders": 2
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 43000,
+        "payment": 28989,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE2TSW02WHT000L",
-    "standard_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 L",
+    "match_sku": "PE2TSW02WHT000M",
+    "standard_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 M",
     "received_qty": 33,
-    "stock_qty": 32,
-    "stock_barcode": "PE2TSW02WHT000L",
-    "stock_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 L",
+    "stock_qty": 47,
+    "stock_barcode": "PE2TSW02WHT000M",
+    "stock_name": "퀵드라이 우먼즈 베이직 티셔츠 화이트 M",
     "season": "2",
     "category_large": "T",
-    "category_small": "S"
+    "category_small": "S",
+    "gross_sales": 215000,
+    "payment_sales": 172257,
+    "avg_unit_price": 34451
   },
   {
     "retailer": "자사몰",
@@ -57818,10 +57858,10 @@
     "name": "퀵드라이 셔링 티셔츠 블랙",
     "color": "",
     "size": "S",
-    "qty": 3,
-    "gross": 177000,
-    "payment": 152537,
-    "avg_unit": 50846,
+    "qty": 2,
+    "gross": 118000,
+    "payment": 112761,
+    "avg_unit": 56380,
     "orders": 3,
     "source_type": "단품",
     "daily": [
@@ -57845,18 +57885,28 @@
         "gross": 59000,
         "payment": 43372,
         "orders": 1
+      },
+      {
+        "date": "2026-05-06",
+        "qty": -1,
+        "gross": -59000,
+        "payment": -39776,
+        "orders": 0
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE2TSW01BLK0000L",
-    "standard_name": "퀵드라이 셔링 티셔츠 블랙 L",
+    "match_sku": "PE2TSW01BLK000S",
+    "standard_name": "퀵드라이 셔링 티셔츠 블랙 S",
     "received_qty": 34,
     "stock_qty": 29,
-    "stock_barcode": "PE2TSW01BLK0000L",
-    "stock_name": "퀵드라이 셔링 티셔츠 블랙 L",
+    "stock_barcode": "PE2TSW01BLK000S",
+    "stock_name": "퀵드라이 셔링 티셔츠 블랙 S",
     "season": "2",
     "category_large": "T",
-    "category_small": "S"
+    "category_small": "S",
+    "gross_sales": 118000,
+    "payment_sales": 112761,
+    "avg_unit_price": 56380
   },
   {
     "retailer": "자사몰",
@@ -61889,11 +61939,11 @@
     "name": "스포츠 러닝 크루삭스",
     "color": "라임",
     "size": "",
-    "qty": 2,
-    "gross": 178000,
-    "payment": 93092,
-    "avg_unit": 46546,
-    "orders": 2,
+    "qty": 4,
+    "gross": 196400,
+    "payment": 105497,
+    "avg_unit": 26374,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -61909,18 +61959,28 @@
         "gross": 89000,
         "payment": 45856,
         "orders": 1
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 2,
+        "gross": 18400,
+        "payment": 12405,
+        "orders": 2
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PD3AAM05PIK000F",
-    "standard_name": "스포츠 러닝 크루삭스(가제)_핑크",
+    "match_sku": "PD3AAM05YEL000F",
+    "standard_name": "스포츠 러닝 크루삭스(가제)_라임",
     "received_qty": 0,
-    "stock_qty": 485,
-    "stock_barcode": "PD3AAM05PIK000F",
-    "stock_name": "스포츠 러닝 크루삭스(가제)_핑크",
+    "stock_qty": 451,
+    "stock_barcode": "PD3AAM05YEL000F",
+    "stock_name": "스포츠 러닝 크루삭스(가제)_라임",
     "season": "3",
     "category_large": "A",
-    "category_small": "A"
+    "category_small": "A",
+    "gross_sales": 196400,
+    "payment_sales": 105497,
+    "avg_unit_price": 26374
   },
   {
     "retailer": "자사몰",
@@ -72357,10 +72417,10 @@
     "name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드",
     "color": "",
     "size": "S",
-    "qty": 2,
-    "gross": 130000,
-    "payment": 107890,
-    "avg_unit": 53945,
+    "qty": 1,
+    "gross": 65000,
+    "payment": 64069,
+    "avg_unit": 64069,
     "orders": 2,
     "source_type": "단품",
     "daily": [
@@ -72377,18 +72437,28 @@
         "gross": 65000,
         "payment": 47783,
         "orders": 1
+      },
+      {
+        "date": "2026-05-06",
+        "qty": -1,
+        "gross": -65000,
+        "payment": -43821,
+        "orders": 0
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE1PSW01RED000M",
-    "standard_name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드 M",
+    "match_sku": "PE1PSW01RED000S",
+    "standard_name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드 S",
     "received_qty": 29,
-    "stock_qty": 28,
-    "stock_barcode": "PE1PSW01RED000M",
-    "stock_name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드 M",
+    "stock_qty": 29,
+    "stock_barcode": "PE1PSW01RED000S",
+    "stock_name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드 S",
     "season": "1",
     "category_large": "P",
-    "category_small": "S"
+    "category_small": "S",
+    "gross_sales": 65000,
+    "payment_sales": 64069,
+    "avg_unit_price": 64069
   },
   {
     "retailer": "자사몰",
@@ -80171,11 +80241,11 @@
     "name": "퀵드라이 메쉬 윈드브레이커 블랙",
     "color": "",
     "size": "2XL",
-    "qty": 2,
-    "gross": 238000,
-    "payment": 47726,
-    "avg_unit": 23863,
-    "orders": 2,
+    "qty": 3,
+    "gross": 357000,
+    "payment": 127951,
+    "avg_unit": 42650,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -80184,18 +80254,28 @@
         "gross": 238000,
         "payment": 47726,
         "orders": 2
+      },
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 119000,
+        "payment": 80225,
+        "orders": 1
       }
     ],
     "match_status": "매칭됨",
-    "match_sku": "PE1OJM01BLK000L",
-    "standard_name": "퀵드라이 메쉬 윈드브레이커 블랙 L",
+    "match_sku": "PE1OJM01BLK02XL",
+    "standard_name": "퀵드라이 메쉬 윈드브레이커 블랙 2XL",
     "received_qty": 55,
-    "stock_qty": 49,
-    "stock_barcode": "PE1OJM01BLK000L",
-    "stock_name": "퀵드라이 메쉬 윈드브레이커 블랙 L",
+    "stock_qty": 18,
+    "stock_barcode": "PE1OJM01BLK02XL",
+    "stock_name": "퀵드라이 메쉬 윈드브레이커 블랙 2XL",
     "season": "1",
     "category_large": "O",
-    "category_small": "J"
+    "category_small": "J",
+    "gross_sales": 357000,
+    "payment_sales": 127951,
+    "avg_unit_price": 42650
   },
   {
     "retailer": "자사몰",
@@ -101938,5 +102018,101 @@
     "gross_sales": 43000,
     "payment_sales": 32310,
     "avg_unit_price": 32310
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "스포츠 러닝 크루삭스",
+    "color": "핑크",
+    "size": "",
+    "qty": 2,
+    "gross": 18400,
+    "payment": 12405,
+    "avg_unit": 6202,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-06",
+        "qty": 2,
+        "gross": 18400,
+        "payment": 12405,
+        "orders": 2
+      }
+    ],
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "PD3AAM05PIK000F",
+    "standard_name": "스포츠 러닝 크루삭스(가제)_핑크",
+    "stock_barcode": "PD3AAM05PIK000F",
+    "stock_name": "스포츠 러닝 크루삭스(가제)_핑크",
+    "match_status": "매칭됨",
+    "gross_sales": 18400,
+    "payment_sales": 12405,
+    "avg_unit_price": 6202
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 마운틴 세미오버핏 반팔티",
+    "color": "다크그레이",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 39800,
+    "payment": 26832,
+    "avg_unit": 26832,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 26832,
+        "orders": 1
+      }
+    ],
+    "received_qty": 0,
+    "stock_qty": 102,
+    "match_sku": "PD2TSM06DGR02XL",
+    "standard_name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-2XL",
+    "stock_barcode": "PD2TSM06DGR02XL",
+    "stock_name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-2XL",
+    "match_status": "매칭됨",
+    "gross_sales": 39800,
+    "payment_sales": 26832,
+    "avg_unit_price": 26832
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
+    "color": "차콜",
+    "size": "M",
+    "qty": 1,
+    "gross": 45900,
+    "payment": 30944,
+    "avg_unit": 30944,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-06",
+        "qty": 1,
+        "gross": 45900,
+        "payment": 30944,
+        "orders": 1
+      }
+    ],
+    "received_qty": 0,
+    "stock_qty": 51,
+    "match_sku": "PD2TSM05CHA000M",
+    "standard_name": "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-M",
+    "stock_barcode": "PD2TSM05CHA000M",
+    "stock_name": "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-M",
+    "match_status": "매칭됨",
+    "gross_sales": 45900,
+    "payment_sales": 30944,
+    "avg_unit_price": 30944
   }
 ]
