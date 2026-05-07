@@ -8,6 +8,13 @@
         "payment": 227790,
         "orders": 4,
         "qty": 7
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 653930,
+        "qty": 17,
+        "orders": 17
       }
     ]
   },
@@ -20,6 +27,13 @@
         "payment": 220300,
         "orders": 4,
         "qty": 9
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 488420,
+        "qty": 10,
+        "orders": 10
       }
     ]
   },
@@ -32,6 +46,13 @@
         "payment": 386740,
         "orders": 5,
         "qty": 16
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 292100,
+        "qty": 8,
+        "orders": 8
       }
     ]
   },
@@ -44,6 +65,13 @@
         "payment": 139200,
         "orders": 2,
         "qty": 4
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 380620,
+        "qty": 9,
+        "orders": 9
       }
     ]
   },
@@ -56,6 +84,13 @@
         "payment": 68800,
         "orders": 1,
         "qty": 2
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 415110,
+        "qty": 9,
+        "orders": 9
       }
     ]
   },
@@ -68,6 +103,13 @@
         "payment": 341720,
         "orders": 5,
         "qty": 7
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 638570,
+        "qty": 15,
+        "orders": 14
       }
     ]
   },
@@ -80,6 +122,13 @@
         "payment": 173400,
         "orders": 3,
         "qty": 3
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 346970,
+        "qty": 6,
+        "orders": 6
       }
     ]
   },
@@ -92,6 +141,13 @@
         "payment": 68200,
         "orders": 1,
         "qty": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 458300,
+        "qty": 10,
+        "orders": 10
       }
     ]
   },
@@ -104,6 +160,13 @@
         "payment": 225600,
         "orders": 4,
         "qty": 5
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 109830,
+        "qty": 3,
+        "orders": 3
       }
     ]
   },
@@ -116,6 +179,13 @@
         "payment": 497860,
         "orders": 6,
         "qty": 8
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 492980,
+        "qty": 9,
+        "orders": 9
       }
     ]
   },
@@ -128,6 +198,13 @@
         "payment": 191600,
         "orders": 4,
         "qty": 5
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 477120,
+        "qty": 10,
+        "orders": 10
       }
     ]
   },
@@ -140,6 +217,13 @@
         "payment": 597800,
         "orders": 9,
         "qty": 14
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 696700,
+        "qty": 16,
+        "orders": 16
       }
     ]
   },
@@ -152,6 +236,13 @@
         "payment": 265500,
         "orders": 4,
         "qty": 5
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 1050950,
+        "qty": 22,
+        "orders": 22
       }
     ]
   },
@@ -164,6 +255,13 @@
         "payment": 532300,
         "orders": 8,
         "qty": 10
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 487940,
+        "qty": 15,
+        "orders": 12
       }
     ]
   },
@@ -176,6 +274,13 @@
         "payment": 384500,
         "orders": 5,
         "qty": 10
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 788060,
+        "qty": 18,
+        "orders": 18
       }
     ]
   },
@@ -188,6 +293,13 @@
         "payment": 360920,
         "orders": 4,
         "qty": 7
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 579120,
+        "qty": 13,
+        "orders": 12
       }
     ]
   },
@@ -200,6 +312,13 @@
         "payment": 375400,
         "orders": 8,
         "qty": 11
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 858600,
+        "qty": 30,
+        "orders": 25
       }
     ]
   },
@@ -212,6 +331,13 @@
         "payment": 432200,
         "orders": 6,
         "qty": 10
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 920590,
+        "qty": 31,
+        "orders": 23
       }
     ]
   },
@@ -224,6 +350,13 @@
         "payment": 389200,
         "orders": 5,
         "qty": 7
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 664190,
+        "qty": 28,
+        "orders": 23
       }
     ]
   },
@@ -236,6 +369,13 @@
         "payment": 548100,
         "orders": 8,
         "qty": 17
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 1006330,
+        "qty": 29,
+        "orders": 28
       }
     ]
   },
@@ -248,6 +388,13 @@
         "payment": 159700,
         "orders": 3,
         "qty": 4
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 574310,
+        "qty": 18,
+        "orders": 18
       }
     ]
   },
@@ -260,6 +407,13 @@
         "payment": 335300,
         "orders": 5,
         "qty": 5
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 886980,
+        "qty": 26,
+        "orders": 23
       }
     ]
   },
@@ -275,62 +429,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 503630,
-        "items": [
-          {
-            "name": "ICE LITE ?? ??",
-            "qty": 3
-          },
-          {
-            "name": "ICE LITE 2 in 1 ??",
-            "qty": 2
-          },
-          {
-            "name": "KINTERRA ???? ??? ??? ???",
-            "qty": 8
-          },
-          {
-            "name": "ICE LITE ??? ????? ???",
-            "qty": 2
-          },
-          {
-            "name": "???? ?? ??? ???",
-            "qty": 2
-          },
-          {
-            "name": "ICE LITE ?? ??",
-            "qty": 1
-          },
-          {
-            "name": "[2PACK] ???? ????? ???? ???",
-            "qty": 1
-          },
-          {
-            "name": "[2PACK] ???? ????? ??? ???",
-            "qty": 1
-          },
-          {
-            "name": "???? ?? ??? ???",
-            "qty": 1
-          },
-          {
-            "name": "??? ?? ????",
-            "qty": 4
-          },
-          {
-            "name": "ICE LITE ??? ???",
-            "qty": -1
-          },
-          {
-            "name": "???? ?? ??? ???",
-            "qty": -1
-          },
-          {
-            "name": "[2PACK] TECH SWEAT 7?? ?? ???",
-            "qty": -1
-          }
-        ],
-        "qty": 22
+        "payment": 660980,
+        "items": [],
+        "qty": 28,
+        "orders": 21
       },
       {
         "retailer": "4XR",
@@ -357,9 +459,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 0,
+        "payment": 575150,
         "items": [],
-        "qty": 16
+        "qty": 16,
+        "orders": 16
       },
       {
         "retailer": "29cm",
@@ -408,9 +511,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 0,
+        "payment": 414620,
         "items": [],
-        "qty": 18
+        "qty": 14,
+        "orders": 12
       },
       {
         "retailer": "29cm",
@@ -456,9 +560,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 0,
+        "payment": 897460,
         "items": [],
-        "qty": 29
+        "qty": 24,
+        "orders": 24
       },
       {
         "retailer": "29cm",
@@ -484,75 +589,10 @@
     "retailers": [
       {
         "retailer": "무신사",
-        "payment": 818830,
-        "items": [
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
-            "qty": 12,
-            "payment": 115780
-          },
-          {
-            "name": "ICE LITE 벌룬 조거",
-            "qty": 3,
-            "payment": 101530
-          },
-          {
-            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
-            "qty": 3,
-            "payment": 95040
-          },
-          {
-            "name": "ICE LITE 카고 조거",
-            "qty": 2,
-            "payment": 93120
-          },
-          {
-            "name": "ICE LITE 세미오버핏 셔켓",
-            "qty": 2,
-            "payment": 75660
-          },
-          {
-            "name": "ICE LITE 데일리 쇼츠",
-            "qty": 2,
-            "payment": 69090
-          },
-          {
-            "name": "채코제에디션 초냉감 트래블러티셔츠",
-            "qty": 2,
-            "payment": 60680
-          },
-          {
-            "name": "ICE LITE 와이드 카고팬츠",
-            "qty": 1,
-            "payment": 55440
-          },
-          {
-            "name": "TECH SWEAT 벌크업 후디 아노락",
-            "qty": 1,
-            "payment": 42090
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 나시",
-            "qty": 1,
-            "payment": 29860
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠",
-            "qty": 1,
-            "payment": 28710
-          },
-          {
-            "name": "ICE LITE 초냉감 오버핏 티셔츠",
-            "qty": 1,
-            "payment": 28430
-          },
-          {
-            "name": "ICE LITE 쿨메쉬 베이직 나시",
-            "qty": 1,
-            "payment": 23400
-          }
-        ],
-        "qty": 32
+        "payment": 1494220,
+        "items": [],
+        "qty": 159,
+        "orders": 148
       },
       {
         "retailer": "자사몰",
@@ -654,6 +694,13 @@
         "payment": 99700,
         "orders": 2,
         "qty": 3
+      },
+      {
+        "retailer": "무신사",
+        "items": [],
+        "payment": 722930,
+        "qty": 25,
+        "orders": 24
       }
     ]
   },
@@ -681,120 +728,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 1085440,
-        "qty": 45,
-        "items": [
-          {
-            "name": "ICE LITE 벌룬 조거",
-            "qty": 3,
-            "payment": 97360
-          },
-          {
-            "name": "ICE LITE 데일리 쇼츠",
-            "qty": 3,
-            "payment": 95000
-          },
-          {
-            "name": "TECH SWEAT 벌룬 쇼츠",
-            "qty": 9,
-            "payment": 87730
-          },
-          {
-            "name": "ICE LITE 벌크업 맨투맨",
-            "qty": 4,
-            "payment": 77220
-          },
-          {
-            "name": "ICE LITE 베이직 팬츠",
-            "qty": 2,
-            "payment": 72890
-          },
-          {
-            "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
-            "qty": 2,
-            "payment": 66090
-          },
-          {
-            "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
-            "qty": 1,
-            "payment": 65210
-          },
-          {
-            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
-            "qty": 2,
-            "payment": 58610
-          },
-          {
-            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
-            "qty": 2,
-            "payment": 56240
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 나시",
-            "qty": 2,
-            "payment": 52690
-          },
-          {
-            "name": "TECH SWEAT 와이드 스트레이트 팬츠",
-            "qty": 1,
-            "payment": 50440
-          },
-          {
-            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
-            "qty": 1,
-            "payment": 49150
-          },
-          {
-            "name": "ICE LITE 2 in 1 쇼츠",
-            "qty": 1,
-            "payment": 47040
-          },
-          {
-            "name": "ICE LITE 카고 조거",
-            "qty": 1,
-            "payment": 38710
-          },
-          {
-            "name": "초냉감 트래블러 티셔츠",
-            "qty": 1,
-            "payment": 32000
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
-            "qty": 1,
-            "payment": 29900
-          },
-          {
-            "name": "ICE LITE 세미오버핏 맨투맨",
-            "qty": 1,
-            "payment": 29610
-          },
-          {
-            "name": "ICE LITE 초냉감 오버핏 티셔츠",
-            "qty": 1,
-            "payment": 24130
-          },
-          {
-            "name": "스포츠 쿠션업 로고 크루삭스",
-            "qty": 4,
-            "payment": 21980
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
-            "qty": 2,
-            "payment": 19800
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 탱크",
-            "qty": 1,
-            "payment": 19120
-          },
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠",
-            "qty": 0,
-            "payment": -5480
-          }
-        ]
+        "payment": 1005270,
+        "qty": 42,
+        "items": [],
+        "orders": 32
       },
       {
         "retailer": "롯데온",
@@ -850,130 +787,10 @@
       },
       {
         "retailer": "무신사",
-        "payment": 968740,
-        "qty": 41,
-        "items": [
-          {
-            "name": "ICE LITE 오버핏 맨투맨",
-            "qty": 6,
-            "payment": 173840
-          },
-          {
-            "name": "ICE LITE 와이드 카고팬츠",
-            "qty": 2,
-            "payment": 96040
-          },
-          {
-            "name": "TECH SWEAT 벌룬 쇼츠",
-            "qty": 9,
-            "payment": 83980
-          },
-          {
-            "name": "ICE LITE 세미오버핏 맨투맨",
-            "qty": 3,
-            "payment": 82300
-          },
-          {
-            "name": "ICE LITE 세미오버핏 셔켓",
-            "qty": 2,
-            "payment": 74530
-          },
-          {
-            "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
-            "qty": 1,
-            "payment": 69680
-          },
-          {
-            "name": "ICE LITE 데일리 쇼츠",
-            "qty": 2,
-            "payment": 60310
-          },
-          {
-            "name": "퀵드라이 투톤 그래픽 나시",
-            "qty": 3,
-            "payment": 53910
-          },
-          {
-            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
-            "qty": 1,
-            "payment": 47930
-          },
-          {
-            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-            "qty": 1,
-            "payment": 47040
-          },
-          {
-            "name": "[2PACK] 퀵드라이 그린퓨처 티셔츠",
-            "qty": 1,
-            "payment": 41350
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
-            "qty": 4,
-            "payment": 39510
-          },
-          {
-            "name": "ICE LITE 루즈핏카고쇼츠",
-            "qty": 1,
-            "payment": 38220
-          },
-          {
-            "name": "ICE LITE 베이직 팬츠",
-            "qty": 1,
-            "payment": 36260
-          },
-          {
-            "name": "ICE LITE 벌룬 조거",
-            "qty": 1,
-            "payment": 32340
-          },
-          {
-            "name": "퀵드라이 마운틴 세미오버핏 반팔티",
-            "qty": 1,
-            "payment": 31920
-          },
-          {
-            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티",
-            "qty": 1,
-            "payment": 24660
-          },
-          {
-            "name": "KINTERRA 퀵드라이 스포츠 나시",
-            "qty": 1,
-            "payment": 24330
-          },
-          {
-            "name": "ICE LITE 초냉감 오버핏 티셔츠",
-            "qty": 1,
-            "payment": 24130
-          },
-          {
-            "name": "퀵드라이 세미오버핏 티셔츠",
-            "qty": 1,
-            "payment": 23490
-          },
-          {
-            "name": "ICE LITE 카고 조거",
-            "qty": 1,
-            "payment": 19720
-          },
-          {
-            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
-            "qty": -1,
-            "payment": -47430
-          },
-          {
-            "name": "퀵드라이 퍼포먼스 숏슬리브 블랙",
-            "qty": -1,
-            "payment": -53010
-          },
-          {
-            "name": "[2PACK] 채코제에디션 채코제에디션 초냉감 트래블러티셔츠",
-            "qty": -1,
-            "payment": -56310
-          }
-        ]
+        "payment": 1141290,
+        "qty": 42,
+        "items": [],
+        "orders": 41
       },
       {
         "retailer": "29cm",

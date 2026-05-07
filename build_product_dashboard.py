@@ -114,6 +114,7 @@ html = f"""<!doctype html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{{
+  --standard-name-col-width:280px;
   --navy:#1e2535;--bg:#f0f2f6;--panel:#fff;
   --border:#e2e6ed;--border2:#d0d5df;--ink:#1e2535;--ink2:#4a5568;--ink3:#8a94a6;
   --blue:#3b82f6;--blue2:#2563eb;--blue-soft:#eff6ff;
@@ -178,6 +179,7 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 
 /* RANK */
 .rank-list{{display:flex;flex-direction:column;gap:1px;}}
+.reorder-list{{max-height:320px;overflow-y:auto;padding-right:4px;}}
 .rank-row{{display:grid;grid-template-columns:22px minmax(0,1fr) 80px 80px;align-items:center;gap:8px;padding:5px 6px;border-radius:6px;transition:background 0.12s;}}
 .rank-row:hover{{background:var(--bg);}}
 .rank-n{{font-size:11px;color:var(--ink3);font-family:'DM Mono',monospace;}}
@@ -215,6 +217,12 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 /* TABLE */
 .table-wrap{{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}}
 table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
+.detail-table{{table-layout:fixed;min-width:1420px;}}
+.detail-table th:nth-child(3),.detail-table td.standard-name-cell{{width:var(--standard-name-col-width);}}
+.standard-name-cell{{max-width:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
+.resizable-th{{position:relative;padding-right:18px;}}
+.col-resizer{{position:absolute;right:0;top:0;width:8px;height:100%;cursor:col-resize;user-select:none;touch-action:none;}}
+.col-resizer:hover{{background:rgba(59,130,246,.18);}}
 thead{{position:sticky;top:0;z-index:2;}}
 th{{background:#f8fafc;color:var(--ink3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}}
 td{{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:middle;}}
@@ -600,13 +608,13 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       </div>
       <div class="panel" style="margin-bottom:12px;background:#fff7ed;border-color:#fed7aa">
         <div class="panel-hd"><span class="panel-title">리오더 알림</span><span class="panel-meta" id="reorderSummary">-</span></div>
-        <div class="rank-list" id="reorderAlerts"></div>
+        <div class="rank-list reorder-list" id="reorderAlerts"></div>
       </div>
       <div class="table-wrap">
-        <table>
+        <table class="detail-table">
           <thead>
             <tr>
-              <th>알림</th><th>바코드</th><th>표준상품명</th><th>유통사</th>
+              <th style="width:72px">알림</th><th style="width:120px">바코드</th><th class="resizable-th" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th><th style="width:120px">유통사</th>
               <th>시즌</th><th>복종</th>
               <th class="num">판매수량</th>
               <th class="num">주간 판매율</th>
@@ -1294,8 +1302,7 @@ function renderDetail() {{
 
   const reorderRows = rows
     .filter(r=>r.reorder_reasons.length)
-    .sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate)
-    .slice(0, 8);
+    .sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
   document.getElementById('reorderSummary').textContent = `${{rows.filter(r=>r.reorder_reasons.length).length}}개 상품`;
   document.getElementById('reorderAlerts').innerHTML = reorderRows.length
     ? reorderRows.map(r=>`<div class="rank-item"><div><div class="rank-name">${{r.standard_name}}</div><div class="rank-meta">${{r.reorder_reasons.join(' · ')}} · 현재고 ${{fmt(r.stock_qty)}} · 주간 ${{fmt(r.weekly_qty)}}개</div></div><div class="rank-value">${{pct(r.weekly_rate)}}</div></div>`).join('')
@@ -1365,7 +1372,7 @@ function renderDetail() {{
     return `<tr>
       <td><span class="badge ${{alertB}}" title="${{r.reorder_reasons.join(' / ')}}">${{alertT}}</span></td>
       <td class="td-mono">${{r.match_sku || '-'}}</td>
-      <td class="td-main" style="max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
+      <td class="td-main standard-name-cell" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
       <td style="font-size:12px;color:var(--ink3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${{r.retailers.join(', ')}}</td>
       <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
       <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
@@ -1387,6 +1394,27 @@ initDetailFilters();
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
 }});
+function initStandardNameResizer(){{
+  const handle = document.getElementById('standardNameResizer');
+  if (!handle || handle.dataset.ready) return;
+  handle.dataset.ready = '1';
+  handle.addEventListener('mousedown', e=>{{
+    e.preventDefault();
+    const startX = e.clientX;
+    const startWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--standard-name-col-width')) || 280;
+    const onMove = ev=>{{
+      const width = Math.max(180, Math.min(760, startWidth + ev.clientX - startX));
+      document.documentElement.style.setProperty('--standard-name-col-width', width + 'px');
+    }};
+    const onUp = ()=>{{
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    }};
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+  }});
+}}
+initStandardNameResizer();
 
 // TODO LIST -------------------------------------------------------------
 const TODO_KEY = 'plaknitTodoProjects.v1';
