@@ -1553,6 +1553,19 @@
         "payment": 408230,
         "qty": 8,
         "orders": 5
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 시그니처 조거_블랙-L",
+            "qty": 2,
+            "payment": 117300
+          }
+        ],
+        "payment": 117300,
+        "qty": 2,
+        "orders": 1
       }
     ]
   }

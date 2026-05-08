@@ -90115,5 +90115,32 @@
     "standard_name": "KINTERRA 퀵 드라이 오버핏 반팔티",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "ICE LITE 시그니처 조거",
+    "color": "블랙",
+    "size": "L",
+    "qty": 2,
+    "gross": 117300,
+    "payment": 117300,
+    "avg_unit": 58650,
+    "orders": 1,
+    "source_type": "상품",
+    "daily": [
+      {
+        "date": "2026-05-07",
+        "qty": 2,
+        "gross": 117300,
+        "payment": 117300,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ICE LITE 시그니처 조거_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]
