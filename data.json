@@ -5,11 +5,11 @@
     "name": "ICE LITE 카고 조거",
     "color": "블랙",
     "size": "L",
-    "qty": 73,
-    "gross": 1947200,
-    "payment": 3248232,
-    "avg_unit": 44496,
-    "orders": 27,
+    "qty": 76,
+    "gross": 2096830,
+    "payment": 3397862,
+    "avg_unit": 44709,
+    "orders": 28,
     "source_type": "단품",
     "daily": [
       {
@@ -766,6 +766,13 @@
         "qty": 1,
         "gross": 38310,
         "payment": 38310,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-07",
+        "qty": 3,
+        "gross": 149630,
+        "payment": 149630,
         "orders": 1
       }
     ],
@@ -18360,11 +18367,11 @@
     "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
     "color": "빈티지차콜",
     "size": "XL",
-    "qty": 21,
-    "gross": 316000,
-    "payment": 560145,
-    "avg_unit": 26674,
-    "orders": 5,
+    "qty": 22,
+    "gross": 377970,
+    "payment": 622115,
+    "avg_unit": 28278,
+    "orders": 6,
     "source_type": "단품",
     "daily": [
       {
@@ -19009,6 +19016,13 @@
         "qty": 1,
         "gross": 49000,
         "payment": 49000,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-07",
+        "qty": 1,
+        "gross": 61970,
+        "payment": 61970,
         "orders": 1
       }
     ],
@@ -42244,11 +42258,11 @@
     "name": "ICE LITE 릴렉스드 조거",
     "color": "블랙",
     "size": "L",
-    "qty": 4,
-    "gross": 151600,
-    "payment": 197084,
-    "avg_unit": 49271,
-    "orders": 3,
+    "qty": 6,
+    "gross": 227450,
+    "payment": 272934,
+    "avg_unit": 45489,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -42879,6 +42893,13 @@
         "qty": 1,
         "gross": 75800,
         "payment": 42990,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-07",
+        "qty": 2,
+        "gross": 75850,
+        "payment": 75850,
         "orders": 1
       }
     ],
@@ -86015,11 +86036,11 @@
     "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
     "color": "블랙, 화이트",
     "size": "XL",
-    "qty": 46,
-    "gross": 3338590,
-    "payment": 2182880,
-    "avg_unit": 47454,
-    "orders": 46,
+    "qty": 47,
+    "gross": 3386620,
+    "payment": 2230910,
+    "avg_unit": 47466,
+    "orders": 47,
     "source_type": "단품",
     "daily": [
       {
@@ -86203,6 +86224,13 @@
         "gross": -1240,
         "payment": -1240,
         "orders": 0
+      },
+      {
+        "date": "2026-05-07",
+        "qty": 1,
+        "gross": 48030,
+        "payment": 48030,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -87967,11 +87995,11 @@
     "name": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티",
     "color": "차콜그레이",
     "size": "XL",
-    "qty": 112,
-    "gross": 4254050,
-    "payment": 1074030,
-    "avg_unit": 9590,
-    "orders": 95,
+    "qty": 111,
+    "gross": 4244150,
+    "payment": 1064130,
+    "avg_unit": 9587,
+    "orders": 94,
     "source_type": "단품",
     "daily": [
       {
@@ -88099,6 +88127,13 @@
         "gross": 9900,
         "payment": 9900,
         "orders": 1
+      },
+      {
+        "date": "2026-05-07",
+        "qty": -1,
+        "gross": -9900,
+        "payment": -9900,
+        "orders": -1
       }
     ],
     "match_status": "매칭완료",
@@ -90024,6 +90059,60 @@
     "match_status": "매칭완료",
     "match_sku": "",
     "standard_name": "퀵드라이 B.B.B 티셔츠_올리브-L",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "[2PACK] 퀵드라이 그래픽 티셔츠",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 50920,
+    "payment": 50920,
+    "avg_unit": 50920,
+    "orders": 1,
+    "source_type": "상품",
+    "daily": [
+      {
+        "date": "2026-05-07",
+        "qty": 1,
+        "gross": 50920,
+        "payment": 50920,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "[2PACK] 퀵드라이 그래픽 티셔츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "KINTERRA 퀵 드라이 오버핏 반팔티",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 31730,
+    "payment": 31730,
+    "avg_unit": 31730,
+    "orders": 1,
+    "source_type": "상품",
+    "daily": [
+      {
+        "date": "2026-05-07",
+        "qty": 1,
+        "gross": 31730,
+        "payment": 31730,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵 드라이 오버핏 반팔티",
     "received_qty": 0,
     "stock_qty": 0
   }
