@@ -1,8 +1,8 @@
 {
   "stock_file": "C:\\Users\\user\\Desktop\\재고조회(기본)_2026-05-11_145158.xlsx",
-  "data_rows": 803,
+  "data_rows": 822,
   "stock_rows": 1006,
-  "matched_data_rows": 788,
+  "matched_data_rows": 807,
   "unmatched_data_rows": [
     {
       "retailer": "자사몰",
@@ -3232,11 +3232,6 @@
       "stock_qty": 25
     },
     {
-      "barcode": "PD4PLM01BLK000M",
-      "outbound_name": "ESSENTIAL HEAT 기모 러닝팬츠 M",
-      "stock_qty": 37
-    },
-    {
       "barcode": "PD4PLM01BLK00XL",
       "outbound_name": "ESSENTIAL HEAT 기모 러닝팬츠 XL",
       "stock_qty": 40
@@ -3417,16 +3412,6 @@
       "stock_qty": 37
     },
     {
-      "barcode": "PE1TMM01BRN000M",
-      "outbound_name": "퀵드라이 벤틸레이션 러닝탑 브라운 M",
-      "stock_qty": 22
-    },
-    {
-      "barcode": "PE1TMM01BRN00XL",
-      "outbound_name": "퀵드라이 벤틸레이션 러닝탑 브라운 XL",
-      "stock_qty": 33
-    },
-    {
       "barcode": "PE1TMM01BRN02XL",
       "outbound_name": "퀵드라이 벤틸레이션 러닝탑 브라운 2XL",
       "stock_qty": 30
@@ -3480,16 +3465,6 @@
       "barcode": "PE1PSM02GRY000M",
       "outbound_name": "퀵드라이 투인원 러닝쇼츠 그레이 M",
       "stock_qty": 32
-    },
-    {
-      "barcode": "PE1PSM02BRN00XL",
-      "outbound_name": "퀵드라이 투인원 러닝쇼츠 브라운 XL",
-      "stock_qty": 41
-    },
-    {
-      "barcode": "PE1PSM02BRN000M",
-      "outbound_name": "퀵드라이 투인원 러닝쇼츠 브라운 M",
-      "stock_qty": 36
     },
     {
       "barcode": "PE1TLM01BLK000S",

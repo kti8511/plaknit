@@ -9559,7 +9559,7 @@
     "qty": 17,
     "gross": 1275000,
     "payment": 988936,
-    "avg_unit": 58172,
+    "avg_unit": 58173,
     "orders": 17,
     "source_type": "단품",
     "daily": [
@@ -11759,7 +11759,7 @@
     "qty": 12,
     "gross": 900000,
     "payment": 706331,
-    "avg_unit": 58860,
+    "avg_unit": 58861,
     "orders": 11,
     "source_type": "단품",
     "daily": [
@@ -14117,35 +14117,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 그레이",
     "color": "",
     "size": "XL",
-    "qty": 8,
-    "gross": 712000,
-    "payment": 614138,
-    "avg_unit": 76767,
-    "orders": 8,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 3,
-        "gross": 267000,
-        "payment": 228685,
-        "orders": 3
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 4,
-        "gross": 356000,
-        "payment": 320920,
-        "orders": 4
-      },
-      {
-        "date": "2026-04-15",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 64533,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02GRY000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 그레이 L",
@@ -17126,35 +17104,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "XL",
-    "qty": 7,
-    "gross": 553000,
-    "payment": 526214,
-    "avg_unit": 75173,
-    "orders": 7,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 4,
-        "gross": 316000,
-        "payment": 320920,
-        "orders": 4
-      },
-      {
-        "date": "2026-04-15",
-        "qty": 2,
-        "gross": 158000,
-        "payment": 129066,
-        "orders": 2
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01GRY000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
@@ -19443,7 +19399,7 @@
     "qty": 6,
     "gross": 450000,
     "payment": 471893,
-    "avg_unit": 78648,
+    "avg_unit": 78649,
     "orders": 6,
     "source_type": "단품",
     "daily": [
@@ -19503,7 +19459,7 @@
     "qty": 8,
     "gross": 600000,
     "payment": 468373,
-    "avg_unit": 58546,
+    "avg_unit": 58547,
     "orders": 8,
     "source_type": "단품",
     "daily": [
@@ -19655,7 +19611,7 @@
     "qty": 8,
     "gross": 600000,
     "payment": 459157,
-    "avg_unit": 57394,
+    "avg_unit": 57395,
     "orders": 8,
     "source_type": "단품",
     "daily": [
@@ -21187,35 +21143,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "L",
-    "qty": 5,
-    "gross": 395000,
-    "payment": 420803,
-    "avg_unit": 84160,
-    "orders": 5,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 3,
-        "gross": 237000,
-        "payment": 240690,
-        "orders": 3
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01GRY000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
@@ -21236,7 +21170,7 @@
     "qty": 7,
     "gross": 525000,
     "payment": 412236,
-    "avg_unit": 58890,
+    "avg_unit": 58891,
     "orders": 6,
     "source_type": "단품",
     "daily": [
@@ -21321,7 +21255,7 @@
     "qty": 6,
     "gross": 450000,
     "payment": 403857,
-    "avg_unit": 67309,
+    "avg_unit": 67310,
     "orders": 6,
     "source_type": "단품",
     "daily": [
@@ -21367,7 +21301,7 @@
     "qty": 7,
     "gross": 525000,
     "payment": 403857,
-    "avg_unit": 57693,
+    "avg_unit": 57694,
     "orders": 7,
     "source_type": "단품",
     "daily": [
@@ -21417,35 +21351,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "2XL",
-    "qty": 4,
-    "gross": 316000,
-    "payment": 390745,
-    "avg_unit": 97686,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-10",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 126400,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 2,
-        "gross": 158000,
-        "payment": 160460,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 L",
@@ -25333,7 +25245,7 @@
     "qty": 4,
     "gross": 300000,
     "payment": 303414,
-    "avg_unit": 75853,
+    "avg_unit": 75854,
     "orders": 4,
     "source_type": "단품",
     "daily": [
@@ -25383,35 +25295,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
     "color": "",
     "size": "XL",
-    "qty": 4,
-    "gross": 316000,
-    "payment": 303200,
-    "avg_unit": 75800,
-    "orders": 4,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 80230,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-13",
-        "qty": 2,
-        "gross": 158000,
-        "payment": 146742,
-        "orders": 2
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BRN000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 브라운 L",
@@ -25432,7 +25322,7 @@
     "qty": 5,
     "gross": 375000,
     "payment": 302473,
-    "avg_unit": 60494,
+    "avg_unit": 60495,
     "orders": 5,
     "source_type": "단품",
     "daily": [
@@ -27068,7 +26958,7 @@
     "qty": 3,
     "gross": 225000,
     "payment": 276500,
-    "avg_unit": 92166,
+    "avg_unit": 92167,
     "orders": 3,
     "source_type": "단품",
     "daily": [
@@ -27157,28 +27047,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 그레이",
     "color": "",
     "size": "L",
-    "qty": 3,
-    "gross": 267000,
-    "payment": 264345,
-    "avg_unit": 88115,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-12",
-        "qty": 2,
-        "gross": 178000,
-        "payment": 160460,
-        "orders": 2
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02GRY000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 그레이 L",
@@ -29337,35 +29212,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "L",
-    "qty": 3,
-    "gross": 237000,
-    "payment": 253484,
-    "avg_unit": 84494,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-13",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 73371,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 L",
@@ -29708,35 +29561,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 브라운",
     "color": "",
     "size": "XL",
-    "qty": 3,
-    "gross": 267000,
-    "payment": 227658,
-    "avg_unit": 75886,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-09",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 71200,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 80230,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BRN000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 브라운 L",
@@ -31109,35 +30940,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
     "color": "",
     "size": "L",
-    "qty": 3,
-    "gross": 237000,
-    "payment": 223658,
-    "avg_unit": 74552,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 80230,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-16",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 67200,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BRN000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 브라운 L",
@@ -31807,35 +31616,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "XL",
-    "qty": 3,
-    "gross": 237000,
-    "payment": 220991,
-    "avg_unit": 73663,
-    "orders": 3,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-12",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 80230,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-15",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 64533,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 L",
@@ -38859,28 +38646,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 블랙",
     "color": "",
     "size": "M",
-    "qty": 2,
-    "gross": 178000,
-    "payment": 180113,
-    "avg_unit": 90056,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BLK000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙 L",
@@ -39241,7 +39013,7 @@
     "qty": 3,
     "gross": 225000,
     "payment": 174278,
-    "avg_unit": 58092,
+    "avg_unit": 58093,
     "orders": 3,
     "source_type": "단품",
     "daily": [
@@ -40101,28 +39873,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
     "color": "",
     "size": "M",
-    "qty": 2,
-    "gross": 158000,
-    "payment": 168418,
-    "avg_unit": 84209,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 103885,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-15",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 64533,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BRN000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 브라운 L",
@@ -43074,21 +42831,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "2XL",
-    "qty": 2,
-    "gross": 158000,
-    "payment": 152457,
-    "avg_unit": 76228,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 2,
-        "gross": 158000,
-        "payment": 152457,
-        "orders": 2
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01GRY000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
@@ -43846,28 +43595,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 블랙",
     "color": "",
     "size": "XL",
-    "qty": 2,
-    "gross": 178000,
-    "payment": 149599,
-    "avg_unit": 74799,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-11",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 76228,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-13",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 73371,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BLK000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 블랙 L",
@@ -44572,28 +44306,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 브라운",
     "color": "",
     "size": "L",
-    "qty": 2,
-    "gross": 178000,
-    "payment": 147430,
-    "avg_unit": 73715,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-12",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 80230,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-16",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 67200,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BRN000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 브라운 L",
@@ -44664,21 +44383,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 그레이",
     "color": "",
     "size": "M",
-    "qty": 2,
-    "gross": 158000,
-    "payment": 146742,
-    "avg_unit": 73371,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-13",
-        "qty": 2,
-        "gross": 158000,
-        "payment": 146742,
-        "orders": 2
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01GRY000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
@@ -45110,28 +44821,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "M",
-    "qty": 2,
-    "gross": 158000,
-    "payment": 137904,
-    "avg_unit": 68952,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-13",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 73371,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-15",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 64533,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK000L",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 L",
@@ -50803,21 +50499,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 브라운",
     "color": "",
     "size": "M",
-    "qty": 1,
-    "gross": 89000,
-    "payment": 103885,
-    "avg_unit": 103885,
-    "orders": 1,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-14",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 103885,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BRN000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 브라운 L",
@@ -56484,21 +56172,13 @@
     "name": "ESSENTIAL HEAT 기모 러닝팬츠",
     "color": "",
     "size": "L (2월 26일 이후 순차출고",
-    "qty": 1,
-    "gross": 75000,
-    "payment": 79000,
-    "avg_unit": 79000,
-    "orders": 1,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-08",
-        "qty": 1,
-        "gross": 75000,
-        "payment": 79000,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PD4PLM01BLK000L",
     "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠 L",
@@ -58009,21 +57689,13 @@
     "name": "퀵드라이 투인원 러닝쇼츠 브라운",
     "color": "",
     "size": "XL",
-    "qty": 1,
-    "gross": 89000,
-    "payment": 71200,
-    "avg_unit": 71200,
-    "orders": 1,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-17",
-        "qty": 1,
-        "gross": 89000,
-        "payment": 71200,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1PSM02BRN000L",
     "standard_name": "퀵드라이 투인원 러닝쇼츠 브라운 L",
@@ -87271,28 +86943,13 @@
     "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
     "color": "",
     "size": "XL",
-    "qty": 2,
-    "gross": 142200,
-    "payment": 142200,
-    "avg_unit": 71100,
-    "orders": 2,
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "avg_unit": 0,
+    "orders": 0,
     "source_type": "단품",
-    "daily": [
-      {
-        "date": "2026-04-25",
-        "qty": 1,
-        "gross": 63200,
-        "payment": 63200,
-        "orders": 1
-      },
-      {
-        "date": "2026-04-29",
-        "qty": 1,
-        "gross": 79000,
-        "payment": 79000,
-        "orders": 1
-      }
-    ],
+    "daily": [],
     "match_status": "매칭됨",
     "match_sku": "PE1TMM01BLK00XL",
     "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙 XL",
@@ -91325,5 +90982,724 @@
     "stock_qty": 42,
     "stock_barcode": "",
     "stock_name": "퀵드라이 5MILE 티셔츠 블랙 2XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 79000,
+    "payment": 79000,
+    "avg_unit": 79000,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-08",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 37,
+    "stock_barcode": "",
+    "stock_name": "ESSENTIAL HEAT 기모 러닝팬츠 M"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "브라운",
+    "size": "XL",
+    "qty": 4,
+    "gross": 356000,
+    "payment": 302600,
+    "avg_unit": 75650,
+    "orders": 4,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-09",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-17",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 89000,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_브라운-XL",
+    "received_qty": 0,
+    "stock_qty": 41,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 브라운 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "그레이",
+    "size": "2XL",
+    "qty": 2,
+    "gross": 158000,
+    "payment": 126400,
+    "avg_unit": 63200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_그레이-2XL",
+    "received_qty": 0,
+    "stock_qty": 22,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 2XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "그레이",
+    "size": "XL",
+    "qty": 8,
+    "gross": 712000,
+    "payment": 569600,
+    "avg_unit": 71200,
+    "orders": 8,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 3,
+        "gross": 267000,
+        "payment": 213600,
+        "orders": 3
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 4,
+        "gross": 356000,
+        "payment": 284800,
+        "orders": 4
+      },
+      {
+        "date": "2026-04-15",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_그레이-XL",
+    "received_qty": 0,
+    "stock_qty": 32,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 그레이 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "그레이",
+    "size": "XL",
+    "qty": 8,
+    "gross": 632000,
+    "payment": 505600,
+    "avg_unit": 63200,
+    "orders": 8,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 4,
+        "gross": 316000,
+        "payment": 252800,
+        "orders": 4
+      },
+      {
+        "date": "2026-04-15",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_그레이-XL",
+    "received_qty": 0,
+    "stock_qty": 13,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "그레이",
+    "size": "L",
+    "qty": 5,
+    "gross": 395000,
+    "payment": 316000,
+    "avg_unit": 63200,
+    "orders": 5,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 3,
+        "gross": 237000,
+        "payment": 189600,
+        "orders": 3
+      },
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_그레이-L",
+    "received_qty": 0,
+    "stock_qty": 31,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 L"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "브라운",
+    "size": "XL",
+    "qty": 4,
+    "gross": 316000,
+    "payment": 252800,
+    "avg_unit": 63200,
+    "orders": 4,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-13",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_브라운-XL",
+    "received_qty": 0,
+    "stock_qty": 33,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 브라운 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 3,
+    "gross": 237000,
+    "payment": 189600,
+    "avg_unit": 63200,
+    "orders": 3,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-15",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_블랙-XL",
+    "received_qty": 0,
+    "stock_qty": 40,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 블랙 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 2,
+    "gross": 178000,
+    "payment": 142400,
+    "avg_unit": 71200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-13",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_블랙-XL",
+    "received_qty": 0,
+    "stock_qty": 57,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 블랙 XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "브라운",
+    "size": "L",
+    "qty": 3,
+    "gross": 237000,
+    "payment": 189600,
+    "avg_unit": 63200,
+    "orders": 3,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-12",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-16",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_브라운-L",
+    "received_qty": 0,
+    "stock_qty": 42,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 브라운 L"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "블랙",
+    "size": "M",
+    "qty": 2,
+    "gross": 178000,
+    "payment": 142400,
+    "avg_unit": 71200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 52,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 블랙 M"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "블랙",
+    "size": "L",
+    "qty": 3,
+    "gross": 237000,
+    "payment": 189600,
+    "avg_unit": 63200,
+    "orders": 3,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-11",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-13",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 46,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 블랙 L"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "그레이",
+    "size": "L",
+    "qty": 3,
+    "gross": 267000,
+    "payment": 213600,
+    "avg_unit": 71200,
+    "orders": 3,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-12",
+        "qty": 2,
+        "gross": 178000,
+        "payment": 142400,
+        "orders": 2
+      },
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_그레이-L",
+    "received_qty": 0,
+    "stock_qty": 48,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 그레이 L"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "블랙",
+    "size": "2XL",
+    "qty": 3,
+    "gross": 237000,
+    "payment": 189600,
+    "avg_unit": 63200,
+    "orders": 3,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-12",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      },
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_블랙-2XL",
+    "received_qty": 0,
+    "stock_qty": 33,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 블랙 2XL"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "브라운",
+    "size": "L",
+    "qty": 2,
+    "gross": 178000,
+    "payment": 142400,
+    "avg_unit": 71200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-12",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-16",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_브라운-L",
+    "received_qty": 0,
+    "stock_qty": 49,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 브라운 L"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "그레이",
+    "size": "M",
+    "qty": 2,
+    "gross": 158000,
+    "payment": 126400,
+    "avg_unit": 63200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-13",
+        "qty": 2,
+        "gross": 158000,
+        "payment": 126400,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_그레이-M",
+    "received_qty": 0,
+    "stock_qty": 24,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 그레이 M"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "블랙",
+    "size": "M",
+    "qty": 2,
+    "gross": 158000,
+    "payment": 126400,
+    "avg_unit": 63200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-13",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-15",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 28,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 블랙 M"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 투인원 러닝쇼츠",
+    "color": "브라운",
+    "size": "M",
+    "qty": 1,
+    "gross": 89000,
+    "payment": 71200,
+    "avg_unit": 71200,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 71200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 투인원 러닝쇼츠_브라운-M",
+    "received_qty": 0,
+    "stock_qty": 36,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 투인원 러닝쇼츠 브라운 M"
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑",
+    "color": "브라운",
+    "size": "M",
+    "qty": 2,
+    "gross": 158000,
+    "payment": 126400,
+    "avg_unit": 63200,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-04-14",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      },
+      {
+        "date": "2026-04-15",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 63200,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑_브라운-M",
+    "received_qty": 0,
+    "stock_qty": 22,
+    "stock_barcode": "",
+    "stock_name": "퀵드라이 벤틸레이션 러닝탑 브라운 M"
   }
 ]
