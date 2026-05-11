@@ -635,7 +635,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <table class="detail-table">
           <thead>
             <tr>
-              <th style="width:72px">알림</th><th style="width:120px">바코드</th><th class="resizable-th" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th><th style="width:120px">유통사</th>
+              <th style="width:72px">알림</th><th style="width:120px">바코드</th><th class="resizable-th" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th>
               <th>시즌</th><th>복종</th>
               <th class="num">판매수량</th>
               <th class="num">주간 판매율</th>
@@ -1340,7 +1340,6 @@ function renderDetail() {{
     <td><select id="tableAlertFilter"><option value="">전체</option><option value="확인">확인</option><option value="정상">정상</option><option value="재고확인">재고확인</option></select></td>
     <td><input id="tableSkuFilter" placeholder="바코드"></td>
     <td><input id="tableNameFilter" placeholder="상품명"></td>
-    <td><input id="tableRetailerFilter" placeholder="유통사"></td>
     <td><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
     <td><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
     <td colspan="8"></td>
@@ -1350,7 +1349,6 @@ function renderDetail() {{
     alert:'',
     sku:'',
     name:'',
-    retailer:'',
     season:'',
     category:''
   }};
@@ -1358,7 +1356,6 @@ function renderDetail() {{
     tableFilters.alert = document.getElementById('tableAlertFilter').value;
     tableFilters.sku = (document.getElementById('tableSkuFilter').value||'').toLowerCase();
     tableFilters.name = (document.getElementById('tableNameFilter').value||'').toLowerCase();
-    tableFilters.retailer = (document.getElementById('tableRetailerFilter').value||'').toLowerCase();
     tableFilters.season = document.getElementById('tableSeasonFilter').value;
     tableFilters.category = document.getElementById('tableCategoryFilter').value;
     drawDetailRows(rows.filter(r=>{{
@@ -1366,23 +1363,22 @@ function renderDetail() {{
       if (tableFilters.alert && alertText !== tableFilters.alert) return false;
       if (tableFilters.sku && !(r.match_sku||'').toLowerCase().includes(tableFilters.sku)) return false;
       if (tableFilters.name && !(r.standard_name||'').toLowerCase().includes(tableFilters.name)) return false;
-      if (tableFilters.retailer && !r.retailers.join(',').toLowerCase().includes(tableFilters.retailer)) return false;
       if (tableFilters.season && !r.seasons.includes(tableFilters.season)) return false;
       if (tableFilters.category && !r.categoryLarge.concat(r.categorySmall).includes(tableFilters.category)) return false;
       return true;
     }}));
   }};
-  ['tableAlertFilter','tableSkuFilter','tableNameFilter','tableRetailerFilter','tableSeasonFilter','tableCategoryFilter'].forEach(id=>{{
+  ['tableAlertFilter','tableSkuFilter','tableNameFilter','tableSeasonFilter','tableCategoryFilter'].forEach(id=>{{
     const el = document.getElementById(id);
     el.addEventListener('input', applyTableFilters);
     el.addEventListener('change', applyTableFilters);
   }});
 
-  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
+  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
   function drawDetailRows(displayRows) {{
   if (!displayRows.length) {{
-    tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
+    tbody.innerHTML='<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
     return;
   }}
   tbody.innerHTML = displayRows.map(r=>{{
@@ -1394,7 +1390,6 @@ function renderDetail() {{
       <td><span class="badge ${{alertB}}" title="${{r.reorder_reasons.join(' / ')}}">${{alertT}}</span></td>
       <td class="td-mono">${{r.match_sku || '-'}}</td>
       <td class="td-main standard-name-cell" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
-      <td style="font-size:12px;color:var(--ink3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${{r.retailers.join(', ')}}</td>
       <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
       <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
       <td class="num">${{fmt(r.qty)}}</td>
