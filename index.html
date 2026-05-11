@@ -28,13 +28,16 @@ header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px
 .logo-text{font-size:13px;font-weight:700;color:#fff;letter-spacing:-0.2px;line-height:1.3;}
 .logo-sub{font-size:10px;color:rgba(255,255,255,0.4);font-weight:400;}
 .header-nav{display:flex;align-items:center;height:100%;flex:1;overflow-x:auto;}
-.nav-item{display:flex;flex-direction:column;justify-content:center;height:100%;padding:0 18px;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s;white-space:nowrap;}
+.nav-item{display:flex;flex-direction:column;justify-content:center;height:100%;padding:0 18px;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s;white-space:nowrap;text-decoration:none;}
 .nav-item:hover{background:rgba(255,255,255,0.05);}
 .nav-item.active{border-bottom-color:var(--blue);}
 .nav-label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:6px;}
 .nav-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
 .nav-sub{font-size:10px;color:rgba(255,255,255,0.38);margin-top:1px;}
 .header-right{margin-left:auto;flex-shrink:0;}
+.mobile-nav-toggle{display:none;align-items:center;justify-content:space-between;gap:8px;height:36px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(255,255,255,.08);color:#fff;padding:0 10px;font-family:'Pretendard',sans-serif;font-size:12px;font-weight:700;cursor:pointer;min-width:132px;}
+.mobile-nav-toggle::after{content:'▾';font-size:11px;color:rgba(255,255,255,.58);}
+.mobile-nav-toggle.open::after{content:'▴';}
 .status-chip{display:flex;align-items:center;gap:5px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:4px 10px;font-size:11px;color:#6ee7b7;font-family:'DM Mono',monospace;}
 .live-dot{width:5px;height:5px;border-radius:50%;background:#10b981;box-shadow:0 0 6px #10b981;animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -194,7 +197,24 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
 
 @media(max-width:1200px){.kpis{grid-template-columns:repeat(3,1fr);}.grid2,.grid2-eq,.charts-row{grid-template-columns:1fr;}}
-@media(max-width:680px){main,.header-top{padding-left:12px;padding-right:12px;}.kpis{grid-template-columns:1fr 1fr;}}
+@media(max-width:680px){
+  header{overflow:visible;}
+  .header-top{height:auto;min-height:52px;padding:8px 12px;gap:8px;flex-wrap:wrap;position:relative;}
+  main{padding-left:12px;padding-right:12px;}
+  .logo-area{min-width:auto;width:auto;max-width:128px;padding-right:10px;margin-right:0;}
+  .logo-text{font-size:12px;}
+  .logo-sub{font-size:9px;}
+  .mobile-nav-toggle{display:flex;flex:1;min-width:128px;}
+  .header-right{margin-left:0;}
+  .status-chip{height:30px;padding:3px 8px;font-size:10px;}
+  .header-nav{display:none;order:5;width:100%;height:auto;max-height:calc(100vh - 76px);overflow-y:auto;background:#111827;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:6px;box-shadow:0 10px 24px rgba(0,0,0,.28);}
+  .header-nav.open{display:grid;grid-template-columns:1fr;gap:4px;}
+  .nav-item{height:auto;min-height:48px;border-bottom:0;border-left:3px solid transparent;border-radius:8px;padding:9px 10px;text-decoration:none;}
+  .nav-item.active{border-left-color:var(--blue);border-bottom-color:transparent;background:rgba(59,130,246,.12);}
+  .nav-label{font-size:13px;}
+  .nav-sub{font-size:10px;}
+  .kpis{grid-template-columns:1fr 1fr;}
+}
 </style>
 </head>
 <body>
@@ -204,34 +224,35 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       <div class="logo-icon">PD</div>
       <div><div class="logo-text">상품DATA</div><div class="logo-sub">운영 대시보드</div></div>
     </div>
-    <nav class="header-nav">
-      <div class="nav-item active" data-tab="overview">
+    <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-expanded="false" aria-controls="mainNav">요약</button>
+    <nav class="header-nav" id="mainNav">
+      <a class="nav-item active" href="#overview" data-tab="overview">
         <div class="nav-label"><span class="nav-dot" style="background:#3b82f6"></span>요약</div>
         <div class="nav-sub">KPI · 최근 트렌드</div>
-      </div>
-      <div class="nav-item" data-tab="todo">
+      </a>
+      <a class="nav-item" href="#todo" data-tab="todo">
         <div class="nav-label"><span class="nav-dot" style="background:#8b5cf6"></span>To do list</div>
         <div class="nav-sub">프로젝트 일정</div>
-      </div>
-      <div class="nav-item" data-tab="compare">
+      </a>
+      <a class="nav-item" href="#compare" data-tab="compare">
         <div class="nav-label"><span class="nav-dot" style="background:#06b6d4"></span>매출 비교</div>
         <div class="nav-sub">연도 · 월별 대비</div>
-      </div>
-      <div class="nav-item" data-tab="calendar">
+      </a>
+      <a class="nav-item" href="#calendar" data-tab="calendar">
         <div class="nav-label"><span class="nav-dot" style="background:#6366f1"></span>일자별 매출</div>
         <div class="nav-sub">날짜별 트래킹</div>
-      </div>
-      <div class="nav-item" data-tab="retailer">
+      </a>
+      <a class="nav-item" href="#retailer" data-tab="retailer">
         <div class="nav-label"><span class="nav-dot" style="background:#10b981"></span>유통사별 매출</div>
         <div class="nav-sub">채널별 현황</div>
-      </div>
-      <div class="nav-item" data-tab="detail">
+      </a>
+      <a class="nav-item" href="#detail" data-tab="detail">
         <div class="nav-label"><span class="nav-dot" style="background:#f59e0b"></span>상품별 매출</div>
         <div class="nav-sub">SKU 상세 분석</div>
-      </div>
+      </a>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-05-11 01:57</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-05-11 13:45</div>
     </div>
   </div>
 </header>
@@ -1695,6 +1716,9 @@ function activateTab(tab) {
   if (nav) nav.classList.add('active');
   const panel = document.getElementById(tab);
   if (panel) panel.classList.add('active');
+  const mobileToggle = document.getElementById('mobileNavToggle');
+  if (mobileToggle && nav) mobileToggle.textContent = nav.querySelector('.nav-label')?.textContent?.trim() || '메뉴';
+  if (window.location.hash !== `#${tab}`) history.replaceState(null, '', `#${tab}`);
   if(tab==='compare')   renderCompare();
   if(tab==='calendar')  renderDaily();
   if(tab==='retailer')  renderRetailer();
@@ -1702,7 +1726,27 @@ function activateTab(tab) {
 }
 
 document.querySelectorAll('.nav-item[data-tab]').forEach(btn=>{
-  btn.addEventListener('click',()=>activateTab(btn.dataset.tab));
+  btn.addEventListener('click',(event)=>{
+    event.preventDefault();
+    activateTab(btn.dataset.tab);
+    document.getElementById('mainNav')?.classList.remove('open');
+    document.getElementById('mobileNavToggle')?.classList.remove('open');
+    document.getElementById('mobileNavToggle')?.setAttribute('aria-expanded','false');
+  });
+});
+
+document.getElementById('mobileNavToggle')?.addEventListener('click',()=>{
+  const nav = document.getElementById('mainNav');
+  const toggle = document.getElementById('mobileNavToggle');
+  const open = !nav.classList.contains('open');
+  nav.classList.toggle('open', open);
+  toggle.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+window.addEventListener('hashchange',()=>{
+  const tab = location.hash.replace('#','');
+  if (document.getElementById(tab)) activateTab(tab);
 });
 
 document.querySelectorAll('[data-tab-jump]').forEach(el=>{
@@ -1715,6 +1759,8 @@ document.querySelectorAll('[data-tab-jump]').forEach(el=>{
 });
 
 // init
+const initialTab = location.hash.replace('#','');
+if (document.getElementById(initialTab)) activateTab(initialTab);
 renderDaily();
 </script>
 </body>
