@@ -89193,11 +89193,11 @@
     "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
     "color": "블랙",
     "size": "3XL",
-    "qty": 2,
-    "gross": 69800,
-    "payment": 69800,
+    "qty": 3,
+    "gross": 104700,
+    "payment": 104700,
     "avg_unit": 34900,
-    "orders": 2,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -89206,9 +89206,16 @@
         "gross": 69800,
         "payment": 69800,
         "orders": 2
+      },
+      {
+        "date": "2026-05-08",
+        "qty": 1,
+        "gross": 34900,
+        "payment": 34900,
+        "orders": 1
       }
     ],
-    "match_status": "매칭됨",
+    "match_status": "매칭완료",
     "match_sku": "PB1TSM01BLKXXXL",
     "standard_name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
     "received_qty": 52,

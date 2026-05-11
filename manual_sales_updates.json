@@ -1641,6 +1641,19 @@
         "payment": 240480,
         "qty": 6,
         "orders": 5
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
+            "qty": 1,
+            "payment": 34900
+          }
+        ],
+        "payment": 34900,
+        "qty": 1,
+        "orders": 1
       }
     ]
   },
