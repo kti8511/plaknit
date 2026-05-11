@@ -1,3 +1,4 @@
+import argparse
 import json
 import re
 from pathlib import Path
@@ -39,7 +40,13 @@ def load_stock_rows(path):
     ws = wb.active
     headers = [str(v).strip() if v is not None else "" for v in next(ws.iter_rows(min_row=1, max_row=1, values_only=True))]
     idx = {h: i for i, h in enumerate(headers)}
-    required = ["출고상품명", "바코드", "총재고"]
+    if "출고가능" in idx:
+        stock_column = "출고가능"
+    elif "현재고" in idx:
+        stock_column = "현재고"
+    else:
+        stock_column = "총재고"
+    required = ["출고상품명", "바코드", stock_column]
     missing = [h for h in required if h not in idx]
     if missing:
         raise ValueError(f"필수 컬럼 누락: {missing}")
@@ -50,7 +57,7 @@ def load_stock_rows(path):
             continue
         barcode = str(row[idx["바코드"]] or "").strip()
         outbound_name = str(row[idx["출고상품명"]] or "").strip()
-        stock_raw = row[idx["총재고"]]
+        stock_raw = row[idx[stock_column]]
         try:
             stock_qty = int(float(str(stock_raw or 0).replace(",", "")))
         except ValueError:
@@ -68,13 +75,23 @@ def load_stock_rows(path):
 
 
 def main():
-    stock_file = latest_stock_file()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("stock_file", nargs="?", help="재고조회 엑셀 파일 경로")
+    args = parser.parse_args()
+
+    stock_file = Path(args.stock_file) if args.stock_file else latest_stock_file()
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     stock_rows = load_stock_rows(stock_file)
 
     by_barcode = {normalize(r["barcode"]): r for r in stock_rows if r["barcode"]}
     by_name = {normalize(r["outbound_name"]): r for r in stock_rows if r["outbound_name"]}
-    stock_name_pairs = [(normalize_name(r["outbound_name"]), r) for r in stock_rows if r["outbound_name"]]
+    stock_name_pairs = [
+        (stock_name, r)
+        for r in stock_rows
+        if r["outbound_name"]
+        for stock_name in [normalize_name(r["outbound_name"])]
+        if len(stock_name) >= 6
+    ]
 
     matched = 0
     unmatched_data = []
@@ -114,7 +131,7 @@ def main():
                 stock_row = {
                     "barcode": "",
                     "outbound_name": matched_by_name[0]["outbound_name"],
-                    "stock_qty": sum(r["stock_qty"] for r in matched_by_name),
+                    "stock_qty": matched_by_name[0]["stock_qty"],
                 }
                 match_key = normalize_name(stock_row["outbound_name"])
 
@@ -126,6 +143,9 @@ def main():
             if match_key:
                 used_stock_keys.add(match_key)
         else:
+            item["stock_qty"] = 0
+            item["stock_barcode"] = ""
+            item["stock_name"] = ""
             unmatched_data.append(
                 {
                     "retailer": item.get("retailer"),
