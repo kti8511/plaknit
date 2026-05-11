@@ -1795,6 +1795,19 @@
         "payment": 224550,
         "qty": 5,
         "orders": 1
+      },
+      {
+        "retailer": "롯데온",
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_BLACK_XL",
+            "qty": 1,
+            "payment": 30680
+          }
+        ],
+        "payment": 30680,
+        "qty": 1,
+        "orders": 1
       }
     ]
   }

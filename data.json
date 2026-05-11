@@ -90971,5 +90971,33 @@
     "standard_name": "퀵드라이 셔링 티셔츠_블랙-L",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ICE LITE 벌룬 조거",
+    "color": "BLACK",
+    "size": "XL",
+    "qty": 1,
+    "gross": 30680,
+    "payment": 30680,
+    "avg_unit": 30680,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-10",
+        "qty": 1,
+        "gross": 30680,
+        "payment": 30680,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ICE LITE 벌룬 조거_BLACK_XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "stock_name": "ICE LITE 벌룬 조거_BLACK_XL"
   }
 ]

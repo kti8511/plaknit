@@ -57,6 +57,7 @@ def main():
     parser.add_argument("--standard-name", required=True)
     parser.add_argument("--qty", required=True, type=int)
     parser.add_argument("--payment", required=True, type=int)
+    parser.add_argument("--create", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -68,7 +69,31 @@ def main():
         and row.get("standard_name") == args.standard_name
     ]
     if len(matches) != 1:
-        raise SystemExit(f"expected 1 match, found {len(matches)} for {args.standard_name}")
+        if not args.create or matches:
+            raise SystemExit(f"expected 1 match, found {len(matches)} for {args.standard_name}")
+        matches = [
+            {
+                "retailer": args.retailer,
+                "mall_no": "",
+                "name": args.name,
+                "color": args.color,
+                "size": args.size,
+                "qty": 0,
+                "gross": 0,
+                "payment": 0,
+                "avg_unit": 0,
+                "orders": 0,
+                "source_type": "단품",
+                "daily": [],
+                "match_status": "매칭완료",
+                "match_sku": "",
+                "standard_name": args.standard_name,
+                "received_qty": 0,
+                "stock_qty": 0,
+                "stock_name": args.standard_name,
+            }
+        ]
+        rows.append(matches[0])
 
     row = matches[0]
     row["name"] = args.name
