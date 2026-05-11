@@ -104,15 +104,20 @@ def load_items(path):
         day = parse_date(row.get("주문일시"))
         color, size = parse_option(row.get("옵션"))
         name, color = split_name_color(row.get("상품명"), color)
+        qty = as_int(row.get("수량"))
+        gross = as_int(row.get("판매액"))
+        payment = as_int(row.get("실 판매액"))
+        if qty == 0 and gross == 0 and payment == 0:
+            continue
         items.append(
             {
                 "date": day,
                 "name": name,
                 "color": color,
                 "size": size,
-                "qty": as_int(row.get("수량")),
-                "gross": as_int(row.get("판매액")),
-                "payment": as_int(row.get("실 판매액")),
+                "qty": qty,
+                "gross": gross,
+                "payment": payment,
             }
         )
     return items
@@ -126,14 +131,17 @@ def row_key(row):
     )
 
 
-def remove_existing_days(rows, days):
+def remove_existing_days(rows, days, replace_month=None):
     for row in rows:
         if row.get("retailer") != RETAILER:
             continue
         kept = []
         removed_qty = removed_gross = removed_payment = removed_orders = 0
         for daily in row.get("daily", []):
-            if daily.get("date") in days:
+            should_remove = daily.get("date") in days
+            if replace_month:
+                should_remove = should_remove or str(daily.get("date", "")).startswith(replace_month)
+            if should_remove:
                 removed_qty += as_int(daily.get("qty"))
                 removed_gross += as_int(daily.get("gross"))
                 removed_payment += as_int(daily.get("payment"))
@@ -178,8 +186,17 @@ def append_daily(row, item):
     row["avg_unit"] = int(round(row["payment"] / row["qty"])) if row["qty"] else 0
 
 
-def update_manual(items):
+def update_manual(items, replace_month=None):
     manual = json.loads(MANUAL_FILE.read_text(encoding="utf-8"))
+    if replace_month:
+        for entry in manual:
+            if not str(entry.get("date", "")).startswith(replace_month):
+                continue
+            entry["retailers"] = [
+                retailer
+                for retailer in entry.get("retailers", [])
+                if retailer.get("retailer") != RETAILER
+            ]
     grouped = collections.defaultdict(list)
     for item in items:
         grouped[item["date"]].append(item)
@@ -204,13 +221,14 @@ def update_manual(items):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("xlsx")
+    parser.add_argument("--replace-month", help="YYYY-MM 형태로 해당 월의 29CM 데이터를 전체 교체")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
     items = load_items(Path(args.xlsx))
     rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     days = {item["date"] for item in items}
-    remove_existing_days(rows, days)
+    remove_existing_days(rows, days, args.replace_month)
     index, by_name = build_index(rows)
     created = []
     for item in items:
@@ -249,7 +267,7 @@ def main():
         row["match_status"] = "매칭완료"
         append_daily(row, item)
 
-    manual = update_manual(items)
+    manual = update_manual(items, args.replace_month)
     summary = {
         "days": sorted(days),
         "line_items": len(items),
