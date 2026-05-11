@@ -37,6 +37,7 @@ def norm_color(value):
 def normalize_name(name):
     text = clean_text(name)
     text = re.sub(r"^\*", "", text).strip()
+    text = re.sub(r"\s*\((블랙|화이트|라이트그레이|그레이|차콜|네이비|카키|브라운)\)$", "", text)
     text = text.replace("퀵 드라이", "퀵드라이")
     text = text.replace("세미 오버핏", "세미오버핏")
     text = text.replace("세비오버핏", "세미오버핏")
@@ -49,6 +50,13 @@ def normalize_name(name):
 def split_name_color(name, color):
     name = normalize_name(name)
     color = norm_color(color)
+    if name == "KINTERRA 벤치프레스 빈티지 그래픽 나시":
+        color = {
+            "블랙": "BLACK",
+            "화이트": "WHITE",
+            "라이트그레이": "LIGHT GREY",
+            "그레이": "GREY",
+        }.get(color, color)
     if color:
         return name, color
     suffixes = [
