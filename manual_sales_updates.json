@@ -1696,6 +1696,19 @@
         "payment": 315530,
         "qty": 8,
         "orders": 7
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-L",
+            "qty": 1,
+            "payment": 50150
+          }
+        ],
+        "payment": 50150,
+        "qty": 1,
+        "orders": 1
       }
     ]
   },
@@ -1756,6 +1769,19 @@
         "payment": 451650,
         "qty": 12,
         "orders": 6
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거_블랙-2XL",
+            "qty": 5,
+            "payment": 224550
+          }
+        ],
+        "payment": 224550,
+        "qty": 5,
+        "orders": 1
       }
     ]
   }

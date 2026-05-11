@@ -59741,12 +59741,12 @@
     "mall_no": "1929983",
     "name": "ICE LITE 카고 조거",
     "color": "블랙",
-    "size": "XXL",
-    "qty": 1,
-    "gross": 79800,
-    "payment": 68258,
-    "avg_unit": 68258,
-    "orders": 1,
+    "size": "2XL",
+    "qty": 6,
+    "gross": 329300,
+    "payment": 292808,
+    "avg_unit": 48801,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -59755,11 +59755,18 @@
         "gross": 79800,
         "payment": 68258,
         "orders": 1
+      },
+      {
+        "date": "2026-05-10",
+        "qty": 5,
+        "gross": 249500,
+        "payment": 224550,
+        "orders": 1
       }
     ],
-    "match_status": "매칭됨",
+    "match_status": "매칭완료",
     "match_sku": "PB1PLM04BLK0XXL",
-    "standard_name": "ICE LITE 카고 조거_BLACK_XXL",
+    "standard_name": "ICE LITE 카고 조거_블랙-2XL",
     "received_qty": 0,
     "stock_qty": 43,
     "stock_barcode": "PB1PLM04BLK0XXL",
@@ -90928,6 +90935,33 @@
     "match_status": "매칭완료",
     "match_sku": "",
     "standard_name": "ICE LITE 벌크업 쇼츠",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 50150,
+    "avg_unit": 50150,
+    "orders": 1,
+    "source_type": "상품",
+    "daily": [
+      {
+        "date": "2026-05-09",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 50150,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠_블랙-L",
     "received_qty": 0,
     "stock_qty": 0
   }
