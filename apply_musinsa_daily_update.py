@@ -10,13 +10,22 @@ RETAILER = "무신사"
 
 
 DAILY_ITEMS = [
-    {"name": "ICE LITE 카고 조거", "qty": 3, "payment": 149630},
-    {"name": "ICE LITE 릴렉스드 조거", "qty": 2, "payment": 75850},
-    {"name": "[헤비쮸리]TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)", "qty": 1, "payment": 61970},
-    {"name": "[2PACK] 퀵드라이 그래픽 티셔츠", "qty": 1, "payment": 50920},
-    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 1, "payment": 48030},
-    {"name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티", "qty": 1, "payment": 31730},
-    {"name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티", "qty": -1, "payment": -9900},
+    {"name": "ICE LITE 와이드 카고팬츠", "qty": 2, "payment": 115460},
+    {"name": "퀵드라이 우먼즈 멀티포켓쇼츠 블랙", "qty": 1, "payment": 57250},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠", "qty": 1, "payment": 49900},
+    {"name": "ICE LITE 세미오버핏 셔켓", "qty": 1, "payment": 48910},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 1, "payment": 48410},
+    {"name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티", "qty": 1, "payment": 36770},
+    {"name": "퀵드라이 마운틴 세미오버핏 반팔티", "qty": 1, "payment": 35190},
+    {"name": "ICE LITE 초냉감 오버핏 티셔츠", "qty": 1, "payment": 30790},
+    {"name": "ICE LITE 벌룬 조거", "qty": 0, "payment": 4410},
+    {"name": "ICE LITE 카고 조거", "qty": 0, "payment": 3910},
+    {"name": "TECH SWEAT 벌룬 쇼츠", "qty": -2, "payment": 1830},
+    {"name": "초냉감 트래블러 티셔츠", "qty": -1, "payment": -29950},
+    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": -1, "payment": -40380},
+    {"name": "TECH SWEAT 벌크업 후디 아노락", "qty": -1, "payment": -47510},
+    {"name": "퀵드라이 벤틸레이션 러닝탑 브라운", "qty": -1, "payment": -73930},
+    {"name": "ICE LITE 와플메쉬 투인원 쇼츠", "qty": -1, "payment": -5670},
 ]
 
 
@@ -25,6 +34,8 @@ NAME_ALIASES = {
     "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
     "KINTERRA 퀵드라이 스포츠 오버핏 반팔티": "KINTERRA 퀵 드라이 오버핏 반팔티",
     "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티",
+    "ICE LITE 초냉감 PLNT 세미오버핏 반팔티": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+    "초냉감 트래블러 티셔츠": "채코제에디션 초냉감 트래블러티셔츠",
 }
 
 
@@ -89,19 +100,20 @@ def build_name_index(rows):
 
 def append_daily(row, day, item):
     gross = abs(item["payment"])
+    order_delta = 1 if item["qty"] > 0 else -1 if item["qty"] < 0 else 0
     row.setdefault("daily", []).append(
         {
             "date": day,
             "qty": item["qty"],
             "gross": gross if item["payment"] >= 0 else -gross,
             "payment": item["payment"],
-            "orders": 1 if item["qty"] > 0 else -1,
+            "orders": order_delta,
         }
     )
     row["qty"] = as_int(row.get("qty")) + item["qty"]
     row["gross"] = as_int(row.get("gross")) + (gross if item["payment"] >= 0 else -gross)
     row["payment"] = as_int(row.get("payment")) + item["payment"]
-    row["orders"] = as_int(row.get("orders")) + (1 if item["qty"] > 0 else -1)
+    row["orders"] = as_int(row.get("orders")) + order_delta
     row["avg_unit"] = int(round(row["payment"] / row["qty"])) if row["qty"] else 0
 
 
@@ -116,7 +128,7 @@ def update_manual(day, items):
         retailers.append(target)
     target["payment"] = sum(item["payment"] for item in items)
     target["qty"] = sum(item["qty"] for item in items)
-    target["orders"] = sum(1 if item["qty"] > 0 else -1 for item in items)
+    target["orders"] = sum(1 if item["qty"] > 0 else -1 if item["qty"] < 0 else 0 for item in items)
     target["items"] = [{"name": item["name"], "qty": item["qty"], "payment": item["payment"]} for item in items]
     return [by_date[date] for date in sorted(by_date)]
 
