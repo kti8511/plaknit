@@ -59,6 +59,17 @@ def split_name_color(name, color):
         }.get(color, color)
     if color:
         return name, color
+    for suffix, suffix_color in [
+        (" 블랙", "블랙"),
+        (" 화이트", "화이트"),
+        (" 그레이", "그레이"),
+        (" 브라운", "브라운"),
+        (" 차콜", "차콜"),
+        (" 세이지", "세이지"),
+        (" 카키", "카키"),
+    ]:
+        if name.endswith(suffix):
+            return name[: -len(suffix)].strip(), suffix_color
     suffixes = [
         (" 라이트그레이", "라이트그레이"),
         (" 멜란지그레이", "멜란지그레이"),
@@ -151,6 +162,24 @@ def standard_name(name, color, size):
     return name
 
 
+def standard_name_candidates(name, color, size):
+    candidates = [standard_name(name, color, size)]
+    if color and size:
+        candidates.extend(
+            [
+                f"{name} {color} {size}",
+                f"{name} {color}-{size}",
+                f"{name}_{color}_{size}",
+                f"{name} {color}_{size}",
+            ]
+        )
+    elif color:
+        candidates.append(f"{name} {color}")
+    elif size:
+        candidates.append(f"{name} {size}")
+    return [clean_text(candidate) for candidate in candidates]
+
+
 def row_key(row):
     return (
         normalize_name(row.get("name")),
@@ -185,13 +214,29 @@ def remove_existing_day(rows, day):
 def build_index(rows):
     index = {}
     name_index = {}
+    standard_index = {}
     for i, row in enumerate(rows):
         if row.get("retailer") != RETAILER:
             continue
         key = row_key(row)
         index.setdefault(key, i)
         name_index.setdefault(key[0], i)
-    return index, name_index
+        standard = clean_text(row.get("standard_name"))
+        if standard:
+            standard_index.setdefault(standard, i)
+    return index, name_index, standard_index
+
+
+def find_row_index(item, index, name_index, standard_index):
+    key = (item["name"], item["color"], item["size"])
+    idx = index.get(key)
+    if idx is not None:
+        return idx
+    for candidate in standard_name_candidates(item["name"], item["color"], item["size"]):
+        idx = standard_index.get(candidate)
+        if idx is not None:
+            return idx
+    return name_index.get(item["name"])
 
 
 def append_daily(row, day, item):
@@ -242,12 +287,12 @@ def main():
 
     rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     remove_existing_day(rows, day)
-    index, name_index = build_index(rows)
+    index, name_index, standard_index = build_index(rows)
     created = []
 
     for item in items:
         key = (item["name"], item["color"], item["size"])
-        idx = index.get(key) or name_index.get(item["name"])
+        idx = find_row_index(item, index, name_index, standard_index)
         if idx is None:
             new_row = {
                 "retailer": RETAILER,
@@ -272,6 +317,8 @@ def main():
             idx = len(rows) - 1
             index[key] = idx
             name_index[item["name"]] = idx
+            for candidate in standard_name_candidates(item["name"], item["color"], item["size"]):
+                standard_index.setdefault(candidate, idx)
             created.append(new_row["standard_name"])
         row = rows[idx]
         row["name"] = item["name"]

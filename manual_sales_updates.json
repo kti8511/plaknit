@@ -2247,5 +2247,17 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-05-11",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": -228600,
+        "qty": -5,
+        "orders": 5
+      }
+    ]
   }
 ]
