@@ -2345,6 +2345,19 @@
         "payment": 235390,
         "qty": 2,
         "orders": 2
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거_블랙-L",
+            "qty": 1,
+            "payment": 42415
+          }
+        ],
+        "payment": 42415,
+        "qty": 1,
+        "orders": 1
       }
     ]
   }

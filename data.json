@@ -59526,11 +59526,11 @@
     "name": "ICE LITE 카고 조거",
     "color": "블랙",
     "size": "L",
-    "qty": 8,
-    "gross": 409100,
-    "payment": 372608,
-    "avg_unit": 46576,
-    "orders": 3,
+    "qty": 9,
+    "gross": 451515,
+    "payment": 415023,
+    "avg_unit": 46114,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -59552,6 +59552,13 @@
         "qty": 2,
         "gross": 79800,
         "payment": 79800,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-11",
+        "qty": 1,
+        "gross": 42415,
+        "payment": 42415,
         "orders": 1
       }
     ],
