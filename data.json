@@ -92066,5 +92066,33 @@
     "standard_name": "퀵드라이 우먼즈 멀티포켓쇼츠 블랙",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "ICE LITE 멀티쇼츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 53100,
+    "payment": 53100,
+    "avg_unit": 53100,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 53100,
+        "payment": 53100,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ICE LITE 멀티쇼츠_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "stock_name": "ICE LITE 멀티쇼츠_블랙-L"
   }
 ]
