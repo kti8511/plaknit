@@ -10,22 +10,16 @@ RETAILER = "무신사"
 
 
 DAILY_ITEMS = [
-    {"name": "ICE LITE 와이드 카고팬츠", "qty": 2, "payment": 115460},
-    {"name": "퀵드라이 우먼즈 멀티포켓쇼츠 블랙", "qty": 1, "payment": 57250},
-    {"name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠", "qty": 1, "payment": 49900},
-    {"name": "ICE LITE 세미오버핏 셔켓", "qty": 1, "payment": 48910},
-    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 1, "payment": 48410},
-    {"name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티", "qty": 1, "payment": 36770},
-    {"name": "퀵드라이 마운틴 세미오버핏 반팔티", "qty": 1, "payment": 35190},
-    {"name": "ICE LITE 초냉감 오버핏 티셔츠", "qty": 1, "payment": 30790},
-    {"name": "ICE LITE 벌룬 조거", "qty": 0, "payment": 4410},
-    {"name": "ICE LITE 카고 조거", "qty": 0, "payment": 3910},
-    {"name": "TECH SWEAT 벌룬 쇼츠", "qty": -2, "payment": 1830},
-    {"name": "초냉감 트래블러 티셔츠", "qty": -1, "payment": -29950},
-    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": -1, "payment": -40380},
-    {"name": "TECH SWEAT 벌크업 후디 아노락", "qty": -1, "payment": -47510},
-    {"name": "퀵드라이 벤틸레이션 러닝탑 브라운", "qty": -1, "payment": -73930},
-    {"name": "ICE LITE 와플메쉬 투인원 쇼츠", "qty": -1, "payment": -5670},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 2, "payment": 93320},
+    {"name": "퀵드라이 메쉬 러닝쇼츠 워시드카키", "qty": 1, "payment": 74440},
+    {"name": "ICE LITE 초냉감 오버핏 티셔츠", "qty": 2, "payment": 68760},
+    {"name": "ICE LITE 2 in 1 쇼츠", "qty": 1, "payment": 58110},
+    {"name": "ICE LITE 와이드 카고팬츠", "qty": 1, "payment": 57730},
+    {"name": "[2PACK] 퀵드라이 그래픽 티셔츠", "qty": 1, "payment": 52830},
+    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": 1, "payment": 48710},
+    {"name": "TECH SWEAT 벌룬 트레이닝 팬츠", "qty": 1, "payment": 37910},
+    {"name": "TECH SWEAT 릴렉스드 반바지", "qty": 1, "payment": 31990},
+    {"name": "KINTERRA 퀵드라이 스포츠 나시", "qty": -1, "payment": -26210},
 ]
 
 
