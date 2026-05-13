@@ -11474,11 +11474,11 @@
     "name": "퀵드라이 셔링 티셔츠",
     "color": "세이지",
     "size": "M",
-    "qty": 10,
-    "gross": 531000,
-    "payment": 404811,
-    "avg_unit": 40481,
-    "orders": 9,
+    "qty": 11,
+    "gross": 590000,
+    "payment": 447827,
+    "avg_unit": 40712,
+    "orders": 10,
     "source_type": "단품",
     "daily": [
       {
@@ -11564,6 +11564,13 @@
         "gross": -118000,
         "payment": -69739,
         "orders": 0
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 43016,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -15595,14 +15602,14 @@
   {
     "retailer": "자사몰",
     "mall_no": "476",
-    "name": "타이다잉 러닝삭스 블랙",
-    "color": "",
+    "name": "타이다잉 러닝삭스",
+    "color": "블랙",
     "size": "",
-    "qty": 9,
-    "gross": 134100,
-    "payment": 238369,
-    "avg_unit": 26485,
-    "orders": 2,
+    "qty": 10,
+    "gross": 149000,
+    "payment": 249232,
+    "avg_unit": 24923,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -15639,11 +15646,18 @@
         "gross": 14900,
         "payment": 11916,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 14900,
+        "payment": 10863,
+        "orders": 1
       }
     ],
-    "match_status": "매칭됨",
+    "match_status": "매칭완료",
     "match_sku": "PE1AAU01BLK000F",
-    "standard_name": "타이다잉 러닝삭스 블랙",
+    "standard_name": "타이다잉 러닝삭스_블랙",
     "received_qty": 605,
     "stock_qty": 564,
     "stock_barcode": "PE1AAU01BLK000F",
@@ -22235,13 +22249,13 @@
     "retailer": "자사몰",
     "mall_no": "444",
     "name": "ICE LITE 벌룬 조거",
-    "color": "BLACK",
+    "color": "블랙",
     "size": "XL",
-    "qty": 6,
-    "gross": 459200,
-    "payment": 285920,
-    "avg_unit": 47653,
-    "orders": 2,
+    "qty": 7,
+    "gross": 524800,
+    "payment": 333748,
+    "avg_unit": 47678,
+    "orders": 3,
     "source_type": "단품",
     "daily": [
       {
@@ -22264,11 +22278,18 @@
         "gross": 131200,
         "payment": 82620,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 65600,
+        "payment": 47828,
+        "orders": 1
       }
     ],
-    "match_status": "매칭",
+    "match_status": "매칭완료",
     "match_sku": "PB1PLM02BLK00XL",
-    "standard_name": "ICE LITE 벌룬 조거_BLACK_XL",
+    "standard_name": "ICE LITE 벌룬 조거_블랙-XL",
     "received_qty": 0,
     "stock_qty": 8,
     "stock_barcode": "PB1PLM02BLK00XL",
@@ -47850,11 +47871,11 @@
     "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
     "color": "차콜",
     "size": "L",
-    "qty": 3,
-    "gross": 131600,
-    "payment": 103581,
-    "avg_unit": 34527,
-    "orders": 3,
+    "qty": 4,
+    "gross": 177500,
+    "payment": 137046,
+    "avg_unit": 34262,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -47877,11 +47898,18 @@
         "gross": 45900,
         "payment": 31566,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 45900,
+        "payment": 33465,
+        "orders": 1
       }
     ],
-    "match_status": "매칭됨",
+    "match_status": "매칭완료",
     "match_sku": "PD2TSM05BLU000L",
-    "standard_name": "퀵드라이 피그먼트 세미오버핏 반팔티_민트블루-L",
+    "standard_name": "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-L",
     "received_qty": 0,
     "stock_qty": 7,
     "stock_barcode": "PD2TSM05BLU000L",
@@ -62499,13 +62527,13 @@
     "retailer": "자사몰",
     "mall_no": "328",
     "name": "ICE LITE 쿨메쉬 베이직 나시",
-    "color": "블랙",
-    "size": "M",
-    "qty": 3,
-    "gross": 115000,
-    "payment": 101653,
-    "avg_unit": 33884,
-    "orders": 3,
+    "color": "네온옐로우",
+    "size": "L",
+    "qty": 4,
+    "gross": 150000,
+    "payment": 127173,
+    "avg_unit": 31793,
+    "orders": 4,
     "source_type": "단품",
     "daily": [
       {
@@ -62528,11 +62556,18 @@
         "gross": 35000,
         "payment": 20773,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 35000,
+        "payment": 25520,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
     "match_sku": "PD2SSM03BLK000L",
-    "standard_name": "ICE LITE 쿨메쉬 베이직 나시_블랙-M",
+    "standard_name": "ICE LITE 쿨메쉬 베이직 나시_네온옐로우-L",
     "received_qty": 0,
     "stock_qty": 56,
     "stock_barcode": "PD2SSM03BLK000L",
@@ -87148,23 +87183,31 @@
     "retailer": "자사몰",
     "source_type": "manual_daily",
     "raw_name": "퀵드라이 5MILE 티셔츠 라이트그레이",
-    "name": "퀵드라이 5MILE 티셔츠 라이트그레이",
+    "name": "퀵드라이 5MILE 티셔츠",
     "color": "라이트그레이",
     "size": "M",
-    "qty": 0,
-    "orders": 0,
+    "qty": 2,
+    "orders": 2,
     "gross_sales": 49000,
     "payment_sales": 49000,
     "avg_unit_price": 49000,
     "discount_rate": 0.0,
-    "daily": [],
-    "match_status": "매칭",
+    "daily": [
+      {
+        "date": "2026-05-12",
+        "qty": 2,
+        "gross": 98000,
+        "payment": 71451,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
     "match_sku": "PE2TSM01LGR000M",
-    "standard_name": "퀵드라이 5MILE 티셔츠 라이트그레이 M",
+    "standard_name": "퀵드라이 5MILE 티셔츠_라이트그레이-M",
     "stock_qty": 34,
-    "gross": -49000,
-    "payment": -49000,
-    "avg_unit": 0,
+    "gross": 49000,
+    "payment": 22451,
+    "avg_unit": 11226,
     "stock_barcode": "PE2TSM01LGR000M",
     "stock_name": "퀵드라이 5MILE 티셔츠 라이트그레이 M"
   },
@@ -90433,13 +90476,13 @@
     "retailer": "자사몰",
     "mall_no": "",
     "name": "퀵드라이 B.B.B 티셔츠",
-    "color": "차콜",
-    "size": "M",
-    "qty": 2,
-    "gross": 118000,
-    "payment": 73244,
-    "avg_unit": 36622,
-    "orders": 2,
+    "color": "올리브",
+    "size": "XL",
+    "qty": 3,
+    "gross": 177000,
+    "payment": 116260,
+    "avg_unit": 38753,
+    "orders": 3,
     "source_type": "상품",
     "daily": [
       {
@@ -90455,11 +90498,18 @@
         "gross": 59000,
         "payment": 38242,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 43016,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
     "match_sku": "",
-    "standard_name": "퀵드라이 B.B.B 티셔츠_차콜-M",
+    "standard_name": "퀵드라이 B.B.B 티셔츠_올리브-XL",
     "received_qty": 0,
     "stock_qty": 53,
     "stock_barcode": "",
@@ -90745,12 +90795,12 @@
     "mall_no": "",
     "name": "퀵드라이 5MILE 티셔츠",
     "color": "라이트그레이",
-    "size": "2XL",
-    "qty": 1,
-    "gross": 49000,
-    "payment": 29082,
-    "avg_unit": 29082,
-    "orders": 1,
+    "size": "L",
+    "qty": 2,
+    "gross": 98000,
+    "payment": 64807,
+    "avg_unit": 32404,
+    "orders": 2,
     "source_type": "상품",
     "daily": [
       {
@@ -90759,11 +90809,18 @@
         "gross": 49000,
         "payment": 29082,
         "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 49000,
+        "payment": 35725,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
     "match_sku": "",
-    "standard_name": "퀵드라이 5MILE 티셔츠_라이트그레이-2XL",
+    "standard_name": "퀵드라이 5MILE 티셔츠_라이트그레이-L",
     "received_qty": 0,
     "stock_qty": 21,
     "stock_barcode": "",
@@ -90775,11 +90832,11 @@
     "name": "퀵드라이 RUNNER`S FEET 티셔츠",
     "color": "차콜",
     "size": "XL",
-    "qty": 2,
-    "gross": 118000,
-    "payment": 74102,
-    "avg_unit": 37051,
-    "orders": 2,
+    "qty": 3,
+    "gross": 177000,
+    "payment": 117118,
+    "avg_unit": 39039,
+    "orders": 3,
     "source_type": "상품",
     "daily": [
       {
@@ -90794,6 +90851,13 @@
         "qty": 1,
         "gross": 59000,
         "payment": 34869,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-12",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 43016,
         "orders": 1
       }
     ],
