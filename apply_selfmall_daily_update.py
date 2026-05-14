@@ -42,6 +42,8 @@ def normalize_name(name):
     text = text.replace("세미 오버핏", "세미오버핏")
     text = text.replace("세비오버핏", "세미오버핏")
     text = text.replace("러닝 팬츠", "러닝팬츠")
+    text = text.replace("[채코제에디션] 초냉감", "채코제에디션 초냉감")
+    text = text.replace("[채코제에디션]퀵드라이", "채코제에디션퀵드라이")
     text = text.replace("채코제 에디션", "채코제에디션")
     text = text.replace("차코제에디션", "채코제에디션")
     return clean_text(text)
@@ -236,6 +238,8 @@ def find_row_index(item, index, name_index, standard_index):
         idx = standard_index.get(candidate)
         if idx is not None:
             return idx
+    if item["color"] or item["size"]:
+        return None
     return name_index.get(item["name"])
 
 
