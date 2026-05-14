@@ -663,6 +663,7 @@ const HISTORICAL_MONTHLY = {historical_monthly_json};
 const HISTORICAL_DAILY = {historical_daily_json};
 const HISTORICAL_DAILY_MONTHLY = {historical_daily_monthly_json};
 const MANUAL_SALES = {manual_sales_json};
+const REORDER_ALLOWED_SEASON_KEYS = new Set(['E1','E2','D1','D2']); // 26SS/25SS 상품만 리오더 알림 대상
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
@@ -680,6 +681,11 @@ function validDiscount(gross, payment) {{
   payment = Number(payment || 0);
   if (gross <= 0 || payment < 0 || payment > gross) return null;
   return (1 - payment / gross) * 100;
+}}
+function reorderSeasonKey(row) {{
+  const sku = String(row.match_sku || row.stock_barcode || '').trim().toUpperCase();
+  const match = sku.match(/^P([A-Z])(\\d)/);
+  return match ? `${{match[1]}}${{match[2]}}` : '';
 }}
 function discountText(gross, payment) {{
   const d = validDiscount(gross, payment);
@@ -1238,6 +1244,7 @@ function renderDetail() {{
       standard_name:r.standard_name || r.name || '-',
       retailers:new Set(),
       seasons:new Set(),
+      reorderSeasonKeys:new Set(),
       categoryLarge:new Set(),
       categorySmall:new Set(),
       qty:0,
@@ -1256,6 +1263,8 @@ function renderDetail() {{
     const g = grouped[key];
     g.retailers.add(r.retailer || '-');
     g.seasons.add(r.season || '-');
+    const reorderKey = reorderSeasonKey(r);
+    if (reorderKey) g.reorderSeasonKeys.add(reorderKey);
     g.categoryLarge.add(r.category_large || '-');
     g.categorySmall.add(r.category_small || '-');
     g.qty += Number(r.qty || 0);
@@ -1287,6 +1296,7 @@ function renderDetail() {{
       ...g,
       retailers:Array.from(g.retailers),
       seasons:Array.from(g.seasons),
+      reorderSeasonKeys:Array.from(g.reorderSeasonKeys),
       categoryLarge:Array.from(g.categoryLarge),
       categorySmall:Array.from(g.categorySmall),
       daily:Object.values(g.dailyMap).sort((a,b)=>a.date.localeCompare(b.date)),
@@ -1316,9 +1326,10 @@ function renderDetail() {{
     r.weekly_qty = weekly;
     r.weekly_rate = weekly + stockBase > 0 ? weekly / (weekly + stockBase) * 100 : 0;
     r.stock_rate = r.qty + stockBase > 0 ? r.qty / (r.qty + stockBase) * 100 : 0;
+    r.reorder_season_eligible = (r.reorderSeasonKeys || []).some(key => REORDER_ALLOWED_SEASON_KEYS.has(key));
     r.reorder_reasons = [];
-    if (r.stock_known && r.weekly_rate >= 7) r.reorder_reasons.push('주간 판매율 7% 이상');
-    if (r.stock_known && r.stock_rate >= 20) r.reorder_reasons.push('재고 소진율 20% 이상');
+    if (r.reorder_season_eligible && r.stock_known && r.weekly_rate >= 7) r.reorder_reasons.push('주간 판매율 7% 이상');
+    if (r.reorder_season_eligible && r.stock_known && r.stock_rate >= 20) r.reorder_reasons.push('재고 소진율 20% 이상');
   }});
 
   const reorderRows = rows
