@@ -289,7 +289,7 @@ def main():
     items = load_items(csv_path)
     allocate_payments(items, args.payment)
 
-    rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    rows = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
     remove_existing_day(rows, day)
     index, name_index, standard_index = build_index(rows)
     created = []

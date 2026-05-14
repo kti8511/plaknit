@@ -12,46 +12,52 @@ UNMATCHED_FILE = ROOT / "stock_unmatched.json"
 DESKTOP = Path.home() / "Desktop"
 
 
-def normalize(value):
+def normalize(value) -> str:
     return re.sub(r"\s+", "", str(value or "")).upper()
 
 
-def normalize_name(value):
+def normalize_name(value) -> str:
     text = normalize(value)
     text = re.sub(r"^\[[^\]]+\]", "", text)
-    return re.sub(r"[-_()（）\[\]/·,]", "", text)
+    return re.sub(r"[-_()\[\]/,]", "", text)
 
 
-def latest_stock_file():
-    files = [
-        p
-        for p in DESKTOP.glob("*2026-04-27_151321.xlsx")
-        if not p.name.startswith("~$")
+def latest_stock_file() -> Path:
+    patterns = [
+        "재고조회(기본)_*.xlsx",
+        "재고조회_*.xlsx",
+        "*재고조회*.xlsx",
     ]
+    files: list[Path] = []
+    for pattern in patterns:
+        files.extend([p for p in DESKTOP.glob(pattern) if not p.name.startswith("~$")])
     if not files:
-        files = [p for p in DESKTOP.glob("*.xlsx") if "재고조회" in p.name and not p.name.startswith("~$")]
-    if not files:
-        raise FileNotFoundError("재고조회 엑셀 파일을 찾지 못했습니다.")
+        raise FileNotFoundError("재고조회(기본) 엑셀 파일을 바탕화면에서 찾지 못했습니다.")
     return max(files, key=lambda p: p.stat().st_mtime)
 
 
-def load_stock_rows(path):
+def load_stock_rows(path: Path) -> list[dict]:
     wb = load_workbook(path, read_only=True, data_only=True)
     ws = wb.active
-    headers = [str(v).strip() if v is not None else "" for v in next(ws.iter_rows(min_row=1, max_row=1, values_only=True))]
+    headers = [
+        str(v).strip() if v is not None else ""
+        for v in next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
+    ]
     idx = {h: i for i, h in enumerate(headers)}
+
     if "출고가능" in idx:
         stock_column = "출고가능"
     elif "현재고" in idx:
         stock_column = "현재고"
     else:
         stock_column = "총재고"
+
     required = ["출고상품명", "바코드", stock_column]
     missing = [h for h in required if h not in idx]
     if missing:
         raise ValueError(f"필수 컬럼 누락: {missing}")
 
-    rows = []
+    rows: list[dict] = []
     for row in ws.iter_rows(min_row=2, values_only=True):
         if not any(row):
             continue
@@ -74,9 +80,9 @@ def load_stock_rows(path):
     return rows
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("stock_file", nargs="?", help="재고조회 엑셀 파일 경로")
+    parser.add_argument("stock_file", nargs="?", help="재고조회(기본) 엑셀 파일 경로")
     args = parser.parse_args()
 
     stock_file = Path(args.stock_file) if args.stock_file else latest_stock_file()
@@ -94,8 +100,8 @@ def main():
     ]
 
     matched = 0
-    unmatched_data = []
-    used_stock_keys = set()
+    unmatched_data: list[dict] = []
+    used_stock_keys: set[str] = set()
 
     for item in data:
         candidates = [
@@ -122,9 +128,13 @@ def main():
                 normalize_name(item.get("name")),
             ]
             name_candidates = [v for v in name_candidates if len(v) >= 6]
-            matched_by_name = []
+            matched_by_name: list[dict] = []
             for candidate in name_candidates:
-                matched_by_name = [r for stock_name, r in stock_name_pairs if candidate in stock_name or stock_name in candidate]
+                matched_by_name = [
+                    r
+                    for stock_name, r in stock_name_pairs
+                    if candidate in stock_name or stock_name in candidate
+                ]
                 if matched_by_name:
                     break
             if matched_by_name:
@@ -160,7 +170,8 @@ def main():
     unmatched_stock = [
         r
         for r in stock_rows
-        if normalize(r["barcode"]) not in used_stock_keys and normalize(r["outbound_name"]) not in used_stock_keys
+        if normalize(r["barcode"]) not in used_stock_keys
+        and normalize(r["outbound_name"]) not in used_stock_keys
     ]
 
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -198,3 +209,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
