@@ -10,24 +10,26 @@ RETAILER = "무신사"
 
 
 DAILY_ITEMS = [
-    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 2, "payment": 93320},
-    {"name": "퀵드라이 메쉬 러닝쇼츠 워시드카키", "qty": 1, "payment": 74440},
-    {"name": "ICE LITE 초냉감 오버핏 티셔츠", "qty": 2, "payment": 68760},
-    {"name": "ICE LITE 2 in 1 쇼츠", "qty": 1, "payment": 58110},
-    {"name": "ICE LITE 와이드 카고팬츠", "qty": 1, "payment": 57730},
-    {"name": "[2PACK] 퀵드라이 그래픽 티셔츠", "qty": 1, "payment": 52830},
-    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": 1, "payment": 48710},
-    {"name": "TECH SWEAT 벌룬 트레이닝 팬츠", "qty": 1, "payment": 37910},
-    {"name": "TECH SWEAT 릴렉스드 반바지", "qty": 1, "payment": 31990},
-    {"name": "KINTERRA 퀵드라이 스포츠 나시", "qty": -1, "payment": -26210},
+    {"name": "ICE LITE 벌룬 조거", "qty": 2, "payment": 70390},
+    {"name": "KINTERRA 숄더-업 탱크", "qty": 2, "payment": 68410},
+    {"name": "KINTERRA 퀵드라이 스포츠 나시", "qty": 2, "payment": 64190},
+    {"name": "퀵드라이 세미오버핏 티셔츠", "qty": 2, "payment": 63540},
+    {"name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티", "qty": 2, "payment": 62530},
+    {"name": "ICE LITE 카고 조거", "qty": 1, "payment": 55860},
+    {"name": "[2PACK] 퀵드라이 그래픽 티셔츠", "qty": 1, "payment": 53900},
+    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": 1, "payment": 50480},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 1, "payment": 48410},
+    {"name": "퀵드라이 피그먼트 세미오버핏 반팔티", "qty": 1, "payment": 36790},
+    {"name": "ICE LITE 세미오버핏 맨투맨", "qty": 1, "payment": 35910},
+    {"name": "ICE LITE 오버핏 맨투맨", "qty": 1, "payment": 33210},
 ]
 
 
 NAME_ALIASES = {
     "[헤비쮸리]TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
     "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
-    "KINTERRA 퀵드라이 스포츠 오버핏 반팔티": "KINTERRA 퀵 드라이 오버핏 반팔티",
-    "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티",
+    "KINTERRA 퀵드라이 스포츠 오버핏 반팔티": "KINTERRA 퀵드라이 오버핏 반팔티",
+    "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
     "ICE LITE 초냉감 PLNT 세미오버핏 반팔티": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
     "초냉감 트래블러 티셔츠": "채코제에디션 초냉감 트래블러티셔츠",
 }
