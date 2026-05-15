@@ -10,18 +10,16 @@ RETAILER = "무신사"
 
 
 DAILY_ITEMS = [
-    {"name": "ICE LITE 벌룬 조거", "qty": 2, "payment": 70390},
-    {"name": "KINTERRA 숄더-업 탱크", "qty": 2, "payment": 68410},
-    {"name": "KINTERRA 퀵드라이 스포츠 나시", "qty": 2, "payment": 64190},
-    {"name": "퀵드라이 세미오버핏 티셔츠", "qty": 2, "payment": 63540},
-    {"name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티", "qty": 2, "payment": 62530},
-    {"name": "ICE LITE 카고 조거", "qty": 1, "payment": 55860},
-    {"name": "[2PACK] 퀵드라이 그래픽 티셔츠", "qty": 1, "payment": 53900},
-    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": 1, "payment": 50480},
-    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 1, "payment": 48410},
-    {"name": "퀵드라이 피그먼트 세미오버핏 반팔티", "qty": 1, "payment": 36790},
-    {"name": "ICE LITE 세미오버핏 맨투맨", "qty": 1, "payment": 35910},
-    {"name": "ICE LITE 오버핏 맨투맨", "qty": 1, "payment": 33210},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠", "qty": 3, "payment": 140800},
+    {"name": "ICE LITE 세미오버핏 맨투맨", "qty": 2, "payment": 78610},
+    {"name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티", "qty": 2, "payment": 72670},
+    {"name": "ICE LITE 초냉감 오버핏 티셔츠", "qty": 2, "payment": 66580},
+    {"name": "ICE LITE 와이드 카고팬츠", "qty": 1, "payment": 55990},
+    {"name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠", "qty": 1, "payment": 49900},
+    {"name": "퀵드라이 셔링 티셔츠 세이지", "qty": 1, "payment": 35630},
+    {"name": "KINTERRA 퀵드라이 스포츠 탱크", "qty": 1, "payment": 32900},
+    {"name": "스포츠 쿠션업 심볼 크루삭스", "qty": 1, "payment": 6510},
+    {"name": "ICE LITE 와플메쉬 투인원 쇼츠", "qty": -10, "payment": -55800},
 ]
 
 
