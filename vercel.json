@@ -3,7 +3,7 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": "",
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [

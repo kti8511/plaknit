@@ -33,6 +33,7 @@ DATA_FILE = pathlib.Path("data.json")
 HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
 MANUAL_SALES_FILE = pathlib.Path("manual_sales_updates.json")
 OUT_FILE  = pathlib.Path("index.html")
+PUBLIC_OUT_FILE = pathlib.Path("public") / "index.html"
 
 with DATA_FILE.open(encoding="utf-8") as f:
     rows = json.load(f)
@@ -1879,4 +1880,6 @@ renderDaily();
 </html>"""
 
 OUT_FILE.write_text(html, encoding="utf-8")
+PUBLIC_OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+PUBLIC_OUT_FILE.write_text(html, encoding="utf-8")
 print(f"✅ index.html 생성 완료 ({OUT_FILE.stat().st_size:,} bytes)")
