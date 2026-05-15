@@ -49,9 +49,11 @@ if MANUAL_SALES_FILE.exists():
         manual_sales_updates = json.load(f)
 
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-rows_json = json.dumps(rows, ensure_ascii=False)
-historical_daily_json = json.dumps(historical_daily, ensure_ascii=False)
-manual_sales_json = json.dumps(manual_sales_updates, ensure_ascii=False)
+JSON_KWARGS = {"ensure_ascii": False, "separators": (",", ":")}
+
+rows_json = json.dumps(rows, **JSON_KWARGS)
+historical_daily_json = json.dumps(historical_daily, **JSON_KWARGS)
+manual_sales_json = json.dumps(manual_sales_updates, **JSON_KWARGS)
 
 # 2026 플래니트 예산.xlsx > 2025 실매출 > 월별 합계(row 32) 기준.
 # GitHub Actions 환경에서도 재생성 가능하도록 기준값은 스크립트에 고정한다.
@@ -69,7 +71,7 @@ PREV_YEAR_MONTHLY = [
     {"month": "11", "sales2025": 23431013},
     {"month": "12", "sales2025": 20800000},
 ]
-prev_year_monthly_json = json.dumps(PREV_YEAR_MONTHLY, ensure_ascii=False)
+prev_year_monthly_json = json.dumps(PREV_YEAR_MONTHLY, **JSON_KWARGS)
 
 HISTORICAL_MONTHLY = {
     "2024": [
@@ -88,7 +90,7 @@ HISTORICAL_MONTHLY = {
     ],
     "2025": [{"month": r["month"], "sales": r["sales2025"]} for r in PREV_YEAR_MONTHLY],
 }
-historical_monthly_json = json.dumps(HISTORICAL_MONTHLY, ensure_ascii=False)
+historical_monthly_json = json.dumps(HISTORICAL_MONTHLY, **JSON_KWARGS)
 
 historical_daily_monthly = {}
 for year, items in historical_daily.items():
@@ -100,7 +102,7 @@ for year, items in historical_daily.items():
         {"month": month, "sales": month_map[month]}
         for month in sorted(month_map)
     ]
-historical_daily_monthly_json = json.dumps(historical_daily_monthly, ensure_ascii=False)
+historical_daily_monthly_json = json.dumps(historical_daily_monthly, **JSON_KWARGS)
 
 # 유통사 목록 (고정)
 RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온"]
@@ -658,7 +660,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 
 <script>
 const rawRows = {rows_json};
-const RETAILERS = {json.dumps(RETAILERS, ensure_ascii=False)};
+const RETAILERS = {json.dumps(RETAILERS, **JSON_KWARGS)};
 const PREV_YEAR_MONTHLY = {prev_year_monthly_json};
 const HISTORICAL_MONTHLY = {historical_monthly_json};
 const HISTORICAL_DAILY = {historical_daily_json};
