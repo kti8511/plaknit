@@ -92926,5 +92926,33 @@
     "standard_name": "퀵드라이 세미오버핏 아치로고 티셔츠_화이트-3XL",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "ICE LITE 릴렉스드 조거",
+    "color": "네이비",
+    "size": "3XL",
+    "qty": 2,
+    "gross": 83800,
+    "payment": 83800,
+    "avg_unit": 41900,
+    "orders": 2,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-14",
+        "qty": 2,
+        "gross": 83800,
+        "payment": 83800,
+        "orders": 2
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ICE LITE 릴렉스드 조거_네이비-3XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "stock_name": "ICE LITE 릴렉스드 조거_네이비-3XL"
   }
 ]
