@@ -2972,6 +2972,19 @@
         "payment": 69430,
         "qty": 2,
         "orders": 2
+      },
+      {
+        "retailer": "글로리어스워커",
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_블랙-L",
+            "qty": 1,
+            "payment": 79000
+          }
+        ],
+        "payment": 79000,
+        "qty": 1,
+        "orders": 1
       }
     ]
   }
