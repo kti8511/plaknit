@@ -2954,6 +2954,24 @@
         "payment": 38930,
         "qty": 2,
         "orders": 2
+      },
+      {
+        "retailer": "롯데온",
+        "items": [
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠_블랙-2XL",
+            "qty": 1,
+            "payment": 27391
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_베이지-3XL",
+            "qty": 1,
+            "payment": 42039
+          }
+        ],
+        "payment": 69430,
+        "qty": 2,
+        "orders": 2
       }
     ]
   }

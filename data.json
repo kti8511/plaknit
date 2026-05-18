@@ -94045,5 +94045,59 @@
     "standard_name": "ICE LITE 초냉감 세미오버핏 티셔츠_블랙-L",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "퀵드라이 세미오버핏 티셔츠",
+    "color": "블랙",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 36000,
+    "payment": 27391,
+    "avg_unit": 27391,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-17",
+        "qty": 1,
+        "gross": 36000,
+        "payment": 27391,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 세미오버핏 티셔츠_블랙-2XL",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "ICE LITE 루즈핏 카고쇼츠",
+    "color": "베이지",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 54000,
+    "payment": 42039,
+    "avg_unit": 42039,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-05-17",
+        "qty": 1,
+        "gross": 54000,
+        "payment": 42039,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "ICE LITE 루즈핏 카고쇼츠_베이지-3XL",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]
