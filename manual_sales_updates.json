@@ -2606,5 +2606,41 @@
         "orders": 2
       }
     ]
+  },
+  {
+    "date": "2026-05-15",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 491400,
+        "qty": 17,
+        "orders": 17
+      }
+    ]
+  },
+  {
+    "date": "2026-05-16",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 263800,
+        "qty": 9,
+        "orders": 9
+      }
+    ]
+  },
+  {
+    "date": "2026-05-17",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 745300,
+        "qty": 23,
+        "orders": 23
+      }
+    ]
   }
 ]
