@@ -72851,11 +72851,11 @@
     "name": "ICE LITE 벌룬 조거",
     "color": "블랙",
     "size": "XL",
-    "qty": 1,
-    "gross": 65600,
-    "payment": 39720,
-    "avg_unit": 39720,
-    "orders": 1,
+    "qty": 2,
+    "gross": 105500,
+    "payment": 79620,
+    "avg_unit": 39810,
+    "orders": 2,
     "source_type": "단품",
     "daily": [
       {
@@ -72863,6 +72863,13 @@
         "qty": 1,
         "gross": 65600,
         "payment": 39720,
+        "orders": 1
+      },
+      {
+        "date": "2026-05-17",
+        "qty": 1,
+        "gross": 39900,
+        "payment": 39900,
         "orders": 1
       }
     ],
