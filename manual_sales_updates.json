@@ -2689,6 +2689,19 @@
         "payment": 283100,
         "qty": 7,
         "orders": 5
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 멀티쇼츠(이너내장)-L",
+            "qty": 1,
+            "payment": 53100
+          }
+        ],
+        "payment": 53100,
+        "qty": 1,
+        "orders": 1
       }
     ]
   },
@@ -2874,6 +2887,19 @@
         "payment": 1277250,
         "qty": 30,
         "orders": 17
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-XL",
+            "qty": 1,
+            "payment": 42000
+          }
+        ],
+        "payment": 42000,
+        "qty": 1,
+        "orders": 1
       }
     ]
   }
