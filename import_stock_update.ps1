@@ -181,8 +181,8 @@ function Write-Json([object]$obj, [string]$path, [bool]$indented) {
 function Update-IndexHtmlRawRows([string]$htmlPath, [string]$rowsJson, [string]$nowText) {
   $text = Get-Content -LiteralPath $htmlPath -Raw -Encoding UTF8
 
-  $pattern = '(?s)\bconst\s+rawRows\s*=\s*.*?;\r?\n\s*const\s+HISTORICAL_DAILY\s*='
-  $replacement = "const rawRows = $rowsJson;`nconst HISTORICAL_DAILY ="
+  $pattern = '(?m)^\s*const\s+rawRows\s*=.*;\r?\n'
+  $replacement = "const rawRows = $rowsJson;`n"
   if (-not [regex]::IsMatch($text, $pattern)) { throw "rawRows 치환 대상 패턴을 찾지 못했습니다: $htmlPath" }
   $newText = [regex]::Replace($text, $pattern, $replacement)
 
