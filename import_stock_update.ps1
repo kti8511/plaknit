@@ -18,6 +18,56 @@ function Normalize-Name([object]$value) {
   return [regex]::Replace($text, '[-_()\[\]/,]', '')
 }
 
+$script:SizePattern = '(?i)(?:^|[^A-Z0-9])(4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)(?=$|[^A-Z0-9])'
+$script:SizeSuffixPattern = '(?i)(4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)$'
+$script:ColorAliases = [ordered]@{
+  BLACK = 'BLACK'; BLK = 'BLACK'; '블랙' = 'BLACK'
+  WHITE = 'WHITE'; WHT = 'WHITE'; '화이트' = 'WHITE'
+  NAVY = 'NAVY'; NVY = 'NAVY'; '네이비' = 'NAVY'
+  CHARCOAL = 'CHARCOAL'; '차콜' = 'CHARCOAL'
+  GREY = 'GREY'; GRAY = 'GREY'; GRY = 'GREY'; LGR = 'GREY'; MGREY = 'GREY'; LIGHTGREY = 'GREY'; LIGHTGRAY = 'GREY'; '라이트그레이' = 'GREY'; MELANGEGREY = 'GREY'; '멜란지그레이' = 'GREY'
+  KHAKI = 'KHAKI'; LKHAKI = 'KHAKI'; '카키' = 'KHAKI'
+  BEIGE = 'BEIGE'; '베이지' = 'BEIGE'
+  BROWN = 'BROWN'; '브라운' = 'BROWN'
+}
+$script:ColorSuffixes = @($script:ColorAliases.Keys | Sort-Object Length -Descending)
+
+function Normalize-Size([object]$value) {
+  $text = ''
+  if ($null -ne $value) { $text = [string]$value }
+  $text = $text.ToUpperInvariant().Replace('(', ' ').Replace(')', ' ')
+  $matches = [regex]::Matches($text, $script:SizePattern)
+  if ($matches.Count -eq 0) { return '' }
+  $size = $matches[$matches.Count - 1].Groups[1].Value.ToUpperInvariant()
+  if ($size -eq 'F') { return 'FREE' }
+  return $size
+}
+
+function Get-ProductKey([object]$value) {
+  $text = Normalize-Name $value
+  if (-not $text) { return '' }
+  $text = [regex]::Replace($text, $script:SizeSuffixPattern, '')
+  foreach ($color in $script:ColorSuffixes) {
+    $text = [regex]::Replace($text, ([regex]::Escape($color) + '$'), '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  }
+  return $text
+}
+
+function Get-ColorKey([object[]]$values) {
+  $text = ''
+  foreach ($value in $values) {
+    if ($null -ne $value) { $text += (Normalize-Name $value) }
+  }
+  $colors = @()
+  foreach ($alias in $script:ColorAliases.Keys) {
+    if ($text.Contains($alias)) {
+      $canonical = $script:ColorAliases[$alias]
+      if ($colors -notcontains $canonical) { $colors += $canonical }
+    }
+  }
+  return (@($colors | Sort-Object) -join '|')
+}
+
 function Get-LatestStockFile([string]$desktopPath) {
   $patterns = @(
     '재고조회(기본)_*.xlsx',
@@ -237,10 +287,40 @@ $stockRows = @($mergedByName.Values)
 
 $byBarcode = @{}
 $byName = @{}
+$byProductSize = @{}
+$productColors = @{}
 $stockNamePairs = New-Object System.Collections.Generic.List[object]
 foreach ($r in $stockRows) {
   if ($r.barcode) { $byBarcode[(Normalize $r.barcode)] = $r }
   if ($r.outbound_name) { $byName[(Normalize $r.outbound_name)] = $r }
+  $productKey = Get-ProductKey $r.outbound_name
+  if ($productKey) {
+    $stockColor = Get-ColorKey @($r.outbound_name, $r.barcode)
+    if (-not $productColors.ContainsKey($productKey)) { $productColors[$productKey] = @() }
+    if ($stockColor -and $productColors[$productKey] -notcontains $stockColor) {
+      $productColors[$productKey] = @($productColors[$productKey]) + $stockColor
+    }
+    $stockSize = Normalize-Size $r.outbound_name
+    if ($stockSize) {
+      $productSizeKey = "$productKey|$stockSize"
+      if (-not $byProductSize.ContainsKey($productSizeKey)) {
+        $byProductSize[$productSizeKey] = [pscustomobject]@{
+          barcode = $r.barcode
+          outbound_name = $r.outbound_name
+          stock_qty = 0
+          used_keys = @()
+        }
+      }
+      $aggregate = $byProductSize[$productSizeKey]
+      $aggregate.stock_qty = [int]$aggregate.stock_qty + [int]$r.stock_qty
+      if (-not $aggregate.barcode -and $r.barcode) { $aggregate.barcode = $r.barcode }
+      foreach ($usedKey in @((Normalize $r.barcode), (Normalize $r.outbound_name))) {
+        if ($usedKey -and $aggregate.used_keys -notcontains $usedKey) {
+          $aggregate.used_keys = @($aggregate.used_keys) + $usedKey
+        }
+      }
+    }
+  }
   if ($r.outbound_name) {
     $sn = Normalize-Name $r.outbound_name
     if ($sn.Length -ge 6) { $stockNamePairs.Add(@($sn, $r)) | Out-Null }
@@ -260,7 +340,23 @@ foreach ($item in $data) {
 
   $stockRow = $null
   $matchKey = $null
+  $itemColor = ''
+  if ($null -ne $item.color) { $itemColor = ([string]$item.color).Trim() }
+  $itemProductKey = Get-ProductKey $item.name
+  if (-not $itemProductKey) { $itemProductKey = Get-ProductKey $item.standard_name }
+  $itemSize = Normalize-Size $item.size
+  if (-not $itemSize) { $itemSize = Normalize-Size $item.standard_name }
+  if ($itemProductKey -and $itemSize) {
+    $colors = @()
+    if ($productColors.ContainsKey($itemProductKey)) { $colors = @($productColors[$itemProductKey]) }
+    $productSizeKey = "$itemProductKey|$itemSize"
+    if ((-not $itemColor -or $colors.Count -le 1) -and $byProductSize.ContainsKey($productSizeKey)) {
+      $stockRow = $byProductSize[$productSizeKey]
+      $matchKey = $productSizeKey
+    }
+  }
   foreach ($k in $candidates) {
+    if ($null -ne $stockRow) { break }
     if ($k -and $byBarcode.ContainsKey($k)) { $stockRow = $byBarcode[$k]; $matchKey = $k; break }
   }
   if ($null -eq $stockRow) {
@@ -294,7 +390,15 @@ foreach ($item in $data) {
     Set-ObjProp $item 'stock_barcode' $stockRow.barcode
     Set-ObjProp $item 'stock_name' $stockRow.outbound_name
     $matched++
-    if ($matchKey) { [void]$usedStockKeys.Add($matchKey) }
+    $usedKeys = @()
+    if ($stockRow.PSObject.Properties['used_keys']) { $usedKeys = @($stockRow.used_keys) }
+    if ($usedKeys.Count -gt 0) {
+      foreach ($usedKey in $usedKeys) {
+        if ($usedKey) { [void]$usedStockKeys.Add($usedKey) }
+      }
+    } elseif ($matchKey) {
+      [void]$usedStockKeys.Add($matchKey)
+    }
   } else {
     Set-ObjProp $item 'stock_qty' 0
     Set-ObjProp $item 'stock_barcode' ''
