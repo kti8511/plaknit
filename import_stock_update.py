@@ -89,6 +89,21 @@ def main() -> None:
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     stock_rows = load_stock_rows(stock_file)
 
+    merged_by_name: dict[str, dict] = {}
+    for r in stock_rows:
+        key = normalize(r.get("outbound_name"))
+        if not key:
+            continue
+        if key not in merged_by_name:
+            merged_by_name[key] = dict(r)
+        else:
+            merged_by_name[key]["stock_qty"] = int(merged_by_name[key].get("stock_qty") or 0) + int(
+                r.get("stock_qty") or 0
+            )
+            if not merged_by_name[key].get("barcode") and r.get("barcode"):
+                merged_by_name[key]["barcode"] = r.get("barcode")
+    stock_rows = list(merged_by_name.values())
+
     by_barcode = {normalize(r["barcode"]): r for r in stock_rows if r["barcode"]}
     by_name = {normalize(r["outbound_name"]): r for r in stock_rows if r["outbound_name"]}
     stock_name_pairs = [

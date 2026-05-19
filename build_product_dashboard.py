@@ -641,6 +641,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
               <th style="width:72px">알림</th><th style="width:120px">바코드</th><th class="resizable-th" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th>
               <th>시즌</th><th>복종</th>
               <th class="num">판매수량</th>
+              <th class="num">주간 판매수량</th>
               <th class="num">주간 판매율</th>
               <th class="num">현재고</th>
               <th class="num">전체 재고 소진율</th>
@@ -1240,7 +1241,7 @@ function renderDetail() {{
 
   const grouped = {{}};
   baseRows.forEach(r=>{{
-    const key = r.match_sku || r.standard_name || `${{r.name}}_${{r.color}}_${{r.size}}`;
+    const key = r.match_sku || `${{r.standard_name||r.name||''}}_${{r.color||''}}_${{r.size||''}}`;
     if (!grouped[key]) grouped[key] = {{
       key,
       match_sku:r.match_sku || '',
@@ -1337,7 +1338,10 @@ function renderDetail() {{
 
   const reorderRows = rows
     .filter(r=>r.reorder_reasons.length)
-    .sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
+    .sort((a,b)=>(
+      Math.max(...(b.seasons||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1) -
+      Math.max(...(a.seasons||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1)
+    ) || b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
   document.getElementById('reorderSummary').textContent = `${{rows.filter(r=>r.reorder_reasons.length).length}}개 상품`;
   document.getElementById('reorderAlerts').innerHTML = reorderRows.length
     ? reorderRows.map(r=>`<div class="rank-item"><div><div class="rank-name">${{r.standard_name}}</div><div class="rank-meta">${{r.reorder_reasons.join(' · ')}} · 현재고 ${{fmt(r.stock_qty)}} · 주간 ${{fmt(r.weekly_qty)}}개</div></div><div class="rank-value">${{pct(r.weekly_rate)}}</div></div>`).join('')
@@ -1356,7 +1360,7 @@ function renderDetail() {{
     <td><input id="tableNameFilter" placeholder="상품명"></td>
     <td><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
     <td><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
-    <td colspan="8"></td>
+    <td colspan="9"></td>
   </tr>`;
 
   const tableFilters = {{
@@ -1388,25 +1392,32 @@ function renderDetail() {{
     el.addEventListener('change', applyTableFilters);
   }});
 
-  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
+  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
-  function drawDetailRows(displayRows) {{
+function drawDetailRows(displayRows) {{
   if (!displayRows.length) {{
-    tbody.innerHTML='<tr><td colspan="13" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
+    tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
     return;
   }}
   tbody.innerHTML = displayRows.map(r=>{{
     const disc    = r.validGross > 0 && r.validPayment <= r.validGross ? (1 - r.validPayment / r.validGross) * 100 : null;
     const stockQty= r.stock_qty ?? '-';
+    const weeklyQty= r.weekly_qty ?? '-';
     const alertB  = !r.stock_known ? 'badge-amber' : r.reorder_reasons.length ? 'badge-red' : 'badge-green';
     const alertT  = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
+    const alertTitle = !r.stock_known
+      ? '재고 매칭 실패(바코드/상품명). WMS 출고상품명/바코드 확인 후 data.json 매칭키 정비가 필요합니다.'
+      : r.reorder_reasons.length
+        ? (r.reorder_reasons.join(' / ') + ' · 리오더/재고 보충 검토가 필요합니다.')
+        : '';
     return `<tr>
-      <td><span class="badge ${{alertB}}" title="${{r.reorder_reasons.join(' / ')}}">${{alertT}}</span></td>
+      <td><span class="badge ${{alertB}}" title="${{alertTitle}}">${{alertT}}</span></td>
       <td class="td-mono">${{r.match_sku || '-'}}</td>
       <td class="td-main standard-name-cell" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
       <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
       <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
       <td class="num">${{fmt(r.qty)}}</td>
+      <td class="num">${{weeklyQty!=='-'?fmt(weeklyQty):'-'}}</td>
       <td class="num" style="color:${{r.weekly_rate>=7?'var(--red)':r.weekly_rate>=4?'var(--amber)':'var(--ink2)'}}">${{r.weekly_rate>0?pct(r.weekly_rate):'-'}}</td>
       <td class="num">${{stockQty!=='-'?fmt(stockQty):'-'}}</td>
       <td class="num" style="color:${{r.stock_rate>=20?'var(--red)':r.stock_rate>=12?'var(--amber)':'var(--ink2)'}}">${{r.stock_rate>0?pct(r.stock_rate):'-'}}</td>
