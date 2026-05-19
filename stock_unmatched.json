@@ -1,8 +1,8 @@
 ﻿{
     "stock_file":  "C:\\Users\\user\\Desktop\\재고조회(기본)_2026-05-14_105359.xlsx",
-    "data_rows":  833,
+    "data_rows":  866,
     "stock_rows":  1225,
-    "matched_data_rows":  822,
+    "matched_data_rows":  851,
     "unmatched_data_rows":  [
                                 {
                                     "retailer":  "무신사",
@@ -91,6 +91,38 @@
                                     "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
                                     "color":  "라이트그레이",
                                     "size":  "M"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_블랙-XL",
+                                    "name":  "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+                                    "color":  "블랙",
+                                    "size":  "XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_블랙-3XL",
+                                    "name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
+                                    "color":  "블랙",
+                                    "size":  "3XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티_블랙-L",
+                                    "name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+                                    "color":  "블랙",
+                                    "size":  "L"
+                                },
+                                {
+                                    "retailer":  "애슬러",
+                                    "match_sku":  "",
+                                    "standard_name":  "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠_블랙-L",
+                                    "name":  "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+                                    "color":  "블랙",
+                                    "size":  "L"
                                 }
                             ],
     "unmatched_stock_rows":  [
@@ -3215,11 +3247,6 @@
                                      "stock_qty":  19
                                  },
                                  {
-                                     "barcode":  "PD2TSM05LGR02XL",
-                                     "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-2XL",
-                                     "stock_qty":  34
-                                 },
-                                 {
                                      "barcode":  "PD2TSM05LGR03XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-3XL",
                                      "stock_qty":  32
@@ -3228,11 +3255,6 @@
                                      "barcode":  "PD2TSM05LGR04XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-4XL",
                                      "stock_qty":  35
-                                 },
-                                 {
-                                     "barcode":  "PD2TSM05PNK000M",
-                                     "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_핑크-M",
-                                     "stock_qty":  14
                                  },
                                  {
                                      "barcode":  "PD2TSM05PNK000L",
@@ -3310,11 +3332,6 @@
                                      "stock_qty":  48
                                  },
                                  {
-                                     "barcode":  "PD2TSM06LGR000L",
-                                     "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트그레이-L",
-                                     "stock_qty":  5
-                                 },
-                                 {
                                      "barcode":  "PD2TSM06LGR00XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트그레이-XL",
                                      "stock_qty":  28
@@ -3358,11 +3375,6 @@
                                      "barcode":  "PD2TSM06BLU04XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트블루-4XL",
                                      "stock_qty":  29
-                                 },
-                                 {
-                                     "barcode":  "PD2TSM07BLK000M",
-                                     "outbound_name":  "퀵드라이 백레터링 세미오버핏 반팔티_블랙-M",
-                                     "stock_qty":  48
                                  },
                                  {
                                      "barcode":  "PD2TSM07BLK00XL",
@@ -3413,11 +3425,6 @@
                                      "barcode":  "PD2TSM07WHT000M",
                                      "outbound_name":  "퀵드라이 백레터링 세미오버핏 반팔티_화이트-M",
                                      "stock_qty":  25
-                                 },
-                                 {
-                                     "barcode":  "PD2TSM07WHT000L",
-                                     "outbound_name":  "퀵드라이 백레터링 세미오버핏 반팔티_화이트-L",
-                                     "stock_qty":  46
                                  },
                                  {
                                      "barcode":  "PD2TSM07WHT00XL",
@@ -3720,19 +3727,9 @@
                                      "stock_qty":  15
                                  },
                                  {
-                                     "barcode":  "PD2PSM01BEG00XL",
-                                     "outbound_name":  "ICE LITE 루즈핏 카고쇼츠_베이지-XL",
-                                     "stock_qty":  13
-                                 },
-                                 {
                                      "barcode":  "PD2PSM01BEG02XL",
                                      "outbound_name":  "ICE LITE 루즈핏 카고쇼츠_베이지-2XL",
                                      "stock_qty":  7
-                                 },
-                                 {
-                                     "barcode":  "PD2PSM01BEG03XL",
-                                     "outbound_name":  "ICE LITE 루즈핏 카고쇼츠_베이지-3XL",
-                                     "stock_qty":  36
                                  },
                                  {
                                      "barcode":  "PD2PSM01KGR000M",
@@ -3755,19 +3752,9 @@
                                      "stock_qty":  37
                                  },
                                  {
-                                     "barcode":  "PD2PLM01BLK000M",
-                                     "outbound_name":  "ICE LITE 와이드 카고팬츠_블랙-M",
-                                     "stock_qty":  6
-                                 },
-                                 {
                                      "barcode":  "PD2PLM01BLK00XL",
                                      "outbound_name":  "ICE LITE 와이드 카고팬츠_블랙-XL",
                                      "stock_qty":  9
-                                 },
-                                 {
-                                     "barcode":  "PD2PLM01CHA000M",
-                                     "outbound_name":  "ICE LITE 와이드 카고팬츠_차콜-M",
-                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PD2PLM01CHA000L",
@@ -3828,11 +3815,6 @@
                                      "barcode":  "PD2OSM01BEG000M",
                                      "outbound_name":  "ICE LITE 세미오버핏 셔켓_베이지-M",
                                      "stock_qty":  0
-                                 },
-                                 {
-                                     "barcode":  "PD2OSM01BEG00XL",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_베이지-XL",
-                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PD2OSM01BEG02XL",
@@ -4483,16 +4465,6 @@
                                      "barcode":  "PE2TSM01BLK000M",
                                      "outbound_name":  "퀵드라이 5MILE 티셔츠 블랙 M",
                                      "stock_qty":  51
-                                 },
-                                 {
-                                     "barcode":  "PE2TSM01BLK00XL",
-                                     "outbound_name":  "퀵드라이 5MILE 티셔츠 블랙 XL",
-                                     "stock_qty":  75
-                                 },
-                                 {
-                                     "barcode":  "PE2TSM01LGR00XL",
-                                     "outbound_name":  "퀵드라이 5MILE 티셔츠 라이트그레이 XL",
-                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "PE2TSM01LGR02XL",
