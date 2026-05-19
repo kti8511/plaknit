@@ -609,6 +609,102 @@ function unitPriceBase(row) {
   }
   return {qty, payment};
 }
+const DETAIL_SIZE_TOKEN = '(4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)';
+function cleanDetailText(value) {
+  return String(value || '').replace(/^\[[^\]]+\]\s*/, '').replace(/\s+/g, ' ').trim();
+}
+function normalizeDetailSize(size) {
+  size = String(size || '').toUpperCase();
+  return size === 'F' ? 'FREE' : size;
+}
+function detailSizeFromValue(value) {
+  const text = cleanDetailText(value).replace(/[()]/g, ' ').toUpperCase();
+  const re = new RegExp(`(?:^|[^A-Z0-9])${DETAIL_SIZE_TOKEN}(?=$|[^A-Z0-9])`, 'g');
+  const matches = Array.from(text.matchAll(re));
+  if (!matches.length) return '';
+  return normalizeDetailSize(matches[matches.length - 1][1]);
+}
+function detailSizeFromSku(value) {
+  const text = String(value || '').trim().toUpperCase();
+  const match = text.match(new RegExp(`${DETAIL_SIZE_TOKEN}$`));
+  return match ? normalizeDetailSize(match[1]) : '';
+}
+function detailSize(row) {
+  return detailSizeFromValue(row.size) ||
+    detailSizeFromValue(row.standard_name) ||
+    detailSizeFromValue(row.stock_name) ||
+    detailSizeFromSku(row.match_sku);
+}
+function detailProductNameFromText(value) {
+  let name = cleanDetailText(value);
+  if (!name) return '';
+  name = name
+    .replace(/[_-](4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)$/i, '')
+    .replace(/\s+(4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)$/i, '')
+    .replace(/[_-](BLACK|WHITE|NAVY|CHARCOAL|GREY|GRAY|M\/GREY|L\/KHAKI|블랙|화이트|네이비|차콜|그레이|라이트그레이|멜란지그레이|베이지|카키|브라운|레드|블루|민트블루|세이지|올리브|핑크|라임)$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return name || '';
+}
+function detailColor(row) {
+  const explicit = cleanDetailText(row.color);
+  if (explicit) return explicit;
+  const code = String(row.match_sku || row.stock_barcode || '').toUpperCase();
+  if (code.includes('WHT')) return '화이트';
+  if (code.includes('BLK')) return '블랙';
+  if (code.includes('NVY') || code.includes('NAVY')) return '네이비';
+  if (code.includes('GRY') || code.includes('GREY') || code.includes('GRAY')) return '그레이';
+  return '';
+}
+function detailApplyColor(product, color) {
+  if (color && product && product !== '-' && !detailGroupKeyText(product).includes(detailGroupKeyText(color))) {
+    return `${product} ${color}`;
+  }
+  return product;
+}
+function detailProductName(row) {
+  let product = detailProductNameFromText(row.name) ||
+    detailProductNameFromText(row.standard_name) ||
+    detailProductNameFromText(row.stock_name) ||
+    '-';
+  return detailApplyColor(product, detailColor(row));
+}
+function detailGroupKeyText(value) {
+  return cleanDetailText(value).replace(/\s+/g, '').toUpperCase();
+}
+function detailGroupInfo(row) {
+  const product = detailProductName(row);
+  const size = detailSize(row);
+  return {
+    key: `${detailGroupKeyText(product)}|${size}`,
+    label: size ? `${product} ${size}` : product,
+    product,
+    size
+  };
+}
+function detailStockKey(row, groupKey) {
+  return cleanDetailText(row.stock_barcode) ||
+    cleanDetailText(row.stock_name) ||
+    cleanDetailText(row.match_sku) ||
+    `${groupKey}|${cleanDetailText(row.standard_name || row.name)}|${cleanDetailText(row.color)}|${cleanDetailText(row.size)}|${Number(row.stock_qty || 0)}`;
+}
+function detailStockMatchesGroup(row, groupInfo) {
+  const groupProductKey = detailGroupKeyText(groupInfo.product);
+  const groupSize = groupInfo.size;
+  const displayProductKey = detailGroupKeyText(detailProductName(row));
+  const displaySize = detailSize(row);
+  const stockLabel = row.stock_name || row.standard_name || row.name || '';
+  const stockProductKey = detailGroupKeyText(detailApplyColor(detailProductNameFromText(stockLabel), detailColor(row)));
+  const stockSize = detailSizeFromValue(stockLabel);
+  if (row.match_sku) {
+    return stockProductKey === groupProductKey && (!stockSize || !groupSize || stockSize === groupSize);
+  }
+  return displayProductKey === groupProductKey && (!displaySize || !groupSize || displaySize === groupSize);
+}
+function addDetailSearchPart(group, value) {
+  const text = cleanDetailText(value);
+  if (text) group.searchParts.add(text);
+}
 
 // ── 전체 집계 ─────────────────────────────────────────────
 function shiftDate(dateStr, days) {
@@ -1132,11 +1228,17 @@ function renderDetail() {
 
   const grouped = {};
   baseRows.forEach(r=>{
-    const key = r.match_sku || `${r.standard_name||r.name||''}_${r.color||''}_${r.size||''}`;
+    const groupInfo = detailGroupInfo(r);
+    const key = groupInfo.key;
     if (!grouped[key]) grouped[key] = {
       key,
       match_sku:r.match_sku || '',
-      standard_name:r.standard_name || r.name || '-',
+      standard_name:groupInfo.label,
+      product_name:groupInfo.product,
+      detail_size:groupInfo.size,
+      matchSkus:new Set(),
+      searchParts:new Set(),
+      stockKeys:new Set(),
       retailers:new Set(),
       seasons:new Set(),
       reorderSeasonKeys:new Set(),
@@ -1156,6 +1258,12 @@ function renderDetail() {
       dailyMap:{}
     };
     const g = grouped[key];
+    const stockQty = Math.max(0, Number(r.stock_qty || 0));
+    const stockKey = detailStockKey(r, key);
+    const stockMatches = detailStockMatchesGroup(r, groupInfo);
+    if (r.match_sku && stockMatches) g.matchSkus.add(r.match_sku);
+    [groupInfo.label, groupInfo.product, groupInfo.size, r.name, r.color, r.size].forEach(v=>addDetailSearchPart(g, v));
+    if (stockMatches) [r.standard_name, r.stock_name, r.stock_barcode, r.match_sku].forEach(v=>addDetailSearchPart(g, v));
     g.retailers.add(r.retailer || '-');
     g.seasons.add(r.season || '-');
     const reorderKey = reorderSeasonKey(r);
@@ -1173,9 +1281,12 @@ function renderDetail() {
       g.validGross += Number(r.gross || 0);
       g.validPayment += Number(r.payment || 0);
     }
-    g.stock_qty = Math.max(g.stock_qty, Number(r.stock_qty || 0));
+    if (stockMatches && stockQty > 0 && stockKey && !g.stockKeys.has(stockKey)) {
+      g.stock_qty += stockQty;
+      g.stockKeys.add(stockKey);
+    }
     g.received_qty = Math.max(g.received_qty, Number(r.received_qty || 0));
-    if (r.stock_barcode || r.stock_name) g.stock_known = true;
+    if (stockMatches && (r.stock_barcode || r.stock_name || stockQty > 0)) g.stock_known = true;
     (r.daily || []).forEach(d=>{
       if (!g.dailyMap[d.date]) g.dailyMap[d.date] = {date:d.date,qty:0,gross:0,payment:0,orders:0};
       g.dailyMap[d.date].qty += Number(d.qty || 0);
@@ -1187,8 +1298,12 @@ function renderDetail() {
 
   let rows = Object.values(grouped).map(g=>{
     const avg_unit = g.avgQty ? g.avgPayment / g.avgQty : 0;
+    const match_skus = Array.from(g.matchSkus);
     return {
       ...g,
+      match_skus,
+      match_sku: match_skus.length > 1 ? `${match_skus[0]} 외 ${match_skus.length - 1}` : (match_skus[0] || ''),
+      searchText:Array.from(g.searchParts).join(' ').toLowerCase(),
       retailers:Array.from(g.retailers),
       seasons:Array.from(g.seasons),
       reorderSeasonKeys:Array.from(g.reorderSeasonKeys),
@@ -1199,10 +1314,7 @@ function renderDetail() {
     };
   });
 
-  if (q) rows = rows.filter(r=>
-    (r.standard_name||'').toLowerCase().includes(q) ||
-    (r.match_sku||'').toLowerCase().includes(q)
-  );
+  if (q) rows = rows.filter(r=>(r.searchText||'').includes(q));
 
   const detailDates = buildDailyMap('').map(d=>d.date);
   const detailCutoff = detailDates.length >= 7 ? detailDates[detailDates.length-7] : detailDates[0];
@@ -1270,8 +1382,8 @@ function renderDetail() {
     drawDetailRows(rows.filter(r=>{
       const alertText = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
       if (tableFilters.alert && alertText !== tableFilters.alert) return false;
-      if (tableFilters.sku && !(r.match_sku||'').toLowerCase().includes(tableFilters.sku)) return false;
-      if (tableFilters.name && !(r.standard_name||'').toLowerCase().includes(tableFilters.name)) return false;
+      if (tableFilters.sku && !((r.match_skus||[]).join(' ').toLowerCase().includes(tableFilters.sku) || (r.searchText||'').includes(tableFilters.sku))) return false;
+      if (tableFilters.name && !(r.searchText||'').includes(tableFilters.name)) return false;
       if (tableFilters.season && !r.seasons.includes(tableFilters.season)) return false;
       if (tableFilters.category && !r.categoryLarge.concat(r.categorySmall).includes(tableFilters.category)) return false;
       return true;
@@ -1303,7 +1415,7 @@ function drawDetailRows(displayRows) {
         : '';
     return `<tr>
       <td><span class="badge ${alertB}" title="${alertTitle}">${alertT}</span></td>
-      <td class="td-mono">${r.match_sku || '-'}</td>
+      <td class="td-mono" title="${(r.match_skus||[]).join(', ')}">${r.match_sku || '-'}</td>
       <td class="td-main standard-name-cell" title="${r.standard_name}">${r.standard_name||'-'}</td>
       <td><span class="badge badge-blue">${r.seasons.join(', ')}</span></td>
       <td><span class="badge badge-indigo">${r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}</span></td>
