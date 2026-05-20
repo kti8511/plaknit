@@ -1243,9 +1243,10 @@ function renderDaily() {{
     options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:false}},tooltip:ttip}},scales:scl}}
   }});
 
-  document.getElementById('dailyRows').innerHTML = !f.length
+  const tableRows = [...f].sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById('dailyRows').innerHTML = !tableRows.length
     ? '<tr><td colspan="6" style="text-align:center;color:var(--ink3);padding:24px">데이터 없음</td></tr>'
-    : f.map(d=>`<tr>
+    : tableRows.map(d=>`<tr>
         <td class="td-main td-mono">${{d.date}}</td>
         <td class="num">${{fmt(d.payment)}}</td>
         <td class="num">${{calYear === '2026' ? fmt(d.gross) : '-'}}</td>
