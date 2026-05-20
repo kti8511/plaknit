@@ -3113,5 +3113,17 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-05-19",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 668600,
+        "qty": 21,
+        "orders": 21
+      }
+    ]
   }
 ]
