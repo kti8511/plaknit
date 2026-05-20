@@ -223,7 +223,7 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 /* TABLE */
 .table-wrap{{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}}
 table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
-.detail-table{{table-layout:fixed;min-width:1420px;}}
+.detail-table{{table-layout:fixed;min-width:1510px;}}
 .detail-table th:nth-child(3),.detail-table td.standard-name-cell{{width:var(--standard-name-col-width);}}
 .standard-name-cell{{max-width:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
 .resizable-th{{position:relative;padding-right:18px;}}
@@ -232,8 +232,13 @@ table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
 thead{{position:sticky;top:0;z-index:2;}}
 th{{background:#f8fafc;color:var(--ink3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}}
 td{{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:middle;}}
-.table-filter-row td{{position:sticky;top:37px;background:#fff;z-index:1;padding:6px 8px;}}
+.detail-table thead{{position:sticky;top:0;z-index:5;box-shadow:0 1px 0 var(--border);}}
+.detail-table thead th{{position:relative;z-index:5;}}
+.table-filter-row th{{background:#fff;padding:6px 8px;border-bottom:1px solid var(--border);}}
 .table-filter-row input,.table-filter-row select{{width:100%;height:28px;border:1px solid var(--border);border-radius:6px;padding:0 7px;font-size:11px;color:var(--ink2);background:#fff;}}
+.sortable-th{{cursor:pointer;user-select:none;}}
+.sortable-th::after{{content:attr(data-sort-mark);float:right;color:var(--ink3);font-size:10px;margin-left:6px;}}
+.sortable-th:hover{{color:var(--ink2);background:#f1f5f9;}}
 tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 .num{{text-align:right;font-family:'DM Mono',monospace;font-size:12px;}}
 .td-main{{color:var(--ink);font-weight:600;}} .td-mono{{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--ink3);}}
@@ -638,20 +643,20 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <table class="detail-table">
           <thead>
             <tr>
-              <th style="width:72px">알림</th><th style="width:120px">바코드</th><th class="resizable-th" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th>
-              <th>시즌</th><th>복종</th>
-              <th class="num">판매수량</th>
-              <th class="num">주간 판매수량</th>
-              <th class="num">주간 판매율</th>
-              <th class="num">현재고</th>
-              <th class="num">전체 재고 소진율</th>
-              <th class="num">정상가금액</th>
-              <th class="num">실판매금액</th>
-              <th class="num">평균단가</th>
-              <th class="num">할인율</th>
+              <th class="sortable-th" data-detail-sort="alert" style="width:72px">알림</th><th class="sortable-th" data-detail-sort="sku" style="width:120px">바코드</th><th class="sortable-th resizable-th" data-detail-sort="name" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th>
+              <th class="sortable-th" data-detail-sort="year">연도</th><th class="sortable-th" data-detail-sort="season">시즌</th><th class="sortable-th" data-detail-sort="category">복종</th>
+              <th class="sortable-th num" data-detail-sort="qty">판매수량</th>
+              <th class="sortable-th num" data-detail-sort="weeklyQty">주간 판매수량</th>
+              <th class="sortable-th num" data-detail-sort="weeklyRate">주간 판매율</th>
+              <th class="sortable-th num" data-detail-sort="stockQty">현재고</th>
+              <th class="sortable-th num" data-detail-sort="stockRate">전체 재고 소진율</th>
+              <th class="sortable-th num" data-detail-sort="gross">정상가금액</th>
+              <th class="sortable-th num" data-detail-sort="payment">실판매금액</th>
+              <th class="sortable-th num" data-detail-sort="avgUnit">평균단가</th>
+              <th class="sortable-th num" data-detail-sort="discount">할인율</th>
             </tr>
+            <tr class="table-filter-row" id="detailFilterRows"></tr>
           </thead>
-          <tbody id="detailFilterRows"></tbody>
           <tbody id="detailRows"></tbody>
         </table>
       </div>
@@ -667,7 +672,8 @@ const HISTORICAL_MONTHLY = {historical_monthly_json};
 const HISTORICAL_DAILY = {historical_daily_json};
 const HISTORICAL_DAILY_MONTHLY = {historical_daily_monthly_json};
 const MANUAL_SALES = {manual_sales_json};
-const REORDER_ALLOWED_SEASON_KEYS = new Set(['E1','E2','D1','D2']); // 26SS/25SS 상품만 리오더 알림 대상
+const BARCODE_YEAR_LABELS = {{A:'2022',B:'2023',C:'2024',D:'2025',E:'2026',F:'2027',G:'2028'}};
+const REORDER_ALLOWED_YEAR_CODES = new Set(['D','E']); // 바코드 연도 D/E(2025/2026) 상품만 리오더 알림 대상
 
 const fmt  = n => Math.round(n).toLocaleString('ko-KR');
 const pct  = n => n.toFixed(1) + '%';
@@ -686,10 +692,16 @@ function validDiscount(gross, payment) {{
   if (gross <= 0 || payment < 0 || payment > gross) return null;
   return (1 - payment / gross) * 100;
 }}
-function reorderSeasonKey(row) {{
+function barcodeYearCode(value) {{
+  const match = String(value || '').trim().toUpperCase().match(/^P([A-Z])/);
+  return match ? match[1] : '';
+}}
+function barcodeYearLabel(code) {{
+  return code ? (BARCODE_YEAR_LABELS[code] || code) : '';
+}}
+function rowBarcodeYearCode(row) {{
   const sku = String(row.match_sku || row.stock_barcode || '').trim().toUpperCase();
-  const match = sku.match(/^P([A-Z])(\\d)/);
-  return match ? `${{match[1]}}${{match[2]}}` : '';
+  return barcodeYearCode(sku);
 }}
 function discountText(gross, payment) {{
   const d = validDiscount(gross, payment);
@@ -1323,6 +1335,47 @@ function initDetailFilters() {{
   fill('categorySmallFilter', '전체 복종(소)', uniqSorted(rawRows.map(r=>r.category_small)));
 }}
 
+let detailTableSort = {{key:'payment', dir:'desc'}};
+function detailAlertText(row) {{
+  return !row.stock_known ? '재고확인' : row.reorder_reasons.length ? '확인' : '정상';
+}}
+function detailDiscountValue(row) {{
+  return row.validGross > 0 && row.validPayment <= row.validGross ? (1 - row.validPayment / row.validGross) * 100 : -1;
+}}
+function detailSortValue(row, key) {{
+  if (key === 'alert') return detailAlertText(row);
+  if (key === 'sku') return row.match_sku || '';
+  if (key === 'name') return row.standard_name || '';
+  if (key === 'year') return (row.years || []).join(', ');
+  if (key === 'season') return (row.seasons || []).join(', ');
+  if (key === 'category') return row.categoryLarge.concat(row.categorySmall).filter(v=>v && v !== '-').join(' / ');
+  if (key === 'qty') return Number(row.qty || 0);
+  if (key === 'weeklyQty') return Number(row.weekly_qty || 0);
+  if (key === 'weeklyRate') return Number(row.weekly_rate || 0);
+  if (key === 'stockQty') return Number(row.stock_qty || 0);
+  if (key === 'stockRate') return Number(row.stock_rate || 0);
+  if (key === 'gross') return Number(row.gross || 0);
+  if (key === 'payment') return Number(row.payment || 0);
+  if (key === 'avgUnit') return Number(row.avg_unit || 0);
+  if (key === 'discount') return detailDiscountValue(row);
+  return '';
+}}
+function applyDetailSort(rows) {{
+  const key = detailTableSort.key || 'payment';
+  const dir = detailTableSort.dir === 'asc' ? 1 : -1;
+  rows.sort((a,b)=>{{
+    const av = detailSortValue(a, key);
+    const bv = detailSortValue(b, key);
+    if (typeof av === 'number' || typeof bv === 'number') return ((Number(av)||0) - (Number(bv)||0)) * dir;
+    return String(av || '').localeCompare(String(bv || '')) * dir;
+  }});
+}}
+function updateDetailSortMarks() {{
+  document.querySelectorAll('[data-detail-sort]').forEach(th=>{{
+    th.dataset.sortMark = th.dataset.detailSort === detailTableSort.key ? (detailTableSort.dir === 'asc' ? '▲' : '▼') : '↕';
+  }});
+}}
+
 function renderDetail() {{
   const q   = (document.getElementById('q').value||'').toLowerCase();
   const seasonFilter = document.getElementById('seasonFilter').value;
@@ -1350,7 +1403,7 @@ function renderDetail() {{
       stockKeys:new Set(),
       retailers:new Set(),
       seasons:new Set(),
-      reorderSeasonKeys:new Set(),
+      yearCodes:new Set(),
       categoryLarge:new Set(),
       categorySmall:new Set(),
       qty:0,
@@ -1375,8 +1428,8 @@ function renderDetail() {{
     if (stockMatches) [r.standard_name, r.stock_name, r.stock_barcode, r.match_sku].forEach(v=>addDetailSearchPart(g, v));
     g.retailers.add(r.retailer || '-');
     g.seasons.add(r.season || '-');
-    const reorderKey = reorderSeasonKey(r);
-    if (reorderKey) g.reorderSeasonKeys.add(reorderKey);
+    const yearCode = rowBarcodeYearCode(r);
+    if (yearCode) g.yearCodes.add(yearCode);
     g.categoryLarge.add(r.category_large || '-');
     g.categorySmall.add(r.category_small || '-');
     g.qty += Number(r.qty || 0);
@@ -1415,7 +1468,8 @@ function renderDetail() {{
       searchText:Array.from(g.searchParts).join(' ').toLowerCase(),
       retailers:Array.from(g.retailers),
       seasons:Array.from(g.seasons),
-      reorderSeasonKeys:Array.from(g.reorderSeasonKeys),
+      yearCodes:Array.from(g.yearCodes),
+      years:Array.from(g.yearCodes).map(code=>barcodeYearLabel(code)).filter(Boolean),
       categoryLarge:Array.from(g.categoryLarge),
       categorySmall:Array.from(g.categorySmall),
       daily:Object.values(g.dailyMap).sort((a,b)=>a.date.localeCompare(b.date)),
@@ -1442,43 +1496,42 @@ function renderDetail() {{
     r.weekly_qty = weekly;
     r.weekly_rate = weekly + stockBase > 0 ? weekly / (weekly + stockBase) * 100 : 0;
     r.stock_rate = r.qty + stockBase > 0 ? r.qty / (r.qty + stockBase) * 100 : 0;
-    r.reorder_season_eligible = (r.reorderSeasonKeys || []).some(key => REORDER_ALLOWED_SEASON_KEYS.has(key));
+    r.reorder_year_eligible = (r.yearCodes || []).some(code => REORDER_ALLOWED_YEAR_CODES.has(code));
     r.reorder_reasons = [];
-    if (r.reorder_season_eligible && r.stock_known && r.weekly_rate >= 7) r.reorder_reasons.push('주간 판매율 7% 이상');
-    if (r.reorder_season_eligible && r.stock_known && r.stock_rate >= 20) r.reorder_reasons.push('재고 소진율 20% 이상');
+    if (r.reorder_year_eligible && r.stock_known && r.weekly_rate >= 7) r.reorder_reasons.push('주간 판매율 7% 이상');
+    if (r.reorder_year_eligible && r.stock_known && r.stock_rate >= 20) r.reorder_reasons.push('재고 소진율 20% 이상');
   }});
 
   const reorderRows = rows
     .filter(r=>r.reorder_reasons.length)
     .sort((a,b)=>(
-      Math.max(...(b.seasons||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1) -
-      Math.max(...(a.seasons||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1)
+      Math.max(...(b.years||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1) -
+      Math.max(...(a.years||[]).map(s=>parseInt(s,10)).filter(Number.isFinite), -1)
     ) || b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
   document.getElementById('reorderSummary').textContent = `${{rows.filter(r=>r.reorder_reasons.length).length}}개 상품`;
   document.getElementById('reorderAlerts').innerHTML = reorderRows.length
     ? reorderRows.map(r=>`<div class="rank-item"><div><div class="rank-name">${{r.standard_name}}</div><div class="rank-meta">${{r.reorder_reasons.join(' · ')}} · 현재고 ${{fmt(r.stock_qty)}} · 주간 ${{fmt(r.weekly_qty)}}개</div></div><div class="rank-value">${{pct(r.weekly_rate)}}</div></div>`).join('')
     : '<div style="padding:14px;color:var(--ink3)">현재 기준 리오더 알림 상품 없음</div>';
 
-  if (sb==='payment') rows.sort((a,b)=>b.payment-a.payment);
-  else if (sb==='qty') rows.sort((a,b)=>b.qty-a.qty);
-  else if (sb==='weeklyRate') rows.sort((a,b)=>b.weekly_rate-a.weekly_rate || b.stock_rate-a.stock_rate);
-  else rows.sort((a,b)=>(a.standard_name||'').localeCompare(b.standard_name||''));
+  applyDetailSort(rows);
+  updateDetailSortMarks();
 
   const tbody = document.getElementById('detailRows');
   const filterBody = document.getElementById('detailFilterRows');
-  filterBody.innerHTML = `<tr class="table-filter-row">
-    <td><select id="tableAlertFilter"><option value="">전체</option><option value="확인">확인</option><option value="정상">정상</option><option value="재고확인">재고확인</option></select></td>
-    <td><input id="tableSkuFilter" placeholder="바코드"></td>
-    <td><input id="tableNameFilter" placeholder="상품명"></td>
-    <td><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
-    <td><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></td>
-    <td colspan="9"></td>
-  </tr>`;
+  filterBody.innerHTML = `
+    <th><select id="tableAlertFilter"><option value="">전체</option><option value="확인">확인</option><option value="정상">정상</option><option value="재고확인">재고확인</option></select></th>
+    <th><input id="tableSkuFilter" placeholder="바코드"></th>
+    <th><input id="tableNameFilter" placeholder="상품명"></th>
+    <th><select id="tableYearFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.years)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
+    <th><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
+    <th><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
+    <th colspan="9"></th>`;
 
   const tableFilters = {{
     alert:'',
     sku:'',
     name:'',
+    year:'',
     season:'',
     category:''
   }};
@@ -1486,29 +1539,31 @@ function renderDetail() {{
     tableFilters.alert = document.getElementById('tableAlertFilter').value;
     tableFilters.sku = (document.getElementById('tableSkuFilter').value||'').toLowerCase();
     tableFilters.name = (document.getElementById('tableNameFilter').value||'').toLowerCase();
+    tableFilters.year = document.getElementById('tableYearFilter').value;
     tableFilters.season = document.getElementById('tableSeasonFilter').value;
     tableFilters.category = document.getElementById('tableCategoryFilter').value;
     drawDetailRows(rows.filter(r=>{{
-      const alertText = !r.stock_known ? '재고확인' : r.reorder_reasons.length ? '확인' : '정상';
+      const alertText = detailAlertText(r);
       if (tableFilters.alert && alertText !== tableFilters.alert) return false;
       if (tableFilters.sku && !((r.match_skus||[]).join(' ').toLowerCase().includes(tableFilters.sku) || (r.searchText||'').includes(tableFilters.sku))) return false;
       if (tableFilters.name && !(r.searchText||'').includes(tableFilters.name)) return false;
+      if (tableFilters.year && !r.years.includes(tableFilters.year)) return false;
       if (tableFilters.season && !r.seasons.includes(tableFilters.season)) return false;
       if (tableFilters.category && !r.categoryLarge.concat(r.categorySmall).includes(tableFilters.category)) return false;
       return true;
     }}));
   }};
-  ['tableAlertFilter','tableSkuFilter','tableNameFilter','tableSeasonFilter','tableCategoryFilter'].forEach(id=>{{
+  ['tableAlertFilter','tableSkuFilter','tableNameFilter','tableYearFilter','tableSeasonFilter','tableCategoryFilter'].forEach(id=>{{
     const el = document.getElementById(id);
     el.addEventListener('input', applyTableFilters);
     el.addEventListener('change', applyTableFilters);
   }});
 
-  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
+  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="15" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
 function drawDetailRows(displayRows) {{
   if (!displayRows.length) {{
-    tbody.innerHTML='<tr><td colspan="14" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
+    tbody.innerHTML='<tr><td colspan="15" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
     return;
   }}
   tbody.innerHTML = displayRows.map(r=>{{
@@ -1526,6 +1581,7 @@ function drawDetailRows(displayRows) {{
       <td><span class="badge ${{alertB}}" title="${{alertTitle}}">${{alertT}}</span></td>
       <td class="td-mono" title="${{(r.match_skus||[]).join(', ')}}">${{r.match_sku || '-'}}</td>
       <td class="td-main standard-name-cell" title="${{r.standard_name}}">${{r.standard_name||'-'}}</td>
+      <td><span class="badge badge-gray">${{(r.years||[]).join(', ') || '-'}}</span></td>
       <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
       <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
       <td class="num">${{fmt(r.qty)}}</td>
@@ -1543,9 +1599,28 @@ function drawDetailRows(displayRows) {{
   drawDetailRows(rows);
 }}
 initDetailFilters();
-['q','seasonFilter','categoryLargeFilter','categorySmallFilter','sortBy'].forEach(id=>{{
+['q','seasonFilter','categoryLargeFilter','categorySmallFilter'].forEach(id=>{{
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
+}});
+document.getElementById('sortBy').addEventListener('change', e=>{{
+  const value = e.target.value;
+  detailTableSort = {{
+    key: value === 'weeklyRate' ? 'weeklyRate' : value === 'qty' ? 'qty' : value === 'name' ? 'name' : 'payment',
+    dir: value === 'name' ? 'asc' : 'desc'
+  }};
+  renderDetail();
+}});
+document.querySelectorAll('[data-detail-sort]').forEach(th=>{{
+  th.addEventListener('click', e=>{{
+    if (e.target && e.target.classList && e.target.classList.contains('col-resizer')) return;
+    const key = th.dataset.detailSort;
+    detailTableSort = {{
+      key,
+      dir: detailTableSort.key === key && detailTableSort.dir === 'desc' ? 'asc' : 'desc'
+    }};
+    renderDetail();
+  }});
 }});
 function initStandardNameResizer(){{
   const handle = document.getElementById('standardNameResizer');
