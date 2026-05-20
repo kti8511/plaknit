@@ -41,6 +41,7 @@ def normalize_name(name):
     text = clean_text(name)
     text = text.replace("퀵 드라이", "퀵드라이")
     text = text.replace("세미 오버핏", "세미오버핏")
+    text = text.replace("RUNNERS FEET", "RUNNER`S FEET")
     return text
 
 
