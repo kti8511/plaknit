@@ -95293,10 +95293,12 @@
       }
     ],
     "match_status": "매칭완료",
-    "match_sku": "",
+    "match_sku": "PB2PSM05BLKXXXL",
     "standard_name": "ICE LITE 데일리 쇼츠_블랙-3XL",
     "received_qty": 0,
-    "stock_qty": 0
+    "stock_qty": 110,
+    "stock_barcode": "PB2PSM05BLKXXXL",
+    "stock_name": "ICE LITE 테크 6\" 데일리 쇼츠_BLACK_XXXL"
   },
   {
     "retailer": "자사몰",
@@ -95320,10 +95322,12 @@
       }
     ],
     "match_status": "매칭완료",
-    "match_sku": "",
+    "match_sku": "PE2TSM03CHA000L",
     "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-L",
     "received_qty": 0,
-    "stock_qty": 0
+    "stock_qty": 61,
+    "stock_barcode": "PE2TSM03CHA000L",
+    "stock_name": "퀵드라이 RUNNER'S FEET 티셔츠 차콜 L"
   },
   {
     "retailer": "자사몰",
@@ -95347,10 +95351,12 @@
       }
     ],
     "match_status": "매칭완료",
-    "match_sku": "",
+    "match_sku": "PD2TSM08WHT04XL",
     "standard_name": "[채코제에디션]퀵드라이 그린퓨처 티셔츠_화이트-4XL",
     "received_qty": 0,
-    "stock_qty": 0
+    "stock_qty": 36,
+    "stock_barcode": "PD2TSM08WHT04XL",
+    "stock_name": "_채코제에디션퀵드라이 그린퓨처 티셔츠_화이트-4XL"
   },
   {
     "retailer": "자사몰",
@@ -95374,10 +95380,12 @@
       }
     ],
     "match_status": "매칭완료",
-    "match_sku": "",
+    "match_sku": "PD2TSM07DGR04XL",
     "standard_name": "퀵드라이 백레터링 세미오버핏 반팔티_다크그린-4XL",
     "received_qty": 0,
-    "stock_qty": 0
+    "stock_qty": 0,
+    "stock_barcode": "PD2TSM07DGR04XL",
+    "stock_name": "퀵드라이 백레터링 세미오버핏 반팔티_다크그린-4XL"
   },
   {
     "retailer": "자사몰",
@@ -95401,10 +95409,12 @@
       }
     ],
     "match_status": "매칭완료",
-    "match_sku": "",
+    "match_sku": "PB2PSM05NVYXXXL",
     "standard_name": "ICE LITE 데일리 쇼츠_네이비-3XL",
     "received_qty": 0,
-    "stock_qty": 0
+    "stock_qty": 29,
+    "stock_barcode": "PB2PSM05NVYXXXL",
+    "stock_name": "ICE LITE 테크 6\" 데일리 쇼츠_NAVY_XXXL"
   },
   {
     "retailer": "29cm",
