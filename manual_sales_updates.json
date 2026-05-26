@@ -3285,5 +3285,318 @@
         "orders": 14
       }
     ]
+  },
+  {
+    "date": "2026-05-22",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 316300,
+        "qty": 12,
+        "orders": 16
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 50152
+          },
+          {
+            "name": "ICE LITE 베이직 팬츠_블랙-XL",
+            "qty": 2,
+            "payment": 84960
+          }
+        ],
+        "payment": 135112,
+        "qty": 3,
+        "orders": 2
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "퀵드라이 투인원 러닝쇼츠 브라운",
+            "qty": 1,
+            "payment": 87220
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 38270
+          },
+          {
+            "name": "퀵드라이 9 탱크",
+            "qty": 1,
+            "payment": 32900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 1,
+            "payment": 30960
+          }
+        ],
+        "payment": 189350,
+        "qty": 4,
+        "orders": 4
+      }
+    ]
+  },
+  {
+    "date": "2026-05-23",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 346880,
+        "qty": 10,
+        "orders": 10
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 멀티쇼츠(이너내장)-L",
+            "qty": 1,
+            "payment": 53100
+          }
+        ],
+        "payment": 53100,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 3,
+            "payment": 118120
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 2,
+            "payment": 97820
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 2,
+            "payment": 95380
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 54190
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 48410
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 1,
+            "payment": 31610
+          }
+        ],
+        "payment": 445530,
+        "qty": 10,
+        "orders": 6
+      }
+    ]
+  },
+  {
+    "date": "2026-05-24",
+    "retailers": [
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 53100
+          }
+        ],
+        "payment": 53100,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "롯데온",
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_블랙-XL",
+            "qty": 1,
+            "payment": 30140
+          }
+        ],
+        "payment": 30140,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 3,
+            "payment": 106270
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 1,
+            "payment": 56860
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 49970
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 49410
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 48180
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 38700
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 37900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크",
+            "qty": 1,
+            "payment": 32410
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 31920
+          }
+        ],
+        "payment": 451620,
+        "qty": 11,
+        "orders": 9
+      },
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 353900,
+        "qty": 12,
+        "orders": 12
+      }
+    ]
+  },
+  {
+    "date": "2026-05-25",
+    "retailers": [
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠 블루-S",
+            "qty": 1,
+            "payment": 45000
+          }
+        ],
+        "payment": 45000,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "나일론 리플렉티브 심볼 볼캡",
+            "qty": 1,
+            "payment": 36900
+          }
+        ],
+        "payment": 36900,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 4,
+            "payment": 138050
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 2,
+            "payment": 97310
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 1,
+            "payment": 58320
+          },
+          {
+            "name": "[2PACK] ICE LITE 초냉감 프론트그래픽 오버핏 반팔티",
+            "qty": 1,
+            "payment": 58110
+          },
+          {
+            "name": "[2PACK] 퀵드라이 피그먼트 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 56050
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 47430
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 45780
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 38710
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 36390
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 35800
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 33490
+          }
+        ],
+        "payment": 645440,
+        "qty": 15,
+        "orders": 11
+      },
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 476400,
+        "qty": 15,
+        "orders": 15
+      }
+    ]
   }
 ]
