@@ -3598,5 +3598,43 @@
         "orders": 15
       }
     ]
+  },
+  {
+    "date": "2026-05-26",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 938900,
+        "qty": 23,
+        "orders": 30
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠 라벤더-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ],
+        "payment": 36550,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "애슬러",
+        "items": [
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티_블랙-L",
+            "qty": 1,
+            "payment": 39800
+          }
+        ],
+        "payment": 39800,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]
