@@ -3694,5 +3694,121 @@
         "orders": 10
       }
     ]
+  },
+  {
+    "date": "2026-05-27",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 573100,
+        "qty": 17,
+        "orders": 17
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 5,
+            "payment": 164770
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 4,
+            "payment": 144320
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 2,
+            "payment": 115760
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 59520
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 47430
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 46480
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 32670
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 29010
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": -1,
+            "payment": -33860
+          }
+        ],
+        "payment": 606100,
+        "qty": 15,
+        "orders": 7
+      },
+      {
+        "retailer": "애슬러",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 1,
+            "payment": 55469
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지_블랙-XL",
+            "qty": 1,
+            "payment": 54800
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지_멜란지그레이-XL",
+            "qty": 1,
+            "payment": 54800
+          }
+        ],
+        "payment": 165069,
+        "qty": 3,
+        "orders": 3
+      },
+      {
+        "retailer": "롯데온",
+        "items": [
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 26790
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-2XL",
+            "qty": 1,
+            "payment": 37840
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_카키그레이-3XL",
+            "qty": 1,
+            "payment": 37840
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_베이지-2XL",
+            "qty": 1,
+            "payment": 37840
+          }
+        ],
+        "payment": 140310,
+        "qty": 4,
+        "orders": 4
+      }
+    ]
   }
 ]
