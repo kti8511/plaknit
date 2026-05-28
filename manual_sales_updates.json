@@ -3810,5 +3810,121 @@
         "orders": 4
       }
     ]
+  },
+  {
+    "date": "2026-05-28",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 855800,
+        "qty": 26,
+        "orders": 26
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "ICE LITE 베이직 팬츠_블랙-XL",
+            "qty": 2,
+            "payment": 94400
+          }
+        ],
+        "payment": 94400,
+        "qty": 2,
+        "orders": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "확인 필요_무신사 상품명 누락(캡처 첫 행)",
+            "qty": 2,
+            "payment": 76839
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠_블랙, 화이트-XL",
+            "qty": 4,
+            "payment": 192640
+          },
+          {
+            "name": "[2PACK] 채코제에디션 초냉감 트래블러티셔츠_블랙, 화이트-3XL",
+            "qty": 2,
+            "payment": 116820
+          },
+          {
+            "name": "ICE LITE 카고 조거_블랙-L",
+            "qty": 2,
+            "payment": 111720
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-2XL",
+            "qty": 3,
+            "payment": 111470
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠_블랙-2XL",
+            "qty": 2,
+            "payment": 110830
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 그레이 L",
+            "qty": 1,
+            "payment": 77820
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠_라이트그레이-XL",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠_다크 그레이-XL",
+            "qty": 2,
+            "payment": 58760
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 1,
+            "payment": 39920
+          },
+          {
+            "name": "ICE LITE 시그니처 조거_블랙-M",
+            "qty": 1,
+            "payment": 38310
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠_라이트그레이-XL",
+            "qty": 1,
+            "payment": 33860
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크_BLACK_L",
+            "qty": 1,
+            "payment": 27850
+          },
+          {
+            "name": "TECH SWEAT 벌룬 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 19110
+          }
+        ],
+        "payment": 1075749,
+        "qty": 25,
+        "orders": 14
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "TECH SWEAT 7\" 카고 반바지_M/GREY_XXXL",
+            "qty": 1,
+            "payment": 46900
+          }
+        ],
+        "payment": 46900,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]

@@ -35,7 +35,7 @@ MANUAL_SALES_FILE = pathlib.Path("manual_sales_updates.json")
 OUT_FILE  = pathlib.Path("index.html")
 PUBLIC_OUT_FILE = pathlib.Path("public") / "index.html"
 
-with DATA_FILE.open(encoding="utf-8") as f:
+with DATA_FILE.open(encoding="utf-8-sig") as f:
     rows = json.load(f)
 
 historical_daily = {}

@@ -227,7 +227,7 @@ def main():
     args = parser.parse_args()
 
     items = load_items(Path(args.xlsx))
-    rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    rows = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
     days = {item["date"] for item in items}
     remove_existing_days(rows, days, args.replace_month)
     index, by_name = build_index(rows)
