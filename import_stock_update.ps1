@@ -237,7 +237,10 @@ function Update-IndexHtmlRawRows([string]$htmlPath, [string]$rowsJson, [string]$
   $newText = [regex]::Replace($text, $pattern, $replacement)
 
   $chipPattern = '(<div class="status-chip"><div class="live-dot"></div>)([^<]+)(</div>)'
-  $newText2 = [regex]::Replace($newText, $chipPattern, ('$1' + $nowText + '$3'))
+  $newText2 = [regex]::Replace($newText, $chipPattern, {
+    param($match)
+    return $match.Groups[1].Value + $nowText + $match.Groups[3].Value
+  })
 
   Set-Content -LiteralPath $htmlPath -Value $newText2 -Encoding UTF8 -NoNewline
 }
