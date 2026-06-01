@@ -93436,11 +93436,11 @@
         "name":  "[2PACK] 퀵드라이 그래픽 티셔츠",
         "color":  "",
         "size":  "",
-        "qty":  3,
-        "gross":  157650,
-        "payment":  157650,
-        "avg_unit":  52550,
-        "orders":  3,
+        "qty":  4,
+        "gross":  205580,
+        "payment":  205580,
+        "avg_unit":  51395,
+        "orders":  4,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -93462,6 +93462,13 @@
                           "qty":  1,
                           "gross":  53900,
                           "payment":  53900,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-05-30",
+                          "qty":  1,
+                          "gross":  47930,
+                          "payment":  47930,
                           "orders":  1
                       }
                   ],
@@ -99920,33 +99927,6 @@
         "match_status":  "매칭완료",
         "match_sku":  "",
         "standard_name":  "ICE LITE 멀티쇼츠(이너내장)",
-        "received_qty":  0,
-        "stock_qty":  0
-    },
-    {
-        "retailer":  "무신사",
-        "mall_no":  "",
-        "name":  "[2PACK] 퀵드라이 고릴라핏 티셔츠",
-        "color":  "",
-        "size":  "",
-        "qty":  1,
-        "gross":  47930,
-        "payment":  47930,
-        "avg_unit":  47930,
-        "orders":  1,
-        "source_type":  "상품",
-        "daily":  [
-                      {
-                          "date":  "2026-05-30",
-                          "qty":  1,
-                          "gross":  47930,
-                          "payment":  47930,
-                          "orders":  1
-                      }
-                  ],
-        "match_status":  "매칭완료",
-        "match_sku":  "",
-        "standard_name":  "[2PACK] 퀵드라이 고릴라핏 티셔츠",
         "received_qty":  0,
         "stock_qty":  0
     },
