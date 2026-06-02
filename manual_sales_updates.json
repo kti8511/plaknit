@@ -4245,5 +4245,43 @@
         "orders": 16
       }
     ]
+  },
+  {
+    "date": "2026-06-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 335600,
+        "qty": 11,
+        "orders": 15
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 42480
+          }
+        ],
+        "payment": 42480,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "애슬러",
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_라이트카키-XL",
+            "qty": 1,
+            "payment": 60280
+          }
+        ],
+        "payment": 60280,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]
