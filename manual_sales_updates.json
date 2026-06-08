@@ -4655,5 +4655,53 @@
         "orders": 8
       }
     ]
+  },
+  {
+    "date": "2026-06-05",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 30000,
+        "qty": 1,
+        "orders": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-06-06",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 435100,
+        "qty": 15,
+        "orders": 15
+      }
+    ]
+  },
+  {
+    "date": "2026-06-07",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 533000,
+        "qty": 13,
+        "orders": 13
+      }
+    ]
+  },
+  {
+    "date": "2026-06-08",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 743100,
+        "qty": 21,
+        "orders": 22
+      }
+    ]
   }
 ]
