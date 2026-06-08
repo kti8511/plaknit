@@ -101484,5 +101484,33 @@
     "standard_name": "퀵드라이 세미오버핏 백로고 티셔츠_화이트-4XL",
     "received_qty": 0,
     "stock_qty": 0
+  },
+  {
+    "retailer": "글로리어스워커",
+    "mall_no": "",
+    "name": "퀵드라이 퍼포먼스 숏슬리브",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 59000,
+    "avg_unit": 59000,
+    "orders": 1,
+    "source_type": "단품",
+    "daily": [
+      {
+        "date": "2026-06-06",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 59000,
+        "orders": 1
+      }
+    ],
+    "match_status": "매칭완료",
+    "match_sku": "",
+    "standard_name": "퀵드라이 퍼포먼스 숏슬리브_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "stock_name": "퀵드라이 퍼포먼스 숏슬리브_블랙-L"
   }
 ]

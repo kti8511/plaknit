@@ -4677,6 +4677,19 @@
         "payment": 435100,
         "qty": 15,
         "orders": 15
+      },
+      {
+        "retailer": "글로리어스워커",
+        "items": [
+          {
+            "name": "퀵드라이 퍼포먼스 숏슬리브_블랙-L",
+            "qty": 1,
+            "payment": 59000
+          }
+        ],
+        "payment": 59000,
+        "qty": 1,
+        "orders": 1
       }
     ]
   },
