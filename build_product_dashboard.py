@@ -27,13 +27,33 @@ data.json 구조:
   }
 ]
 """
-import json, datetime, pathlib
+import json, datetime, os, pathlib
 
 DATA_FILE = pathlib.Path("data.json")
 HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
 MANUAL_SALES_FILE = pathlib.Path("manual_sales_updates.json")
 OUT_FILE  = pathlib.Path("index.html")
 PUBLIC_OUT_FILE = pathlib.Path("public") / "index.html"
+
+TODO_SUPABASE_PROJECT = (
+    os.environ.get("PLAKNIT_SUPABASE_URL")
+    or os.environ.get("NEXT_PUBLIC_SUPABASE_URL")
+    or os.environ.get("VITE_SUPABASE_URL")
+    or os.environ.get("SUPABASE_URL")
+    or ""
+)
+TODO_SUPABASE_PROJECT = TODO_SUPABASE_PROJECT.rstrip("/")
+TODO_SUPABASE_REST = f"{TODO_SUPABASE_PROJECT}/rest/v1" if TODO_SUPABASE_PROJECT else ""
+TODO_SUPABASE_KEY = (
+    os.environ.get("PLAKNIT_SUPABASE_ANON_KEY")
+    or os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY")
+    or os.environ.get("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY")
+    or os.environ.get("VITE_SUPABASE_ANON_KEY")
+    or os.environ.get("SUPABASE_ANON_KEY")
+    or os.environ.get("SUPABASE_PUBLISHABLE_KEY")
+    or ""
+)
+TODO_SUPABASE_BUCKET = os.environ.get("PLAKNIT_SUPABASE_BUCKET") or os.environ.get("SUPABASE_BUCKET") or "todo-files"
 
 with DATA_FILE.open(encoding="utf-8-sig") as f:
     rows = json.load(f)
@@ -1647,18 +1667,41 @@ initStandardNameResizer();
 
 // TODO LIST -------------------------------------------------------------
 const TODO_KEY = 'plaknitTodoProjects.v1';
-const TODO_SUPABASE_REST = 'https://ucncftctvblshhdykwcl.supabase.co/rest/v1';
-const TODO_SUPABASE_PROJECT = 'https://ucncftctvblshhdykwcl.supabase.co';
-const TODO_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjbmNmdGN0dmJsc2hoZHlrd2NsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTU1NzIsImV4cCI6MjA5Mjk3MTU3Mn0.E4MEqRCk1p3lzXA6l3cPf6CwaKpN8RFQJuENK9mkW38';
-const TODO_SUPABASE_BUCKET = 'todo-files';
-const TODO_HEADERS = {{
-  apikey: TODO_SUPABASE_KEY,
-  Authorization: `Bearer ${{TODO_SUPABASE_KEY}}`,
-  'Content-Type': 'application/json'
-}};
+let TODO_SUPABASE_REST = {json.dumps(TODO_SUPABASE_REST, ensure_ascii=False)};
+let TODO_SUPABASE_PROJECT = {json.dumps(TODO_SUPABASE_PROJECT, ensure_ascii=False)};
+let TODO_SUPABASE_KEY = {json.dumps(TODO_SUPABASE_KEY, ensure_ascii=False)};
+let TODO_SUPABASE_BUCKET = {json.dumps(TODO_SUPABASE_BUCKET, ensure_ascii=False)};
+let TODO_HEADERS = buildTodoHeaders();
 let todoEditId = null;
 let todoItems = [];
 const todoStatusText = {{todo:'할 일', progress:'진행중', done:'완료', delay:'지연'}};
+
+function buildTodoHeaders() {{
+  return {{
+    apikey: TODO_SUPABASE_KEY,
+    Authorization: `Bearer ${{TODO_SUPABASE_KEY}}`,
+    'Content-Type': 'application/json'
+  }};
+}}
+function hasTodoSupabaseConfig() {{
+  return Boolean(TODO_SUPABASE_REST && TODO_SUPABASE_PROJECT && TODO_SUPABASE_KEY);
+}}
+async function ensureTodoSupabaseConfig() {{
+  if (hasTodoSupabaseConfig()) return true;
+  try {{
+    const res = await fetch('/api/supabase-config', {{cache:'no-store'}});
+    if (!res.ok) throw new Error(await res.text());
+    const cfg = await res.json();
+    TODO_SUPABASE_PROJECT = (cfg.url || cfg.projectUrl || '').replace(/\\/$/, '');
+    TODO_SUPABASE_REST = cfg.rest || (TODO_SUPABASE_PROJECT ? `${{TODO_SUPABASE_PROJECT}}/rest/v1` : '');
+    TODO_SUPABASE_KEY = cfg.anonKey || cfg.key || '';
+    TODO_SUPABASE_BUCKET = cfg.bucket || TODO_SUPABASE_BUCKET || 'todo-files';
+    TODO_HEADERS = buildTodoHeaders();
+  }} catch (e) {{
+    console.warn('Supabase config load failed.', e);
+  }}
+  return hasTodoSupabaseConfig();
+}}
 
 function todayISO() {{
   const d = new Date();
@@ -1724,6 +1767,7 @@ function todoToServer(item) {{
   }};
 }}
 async function fetchTodoRemote() {{
+  if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
   const res = await fetch(`${{TODO_SUPABASE_REST}}/todos?select=*&order=created_at.asc`, {{
     headers: TODO_HEADERS
   }});
@@ -1742,6 +1786,7 @@ async function refreshTodoFromSupabase() {{
 }}
 async function uploadTodoFile(file) {{
   if (!file) return {{fileName:'', filePath:''}};
+  if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
   const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
   const path = `${{Date.now()}}-${{safeName}}`;
   const res = await fetch(`${{TODO_SUPABASE_PROJECT}}/storage/v1/object/${{TODO_SUPABASE_BUCKET}}/${{path}}`, {{
@@ -1761,6 +1806,7 @@ async function uploadTodoFile(file) {{
   }};
 }}
 async function saveTodoRemote(item, isEdit) {{
+  if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
   const payload = todoToServer(item);
   const url = isEdit
     ? `${{TODO_SUPABASE_REST}}/todos?id=eq.${{encodeURIComponent(item.id)}}`
@@ -1775,6 +1821,7 @@ async function saveTodoRemote(item, isEdit) {{
   return rows[0] ? todoFromServer(rows[0]) : item;
 }}
 async function deleteTodoRemote(id) {{
+  if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
   const res = await fetch(`${{TODO_SUPABASE_REST}}/todos?id=eq.${{encodeURIComponent(id)}}`, {{
     method: 'DELETE',
     headers: TODO_HEADERS
