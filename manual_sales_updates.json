@@ -5440,6 +5440,24 @@
         "payment": 438140,
         "qty": 10,
         "orders": 6
+      },
+      {
+        "retailer": "4XR",
+        "payment": 84900,
+        "qty": 2,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-2XL",
+            "qty": 1,
+            "payment": 42450
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_차콜-2XL",
+            "qty": 1,
+            "payment": 42450
+          }
+        ]
       }
     ]
   },
@@ -5952,6 +5970,34 @@
         "payment": 1274760,
         "qty": 58,
         "orders": 18
+      },
+      {
+        "retailer": "4XR",
+        "payment": 124300,
+        "qty": 4,
+        "orders": 4,
+        "items": [
+          {
+            "name": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티_라이트카키-2XL",
+            "qty": 1,
+            "payment": 32900
+          },
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_블랙-2XL",
+            "qty": 1,
+            "payment": 29950
+          },
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_블랙-2XL",
+            "qty": 1,
+            "payment": 29950
+          },
+          {
+            "name": "ICE LITE 쿨메쉬 베이직 나시_블랙-2XL",
+            "qty": 1,
+            "payment": 31500
+          }
+        ]
       }
     ]
   },
@@ -6120,6 +6166,121 @@
         "payment": 1294470,
         "qty": 51,
         "orders": 24
+      }
+    ]
+  },
+  {
+    "date": "2026-06-18",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 937860,
+        "qty": 54,
+        "orders": 61
+      },
+      {
+        "retailer": "무신사",
+        "payment": 1043600,
+        "qty": 39,
+        "orders": 15,
+        "items": [
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 3,
+            "payment": 131130
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": 7,
+            "payment": 129090
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 6,
+            "payment": 111620
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 3,
+            "payment": 92630
+          },
+          {
+            "name": "ICE LITE 컴포트 쇼츠",
+            "qty": 5,
+            "payment": 91560
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 2,
+            "payment": 89320
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": 2,
+            "payment": 60210
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티",
+            "qty": 4,
+            "payment": 57440
+          },
+          {
+            "name": "ICE LITE 2 in 1 쇼츠",
+            "qty": 1,
+            "payment": 52200
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "ICE LITE 루즈핏카고쇼츠",
+            "qty": 1,
+            "payment": 46700
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브 라이트블루",
+            "qty": 1,
+            "payment": 45080
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 네이비",
+            "qty": 1,
+            "payment": 42480
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티",
+            "qty": 1,
+            "payment": 40460
+          },
+          {
+            "name": "TECH SWEAT 7\" 카고 반바지",
+            "qty": 1,
+            "payment": 38090
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 31790
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+            "qty": 2,
+            "payment": 27640
+          },
+          {
+            "name": "TECH SWEAT 벌룬 쇼츠",
+            "qty": -2,
+            "payment": -38610
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": -1,
+            "payment": -55130
+          }
+        ]
       }
     ]
   }
