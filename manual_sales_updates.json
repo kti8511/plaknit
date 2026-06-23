@@ -6581,5 +6581,128 @@
         "orders": 2
       }
     ]
+  },
+  {
+    "date": "2026-06-22",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 1322360,
+        "qty": 71,
+        "orders": 75
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 40122
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_블랙-XL",
+            "qty": 1,
+            "payment": 33320
+          }
+        ],
+        "payment": 73442,
+        "qty": 2,
+        "orders": 2
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 4,
+            "payment": 129350
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 2,
+            "payment": 97570
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 2,
+            "payment": 60990
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 47530
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 레드",
+            "qty": 1,
+            "payment": 45620
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+            "qty": 2,
+            "payment": 39130
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 38520
+          },
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠",
+            "qty": 1,
+            "payment": 36590
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠 블랙",
+            "qty": 1,
+            "payment": 34580
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스",
+            "qty": 1,
+            "payment": 6900
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 0,
+            "payment": 2230
+          },
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠 블루",
+            "qty": 0,
+            "payment": 0
+          },
+          {
+            "name": "ICE LITE 2 in 1 쇼츠",
+            "qty": 0,
+            "payment": 0
+          },
+          {
+            "name": "TECH SWEAT 벌룬 쇼츠",
+            "qty": 0,
+            "payment": 0
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 0,
+            "payment": -2610
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": -1,
+            "payment": -33360
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": -2,
+            "payment": -91390
+          }
+        ],
+        "payment": 411650,
+        "qty": 13,
+        "orders": 8
+      }
+    ]
   }
 ]
