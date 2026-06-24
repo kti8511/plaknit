@@ -6704,5 +6704,138 @@
         "orders": 8
       }
     ]
+  },
+  {
+    "date": "2026-06-23",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 2014600,
+        "qty": 111,
+        "orders": 111
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 2,
+            "payment": 93140
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크",
+            "qty": 5,
+            "payment": 91390
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
+            "qty": 2,
+            "payment": 74700
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 2,
+            "payment": 72520
+          },
+          {
+            "name": "채코제에디션퀵드라이 그린퓨처 티셔츠",
+            "qty": 2,
+            "payment": 68980
+          },
+          {
+            "name": "퀵드라이 B.B.B 티셔츠 올리브",
+            "qty": 1,
+            "payment": 58710
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
+            "qty": 1,
+            "payment": 58040
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 48170
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 네이비",
+            "qty": 1,
+            "payment": 45620
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙",
+            "qty": 1,
+            "payment": 45140
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티",
+            "qty": 1,
+            "payment": 42350
+          },
+          {
+            "name": "TECH SWEAT 7\" 카고 반바지",
+            "qty": 1,
+            "payment": 40260
+          },
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티",
+            "qty": 2,
+            "payment": 39190
+          },
+          {
+            "name": "퀵드라이 베이직 릴렉스 롱슬리브",
+            "qty": 2,
+            "payment": 37620
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 35670
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 1,
+            "payment": 32740
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 32310
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 1,
+            "payment": 31600
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 31280
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 1,
+            "payment": 29470
+          }
+        ],
+        "payment": 1008900,
+        "qty": 30,
+        "orders": 20
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 40120
+          }
+        ],
+        "payment": 40120,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]
