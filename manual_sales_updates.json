@@ -7277,5 +7277,96 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-06-29",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 1118660,
+        "qty": 49,
+        "orders": 51
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 5MILE 티셔츠_라이트그레이-L",
+            "qty": 1,
+            "payment": 33950
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 40120
+          }
+        ],
+        "payment": 74070,
+        "qty": 2,
+        "orders": 2
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 51520
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙",
+            "qty": 1,
+            "payment": 51000
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 36390
+          },
+          {
+            "name": "채코제에디션퀵드라이 그린퓨처 티셔츠",
+            "qty": 1,
+            "payment": 35380
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": 1,
+            "payment": 32850
+          },
+          {
+            "name": "KINTERRA 퀵드라이 오버핏 반팔티",
+            "qty": 1,
+            "payment": 31430
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 30830
+          }
+        ],
+        "payment": 269400,
+        "qty": 7,
+        "orders": 7
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠화이트-2XL",
+            "qty": 1,
+            "payment": 34950
+          },
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠블랙-XL",
+            "qty": 1,
+            "payment": 34950
+          }
+        ],
+        "payment": 69900,
+        "qty": 2,
+        "orders": 2
+      }
+    ]
   }
 ]
