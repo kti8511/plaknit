@@ -296,6 +296,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 .todo-board{{display:none;}} .todo-board.active{{display:block;}}
 .gantt-project{{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px;box-shadow:var(--shadow);}}
 .gantt-head{{display:flex;justify-content:space-between;align-items:center;background:#fbfdff;padding:12px 14px;border-bottom:1px solid var(--line);font-weight:800;}}
+.gantt-head-main{{display:flex;align-items:center;gap:10px;min-width:0;}}
+.gantt-head-main>span:first-child{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
+.todo-project-delete{{border:1px solid #fecaca;background:#fff;color:#b91c1c;border-radius:6px;padding:6px 8px;font:inherit;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;}}
+.todo-project-delete:hover{{background:#fef2f2;}} .todo-project-delete:disabled{{cursor:wait;opacity:.6;}}
 .gantt-meta{{font-size:12px;color:var(--ink3);font-weight:600;}}
 .gantt-row{{display:grid;grid-template-columns:210px 1fr;min-height:48px;border-bottom:1px solid #edf2f7;}}
 .gantt-row:last-child{{border-bottom:0;}}
@@ -1828,6 +1832,37 @@ async function deleteTodoRemote(id) {{
   }});
   if (!res.ok) throw new Error(await res.text());
 }}
+async function deleteTodoProjectRemote(project) {{
+  const remoteItems = (await fetchTodoRemote()).filter(item=>item.project === project);
+  if (!remoteItems.length) return 0;
+  const idFilter = `in.(${{remoteItems.map(item=>item.id).join(',')}})`;
+  const res = await fetch(`${{TODO_SUPABASE_REST}}/todos?id=${{encodeURIComponent(idFilter)}}`, {{
+    method: 'DELETE',
+    headers: {{...TODO_HEADERS, Prefer:'return=representation'}}
+  }});
+  if (!res.ok) throw new Error(await res.text());
+  const deleted = await res.json();
+  if (!Array.isArray(deleted) || deleted.length !== remoteItems.length) {{
+    throw new Error(`프로젝트 삭제 결과가 일치하지 않습니다. 요청 ${{remoteItems.length}}건, 삭제 ${{Array.isArray(deleted) ? deleted.length : 0}}건`);
+  }}
+  const remaining = (await fetchTodoRemote()).filter(item=>item.project === project);
+  if (remaining.length) throw new Error(`프로젝트 태스크 ${{remaining.length}}건이 남아 있습니다.`);
+  return deleted.length;
+}}
+async function deleteTodoProject(project, button) {{
+  const projectItems = todoItems.filter(item=>item.project === project);
+  if (!projectItems.length) return;
+  if (!confirm(`'${{project}}' 프로젝트와 태스크 ${{projectItems.length}}개를 모두 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.`)) return;
+  button.disabled = true;
+  try {{
+    await deleteTodoProjectRemote(project);
+  }} catch(e) {{
+    console.warn('Supabase project delete failed. Local project delete applied.', e);
+  }}
+  todoItems = todoItems.filter(item=>item.project !== project);
+  saveTodoItems();
+  renderTodo();
+}}
 function todoStatusClass(status) {{
   if (status === 'done') return 'done';
   if (status === 'delay') return 'delay';
@@ -1863,9 +1898,13 @@ function renderTodoGantt() {{
     if (!byProject[item.project]) byProject[item.project] = [];
     byProject[item.project].push(item);
   }});
-  el.innerHTML = Object.entries(byProject).map(([project,items])=>`
+  const projectEntries = Object.entries(byProject);
+  el.innerHTML = projectEntries.map(([project,items],projectIndex)=>`
     <section class="gantt-project">
-      <div class="gantt-head"><span>▾ ${{project}}</span><span class="gantt-meta">${{items.length}}개</span></div>
+      <div class="gantt-head">
+        <div class="gantt-head-main"><span>▾ ${{project}}</span><span class="gantt-meta">${{items.length}}개</span></div>
+        <button class="todo-project-delete" type="button" data-delete-project="${{projectIndex}}" title="프로젝트와 모든 태스크 삭제">프로젝트 삭제</button>
+      </div>
       ${{items.map(item=>{{
         const left = Math.max(0, Math.min(100, daysBetween(range.start, item.start || range.start) / span * 100));
         const width = Math.max(4, Math.min(100-left, (Math.max(1, daysBetween(item.start || range.start, item.end || item.start || range.end)+1) / span * 100)));
@@ -1880,6 +1919,11 @@ function renderTodoGantt() {{
     </section>
   `).join('') || '<div class="panel">등록된 일정이 없습니다.</div>';
   el.querySelectorAll('[data-open-todo]').forEach(node=>node.addEventListener('click',()=>openTodoForm(node.dataset.openTodo)));
+  el.querySelectorAll('[data-delete-project]').forEach(button=>button.addEventListener('click',async event=>{{
+    event.stopPropagation();
+    const entry = projectEntries[Number(button.dataset.deleteProject)];
+    if (entry) await deleteTodoProject(entry[0], button);
+  }}));
 }}
 function renderTodoCalendar() {{
   const grid = document.getElementById('todoCalendarGrid');
