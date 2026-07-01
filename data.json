@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "retailer":  "무신사",
         "mall_no":  "",
@@ -5567,11 +5567,11 @@
         "name":  "ICE LITE 와이드 카고팬츠",
         "color":  "",
         "size":  "",
-        "qty":  68,
-        "gross":  3256370,
-        "payment":  3880799,
-        "avg_unit":  57071,
-        "orders":  37,
+        "qty":  69,
+        "gross":  3313230,
+        "payment":  3937659,
+        "avg_unit":  57068,
+        "orders":  38,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -6504,6 +6504,13 @@
                           "gross":  -51840,
                           "payment":  -51840,
                           "orders":  -1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  56860,
+                          "payment":  56860,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -9668,11 +9675,11 @@
         "name":  "퀵드라이 세미오버핏 티셔츠",
         "color":  "",
         "size":  "",
-        "qty":  54,
-        "gross":  1488890,
-        "payment":  2055826,
-        "avg_unit":  38071,
-        "orders":  30,
+        "qty":  57,
+        "gross":  1580520,
+        "payment":  2147456,
+        "avg_unit":  37675,
+        "orders":  31,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -10513,6 +10520,13 @@
                           "qty":  1,
                           "gross":  30830,
                           "payment":  30830,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  3,
+                          "gross":  91630,
+                          "payment":  91630,
                           "orders":  1
                       }
                   ],
@@ -17014,11 +17028,11 @@
         "name":  "타이다잉 러닝삭스",
         "color":  "블랙",
         "size":  "",
-        "qty":  20,
-        "gross":  298000,
-        "payment":  333869,
-        "avg_unit":  16693,
-        "orders":  13,
+        "qty":  21,
+        "gross":  312900,
+        "payment":  340347,
+        "avg_unit":  16207,
+        "orders":  14,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -17118,6 +17132,13 @@
                           "gross":  14900,
                           "payment":  5638,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  14900,
+                          "payment":  6478,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -17137,11 +17158,11 @@
         "name":  "ICE LITE 초냉감 오버핏 티셔츠",
         "color":  "라이트그레이",
         "size":  "XL",
-        "qty":  81,
-        "gross":  1997450,
-        "payment":  2178552,
-        "avg_unit":  26896,
-        "orders":  34,
+        "qty":  82,
+        "gross":  2030120,
+        "payment":  2211222,
+        "avg_unit":  26966,
+        "orders":  35,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -17989,6 +18010,13 @@
                           "qty":  1,
                           "gross":  32850,
                           "payment":  32850,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  32670,
+                          "payment":  32670,
                           "orders":  1
                       }
                   ],
@@ -19625,11 +19653,11 @@
         "name":  "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
         "color":  "블랙",
         "size":  "M",
-        "qty":  20,
-        "gross":  178410,
-        "payment":  510959,
-        "avg_unit":  25548,
-        "orders":  4,
+        "qty":  21,
+        "gross":  226820,
+        "payment":  559369,
+        "avg_unit":  26637,
+        "orders":  5,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -20257,6 +20285,13 @@
                       },
                       {
                           "date":  "2026-06-26",
+                          "qty":  1,
+                          "gross":  48410,
+                          "payment":  48410,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
                           "qty":  1,
                           "gross":  48410,
                           "payment":  48410,
@@ -21534,11 +21569,11 @@
         "name":  "퀵드라이 셔링 티셔츠",
         "color":  "세이지",
         "size":  "S",
-        "qty":  24,
-        "gross":  1416000,
-        "payment":  984773,
-        "avg_unit":  41032,
-        "orders":  25,
+        "qty":  25,
+        "gross":  1475000,
+        "payment":  1010425,
+        "avg_unit":  40417,
+        "orders":  26,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -21700,6 +21735,13 @@
                           "qty":  1,
                           "gross":  59000,
                           "payment":  24196,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  59000,
+                          "payment":  25652,
                           "orders":  1
                       }
                   ],
@@ -35918,11 +35960,11 @@
         "name":  "TECH SWEAT 벌룬 쇼츠",
         "color":  "블랙",
         "size":  "L",
-        "qty":  32,
-        "gross":  1574400,
-        "payment":  682446,
-        "avg_unit":  21326,
-        "orders":  28,
+        "qty":  36,
+        "gross":  1771200,
+        "payment":  768011,
+        "avg_unit":  21334,
+        "orders":  32,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -36036,6 +36078,13 @@
                           "gross":  49200,
                           "payment":  21679,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  4,
+                          "gross":  196800,
+                          "payment":  85565,
+                          "orders":  4
                       }
                   ],
         "match_status":  "매칭완료",
@@ -43214,11 +43263,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "",
         "size":  "",
-        "qty":  45,
-        "gross":  974090,
-        "payment":  1092734,
-        "avg_unit":  24283,
-        "orders":  18,
+        "qty":  44,
+        "gross":  956490,
+        "payment":  1075134,
+        "avg_unit":  24435,
+        "orders":  17,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -43983,6 +44032,13 @@
                           "gross":  32580,
                           "payment":  32580,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  -1,
+                          "gross":  -17600,
+                          "payment":  -17600,
+                          "orders":  -1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -49374,11 +49430,11 @@
         "name":  "스포츠 쿠션업 49 크루삭스",
         "color":  "화이트",
         "size":  "",
-        "qty":  9,
-        "gross":  476400,
-        "payment":  113327,
-        "avg_unit":  12592,
-        "orders":  6,
+        "qty":  10,
+        "gross":  485200,
+        "payment":  117153,
+        "avg_unit":  11715,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -49415,6 +49471,13 @@
                           "gross":  17600,
                           "payment":  6893,
                           "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  8800,
+                          "payment":  3826,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -51477,11 +51540,11 @@
         "name":  "퀵드라이 세미오버핏 티셔츠",
         "color":  "블랙",
         "size":  "2XL",
-        "qty":  12,
-        "gross":  477800,
-        "payment":  324253,
-        "avg_unit":  27021,
-        "orders":  11,
+        "qty":  13,
+        "gross":  515800,
+        "payment":  340775,
+        "avg_unit":  26213,
+        "orders":  12,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -51532,6 +51595,13 @@
                           "gross":  76000,
                           "payment":  29764,
                           "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  38000,
+                          "payment":  16522,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -51551,11 +51621,11 @@
         "name":  "퀵드라이 피그먼트 세미오버핏 반팔티",
         "color":  "차콜",
         "size":  "L",
-        "qty":  8,
-        "gross":  361100,
-        "payment":  241820,
-        "avg_unit":  30228,
-        "orders":  8,
+        "qty":  9,
+        "gross":  407000,
+        "payment":  261777,
+        "avg_unit":  29086,
+        "orders":  9,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -51612,6 +51682,13 @@
                           "qty":  1,
                           "gross":  45900,
                           "payment":  16652,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  45900,
+                          "payment":  19957,
                           "orders":  1
                       }
                   ],
@@ -59235,11 +59312,11 @@
         "name":  "퀵드라이 세미오버핏 백로고 티셔츠",
         "color":  "블랙",
         "size":  "L",
-        "qty":  6,
-        "gross":  235200,
-        "payment":  139836,
-        "avg_unit":  23306,
-        "orders":  5,
+        "qty":  7,
+        "gross":  275000,
+        "payment":  157140,
+        "avg_unit":  22449,
+        "orders":  6,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -59268,6 +59345,13 @@
                           "qty":  1,
                           "gross":  39800,
                           "payment":  14952,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
                           "orders":  1
                       }
                   ],
@@ -60698,11 +60782,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "블랙",
         "size":  "2XL",
-        "qty":  17,
-        "gross":  697000,
-        "payment":  306756,
-        "avg_unit":  18044,
-        "orders":  17,
+        "qty":  22,
+        "gross":  902000,
+        "payment":  395887,
+        "avg_unit":  17995,
+        "orders":  22,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -60795,6 +60879,13 @@
                           "gross":  82000,
                           "payment":  36131,
                           "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  5,
+                          "gross":  205000,
+                          "payment":  89131,
+                          "orders":  5
                       }
                   ],
         "match_status":  "매칭완료",
@@ -72216,11 +72307,11 @@
         "name":  "ICE LITE 초냉감 오버핏 티셔츠",
         "color":  "라이트그레이",
         "size":  "XL",
-        "qty":  71,
-        "gross":  3219000,
-        "payment":  1277665,
-        "avg_unit":  17995,
-        "orders":  71,
+        "qty":  78,
+        "gross":  3534000,
+        "payment":  1414622,
+        "avg_unit":  18136,
+        "orders":  78,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -72334,6 +72425,13 @@
                           "gross":  180000,
                           "payment":  62778,
                           "orders":  4
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  7,
+                          "gross":  315000,
+                          "payment":  136957,
+                          "orders":  7
                       }
                   ],
         "match_status":  "매칭완료",
@@ -73232,11 +73330,11 @@
         "name":  "퀵드라이 세미오버핏 티셔츠",
         "color":  "화이트",
         "size":  "XL",
-        "qty":  7,
-        "gross":  266000,
-        "payment":  177731,
-        "avg_unit":  25390,
-        "orders":  6,
+        "qty":  8,
+        "gross":  304000,
+        "payment":  194253,
+        "avg_unit":  24282,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -73272,6 +73370,13 @@
                           "qty":  1,
                           "gross":  38000,
                           "payment":  20448,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  38000,
+                          "payment":  16522,
                           "orders":  1
                       }
                   ],
@@ -73750,11 +73855,11 @@
         "name":  "퀵드라이 퍼포먼스 숏슬리브 블랙",
         "color":  "",
         "size":  "",
-        "qty":  1,
-        "gross":  56980,
-        "payment":  92397,
-        "avg_unit":  92397,
-        "orders":  2,
+        "qty":  2,
+        "gross":  111350,
+        "payment":  146767,
+        "avg_unit":  73384,
+        "orders":  3,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -74389,6 +74494,13 @@
                       },
                       {
                           "date":  "2026-06-27",
+                          "qty":  1,
+                          "gross":  54370,
+                          "payment":  54370,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
                           "qty":  1,
                           "gross":  54370,
                           "payment":  54370,
@@ -75645,11 +75757,11 @@
         "name":  "퀵드라이 마운틴 세미오버핏 반팔티",
         "color":  "라이트그레이",
         "size":  "M",
-        "qty":  1,
-        "gross":  39800,
-        "payment":  28472,
-        "avg_unit":  28472,
-        "orders":  1,
+        "qty":  2,
+        "gross":  79600,
+        "payment":  45776,
+        "avg_unit":  22888,
+        "orders":  2,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -75658,11 +75770,18 @@
                           "gross":  39800,
                           "payment":  28472,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
+                          "orders":  1
                       }
                   ],
-        "match_status":  "매칭됨",
+        "match_status":  "매칭완료",
         "match_sku":  "PD2TSM06BLU000L",
-        "standard_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트블루-L",
+        "standard_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트그레이-M",
         "received_qty":  0,
         "stock_qty":  48,
         "stock_barcode":  "PD2TSM06LGR000M",
@@ -80316,11 +80435,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "라이트그레이",
         "size":  "2XL",
-        "qty":  13,
-        "gross":  533000,
-        "payment":  228109,
-        "avg_unit":  17547,
-        "orders":  13,
+        "qty":  14,
+        "gross":  574000,
+        "payment":  245935,
+        "avg_unit":  17567,
+        "orders":  14,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -80391,6 +80510,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  18066,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -80514,11 +80640,11 @@
         "name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
         "color":  "라이트카키",
         "size":  "2XL",
-        "qty":  11,
-        "gross":  462000,
-        "payment":  177957,
-        "avg_unit":  16178,
-        "orders":  11,
+        "qty":  12,
+        "gross":  504000,
+        "payment":  196218,
+        "avg_unit":  16352,
+        "orders":  12,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -80575,6 +80701,13 @@
                           "qty":  1,
                           "gross":  42000,
                           "payment":  18506,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  42000,
+                          "payment":  18261,
                           "orders":  1
                       }
                   ],
@@ -80981,11 +81114,11 @@
         "name":  "퀵드라이 메쉬 러닝쇼츠 워시드카키",
         "color":  "",
         "size":  "XL",
-        "qty":  1,
-        "gross":  89000,
-        "payment":  34488,
-        "avg_unit":  34488,
-        "orders":  1,
+        "qty":  2,
+        "gross":  178000,
+        "payment":  73184,
+        "avg_unit":  36592,
+        "orders":  2,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -80994,11 +81127,18 @@
                           "gross":  89000,
                           "payment":  34488,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  89000,
+                          "payment":  38696,
+                          "orders":  1
                       }
                   ],
-        "match_status":  "매칭됨",
+        "match_status":  "매칭완료",
         "match_sku":  "PE1PSM01WKH000L",
-        "standard_name":  "퀵드라이 메쉬 러닝쇼츠 워시드카키 L",
+        "standard_name":  "퀵드라이 메쉬 러닝쇼츠 워시드카키-XL",
         "received_qty":  74,
         "stock_qty":  115,
         "stock_barcode":  "PE1PSM01WBK00XL",
@@ -85599,11 +85739,11 @@
         "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  51,
-        "gross":  425220,
-        "payment":  423601,
-        "avg_unit":  8306,
-        "orders":  10,
+        "qty":  52,
+        "gross":  455540,
+        "payment":  453921,
+        "avg_unit":  8729,
+        "orders":  11,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -86298,6 +86438,13 @@
                           "gross":  -19900,
                           "payment":  -19900,
                           "orders":  -1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  30320,
+                          "payment":  30320,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -87560,11 +87707,11 @@
         "name":  "ICE LITE 초냉감 세미오버핏 티셔츠",
         "color":  "블랙",
         "size":  "L",
-        "qty":  10,
-        "gross":  450000,
-        "payment":  254316,
-        "avg_unit":  25432,
-        "orders":  11,
+        "qty":  11,
+        "gross":  495000,
+        "payment":  273881,
+        "avg_unit":  24898,
+        "orders":  12,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -87642,6 +87789,13 @@
                           "qty":  1,
                           "gross":  45000,
                           "payment":  18459,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  45000,
+                          "payment":  19565,
                           "orders":  1
                       }
                   ],
@@ -87739,12 +87893,12 @@
         "mall_no":  "446",
         "name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
         "color":  "라이트카키",
-        "size":  "XXXL",
-        "qty":  1,
-        "gross":  42000,
-        "payment":  19800,
-        "avg_unit":  19800,
-        "orders":  1,
+        "size":  "3XL",
+        "qty":  2,
+        "gross":  84000,
+        "payment":  38061,
+        "avg_unit":  19030,
+        "orders":  2,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -87753,11 +87907,18 @@
                           "gross":  42000,
                           "payment":  19800,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  42000,
+                          "payment":  18261,
+                          "orders":  1
                       }
                   ],
-        "match_status":  "매칭됨",
+        "match_status":  "매칭완료",
         "match_sku":  "PB1SSM01BLKXXXL",
-        "standard_name":  "KINTERRA 퀵 드라이 스포츠 나시_BLACK_XXXL",
+        "standard_name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_라이트카키-3XL",
         "received_qty":  0,
         "stock_qty":  6,
         "stock_barcode":  "PB1SSM01BLKXXXL",
@@ -88139,11 +88300,11 @@
         "name":  "ICE LITE 초냉감 오버핏 티셔츠",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  139,
-        "gross":  6303000,
-        "payment":  2552184,
-        "avg_unit":  18361,
-        "orders":  140,
+        "qty":  153,
+        "gross":  6933000,
+        "payment":  2826098,
+        "avg_unit":  18471,
+        "orders":  154,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -88306,6 +88467,13 @@
                           "gross":  405000,
                           "payment":  178453,
                           "orders":  9
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  14,
+                          "gross":  630000,
+                          "payment":  273914,
+                          "orders":  14
                       }
                   ],
         "match_status":  "매칭완료",
@@ -92416,11 +92584,11 @@
         "name":  "퀵드라이 마운틴 세미오버핏 반팔티",
         "color":  "다크그레이",
         "size":  "XL",
-        "qty":  9,
-        "gross":  358200,
-        "payment":  163671,
-        "avg_unit":  18186,
-        "orders":  9,
+        "qty":  10,
+        "gross":  398000,
+        "payment":  180975,
+        "avg_unit":  18098,
+        "orders":  10,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -92470,6 +92638,13 @@
                           "qty":  1,
                           "gross":  39800,
                           "payment":  13881,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
                           "orders":  1
                       }
                   ],
@@ -93000,11 +93175,11 @@
         "name":  "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
         "color":  "블랙, 화이트",
         "size":  "XL",
-        "qty":  91,
-        "gross":  5438460,
-        "payment":  4282750,
-        "avg_unit":  47063,
-        "orders":  69,
+        "qty":  92,
+        "gross":  5483370,
+        "payment":  4327660,
+        "avg_unit":  47040,
+        "orders":  70,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -93362,6 +93537,13 @@
                           "qty":  1,
                           "gross":  47440,
                           "payment":  47440,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  44910,
+                          "payment":  44910,
                           "orders":  1
                       }
                   ],
@@ -94003,11 +94185,11 @@
         "name":  "퀵드라이 셔링 티셔츠 세이지",
         "color":  "",
         "size":  "M",
-        "qty":  22,
-        "gross":  1075600,
-        "payment":  943847,
-        "avg_unit":  42902,
-        "orders":  22,
+        "qty":  23,
+        "gross":  1122800,
+        "payment":  983967,
+        "avg_unit":  42781,
+        "orders":  23,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -94163,6 +94345,13 @@
                           "gross":  47200,
                           "payment":  40124,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  47200,
+                          "payment":  40120,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -94204,12 +94393,12 @@
         "mall_no":  "1918667",
         "name":  "TECH SWEAT 벌룬 쇼츠",
         "color":  "블랙",
-        "size":  "XL",
-        "qty":  3,
-        "gross":  29700,
-        "payment":  25246,
-        "avg_unit":  8415,
-        "orders":  2,
+        "size":  "L",
+        "qty":  4,
+        "gross":  64700,
+        "payment":  54996,
+        "avg_unit":  13749,
+        "orders":  3,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -94225,11 +94414,18 @@
                           "gross":  19800,
                           "payment":  16830,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  35000,
+                          "payment":  29750,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
         "match_sku":  "PB2PSM01BLK00XL",
-        "standard_name":  "TECH SWEAT 벌룬 쇼츠_블랙-XL",
+        "standard_name":  "TECH SWEAT 벌룬 쇼츠_블랙-L",
         "received_qty":  0,
         "stock_qty":  1,
         "stock_barcode":  "PB2PSM01BLK00XL",
@@ -95757,11 +95953,11 @@
         "name":  "ICE LITE 데일리 쇼츠",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  6,
-        "gross":  328800,
-        "payment":  181338,
-        "avg_unit":  30223,
-        "orders":  6,
+        "qty":  10,
+        "gross":  548000,
+        "payment":  276643,
+        "avg_unit":  27664,
+        "orders":  10,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -95805,6 +96001,13 @@
                           "gross":  54800,
                           "payment":  19881,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  4,
+                          "gross":  219200,
+                          "payment":  95305,
+                          "orders":  4
                       }
                   ],
         "match_status":  "매칭완료",
@@ -96921,11 +97124,11 @@
         "name":  "퀵드라이 마운틴 세미오버핏 반팔티",
         "color":  "다크그레이",
         "size":  "2XL",
-        "qty":  5,
-        "gross":  199000,
-        "payment":  111838,
-        "avg_unit":  22368,
-        "orders":  5,
+        "qty":  7,
+        "gross":  278600,
+        "payment":  146447,
+        "avg_unit":  20921,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -96962,6 +97165,13 @@
                           "gross":  39800,
                           "payment":  16326,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  79600,
+                          "payment":  34609,
+                          "orders":  2
                       }
                   ],
         "received_qty":  0,
@@ -97427,11 +97637,11 @@
         "name":  "ICE LITE 초냉감 세미오버핏 티셔츠",
         "color":  "블랙",
         "size":  "S",
-        "qty":  2,
-        "gross":  90000,
-        "payment":  62900,
-        "avg_unit":  31450,
-        "orders":  2,
+        "qty":  3,
+        "gross":  135000,
+        "payment":  82465,
+        "avg_unit":  27488,
+        "orders":  3,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -97446,6 +97656,13 @@
                           "qty":  1,
                           "gross":  45000,
                           "payment":  28400,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  45000,
+                          "payment":  19565,
                           "orders":  1
                       }
                   ],
@@ -97463,11 +97680,11 @@
         "name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
         "color":  "차콜",
         "size":  "3XL",
-        "qty":  1,
-        "gross":  42000,
-        "payment":  19800,
-        "avg_unit":  19800,
-        "orders":  1,
+        "qty":  2,
+        "gross":  84000,
+        "payment":  38061,
+        "avg_unit":  19030,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -97475,6 +97692,13 @@
                           "qty":  1,
                           "gross":  42000,
                           "payment":  19800,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  42000,
+                          "payment":  18261,
                           "orders":  1
                       }
                   ],
@@ -98996,11 +99220,11 @@
         "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
         "color":  "블랙",
         "size":  "M",
-        "qty":  3,
-        "gross":  123000,
-        "payment":  70170,
-        "avg_unit":  23390,
-        "orders":  3,
+        "qty":  4,
+        "gross":  164000,
+        "payment":  87996,
+        "avg_unit":  21999,
+        "orders":  4,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -99022,6 +99246,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  15644,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -101155,11 +101386,11 @@
         "name":  "퀵드라이 세미오버핏 티셔츠",
         "color":  "블랙",
         "size":  "L",
-        "qty":  4,
-        "gross":  152000,
-        "payment":  108824,
-        "avg_unit":  27206,
-        "orders":  4,
+        "qty":  6,
+        "gross":  228000,
+        "payment":  141868,
+        "avg_unit":  23645,
+        "orders":  6,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -101181,6 +101412,13 @@
                           "qty":  2,
                           "gross":  76000,
                           "payment":  56035,
+                          "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  76000,
+                          "payment":  33044,
                           "orders":  2
                       }
                   ],
@@ -102160,11 +102398,11 @@
         "name":  "ICE LITE 우먼즈 데일리쇼츠",
         "color":  "블랙",
         "size":  "S",
-        "qty":  2,
-        "gross":  81000,
-        "payment":  69213,
-        "avg_unit":  34606,
-        "orders":  2,
+        "qty":  3,
+        "gross":  117000,
+        "payment":  99813,
+        "avg_unit":  33271,
+        "orders":  3,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -102179,6 +102417,13 @@
                           "qty":  1,
                           "gross":  36000,
                           "payment":  30963,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  36000,
+                          "payment":  30600,
                           "orders":  1
                       }
                   ],
@@ -104325,11 +104570,11 @@
         "name":  "ICE LITE 컴포트 쇼츠",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  3,
-        "gross":  164400,
-        "payment":  102543,
-        "avg_unit":  34181,
-        "orders":  3,
+        "qty":  4,
+        "gross":  219200,
+        "payment":  126369,
+        "avg_unit":  31592,
+        "orders":  4,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -104351,6 +104596,13 @@
                           "qty":  1,
                           "gross":  54800,
                           "payment":  33292,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  54800,
+                          "payment":  23826,
                           "orders":  1
                       }
                   ],
@@ -104498,11 +104750,11 @@
         "name":  "멀티 스포츠 타월",
         "color":  "레드",
         "size":  "",
-        "qty":  2,
-        "gross":  29800,
-        "payment":  16300,
-        "avg_unit":  8150,
-        "orders":  2,
+        "qty":  4,
+        "gross":  59600,
+        "payment":  29257,
+        "avg_unit":  7314,
+        "orders":  4,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -104518,6 +104770,13 @@
                           "gross":  14900,
                           "payment":  5835,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  29800,
+                          "payment":  12957,
+                          "orders":  2
                       }
                   ],
         "match_status":  "매칭완료",
@@ -104534,11 +104793,11 @@
         "name":  "KINTERRA 퀵드라이 스포츠 탱크",
         "color":  "차콜",
         "size":  "2XL",
-        "qty":  1,
-        "gross":  41000,
-        "payment":  28796,
-        "avg_unit":  28796,
-        "orders":  1,
+        "qty":  2,
+        "gross":  82000,
+        "payment":  46622,
+        "avg_unit":  23311,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -104546,6 +104805,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  28796,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -104563,11 +104829,11 @@
         "name":  "KINTERRA 숄더-업 탱크",
         "color":  "라이트그레이",
         "size":  "2XL",
-        "qty":  10,
-        "gross":  430000,
-        "payment":  175514,
-        "avg_unit":  17551,
-        "orders":  10,
+        "qty":  11,
+        "gross":  473000,
+        "payment":  194210,
+        "avg_unit":  17655,
+        "orders":  11,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -104631,6 +104897,13 @@
                           "qty":  1,
                           "gross":  43000,
                           "payment":  15600,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  43000,
+                          "payment":  18696,
                           "orders":  1
                       }
                   ],
@@ -105816,11 +106089,11 @@
         "name":  "ICE LITE 세미오버핏 맨투맨",
         "color":  "블랙",
         "size":  "M",
-        "qty":  7,
-        "gross":  418600,
-        "payment":  178302,
-        "avg_unit":  25472,
-        "orders":  7,
+        "qty":  8,
+        "gross":  478400,
+        "payment":  204302,
+        "avg_unit":  25538,
+        "orders":  8,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -105863,6 +106136,13 @@
                           "qty":  1,
                           "gross":  59800,
                           "payment":  21695,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  59800,
+                          "payment":  26000,
                           "orders":  1
                       }
                   ],
@@ -106039,11 +106319,11 @@
         "name":  "ICE LITE 초냉감 세미오버핏 티셔츠",
         "color":  "블랙",
         "size":  "3XL",
-        "qty":  4,
-        "gross":  180000,
-        "payment":  96831,
-        "avg_unit":  24208,
-        "orders":  4,
+        "qty":  5,
+        "gross":  225000,
+        "payment":  116396,
+        "avg_unit":  23279,
+        "orders":  5,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -106072,6 +106352,13 @@
                           "qty":  1,
                           "gross":  45000,
                           "payment":  19828,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  45000,
+                          "payment":  19565,
                           "orders":  1
                       }
                   ],
@@ -106282,11 +106569,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  22,
-        "gross":  902000,
-        "payment":  357466,
-        "avg_unit":  16248,
-        "orders":  24,
+        "qty":  23,
+        "gross":  943000,
+        "payment":  375292,
+        "avg_unit":  16317,
+        "orders":  25,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -106372,6 +106659,13 @@
                           "gross":  82000,
                           "payment":  36131,
                           "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -107059,11 +107353,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "라이트그레이",
         "size":  "3XL",
-        "qty":  7,
-        "gross":  287000,
-        "payment":  137475,
-        "avg_unit":  19639,
-        "orders":  7,
+        "qty":  8,
+        "gross":  328000,
+        "payment":  155301,
+        "avg_unit":  19413,
+        "orders":  8,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -107099,6 +107393,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  15586,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -108611,11 +108912,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "블랙",
         "size":  "L",
-        "qty":  32,
-        "gross":  1312000,
-        "payment":  501655,
-        "avg_unit":  15677,
-        "orders":  32,
+        "qty":  34,
+        "gross":  1394000,
+        "payment":  537307,
+        "avg_unit":  15803,
+        "orders":  34,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -108701,6 +109002,13 @@
                           "gross":  164000,
                           "payment":  57197,
                           "orders":  4
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  82000,
+                          "payment":  35652,
+                          "orders":  2
                       }
                   ],
         "match_status":  "매칭완료",
@@ -109069,11 +109377,11 @@
         "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  5,
-        "gross":  205000,
-        "payment":  78096,
-        "avg_unit":  15619,
-        "orders":  5,
+        "qty":  6,
+        "gross":  246000,
+        "payment":  95922,
+        "avg_unit":  15987,
+        "orders":  6,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -109102,6 +109410,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  18066,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -109357,11 +109672,11 @@
         "name":  "KINTERRA 숄더-업 탱크",
         "color":  "화이트",
         "size":  "2XL",
-        "qty":  13,
-        "gross":  559000,
-        "payment":  206679,
-        "avg_unit":  15898,
-        "orders":  14,
+        "qty":  14,
+        "gross":  602000,
+        "payment":  225375,
+        "avg_unit":  16098,
+        "orders":  15,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -109433,6 +109748,13 @@
                           "gross":  -43000,
                           "payment":  -18946,
                           "orders":  0
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  43000,
+                          "payment":  18696,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -109521,11 +109843,11 @@
         "name":  "퀵드라이 베이직 나시",
         "color":  "블랙",
         "size":  "2XL",
-        "qty":  3,
-        "gross":  117000,
-        "payment":  42904,
-        "avg_unit":  14301,
-        "orders":  3,
+        "qty":  5,
+        "gross":  195000,
+        "payment":  76817,
+        "avg_unit":  15363,
+        "orders":  5,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -109541,6 +109863,13 @@
                           "gross":  39000,
                           "payment":  13602,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  78000,
+                          "payment":  33913,
+                          "orders":  2
                       }
                   ],
         "match_status":  "매칭완료",
@@ -109557,11 +109886,11 @@
         "name":  "ICE LITE 초냉감 탱크",
         "color":  "라이트그레이",
         "size":  "XL",
-        "qty":  18,
-        "gross":  738000,
-        "payment":  277026,
-        "avg_unit":  15390,
-        "orders":  18,
+        "qty":  19,
+        "gross":  779000,
+        "payment":  294852,
+        "avg_unit":  15519,
+        "orders":  19,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -109632,6 +109961,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  18066,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -109865,11 +110201,11 @@
         "name":  "퀵드라이 베이직 나시",
         "color":  "옐로우그린",
         "size":  "2XL",
-        "qty":  1,
-        "gross":  39000,
-        "payment":  14651,
-        "avg_unit":  14651,
-        "orders":  1,
+        "qty":  2,
+        "gross":  78000,
+        "payment":  31608,
+        "avg_unit":  15804,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -109877,6 +110213,13 @@
                           "qty":  1,
                           "gross":  39000,
                           "payment":  14651,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16957,
                           "orders":  1
                       }
                   ],
@@ -109980,11 +110323,11 @@
         "name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시",
         "color":  "LIGHT GREY",
         "size":  "2XL",
-        "qty":  3,
-        "gross":  117000,
-        "payment":  46661,
-        "avg_unit":  15554,
-        "orders":  3,
+        "qty":  4,
+        "gross":  156000,
+        "payment":  63618,
+        "avg_unit":  15904,
+        "orders":  4,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -110006,6 +110349,13 @@
                           "qty":  1,
                           "gross":  39000,
                           "payment":  17184,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16957,
                           "orders":  1
                       }
                   ],
@@ -110109,11 +110459,11 @@
         "name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시",
         "color":  "BLACK",
         "size":  "2XL",
-        "qty":  2,
-        "gross":  78000,
-        "payment":  29474,
-        "avg_unit":  14737,
-        "orders":  2,
+        "qty":  3,
+        "gross":  117000,
+        "payment":  46431,
+        "avg_unit":  15477,
+        "orders":  3,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -110128,6 +110478,13 @@
                           "qty":  1,
                           "gross":  39000,
                           "payment":  14826,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16957,
                           "orders":  1
                       }
                   ],
@@ -111017,11 +111374,11 @@
         "name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시",
         "color":  "BLACK",
         "size":  "XL",
-        "qty":  5,
-        "gross":  195000,
-        "payment":  73614,
-        "avg_unit":  14723,
-        "orders":  5,
+        "qty":  6,
+        "gross":  234000,
+        "payment":  90570,
+        "avg_unit":  15095,
+        "orders":  6,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -111050,6 +111407,13 @@
                           "qty":  1,
                           "gross":  39000,
                           "payment":  14824,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16956,
                           "orders":  1
                       }
                   ],
@@ -111276,11 +111640,11 @@
         "name":  "퀵드라이 베이직 나시",
         "color":  "다크그린",
         "size":  "2XL",
-        "qty":  1,
-        "gross":  39000,
-        "payment":  13955,
-        "avg_unit":  13955,
-        "orders":  1,
+        "qty":  3,
+        "gross":  117000,
+        "payment":  47868,
+        "avg_unit":  15956,
+        "orders":  3,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -111289,6 +111653,13 @@
                           "gross":  39000,
                           "payment":  13955,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  78000,
+                          "payment":  33913,
+                          "orders":  2
                       }
                   ],
         "match_status":  "매칭완료",
@@ -111666,11 +112037,11 @@
         "name":  "퀵드라이 베이직 나시",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  6,
-        "gross":  234000,
-        "payment":  88127,
-        "avg_unit":  14688,
-        "orders":  6,
+        "qty":  8,
+        "gross":  312000,
+        "payment":  122040,
+        "avg_unit":  15255,
+        "orders":  8,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -111699,6 +112070,13 @@
                           "qty":  2,
                           "gross":  78000,
                           "payment":  27204,
+                          "orders":  2
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  78000,
+                          "payment":  33913,
                           "orders":  2
                       }
                   ],
@@ -112222,11 +112600,11 @@
         "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
         "color":  "라이트그레이",
         "size":  "XL",
-        "qty":  1,
-        "gross":  41000,
-        "payment":  16167,
-        "avg_unit":  16167,
-        "orders":  1,
+        "qty":  2,
+        "gross":  82000,
+        "payment":  33993,
+        "avg_unit":  16996,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -112234,6 +112612,13 @@
                           "qty":  1,
                           "gross":  41000,
                           "payment":  16167,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
                           "orders":  1
                       }
                   ],
@@ -113250,11 +113635,11 @@
         "name":  "퀵드라이 마운틴 세미오버핏 반팔티",
         "color":  "라이트그레이",
         "size":  "2XL",
-        "qty":  1,
-        "gross":  39800,
-        "payment":  13982,
-        "avg_unit":  13982,
-        "orders":  1,
+        "qty":  2,
+        "gross":  79600,
+        "payment":  31286,
+        "avg_unit":  15643,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -113262,6 +113647,13 @@
                           "qty":  1,
                           "gross":  39800,
                           "payment":  13982,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
                           "orders":  1
                       }
                   ],
@@ -113801,5 +114193,410 @@
         "stock_qty":  0,
         "stock_name":  "_채코제에디션 초냉감 트래블러티셔츠_블랙-XL",
         "stock_barcode":  ""
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 베이직 나시",
+        "color":  "옐로우그린",
+        "size":  "XL",
+        "qty":  2,
+        "gross":  78000,
+        "payment":  33913,
+        "avg_unit":  16956,
+        "orders":  2,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  2,
+                          "gross":  78000,
+                          "payment":  33913,
+                          "orders":  2
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 베이직 나시_옐로우그린-XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 메쉬 러닝쇼츠 워시드블랙",
+        "color":  "",
+        "size":  "XL",
+        "qty":  1,
+        "gross":  89000,
+        "payment":  38696,
+        "avg_unit":  38696,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  89000,
+                          "payment":  38696,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 메쉬 러닝쇼츠 워시드블랙-XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+        "color":  "화이트",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  42000,
+        "payment":  18261,
+        "avg_unit":  18261,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  42000,
+                          "payment":  18261,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_화이트-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "ICE LITE 벌룬 조거",
+        "color":  "라이트카키",
+        "size":  "XL",
+        "qty":  1,
+        "gross":  65600,
+        "payment":  28522,
+        "avg_unit":  28522,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  65600,
+                          "payment":  28522,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "ICE LITE 벌룬 조거_라이트카키-XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 피그먼트 오버핏 반팔티",
+        "color":  "라이트그레이",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  54900,
+        "payment":  23870,
+        "avg_unit":  23870,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  54900,
+                          "payment":  23870,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 피그먼트 오버핏 반팔티_라이트그레이-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 백레터링 세미오버핏 반팔티",
+        "color":  "화이트",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  39800,
+        "payment":  17304,
+        "avg_unit":  17304,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 백레터링 세미오버핏 반팔티_화이트-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 백레터링 세미오버핏 반팔티",
+        "color":  "블랙",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  39800,
+        "payment":  17304,
+        "avg_unit":  17304,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  17304,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 백레터링 세미오버핏 반팔티_블랙-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "[채코제에디션] 초냉감 밸런스탱크",
+        "color":  "다크 그레이",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  41000,
+        "payment":  17826,
+        "avg_unit":  17826,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "[채코제에디션] 초냉감 밸런스탱크_다크 그레이-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 9 탱크",
+        "color":  "레드",
+        "size":  "XL",
+        "qty":  1,
+        "gross":  42000,
+        "payment":  18261,
+        "avg_unit":  18261,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  42000,
+                          "payment":  18261,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 9 탱크_레드-XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "퀵드라이 투톤 그래픽 나시",
+        "color":  "블랙",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  39000,
+        "payment":  16957,
+        "avg_unit":  16957,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16957,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "퀵드라이 투톤 그래픽 나시_블랙-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "KINTERRA 퀵드라이 스포츠 나시",
+        "color":  "블루",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  39000,
+        "payment":  16957,
+        "avg_unit":  16957,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  39000,
+                          "payment":  16957,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "KINTERRA 퀵드라이 스포츠 나시_블루-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "TECH SWEAT 7인치 카고 반바지",
+        "color":  "블랙",
+        "size":  "L",
+        "qty":  1,
+        "gross":  57800,
+        "payment":  25130,
+        "avg_unit":  25130,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  57800,
+                          "payment":  25130,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "TECH SWEAT 7인치 카고 반바지_블랙-L",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "자사몰",
+        "mall_no":  "",
+        "name":  "KINTERRA 퀵드라이 스포츠 탱크",
+        "color":  "블랙",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  41000,
+        "payment":  17826,
+        "avg_unit":  17826,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  41000,
+                          "payment":  17826,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "KINTERRA 퀵드라이 스포츠 탱크_블랙-2XL",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "29cm",
+        "mall_no":  "",
+        "name":  "ICE LITE 우먼즈 데일리쇼츠 아이보리",
+        "color":  "",
+        "size":  "S",
+        "qty":  1,
+        "gross":  36000,
+        "payment":  30600,
+        "avg_unit":  30600,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  1,
+                          "gross":  36000,
+                          "payment":  30600,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "ICE LITE 우먼즈 데일리쇼츠 아이보리-S",
+        "received_qty":  0,
+        "stock_qty":  0
+    },
+    {
+        "retailer":  "무신사",
+        "mall_no":  "",
+        "name":  "[헤비쮸리] TECH SWEAT 베이직 조거팬츠",
+        "color":  "",
+        "size":  "",
+        "qty":  -1,
+        "gross":  -50560,
+        "payment":  -50560,
+        "avg_unit":  50560,
+        "orders":  -1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-06-30",
+                          "qty":  -1,
+                          "gross":  -50560,
+                          "payment":  -50560,
+                          "orders":  -1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "[헤비쮸리] TECH SWEAT 베이직 조거팬츠_블랙-L",
+        "received_qty":  0,
+        "stock_qty":  0
     }
 ]
