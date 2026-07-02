@@ -125,7 +125,7 @@ for year, items in historical_daily.items():
 historical_daily_monthly_json = json.dumps(historical_daily_monthly, **JSON_KWARGS)
 
 # 유통사 목록 (고정)
-RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온"]
+RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온", "ABC마트", "러너블"]
 
 html = f"""<!doctype html>
 <html lang="ko">
@@ -586,6 +586,8 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <button class="sub-tab" data-retailer="4XR">4XR</button>
         <button class="sub-tab" data-retailer="애슬러">애슬러</button>
         <button class="sub-tab" data-retailer="롯데온">롯데온</button>
+        <button class="sub-tab" data-retailer="ABC마트">ABC마트</button>
+        <button class="sub-tab" data-retailer="러너블">러너블</button>
       </div>
 
       <div class="toolbar">
@@ -629,6 +631,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
           <option value="">전체 유통사</option>
           <option>자사몰</option><option>무신사</option><option>29cm</option>
           <option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option>
+          <option>ABC마트</option><option>러너블</option>
         </select>
         <button class="btn-sm" id="clearRetailer">초기화</button>
       </div>
@@ -1059,7 +1062,7 @@ const scl  = {{x:{{grid:{{color:'#e2e6ed'}},ticks:{{maxRotation:0}}}},y:{{grid:{
     options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:false}},tooltip:ttip,title:{{display:true,text:'일별 판매수량',color:'#4a5568',padding:{{bottom:8}}}}}},scales:scl}}
   }});
 
-  const retailerPalette = ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#06b6d4','#64748b'];
+  const retailerPalette = ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#06b6d4','#64748b','#db2777','#84cc16'];
   const recentDates = recent3.map(d => d.date);
   const retailerLineData = RETAILERS.map((retailer, idx) => {{
     const retailerDailyMap = Object.fromEntries(
