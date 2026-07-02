@@ -7461,5 +7461,68 @@
         "orders": 5
       }
     ]
+  },
+  {
+    "date": "2026-07-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 683690,
+        "qty": 55,
+        "orders": 61
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 40122
+          }
+        ],
+        "payment": 40122,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 2,
+            "payment": 63700
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 55860
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 44750
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 43920
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 36170
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": 1,
+            "payment": 27920
+          }
+        ],
+        "payment": 272320,
+        "qty": 7,
+        "orders": 6
+      }
+    ]
   }
 ]
