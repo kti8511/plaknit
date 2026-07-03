@@ -115778,5 +115778,130 @@
         "stock_qty":  76,
         "stock_barcode":  "",
         "stock_name":  "_채코제 에디션 초냉감 밸런스탱크_블랙-L"
+    },
+    {
+        "retailer":  "4XR",
+        "mall_no":  "681995",
+        "name":  "채코제에디션퀵드라이 그린퓨처 티셔츠",
+        "color":  "블랙",
+        "size":  "3XL",
+        "qty":  1,
+        "gross":  29950,
+        "payment":  29950,
+        "avg_unit":  29950,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-07-02",
+                          "qty":  1,
+                          "gross":  29950,
+                          "payment":  29950,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "채코제에디션퀵드라이 그린퓨처 티셔츠_블랙-3XL",
+        "received_qty":  0,
+        "stock_qty":  48,
+        "stock_barcode":  "",
+        "stock_name":  "_채코제에디션퀵드라이 그린퓨처 티셔츠_블랙-3XL"
+    },
+    {
+        "retailer":  "4XR",
+        "mall_no":  "681995",
+        "name":  "채코제에디션퀵드라이 그린퓨처 티셔츠",
+        "color":  "카키그레이",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  29950,
+        "payment":  29950,
+        "avg_unit":  29950,
+        "orders":  1,
+        "source_type":  "단품",
+        "daily":  [
+                      {
+                          "date":  "2026-07-02",
+                          "qty":  1,
+                          "gross":  29950,
+                          "payment":  29950,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "PD2TSM08KGR02XL",
+        "standard_name":  "채코제에디션퀵드라이 그린퓨처 티셔츠_카키그레이-2XL",
+        "received_qty":  0,
+        "stock_qty":  49,
+        "stock_barcode":  "PD2TSM08KGR02XL",
+        "stock_name":  "_채코제에디션퀵드라이 그린퓨처 티셔츠_카키그레이-2XL",
+        "season":  "2",
+        "category_large":  "T",
+        "category_small":  "S"
+    },
+    {
+        "retailer":  "4XR",
+        "mall_no":  "681998",
+        "name":  "채코제에디션 초냉감 트래블러티셔츠",
+        "color":  "블랙",
+        "size":  "3XL",
+        "qty":  1,
+        "gross":  34950,
+        "payment":  34950,
+        "avg_unit":  34950,
+        "orders":  1,
+        "source_type":  "단품",
+        "daily":  [
+                      {
+                          "date":  "2026-07-02",
+                          "qty":  1,
+                          "gross":  34950,
+                          "payment":  34950,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "PD2TSM02BLK000L",
+        "standard_name":  "채코제에디션 초냉감 트래블러티셔츠_블랙-3XL",
+        "received_qty":  0,
+        "stock_qty":  4,
+        "stock_barcode":  "PD2TSM02BLK000L",
+        "stock_name":  "_채코제에디션 초냉감 트래블러티셔츠_블랙-L",
+        "season":  "2",
+        "category_large":  "T",
+        "category_small":  "S",
+        "gross_sales":  213100,
+        "payment_sales":  382326,
+        "avg_unit_price":  23895
+    },
+    {
+        "retailer":  "4XR",
+        "mall_no":  "681998",
+        "name":  "채코제에디션 초냉감 트래블러티셔츠",
+        "color":  "다크그레이",
+        "size":  "2XL",
+        "qty":  1,
+        "gross":  34950,
+        "payment":  34950,
+        "avg_unit":  34950,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-07-02",
+                          "qty":  1,
+                          "gross":  34950,
+                          "payment":  34950,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "채코제에디션 초냉감 트래블러티셔츠_다크그레이-2XL",
+        "received_qty":  0,
+        "stock_qty":  0,
+        "stock_barcode":  "",
+        "stock_name":  "_채코제에디션 초냉감 트래블러티셔츠_다크그레이-2XL"
     }
 ]
