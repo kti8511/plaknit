@@ -8122,5 +8122,101 @@
         "orders": 3
       }
     ]
+  },
+  {
+    "date": "2026-07-07",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 583900,
+        "qty": 22,
+        "orders": 12
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 2,
+            "payment": 105120
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 2,
+            "payment": 70180
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 2,
+            "payment": 62250
+          },
+          {
+            "name": "ICE LITE 베이직 팬츠",
+            "qty": 1,
+            "payment": 42260
+          },
+          {
+            "name": "TECH SWEAT 벌룬 트레이닝 팬츠",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 37720
+          },
+          {
+            "name": "초냉감 밸런스 탱크",
+            "qty": 1,
+            "payment": 33900
+          },
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠",
+            "qty": 1,
+            "payment": 33610
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+            "qty": 1,
+            "payment": 32310
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브 라이트블루",
+            "qty": -1,
+            "payment": -45080
+          }
+        ],
+        "payment": 412170,
+        "qty": 11,
+        "orders": 8
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 47200
+          }
+        ],
+        "payment": 47200,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜-2XL",
+            "qty": 1,
+            "payment": 38900
+          }
+        ],
+        "payment": 38900,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]
