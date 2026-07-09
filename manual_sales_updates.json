@@ -8218,5 +8218,106 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-07-08",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 495700,
+        "qty": 26,
+        "orders": 13
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 2,
+            "payment": 64490
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 49410
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 48410
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 34830
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 1,
+            "payment": 31280
+          },
+          {
+            "name": "채코제에디션 초냉감 트래블러티셔츠",
+            "qty": 1,
+            "payment": 30320
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+            "qty": -1,
+            "payment": -48410
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 숏슬리브 블랙",
+            "qty": -1,
+            "payment": -54370
+          }
+        ],
+        "payment": 155960,
+        "qty": 5,
+        "orders": 4
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "ICE LITE 베이직 팬츠_BLACK_XL",
+            "qty": 1,
+            "payment": 44900
+          }
+        ],
+        "payment": 44900,
+        "qty": 1,
+        "orders": 1
+      },
+      {
+        "retailer": "ABC마트",
+        "items": [
+          {
+            "name": "ICE LITE 버뮤다쇼츠_블랙-XL",
+            "qty": 1,
+            "payment": 27400
+          },
+          {
+            "name": "채코제에디션퀵드라이 그린퓨처 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "채코제에디션퀵드라이 그린퓨처 티셔츠_카키그레이-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "채코제에디션퀵드라이 그린퓨처 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 19900
+          }
+        ],
+        "payment": 87100,
+        "qty": 4,
+        "orders": 4
+      }
+    ]
   }
 ]
