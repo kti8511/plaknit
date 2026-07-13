@@ -125,7 +125,7 @@ for year, items in historical_daily.items():
 historical_daily_monthly_json = json.dumps(historical_daily_monthly, **JSON_KWARGS)
 
 # 유통사 목록 (고정)
-RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온", "ABC마트", "러너블"]
+RETAILERS = ["자사몰", "무신사", "29cm", "글로리어스워커", "4XR", "애슬러", "롯데온", "ABC마트", "러너블", "기타"]
 
 html = f"""<!doctype html>
 <html lang="ko">
@@ -588,6 +588,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         <button class="sub-tab" data-retailer="롯데온">롯데온</button>
         <button class="sub-tab" data-retailer="ABC마트">ABC마트</button>
         <button class="sub-tab" data-retailer="러너블">러너블</button>
+        <button class="sub-tab" data-retailer="기타">기타</button>
       </div>
 
       <div class="toolbar">
@@ -631,7 +632,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
           <option value="">전체 유통사</option>
           <option>자사몰</option><option>무신사</option><option>29cm</option>
           <option>글로리어스워커</option><option>4XR</option><option>애슬러</option><option>롯데온</option>
-          <option>ABC마트</option><option>러너블</option>
+          <option>ABC마트</option><option>러너블</option><option>기타</option>
         </select>
         <button class="btn-sm" id="clearRetailer">초기화</button>
       </div>
