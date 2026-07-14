@@ -9070,5 +9070,153 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-07-13",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 158770,
+        "qty": 2,
+        "orders": 11
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 와이드 카고팬츠",
+            "qty": 2,
+            "payment": 107680
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 2,
+            "payment": 104360
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 3,
+            "payment": 96120
+          },
+          {
+            "name": "퀵드라이 우먼즈 멀티포켓쇼츠 블랙",
+            "qty": 1,
+            "payment": 57240
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙",
+            "qty": 1,
+            "payment": 49700
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 49410
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 47410
+          },
+          {
+            "name": "ICE LITE 버뮤다 쇼츠",
+            "qty": 1,
+            "payment": 45900
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 1,
+            "payment": 35900
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티",
+            "qty": 1,
+            "payment": 35850
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 1,
+            "payment": 31770
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 1,
+            "payment": 30970
+          },
+          {
+            "name": "스포츠 러닝 크루삭스",
+            "qty": 2,
+            "payment": 14330
+          },
+          {
+            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": -1,
+            "payment": -32240
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": -1,
+            "payment": -33480
+          },
+          {
+            "name": "ICE LITE 베이직 팬츠",
+            "qty": -1,
+            "payment": -38080
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": -2,
+            "payment": -72400
+          }
+        ],
+        "payment": 530440,
+        "qty": 13,
+        "orders": 9
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 40120
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-S",
+            "qty": 1,
+            "payment": 42480
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 40121
+          },
+          {
+            "name": "퀵드라이 9 탱크_레드-XL",
+            "qty": 1,
+            "payment": 24195
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_라이트그레이-M",
+            "qty": 1,
+            "payment": 35282
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_라이트그레이-L",
+            "qty": 1,
+            "payment": 35280
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트-L",
+            "qty": 1,
+            "payment": 42480
+          }
+        ],
+        "payment": 259958,
+        "qty": 7,
+        "orders": 7
+      }
+    ]
   }
 ]
