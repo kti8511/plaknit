@@ -10028,5 +10028,78 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-07-21",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 904640,
+        "qty": 36,
+        "orders": 19
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 시그니처 조거",
+            "qty": 2,
+            "payment": 78620
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 2,
+            "payment": 56680
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 29610
+          },
+          {
+            "name": "퀵드라이 투톤 그래픽 나시",
+            "qty": 1,
+            "payment": 24300
+          }
+        ],
+        "payment": 269010,
+        "qty": 8,
+        "orders": 6
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-L",
+            "qty": 1,
+            "payment": 40122
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 40120
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 40120
+          }
+        ],
+        "payment": 120362,
+        "qty": 3,
+        "orders": 3
+      }
+    ]
   }
 ]
