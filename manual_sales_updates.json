@@ -10262,5 +10262,126 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-07-23",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 450400,
+        "qty": 13,
+        "orders": 8
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 4,
+            "payment": 130240
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시",
+            "qty": 3,
+            "payment": 89550
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 3,
+            "payment": 84110
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 2,
+            "payment": 67200
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 46940
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브 라이트블루",
+            "qty": 1,
+            "payment": 46340
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙",
+            "qty": 1,
+            "payment": 45510
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 네이비",
+            "qty": 1,
+            "payment": 44690
+          },
+          {
+            "name": "[2PACK] 채코제에디션 초냉감 트래블러티셔츠",
+            "qty": 1,
+            "payment": 44470
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜",
+            "qty": 1,
+            "payment": 43440
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 36120
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티",
+            "qty": 1,
+            "payment": 29170
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": -1,
+            "payment": -47410
+          }
+        ],
+        "payment": 660370,
+        "qty": 19,
+        "orders": 11
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "KINTERRA 숄더-업 탱크_블랙-2XL",
+            "qty": 1,
+            "payment": 23835
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-L",
+            "qty": 1,
+            "payment": 22306
+          }
+        ],
+        "payment": 46141,
+        "qty": 2,
+        "orders": 2
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "TECH SWEAT 7\" 카고 반바지_멜란지그레이-3XL",
+            "qty": 1,
+            "payment": 46900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시_블랙-3XL",
+            "qty": 1,
+            "payment": 31900
+          }
+        ],
+        "payment": 78800,
+        "qty": 2,
+        "orders": 2
+      }
+    ]
   }
 ]
