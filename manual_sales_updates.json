@@ -11803,5 +11803,83 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-08-03",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 1018070,
+        "qty": 41,
+        "orders": 19
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 29127
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠 아이보리-S",
+            "qty": 1,
+            "payment": 28350
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-S",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ],
+        "payment": 203677,
+        "qty": 6,
+        "orders": 6
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 53100
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 1,
+            "payment": 34470
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 31280
+          }
+        ],
+        "payment": 168750,
+        "qty": 4,
+        "orders": 4
+      }
+    ]
   }
 ]
