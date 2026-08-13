@@ -12942,5 +12942,279 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-08-12",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 478500,
+        "qty": 28,
+        "orders": 15
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-L",
+            "qty": 1,
+            "payment": 43000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "KINTERRA 숄더-업 탱크-2XL",
+            "qty": 1,
+            "payment": 17910
+          }
+        ],
+        "payment": 97460,
+        "qty": 3,
+        "orders": 3
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 16,
+            "payment": 596430
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_라이트카키-L",
+            "qty": 5,
+            "payment": 84240
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠_라이트그레이-XL",
+            "qty": 3,
+            "payment": 47400
+          },
+          {
+            "name": "ICE LITE 2 in 1 쇼츠_레드-XL",
+            "qty": 1,
+            "payment": 41400
+          },
+          {
+            "name": "ICE LITE 버뮤다 쇼츠",
+            "qty": 1,
+            "payment": 33890
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크_BLACK_L",
+            "qty": 3,
+            "payment": 33380
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠_라이트그레이-XL",
+            "qty": 1,
+            "payment": 30790
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-L",
+            "qty": 3,
+            "payment": 25000
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_블랙-3XL",
+            "qty": 1,
+            "payment": 22310
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠_블랙-XL",
+            "qty": 1,
+            "payment": 20370
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_다크 그레이-3XL",
+            "qty": 1,
+            "payment": 16760
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-2XL",
+            "qty": 1,
+            "payment": 10610
+          },
+          {
+            "name": "타이다잉 러닝삭스 블랙",
+            "qty": 1,
+            "payment": 9710
+          },
+          {
+            "name": "나일론 리플렉티브 심볼 볼캡",
+            "qty": 1,
+            "payment": 9710
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스_화이트-F",
+            "qty": 1,
+            "payment": 6340
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-2XL",
+            "qty": 0,
+            "payment": -12210
+          },
+          {
+            "name": "퀵드라이 9 탱크_BLACK_L",
+            "qty": -1,
+            "payment": -30950
+          }
+        ],
+        "payment": 945180,
+        "qty": 39,
+        "orders": 14
+      },
+      {
+        "retailer": "글로리어스워커",
+        "payment": 6273000,
+        "qty": 224,
+        "orders": 164,
+        "items": [
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_베이지-M",
+            "qty": 1,
+            "payment": 19000
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_베이지-XL",
+            "qty": 1,
+            "payment": 19000
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-2XL",
+            "qty": 2,
+            "payment": 38000
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-3XL",
+            "qty": 6,
+            "payment": 98166
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-L",
+            "qty": 5,
+            "payment": 85500
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-XL",
+            "qty": 10,
+            "payment": 183667
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_카키그레이-3XL",
+            "qty": 2,
+            "payment": 22167
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_카키그레이-L",
+            "qty": 2,
+            "payment": 28500
+          },
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_카키그레이-XL",
+            "qty": 1,
+            "payment": 19000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-2XL",
+            "qty": 6,
+            "payment": 190000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-3XL",
+            "qty": 1,
+            "payment": 12667
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-L",
+            "qty": 1,
+            "payment": 19000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-XL",
+            "qty": 3,
+            "payment": 50667
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-2XL",
+            "qty": 27,
+            "payment": 785333
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-3XL",
+            "qty": 17,
+            "payment": 446501
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 38,
+            "payment": 1317333
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
+            "qty": 12,
+            "payment": 437000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 68,
+            "payment": 2118499
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-2XL",
+            "qty": 3,
+            "payment": 37999
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-3XL",
+            "qty": 3,
+            "payment": 41166
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-L",
+            "qty": 4,
+            "payment": 63335
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-M",
+            "qty": 1,
+            "payment": 19000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-XL",
+            "qty": 9,
+            "payment": 142500
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_블랙-2XL",
+            "qty": 1,
+            "payment": 79000
+          }
+        ]
+      },
+      {
+        "retailer": "러너블",
+        "payment": 23400,
+        "qty": 2,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 베이직 나시_다크그린-XL",
+            "qty": 1,
+            "payment": 11700
+          },
+          {
+            "name": "퀵드라이 베이직 나시_블랙-XL",
+            "qty": 1,
+            "payment": 11700
+          }
+        ]
+      }
+    ]
   }
 ]
