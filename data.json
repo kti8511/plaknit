@@ -132420,41 +132420,6 @@
         "stock_name":  "퀵드라이 백레터링 세미오버핏 반팔티_화이트-L"
     },
     {
-        "retailer":  "러너블",
-        "mall_no":  "",
-        "name":  "스포츠 러닝 크루삭스",
-        "color":  "라임",
-        "size":  "",
-        "qty":  1,
-        "gross":  9200,
-        "payment":  9200,
-        "avg_unit":  9200,
-        "orders":  1,
-        "source_type":  "단품",
-        "daily":  [
-                      {
-                          "date":  "2026-08-09",
-                          "qty":  1,
-                          "gross":  9200,
-                          "payment":  9200,
-                          "orders":  1
-                      }
-                  ],
-        "match_status":  "매칭완료",
-        "match_sku":  "PD3AAM05YEL000F",
-        "standard_name":  "스포츠 러닝 크루삭스_라임",
-        "received_qty":  0,
-        "stock_qty":  33,
-        "stock_barcode":  "PD3AAM05YEL000F",
-        "stock_name":  "스포츠 러닝 크루삭스(가제)_라임",
-        "season":  "3",
-        "category_large":  "A",
-        "category_small":  "A",
-        "gross_sales":  196400,
-        "payment_sales":  105497,
-        "avg_unit_price":  26374
-    },
-    {
         "retailer":  "무신사",
         "mall_no":  "",
         "name":  "나일론 리플렉티브 심볼 볼캡",
@@ -133727,64 +133692,6 @@
         "season":  "2",
         "category_large":  "O",
         "category_small":  "S"
-    },
-    {
-        "retailer":  "러너블",
-        "mall_no":  "",
-        "name":  "퀵드라이 베이직 나시",
-        "color":  "다크그린",
-        "size":  "XL",
-        "qty":  1,
-        "gross":  11700,
-        "payment":  11700,
-        "avg_unit":  11700,
-        "orders":  1,
-        "source_type":  "상품",
-        "daily":  [
-                      {
-                          "date":  "2026-08-12",
-                          "qty":  1,
-                          "gross":  11700,
-                          "payment":  11700,
-                          "orders":  1
-                      }
-                  ],
-        "match_status":  "매칭완료",
-        "match_sku":  "",
-        "standard_name":  "퀵드라이 베이직 나시_다크그린-XL",
-        "received_qty":  0,
-        "stock_qty":  83,
-        "stock_name":  "퀵드라이 베이직 나시_블랙-XL",
-        "stock_barcode":  "PD2SSM01BLK00XL"
-    },
-    {
-        "retailer":  "러너블",
-        "mall_no":  "",
-        "name":  "퀵드라이 베이직 나시",
-        "color":  "블랙",
-        "size":  "XL",
-        "qty":  1,
-        "gross":  11700,
-        "payment":  11700,
-        "avg_unit":  11700,
-        "orders":  0,
-        "source_type":  "상품",
-        "daily":  [
-                      {
-                          "date":  "2026-08-12",
-                          "qty":  1,
-                          "gross":  11700,
-                          "payment":  11700,
-                          "orders":  0
-                      }
-                  ],
-        "match_status":  "매칭완료",
-        "match_sku":  "",
-        "standard_name":  "퀵드라이 베이직 나시_블랙-XL",
-        "received_qty":  0,
-        "stock_qty":  83,
-        "stock_name":  "퀵드라이 베이직 나시_블랙-XL",
-        "stock_barcode":  "PD2SSM01BLK00XL"
     },
     {
         "retailer":  "자사몰",

@@ -12467,19 +12467,6 @@
         "payment": 85700,
         "qty": 4,
         "orders": 2
-      },
-      {
-        "retailer": "러너블",
-        "items": [
-          {
-            "name": "스포츠 러닝 크루삭스_라임",
-            "qty": 1,
-            "payment": 9200
-          }
-        ],
-        "payment": 9200,
-        "qty": 1,
-        "orders": 1
       }
     ]
   },
@@ -13194,24 +13181,6 @@
             "name": "퀵드라이 벤틸레이션 러닝탑_블랙-2XL",
             "qty": 1,
             "payment": 79000
-          }
-        ]
-      },
-      {
-        "retailer": "러너블",
-        "payment": 23400,
-        "qty": 2,
-        "orders": 1,
-        "items": [
-          {
-            "name": "퀵드라이 베이직 나시_다크그린-XL",
-            "qty": 1,
-            "payment": 11700
-          },
-          {
-            "name": "퀵드라이 베이직 나시_블랙-XL",
-            "qty": 1,
-            "payment": 11700
           }
         ]
       }
