@@ -1,8 +1,8 @@
 ﻿{
-    "stock_file":  "C:\\Users\\user\\Desktop\\재고조회(기본)_2026-08-03_151139.xlsx",
-    "data_rows":  1373,
-    "stock_rows":  1230,
-    "matched_data_rows":  1297,
+    "stock_file":  "C:\\Users\\user\\Desktop\\재고조회(기본)_2026-08-24_123118.xlsx",
+    "data_rows":  1467,
+    "stock_rows":  1251,
+    "matched_data_rows":  1384,
     "unmatched_data_rows":  [
                                 {
                                     "retailer":  "무신사",
@@ -611,6 +611,62 @@
                                     "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
                                     "color":  "블랙",
                                     "size":  "XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_크림-XL",
+                                    "name":  "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)",
+                                    "color":  "크림",
+                                    "size":  "XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_크림-XL",
+                                    "name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
+                                    "color":  "크림",
+                                    "size":  "XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_블랙-XL",
+                                    "name":  "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
+                                    "color":  "블랙",
+                                    "size":  "XL"
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "이민우님 개인결제",
+                                    "name":  "이민우님 개인결제",
+                                    "color":  "",
+                                    "size":  ""
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티_블랙-M",
+                                    "name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+                                    "color":  "블랙",
+                                    "size":  "M"
+                                },
+                                {
+                                    "retailer":  "기타",
+                                    "match_sku":  "",
+                                    "standard_name":  "온당골 단체 티셔츠 개인결제창",
+                                    "name":  "온당골 단체 티셔츠 개인결제창",
+                                    "color":  "",
+                                    "size":  ""
+                                },
+                                {
+                                    "retailer":  "자사몰",
+                                    "match_sku":  "",
+                                    "standard_name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티_블랙-XL",
+                                    "name":  "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+                                    "color":  "블랙",
+                                    "size":  "XL"
                                 }
                             ],
     "unmatched_stock_rows":  [
@@ -627,7 +683,7 @@
                                  {
                                      "barcode":  "PD2TSM09BLK000M",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_블랙-M",
-                                     "stock_qty":  12
+                                     "stock_qty":  11
                                  },
                                  {
                                      "barcode":  "PA3STM01LGR00XL",
@@ -652,17 +708,17 @@
                                  {
                                      "barcode":  "PB4TSM01WHT03XL",
                                      "outbound_name":  "퀵드라이 세미 오버핏 티셔츠_WHITE_3XL",
-                                     "stock_qty":  69
+                                     "stock_qty":  68
                                  },
                                  {
                                      "barcode":  "PD2TSM03BLK00XL",
                                      "outbound_name":  "ICE LITE 초냉감 PLNT 오버핏 반팔티_블랙-XL",
-                                     "stock_qty":  41
+                                     "stock_qty":  40
                                  },
                                  {
                                      "barcode":  "PD2PSM02KGR000L",
                                      "outbound_name":  "ICE LITE 와플메쉬 투인원 쇼츠_카키그레이-L",
-                                     "stock_qty":  6
+                                     "stock_qty":  5
                                  },
                                  {
                                      "barcode":  "PC2SSM01GRN000S",
@@ -692,7 +748,7 @@
                                  {
                                      "barcode":  "PD2TSM05LGR00XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-XL",
-                                     "stock_qty":  9
+                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PB1SSM01RED000L",
@@ -712,7 +768,7 @@
                                  {
                                      "barcode":  "PD2TSM07WHT000M",
                                      "outbound_name":  "퀵드라이 백레터링 세미오버핏 반팔티_화이트-M",
-                                     "stock_qty":  21
+                                     "stock_qty":  19
                                  },
                                  {
                                      "barcode":  "P213TSU04ABL00M",
@@ -722,7 +778,7 @@
                                  {
                                      "barcode":  "PB2PSM05RED0XXL",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_RED_XXL",
-                                     "stock_qty":  12
+                                     "stock_qty":  9
                                  },
                                  {
                                      "barcode":  "P213TMU06CHA00M",
@@ -737,7 +793,7 @@
                                  {
                                      "barcode":  "PB1TSM01NVY0XXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 오버핏 반팔티_NAVY_XXL",
-                                     "stock_qty":  21
+                                     "stock_qty":  20
                                  },
                                  {
                                      "barcode":  "PC2PSM02BLK03XL",
@@ -758,11 +814,6 @@
                                      "barcode":  "PC4PLM01DCH02XL",
                                      "outbound_name":  "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)_DEEP CHARCOAL_2XL",
                                      "stock_qty":  21
-                                 },
-                                 {
-                                     "barcode":  "PD2TSM09BLK00XL",
-                                     "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_블랙-XL",
-                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "P213TMU06ABL00M",
@@ -787,12 +838,12 @@
                                  {
                                      "barcode":  "PD2SSM01DGR000L",
                                      "outbound_name":  "퀵드라이 베이직 나시_다크그린-L",
-                                     "stock_qty":  39
+                                     "stock_qty":  37
                                  },
                                  {
                                      "barcode":  "PB1TMM02LKH00XL",
                                      "outbound_name":  "ICE LITE 오버핏 맨투맨_L/KHAKI_XL",
-                                     "stock_qty":  68
+                                     "stock_qty":  66
                                  },
                                  {
                                      "barcode":  "PC2SSM01WHT000L",
@@ -802,7 +853,7 @@
                                  {
                                      "barcode":  "PB2PSM05RED00XL",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_RED_XL",
-                                     "stock_qty":  1
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "P213TMU06CHA00L",
@@ -832,6 +883,16 @@
                                  {
                                      "barcode":  "PB1TSM02MNTXXXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_LIGHT KHAKI_XXXL",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2PGW01BLK000M",
+                                     "outbound_name":  "펜타플렉스 우먼즈 숏타이즈 M",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2TSW04WHT000S",
+                                     "outbound_name":  "퀵드라이 크롭 WALK 티셔츠 S",
                                      "stock_qty":  0
                                  },
                                  {
@@ -877,7 +938,7 @@
                                  {
                                      "barcode":  "PB1STM01BLK00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 탱크_BLACK_XL",
-                                     "stock_qty":  1
+                                     "stock_qty":  24
                                  },
                                  {
                                      "barcode":  "PD2TSM07DGR000L",
@@ -897,6 +958,11 @@
                                  {
                                      "barcode":  "PB1TSM02BLKXXXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_BLACK_XXXL",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2SSU01DFG000M",
+                                     "outbound_name":  "스웻프리 싱글렛 (다크포그) M",
                                      "stock_qty":  0
                                  },
                                  {
@@ -937,7 +1003,7 @@
                                  {
                                      "barcode":  "PB2PSM05NVY000M",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_NAVY_M",
-                                     "stock_qty":  1
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PC4TMM02VKH000L",
@@ -947,7 +1013,7 @@
                                  {
                                      "barcode":  "PC2SSM02BLK02XL",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_BLACK_2XL",
-                                     "stock_qty":  19
+                                     "stock_qty":  16
                                  },
                                  {
                                      "barcode":  "PA3PLM02KHA00XL",
@@ -1002,7 +1068,7 @@
                                  {
                                      "barcode":  "PB1PLM04LGR00XL",
                                      "outbound_name":  "ICE LITE 카고 조거_L/GREY_XL",
-                                     "stock_qty":  5
+                                     "stock_qty":  4
                                  },
                                  {
                                      "barcode":  "PD2TSM02DGR000M",
@@ -1027,7 +1093,7 @@
                                  {
                                      "barcode":  "PB1STM01BLK0XXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 탱크_BLACK_XXL",
-                                     "stock_qty":  22
+                                     "stock_qty":  19
                                  },
                                  {
                                      "barcode":  "PD2PLM02CHA00XL",
@@ -1042,7 +1108,7 @@
                                  {
                                      "barcode":  "PC2TSM02BLK000M",
                                      "outbound_name":  "퀵드라이 세비오버핏 백로고 티셔츠_BLACK_M",
-                                     "stock_qty":  37
+                                     "stock_qty":  36
                                  },
                                  {
                                      "barcode":  "PA3PLM02BLK00XL",
@@ -1052,7 +1118,7 @@
                                  {
                                      "barcode":  "PD2TSM05PNK000L",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_핑크-L",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PD2TLM01BLK000M",
@@ -1072,7 +1138,7 @@
                                  {
                                      "barcode":  "PB2PSM05BLK000M",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_BLACK_M",
-                                     "stock_qty":  33
+                                     "stock_qty":  32
                                  },
                                  {
                                      "barcode":  "PB2PSM07BLK000M",
@@ -1082,7 +1148,7 @@
                                  {
                                      "barcode":  "PC2TSM03LGR02XL",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_LIGHT GREY_2XL",
-                                     "stock_qty":  34
+                                     "stock_qty":  33
                                  },
                                  {
                                      "barcode":  "PD2TSM05PNK02XL",
@@ -1092,7 +1158,7 @@
                                  {
                                      "barcode":  "PD2TSM04LGR00XL",
                                      "outbound_name":  "퀵드라이 피그먼트 오버핏 반팔티_라이트그레이-XL",
-                                     "stock_qty":  40
+                                     "stock_qty":  38
                                  },
                                  {
                                      "barcode":  "PA3PLM01BLK000M",
@@ -1107,7 +1173,7 @@
                                  {
                                      "barcode":  "PB1TSM02CHA00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_CHARCOAL_XL",
-                                     "stock_qty":  25
+                                     "stock_qty":  23
                                  },
                                  {
                                      "barcode":  "PD2TLM01BLK02XL",
@@ -1132,7 +1198,7 @@
                                  {
                                      "barcode":  "PB1PLM02CHA000M",
                                      "outbound_name":  "ICE LITE 벌룬 조거_CHARCOAL_M",
-                                     "stock_qty":  28
+                                     "stock_qty":  26
                                  },
                                  {
                                      "barcode":  "PB1PLM03KHAXXXL",
@@ -1162,6 +1228,11 @@
                                  {
                                      "barcode":  "PB4TMM02BLK0XXL",
                                      "outbound_name":  "TECH SWEAT 피그먼트 빈티지 맨투맨 (세미오버핏)_VINTAGE CHARCOAL_XXL",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2SSU01DFG00XS",
+                                     "outbound_name":  "스웻프리 싱글렛 (다크포그) XS",
                                      "stock_qty":  0
                                  },
                                  {
@@ -1230,6 +1301,11 @@
                                      "stock_qty":  0
                                  },
                                  {
+                                     "barcode":  "PE2SSW01CTN000S",
+                                     "outbound_name":  "스웻프리 크롭 싱글렛 (코튼캔디) S",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PC2TSM03BLK00XL",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_BLACK_XL",
                                      "stock_qty":  61
@@ -1277,21 +1353,16 @@
                                  {
                                      "barcode":  "PB1PLM03BLK000M",
                                      "outbound_name":  "ICE LITE 릴렉스드 조거_BLACK_M",
-                                     "stock_qty":  63
+                                     "stock_qty":  61
                                  },
                                  {
                                      "barcode":  "PD2TSM06BLU000L",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트블루-L",
-                                     "stock_qty":  25
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PE2TSM04RED02XL",
                                      "outbound_name":  "퀵드라이 B.B.B 티셔츠 레드 2XL",
-                                     "stock_qty":  0
-                                 },
-                                 {
-                                     "barcode":  "PD2OSM01BEG000M",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_베이지-M",
                                      "stock_qty":  0
                                  },
                                  {
@@ -1307,12 +1378,12 @@
                                  {
                                      "barcode":  "PD2TSM04BLU00XL",
                                      "outbound_name":  "퀵드라이 피그먼트 오버핏 반팔티_민트블루-XL",
-                                     "stock_qty":  40
+                                     "stock_qty":  39
                                  },
                                  {
                                      "barcode":  "PC2PSM01LGR02XL",
                                      "outbound_name":  "ICE LITE 컴포트 쇼츠_LIGHT GREY_2XL",
-                                     "stock_qty":  9
+                                     "stock_qty":  8
                                  },
                                  {
                                      "barcode":  "PC4TMM01VKH000L",
@@ -1323,11 +1394,6 @@
                                      "barcode":  "PB2PSM04CHA0XXL",
                                      "outbound_name":  "ICE LITE 투인원 쇼츠_BLACK+CHARCOAL_XXL",
                                      "stock_qty":  28
-                                 },
-                                 {
-                                     "barcode":  "PD2TSM09KHA02XL",
-                                     "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_카키-2XL",
-                                     "stock_qty":  54
                                  },
                                  {
                                      "barcode":  "PC2TSM12WHT000L",
@@ -1362,12 +1428,12 @@
                                  {
                                      "barcode":  "PD2TSM05LGR000L",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-L",
-                                     "stock_qty":  3
+                                     "stock_qty":  4
                                  },
                                  {
                                      "barcode":  "PD2TSM02BLK000M",
                                      "outbound_name":  "_채코제에디션 초냉감 트래블러티셔츠_블랙-M",
-                                     "stock_qty":  24
+                                     "stock_qty":  23
                                  },
                                  {
                                      "barcode":  "PB2PSM07BLK000L",
@@ -1387,12 +1453,12 @@
                                  {
                                      "barcode":  "PC2TSM03LGR04XL",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_LIGHT GREY_4XL",
-                                     "stock_qty":  26
+                                     "stock_qty":  25
                                  },
                                  {
                                      "barcode":  "PB2PSM02MGR000L",
                                      "outbound_name":  "TECH SWEAT 7\" 카고 반바지_M/GREY_L",
-                                     "stock_qty":  9
+                                     "stock_qty":  8
                                  },
                                  {
                                      "barcode":  "PB1PLM02LKH0XXL",
@@ -1407,17 +1473,7 @@
                                  {
                                      "barcode":  "PA3SSM01WHTXXXL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_WHITE_XXXL",
-                                     "stock_qty":  15
-                                 },
-                                 {
-                                     "barcode":  "PE2PSW04BLK0000L",
-                                     "outbound_name":  "퀵드라이 메쉬 우먼즈 투인원쇼츠 블랙 L",
-                                     "stock_qty":  22
-                                 },
-                                 {
-                                     "barcode":  "PD2OSM01BLK02XL",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_블랙-2XL",
-                                     "stock_qty":  30
+                                     "stock_qty":  14
                                  },
                                  {
                                      "barcode":  "PB2PSM04BLK000M",
@@ -1435,9 +1491,19 @@
                                      "stock_qty":  0
                                  },
                                  {
+                                     "barcode":  "PE2PGW01BLK000L",
+                                     "outbound_name":  "펜타플렉스 우먼즈 숏타이즈 L",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PB1TSM02MNT0XXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_LIGHT KHAKI_XXL",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
+                                 },
+                                 {
+                                     "barcode":  "PE2TSW04WHT000L",
+                                     "outbound_name":  "퀵드라이 크롭 WALK 티셔츠 L",
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PC2TSM02WHT00XL",
@@ -1447,7 +1513,7 @@
                                  {
                                      "barcode":  "PC2TSM02BLK00XL",
                                      "outbound_name":  "퀵드라이 세비오버핏 백로고 티셔츠_BLACK_XL",
-                                     "stock_qty":  8
+                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PD2TSM03BLU000M",
@@ -1458,11 +1524,6 @@
                                      "barcode":  "PB2PSM04GKH0XXL",
                                      "outbound_name":  "ICE LITE 2 in 1 쇼츠_카키 그레이-XXL",
                                      "stock_qty":  13
-                                 },
-                                 {
-                                     "barcode":  "PD2OSM01BEG02XL",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_베이지-2XL",
-                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PA3PLM04KHA000L",
@@ -1477,7 +1538,7 @@
                                  {
                                      "barcode":  "PC2TSM01BLK02XL",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_BLACK_2XL",
-                                     "stock_qty":  12
+                                     "stock_qty":  10
                                  },
                                  {
                                      "barcode":  "P212THU50NVY00L",
@@ -1552,7 +1613,7 @@
                                  {
                                      "barcode":  "PE2TSM05WHT02XL",
                                      "outbound_name":  "퀵드라이 코어 로고 티셔츠 화이트 2XL",
-                                     "stock_qty":  7
+                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PA3PLM03BLK00XL",
@@ -1567,7 +1628,7 @@
                                  {
                                      "barcode":  "PE2TSM03CBT00XL",
                                      "outbound_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 코발트 XL",
-                                     "stock_qty":  28
+                                     "stock_qty":  24
                                  },
                                  {
                                      "barcode":  "PB1PLM03NVY000M",
@@ -1577,17 +1638,17 @@
                                  {
                                      "barcode":  "PD2OSM01KGR03XL",
                                      "outbound_name":  "ICE LITE 세미오버핏 셔켓_카키그레이-3XL",
-                                     "stock_qty":  10
+                                     "stock_qty":  4
                                  },
                                  {
                                      "barcode":  "PA3STM01WHT0XXL",
                                      "outbound_name":  "KINTERRA 숄더-업 탱크_WHITE_XXL",
-                                     "stock_qty":  5
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PD2TSM01BLK02XL",
                                      "outbound_name":  "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_블랙-2XL",
-                                     "stock_qty":  0
+                                     "stock_qty":  80
                                  },
                                  {
                                      "barcode":  "PB2PSM05MNT000M",
@@ -1637,7 +1698,7 @@
                                  {
                                      "barcode":  "PB2PSM05MNT00XL",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_MINT_XL",
-                                     "stock_qty":  26
+                                     "stock_qty":  25
                                  },
                                  {
                                      "barcode":  "P213TLU05IVY00L",
@@ -1647,7 +1708,7 @@
                                  {
                                      "barcode":  "PD2TSM09MNT000L",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_민트-L",
-                                     "stock_qty":  42
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "PB4TSM02WHT000M",
@@ -1657,6 +1718,11 @@
                                  {
                                      "barcode":  "PA3OAM01BLK0XXL",
                                      "outbound_name":  "HAET MONSTER 기모 스포츠 아노락_BLACK_XXL",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2SSW01CTN000M",
+                                     "outbound_name":  "스웻프리 크롭 싱글렛 (코튼캔디) M",
                                      "stock_qty":  0
                                  },
                                  {
@@ -1672,12 +1738,17 @@
                                  {
                                      "barcode":  "PB1STM01WHT00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 탱크_WHITE_XL",
-                                     "stock_qty":  12
+                                     "stock_qty":  10
+                                 },
+                                 {
+                                     "barcode":  "PE2SSU01DFG000S",
+                                     "outbound_name":  "스웻프리 싱글렛 (다크포그) S",
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PA3SSM01BLKXXXL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_BLACK_XXXL",
-                                     "stock_qty":  15
+                                     "stock_qty":  14
                                  },
                                  {
                                      "barcode":  "PA3TLM01CRM0XXL",
@@ -1692,12 +1763,7 @@
                                  {
                                      "barcode":  "PD2PSM01BLK00XL",
                                      "outbound_name":  "ICE LITE 루즈핏 카고쇼츠_블랙-XL",
-                                     "stock_qty":  22
-                                 },
-                                 {
-                                     "barcode":  "PE2TSM04RED00XL",
-                                     "outbound_name":  "퀵드라이 B.B.B 티셔츠 레드 XL",
-                                     "stock_qty":  20
+                                     "stock_qty":  7
                                  },
                                  {
                                      "barcode":  "PA3TSM01CRM000M",
@@ -1705,24 +1771,29 @@
                                      "stock_qty":  29
                                  },
                                  {
+                                     "barcode":  "PE2PGU01BLK00XL",
+                                     "outbound_name":  "펜타플렉스 로고 하프타이즈 XL",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PA3SSM01BLK0XXL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_BLACK_XXL",
-                                     "stock_qty":  23
+                                     "stock_qty":  20
                                  },
                                  {
                                      "barcode":  "PB1PLM02LKH000L",
                                      "outbound_name":  "ICE LITE 벌룬 조거_L/KHAKI_L",
-                                     "stock_qty":  68
-                                 },
-                                 {
-                                     "barcode":  "PD2PSM01KGR00XL",
-                                     "outbound_name":  "ICE LITE 루즈핏 카고쇼츠_카키그레이-XL",
-                                     "stock_qty":  8
+                                     "stock_qty":  67
                                  },
                                  {
                                      "barcode":  "PC2SSM01WHT02XL",
                                      "outbound_name":  "퀵드라이 투톤 그래픽 나시_WHITE_2XL",
                                      "stock_qty":  2
+                                 },
+                                 {
+                                     "barcode":  "PE2SSU01DFG000L",
+                                     "outbound_name":  "스웻프리 싱글렛 (다크포그) L",
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PA3PLM01BLK00XL",
@@ -1742,6 +1813,11 @@
                                  {
                                      "barcode":  "PB1PLM04LGR000M",
                                      "outbound_name":  "ICE LITE 카고 조거_L/GREY_M",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2SSU01DFG00XL",
+                                     "outbound_name":  "스웻프리 싱글렛 (다크포그) XL",
                                      "stock_qty":  0
                                  },
                                  {
@@ -1777,6 +1853,11 @@
                                  {
                                      "barcode":  "PA4PLM01BLK000M",
                                      "outbound_name":  "HAET MONSTER 플리스 기모 트레이닝 팬츠_BLACK_M",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2SSW01CTN000L",
+                                     "outbound_name":  "스웻프리 크롭 싱글렛 (코튼캔디) L",
                                      "stock_qty":  0
                                  },
                                  {
@@ -1822,12 +1903,7 @@
                                  {
                                      "barcode":  "PD2TSM09WHT00XL",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_화이트-XL",
-                                     "stock_qty":  40
-                                 },
-                                 {
-                                     "barcode":  "PD2SSM02BLK00XL",
-                                     "outbound_name":  "퀵드라이 짐나시_블랙-XL",
-                                     "stock_qty":  38
+                                     "stock_qty":  39
                                  },
                                  {
                                      "barcode":  "PA3TSM01CRM0XXL",
@@ -1842,7 +1918,7 @@
                                  {
                                      "barcode":  "PC2TSM03BLU000S",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_BLUE_S",
-                                     "stock_qty":  39
+                                     "stock_qty":  38
                                  },
                                  {
                                      "barcode":  "P213TMU06BRK00L",
@@ -1852,17 +1928,17 @@
                                  {
                                      "barcode":  "PA3TLM01CRM00XL",
                                      "outbound_name":  "MESH-ON 파워리프팅 롱티(롱 슬리브)_CREAM_XL",
-                                     "stock_qty":  0
+                                     "stock_qty":  64
                                  },
                                  {
                                      "barcode":  "PD2STM01BLK02XL",
                                      "outbound_name":  "_채코제 에디션 초냉감 밸런스탱크_블랙-2XL",
-                                     "stock_qty":  25
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PD2TSM02DGR02XL",
                                      "outbound_name":  "_채코제에디션 초냉감 트래블러티셔츠_다크그레이-2XL",
-                                     "stock_qty":  54
+                                     "stock_qty":  53
                                  },
                                  {
                                      "barcode":  "PB2PSM05MNTXXXL",
@@ -1892,7 +1968,7 @@
                                  {
                                      "barcode":  "-",
                                      "outbound_name":  "-",
-                                     "stock_qty":  140707
+                                     "stock_qty":  140539
                                  },
                                  {
                                      "barcode":  "P213TSU04BLK0XL",
@@ -1962,7 +2038,7 @@
                                  {
                                      "barcode":  "PC2SSM02BLK000S",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_BLACK_S",
-                                     "stock_qty":  31
+                                     "stock_qty":  28
                                  },
                                  {
                                      "barcode":  "PB2TSM01BLK0XXL",
@@ -1980,6 +2056,11 @@
                                      "stock_qty":  0
                                  },
                                  {
+                                     "barcode":  "PE2TSW03BLK000M",
+                                     "outbound_name":  "퀵드라이 크롭 CHILL 티셔츠 M",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PB4TSM02BLK0XXL",
                                      "outbound_name":  "퀵드라이 세미 오버핏 그래픽 티셔츠_BLACK_XXL",
                                      "stock_qty":  0
@@ -1992,7 +2073,7 @@
                                  {
                                      "barcode":  "PB1PLM01BLK000M",
                                      "outbound_name":  "TECH SWEAT 벌룬핏 트레이닝 팬츠_BLACK_M",
-                                     "stock_qty":  10
+                                     "stock_qty":  9
                                  },
                                  {
                                      "barcode":  "PB4TMM01BLK00XL",
@@ -2007,7 +2088,7 @@
                                  {
                                      "barcode":  "PD2TSM08WHT00XL",
                                      "outbound_name":  "_채코제에디션퀵드라이 그린퓨처 티셔츠_화이트-XL",
-                                     "stock_qty":  7
+                                     "stock_qty":  5
                                  },
                                  {
                                      "barcode":  "PD2TSM04PNK03XL",
@@ -2067,7 +2148,7 @@
                                  {
                                      "barcode":  "PC2TSM01WHT02XL",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_WHITE_2XL",
-                                     "stock_qty":  23
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PD2OJM01BLK00XL",
@@ -2077,7 +2158,7 @@
                                  {
                                      "barcode":  "PC2TSM02KHA00XL",
                                      "outbound_name":  "퀵드라이 세비오버핏 백로고 티셔츠_KHAKI_XL",
-                                     "stock_qty":  19
+                                     "stock_qty":  17
                                  },
                                  {
                                      "barcode":  "P212THU50BLK00M",
@@ -2107,7 +2188,7 @@
                                  {
                                      "barcode":  "PA3STM01LGRXXXL",
                                      "outbound_name":  "KINTERRA 숄더-업 탱크_LIGHT GRAY_XXXL",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "P213TSU04BLK00L",
@@ -2132,17 +2213,17 @@
                                  {
                                      "barcode":  "PD2TSM04BLU03XL",
                                      "outbound_name":  "퀵드라이 피그먼트 오버핏 반팔티_민트블루-3XL",
-                                     "stock_qty":  49
+                                     "stock_qty":  48
                                  },
                                  {
                                      "barcode":  "PB2STM01LGR00XL",
                                      "outbound_name":  "ICE LITE 초냉감 탱크_LIGHT GREY_XL",
-                                     "stock_qty":  124
+                                     "stock_qty":  120
                                  },
                                  {
                                      "barcode":  "PB4TSM02BLK000M",
                                      "outbound_name":  "퀵드라이 세미 오버핏 그래픽 티셔츠_BLACK_M",
-                                     "stock_qty":  20
+                                     "stock_qty":  19
                                  },
                                  {
                                      "barcode":  "P213TSU04IVY00S",
@@ -2152,7 +2233,7 @@
                                  {
                                      "barcode":  "PA3SSM01WHT000L",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_WHITE_L",
-                                     "stock_qty":  9
+                                     "stock_qty":  8
                                  },
                                  {
                                      "barcode":  "PD2TSM08WHT000M",
@@ -2167,7 +2248,7 @@
                                  {
                                      "barcode":  "PB1TSM01BLK00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XL",
-                                     "stock_qty":  99
+                                     "stock_qty":  98
                                  },
                                  {
                                      "barcode":  "PB1TLM01CHL0XXL",
@@ -2182,7 +2263,7 @@
                                  {
                                      "barcode":  "PB1PLM01BLK0XXL",
                                      "outbound_name":  "TECH SWEAT 벌룬핏 트레이닝 팬츠_BLACK_XXL",
-                                     "stock_qty":  12
+                                     "stock_qty":  11
                                  },
                                  {
                                      "barcode":  "P212BSU50WGY00L",
@@ -2202,7 +2283,7 @@
                                  {
                                      "barcode":  "PD2TSM05BLU02XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_민트블루-2XL",
-                                     "stock_qty":  5
+                                     "stock_qty":  4
                                  },
                                  {
                                      "barcode":  "PC2PSM01BLK000M",
@@ -2225,6 +2306,11 @@
                                      "stock_qty":  15
                                  },
                                  {
+                                     "barcode":  "PE2TSW03BLK000L",
+                                     "outbound_name":  "퀵드라이 크롭 CHILL 티셔츠 L",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PB1PLM04BLK000M",
                                      "outbound_name":  "ICE LITE 카고 조거_BLACK_M",
                                      "stock_qty":  0
@@ -2237,7 +2323,7 @@
                                  {
                                      "barcode":  "PC2TSM03LGR00XL",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_LIGHT GREY_XL",
-                                     "stock_qty":  54
+                                     "stock_qty":  52
                                  },
                                  {
                                      "barcode":  "PD2TSM01WHT000L",
@@ -2272,7 +2358,7 @@
                                  {
                                      "barcode":  "PC2TSM01NVY02XL",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_NAVY_2XL",
-                                     "stock_qty":  16
+                                     "stock_qty":  15
                                  },
                                  {
                                      "barcode":  "",
@@ -2287,7 +2373,7 @@
                                  {
                                      "barcode":  "PC2SSM02LGR00XL",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_XL",
-                                     "stock_qty":  29
+                                     "stock_qty":  28
                                  },
                                  {
                                      "barcode":  "P213TMU06NVY00L",
@@ -2337,7 +2423,7 @@
                                  {
                                      "barcode":  "PD2TSM08WHT000L",
                                      "outbound_name":  "_채코제에디션퀵드라이 그린퓨처 티셔츠_화이트-L",
-                                     "stock_qty":  36
+                                     "stock_qty":  34
                                  },
                                  {
                                      "barcode":  "PD2TLM01WHT00XL",
@@ -2392,7 +2478,7 @@
                                  {
                                      "barcode":  "PB2PSM05BLK000L",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_BLACK_L",
-                                     "stock_qty":  19
+                                     "stock_qty":  17
                                  },
                                  {
                                      "barcode":  "PC4TMM04BLK02XL",
@@ -2442,7 +2528,7 @@
                                  {
                                      "barcode":  "PD2SSM01DGR00XL",
                                      "outbound_name":  "퀵드라이 베이직 나시_다크그린-XL",
-                                     "stock_qty":  52
+                                     "stock_qty":  48
                                  },
                                  {
                                      "barcode":  "PB4TMM01MGR000M",
@@ -2482,7 +2568,7 @@
                                  {
                                      "barcode":  "PA3STM01BLKXXXL",
                                      "outbound_name":  "KINTERRA 숄더-업 탱크_BLACK_XXXL",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PB1STM01WHTXXXL",
@@ -2507,7 +2593,7 @@
                                  {
                                      "barcode":  "PD2TSM06DGR000L",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-L",
-                                     "stock_qty":  42
+                                     "stock_qty":  37
                                  },
                                  {
                                      "barcode":  "PC2PSM02BLK000M",
@@ -2517,7 +2603,7 @@
                                  {
                                      "barcode":  "PC2SSM01GRN02XL",
                                      "outbound_name":  "퀵드라이 투톤 그래픽 나시_GREEN_2XL",
-                                     "stock_qty":  6
+                                     "stock_qty":  4
                                  },
                                  {
                                      "barcode":  "PC2PSM02MGR000M",
@@ -2532,7 +2618,7 @@
                                  {
                                      "barcode":  "PB1STM01CHA00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 탱크_CHARCOAL_XL",
-                                     "stock_qty":  19
+                                     "stock_qty":  17
                                  },
                                  {
                                      "barcode":  "PD2PLM02CHA000L",
@@ -2582,7 +2668,7 @@
                                  {
                                      "barcode":  "PE2TSM04OLV000M",
                                      "outbound_name":  "퀵드라이 B.B.B 티셔츠 올리브 M",
-                                     "stock_qty":  26
+                                     "stock_qty":  25
                                  },
                                  {
                                      "barcode":  "PD2TSM01WHT02XL",
@@ -2597,7 +2683,7 @@
                                  {
                                      "barcode":  "PC2STM01RED00XL",
                                      "outbound_name":  "퀵드라이 9 탱크_RED_XL",
-                                     "stock_qty":  53
+                                     "stock_qty":  54
                                  },
                                  {
                                      "barcode":  "PA3PLM02BLK0XXL",
@@ -2635,11 +2721,6 @@
                                      "stock_qty":  0
                                  },
                                  {
-                                     "barcode":  "PD2OSM01KGR00XL",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_카키그레이-XL",
-                                     "stock_qty":  17
-                                 },
-                                 {
                                      "barcode":  "PB2STM02WHTXXXL",
                                      "outbound_name":  "퀵드라이 플러스 숄더업 탱크_WHITE_XXXL",
                                      "stock_qty":  0
@@ -2647,7 +2728,7 @@
                                  {
                                      "barcode":  "PD2TSM06DGR04XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-4XL",
-                                     "stock_qty":  36
+                                     "stock_qty":  35
                                  },
                                  {
                                      "barcode":  "PD2TSM02DGR00XL",
@@ -2682,7 +2763,7 @@
                                  {
                                      "barcode":  "PB1TSM02MNT000L",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_LIGHT KHAKI_L",
-                                     "stock_qty":  11
+                                     "stock_qty":  9
                                  },
                                  {
                                      "barcode":  "PD2SSM02PNK02XL",
@@ -2692,7 +2773,7 @@
                                  {
                                      "barcode":  "PD2SSM01YGR00XL",
                                      "outbound_name":  "퀵드라이 베이직 나시_옐로우그린-XL",
-                                     "stock_qty":  0
+                                     "stock_qty":  88
                                  },
                                  {
                                      "barcode":  "PA3SSM01BLK000L",
@@ -2702,12 +2783,12 @@
                                  {
                                      "barcode":  "PB1TSM02CHA0XXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_CHARCOAL_XXL",
-                                     "stock_qty":  43
+                                     "stock_qty":  42
                                  },
                                  {
                                      "barcode":  "PC4AAM01RED000F",
                                      "outbound_name":  "멀티 스포츠 타월_RED",
-                                     "stock_qty":  60
+                                     "stock_qty":  59
                                  },
                                  {
                                      "barcode":  "PB2PSM05BLK0XXL",
@@ -2742,7 +2823,7 @@
                                  {
                                      "barcode":  "PD2PSM02KGR00XL",
                                      "outbound_name":  "ICE LITE 와플메쉬 투인원 쇼츠_카키그레이-XL",
-                                     "stock_qty":  21
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PC4TMM02VKH03XL",
@@ -2752,7 +2833,7 @@
                                  {
                                      "barcode":  "PA3SSM01LGR0XXL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_LIGHT GRAY_XXL",
-                                     "stock_qty":  18
+                                     "stock_qty":  16
                                  },
                                  {
                                      "barcode":  "PB1TLM01BLKXXXL",
@@ -2772,7 +2853,7 @@
                                  {
                                      "barcode":  "PB4TSM02WHT00XL",
                                      "outbound_name":  "퀵드라이 세미 오버핏 그래픽 티셔츠_WHITE_XL",
-                                     "stock_qty":  14
+                                     "stock_qty":  12
                                  },
                                  {
                                      "barcode":  "PB2PSM04RED000L",
@@ -2802,12 +2883,12 @@
                                  {
                                      "barcode":  "PC2SSM02LGR000M",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_M",
-                                     "stock_qty":  8
+                                     "stock_qty":  3
                                  },
                                  {
                                      "barcode":  "PD2TSM01BLK00XL",
                                      "outbound_name":  "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_블랙-XL",
-                                     "stock_qty":  46
+                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "P212BSU50BLK0XL",
@@ -2822,7 +2903,7 @@
                                  {
                                      "barcode":  "PA3STM01LGR0XXL",
                                      "outbound_name":  "KINTERRA 숄더-업 탱크_LIGHT GRAY_XXL",
-                                     "stock_qty":  3
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PB1TSM02WHTXXXL",
@@ -2837,7 +2918,7 @@
                                  {
                                      "barcode":  "PB2STM01LGR0XXL",
                                      "outbound_name":  "ICE LITE 초냉감 탱크_LIGHT GREY_XXL",
-                                     "stock_qty":  6
+                                     "stock_qty":  5
                                  },
                                  {
                                      "barcode":  "PC2TSM12WHT04XL",
@@ -2862,12 +2943,12 @@
                                  {
                                      "barcode":  "PD2TSM05BLU000M",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_민트블루-M",
-                                     "stock_qty":  29
+                                     "stock_qty":  28
                                  },
                                  {
                                      "barcode":  "PD2SSM02YEL000L",
                                      "outbound_name":  "퀵드라이 짐나시_옐로우-L",
-                                     "stock_qty":  58
+                                     "stock_qty":  55
                                  },
                                  {
                                      "barcode":  "PB2PSM05NVY00XL",
@@ -2897,7 +2978,7 @@
                                  {
                                      "barcode":  "PC2PSM02BLK00XL",
                                      "outbound_name":  "TECH SWEAT 헤비쭈리 쇼츠_BLACK_XL",
-                                     "stock_qty":  3
+                                     "stock_qty":  2
                                  },
                                  {
                                      "barcode":  "PD2TSM02DGR000L",
@@ -2912,12 +2993,12 @@
                                  {
                                      "barcode":  "PB1TSM02CHAXXXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_CHARCOAL_XXXL",
-                                     "stock_qty":  3
+                                     "stock_qty":  2
                                  },
                                  {
                                      "barcode":  "PD2SSM03NYL000L",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 나시_네온옐로우-L",
-                                     "stock_qty":  63
+                                     "stock_qty":  62
                                  },
                                  {
                                      "barcode":  "PE1PSW01CHA000M",
@@ -2932,7 +3013,7 @@
                                  {
                                      "barcode":  "PC2TMM01CHA000L",
                                      "outbound_name":  "ICE LITE 세미오버핏 맨투맨_CHARCOAL_L",
-                                     "stock_qty":  42
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "PD2TSM04CHA00XL",
@@ -2947,7 +3028,7 @@
                                  {
                                      "barcode":  "PA3TLM01BLK0XXL",
                                      "outbound_name":  "MESH-ON 파워리프팅 롱티(롱 슬리브)_BLACK_XXL",
-                                     "stock_qty":  86
+                                     "stock_qty":  85
                                  },
                                  {
                                      "barcode":  "PD2TLM01BLK00XL",
@@ -2962,7 +3043,7 @@
                                  {
                                      "barcode":  "PB1PLM02CHA0XXL",
                                      "outbound_name":  "ICE LITE 벌룬 조거_CHARCOAL_XXL",
-                                     "stock_qty":  32
+                                     "stock_qty":  31
                                  },
                                  {
                                      "barcode":  "PC2TSM02BLK03XL",
@@ -3025,14 +3106,9 @@
                                      "stock_qty":  19
                                  },
                                  {
-                                     "barcode":  "PD2OSM01BLK03XL",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_블랙-3XL",
-                                     "stock_qty":  24
-                                 },
-                                 {
                                      "barcode":  "PB2PSM04BLK0XXL",
                                      "outbound_name":  "ICE LITE 투인원 쇼츠_BLACK+BLACK_XXL",
-                                     "stock_qty":  28
+                                     "stock_qty":  26
                                  },
                                  {
                                      "barcode":  "PA3PLM01KHA000L",
@@ -3042,7 +3118,7 @@
                                  {
                                      "barcode":  "PC2TSM01NVY03XL",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_NAVY_3XL",
-                                     "stock_qty":  8
+                                     "stock_qty":  7
                                  },
                                  {
                                      "barcode":  "PB2PSM04GKH0XXL",
@@ -3052,7 +3128,7 @@
                                  {
                                      "barcode":  "PA3SSM01LGRXXXL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_LIGHT GRAY_XXXL",
-                                     "stock_qty":  8
+                                     "stock_qty":  7
                                  },
                                  {
                                      "barcode":  "PE1TSM01BLU02XL",
@@ -3085,14 +3161,9 @@
                                      "stock_qty":  32
                                  },
                                  {
-                                     "barcode":  "PD2OSM01KGR000L",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_카키그레이-L",
-                                     "stock_qty":  34
-                                 },
-                                 {
                                      "barcode":  "PC2TSM01NVY00XL",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_NAVY_XL",
-                                     "stock_qty":  22
+                                     "stock_qty":  19
                                  },
                                  {
                                      "barcode":  "PB4TSM01BLK04XL",
@@ -3112,27 +3183,22 @@
                                  {
                                      "barcode":  "PC2SSM02BLK00XL",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_BLACK_XL",
-                                     "stock_qty":  79
+                                     "stock_qty":  78
                                  },
                                  {
                                      "barcode":  "PC2SSM01BLK02XL",
                                      "outbound_name":  "퀵드라이 투톤 그래픽 나시_BLACK_2XL",
-                                     "stock_qty":  1
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PD2TSM09MNT000M",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 반팔티_민트-M",
-                                     "stock_qty":  52
+                                     "stock_qty":  49
                                  },
                                  {
                                      "barcode":  "PB2PSM06BLU00XL",
                                      "outbound_name":  "ICE LITE 멀티쇼츠_BLUE_XL",
                                      "stock_qty":  10
-                                 },
-                                 {
-                                     "barcode":  "PD2OSM01BLK000M",
-                                     "outbound_name":  "ICE LITE 세미오버핏 셔켓_블랙-M",
-                                     "stock_qty":  31
                                  },
                                  {
                                      "barcode":  "P213TSU04BRK00M",
@@ -3167,7 +3233,7 @@
                                  {
                                      "barcode":  "PB1STM01BLKXXXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 탱크_BLACK_XXXL",
-                                     "stock_qty":  3
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PC4TMM05WGR00XL",
@@ -3207,7 +3273,7 @@
                                  {
                                      "barcode":  "PD2TSM06DGR00XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-XL",
-                                     "stock_qty":  25
+                                     "stock_qty":  23
                                  },
                                  {
                                      "barcode":  "PD2PLM01BLK00XL",
@@ -3217,7 +3283,12 @@
                                  {
                                      "barcode":  "PD2SSM03NYL000M",
                                      "outbound_name":  "ICE LITE 쿨메쉬 베이직 나시_네온옐로우-M",
-                                     "stock_qty":  48
+                                     "stock_qty":  47
+                                 },
+                                 {
+                                     "barcode":  "PE2TSW04WHT000M",
+                                     "outbound_name":  "퀵드라이 크롭 WALK 티셔츠 M",
+                                     "stock_qty":  0
                                  },
                                  {
                                      "barcode":  "PC2TSM02WHT03XL",
@@ -3227,7 +3298,7 @@
                                  {
                                      "barcode":  "PB1TSM02WHT0XXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 머슬핏 반팔티_WHITE_XXL",
-                                     "stock_qty":  6
+                                     "stock_qty":  3
                                  },
                                  {
                                      "barcode":  "PC2TSM12NVY000M",
@@ -3272,7 +3343,7 @@
                                  {
                                      "barcode":  "PB2PSM04BLK00XL",
                                      "outbound_name":  "ICE LITE 투인원 쇼츠_BLACK+BLACK_XL",
-                                     "stock_qty":  28
+                                     "stock_qty":  27
                                  },
                                  {
                                      "barcode":  "PB1OAM01MGRXXXL",
@@ -3292,12 +3363,12 @@
                                  {
                                      "barcode":  "PA3SSM01WHT00XL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_WHITE_XL",
-                                     "stock_qty":  23
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PD2TSM02DGR03XL",
                                      "outbound_name":  "_채코제에디션 초냉감 트래블러티셔츠_다크그레이-3XL",
-                                     "stock_qty":  36
+                                     "stock_qty":  34
                                  },
                                  {
                                      "barcode":  "PB2PSM05RED000M",
@@ -3337,12 +3408,12 @@
                                  {
                                      "barcode":  "PD2TSM07BLK04XL",
                                      "outbound_name":  "퀵드라이 백레터링 세미오버핏 반팔티_블랙-4XL",
-                                     "stock_qty":  39
+                                     "stock_qty":  36
                                  },
                                  {
                                      "barcode":  "PB1TSM01WHTXXXL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XXXL",
-                                     "stock_qty":  79
+                                     "stock_qty":  77
                                  },
                                  {
                                      "barcode":  "PC2TSM03BLU000L",
@@ -3362,7 +3433,7 @@
                                  {
                                      "barcode":  "PB1SSM01BLU000L",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 나시_BLUE_L",
-                                     "stock_qty":  46
+                                     "stock_qty":  43
                                  },
                                  {
                                      "barcode":  "PD2PSM02KGR000M",
@@ -3377,7 +3448,7 @@
                                  {
                                      "barcode":  "PD2TSM03BLK000M",
                                      "outbound_name":  "ICE LITE 초냉감 PLNT 오버핏 반팔티_블랙-M",
-                                     "stock_qty":  45
+                                     "stock_qty":  43
                                  },
                                  {
                                      "barcode":  "PA3OAM01KHA00XL",
@@ -3432,7 +3503,7 @@
                                  {
                                      "barcode":  "PC2PSM01BLK00XL",
                                      "outbound_name":  "ICE LITE 컴포트 쇼츠_BLACK_XL",
-                                     "stock_qty":  42
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "PE1OJM02NVY02XL",
@@ -3442,7 +3513,7 @@
                                  {
                                      "barcode":  "PB1TMM02LKHXXXL",
                                      "outbound_name":  "ICE LITE 오버핏 맨투맨_L/KHAKI_XXXL",
-                                     "stock_qty":  28
+                                     "stock_qty":  26
                                  },
                                  {
                                      "barcode":  "PC2PSM02MGR03XL",
@@ -3465,6 +3536,11 @@
                                      "stock_qty":  44
                                  },
                                  {
+                                     "barcode":  "PE2PGW01BLK000S",
+                                     "outbound_name":  "펜타플렉스 우먼즈 숏타이즈 S",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PE1TSM01BLU000S",
                                      "outbound_name":  "퀵드라이 퍼포먼스 숏슬리브 라이트블루 S",
                                      "stock_qty":  42
@@ -3477,7 +3553,7 @@
                                  {
                                      "barcode":  "PB2PSM05NVY000L",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_NAVY_L",
-                                     "stock_qty":  9
+                                     "stock_qty":  8
                                  },
                                  {
                                      "barcode":  "PC2TMM01BLK03XL",
@@ -3542,7 +3618,7 @@
                                  {
                                      "barcode":  "PC2TSM02WHT000M",
                                      "outbound_name":  "퀵드라이 세비오버핏 백로고 티셔츠_WHITE_M",
-                                     "stock_qty":  44
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "P213BJU01BLK00L",
@@ -3557,7 +3633,7 @@
                                  {
                                      "barcode":  "PB1PLM03BLK0XXL",
                                      "outbound_name":  "ICE LITE 릴렉스드 조거_BLACK_XXL",
-                                     "stock_qty":  39
+                                     "stock_qty":  38
                                  },
                                  {
                                      "barcode":  "P213TLU05IVY00S",
@@ -3582,7 +3658,7 @@
                                  {
                                      "barcode":  "PB1SSM01BLU00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 스포츠 나시_BLUE_XL",
-                                     "stock_qty":  5
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PB1SSM01MNT00XL",
@@ -3597,12 +3673,12 @@
                                  {
                                      "barcode":  "PB1PLM03KHA000M",
                                      "outbound_name":  "ICE LITE 릴렉스드 조거_KHAKI_M",
-                                     "stock_qty":  47
+                                     "stock_qty":  46
                                  },
                                  {
                                      "barcode":  "PD2TSM05CHA02XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-2XL",
-                                     "stock_qty":  9
+                                     "stock_qty":  6
                                  },
                                  {
                                      "barcode":  "PB2PSM04BGR00XL",
@@ -3632,7 +3708,7 @@
                                  {
                                      "barcode":  "PC2PSM01LGR00XL",
                                      "outbound_name":  "ICE LITE 컴포트 쇼츠_LIGHT GREY_XL",
-                                     "stock_qty":  23
+                                     "stock_qty":  22
                                  },
                                  {
                                      "barcode":  "PD2TSM06BLU03XL",
@@ -3647,7 +3723,7 @@
                                  {
                                      "barcode":  "PD2TSM05CHA000L",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-L",
-                                     "stock_qty":  49
+                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "PD2SSM02YEL02XL",
@@ -3657,7 +3733,7 @@
                                  {
                                      "barcode":  "PC2TSM01BLK000M",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_BLACK_M",
-                                     "stock_qty":  17
+                                     "stock_qty":  14
                                  },
                                  {
                                      "barcode":  "PD2TSM05BLU04XL",
@@ -3677,7 +3753,7 @@
                                  {
                                      "barcode":  "PD2TSM06DGR02XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-2XL",
-                                     "stock_qty":  40
+                                     "stock_qty":  35
                                  },
                                  {
                                      "barcode":  "PD2TSM01KGR000L",
@@ -3692,7 +3768,7 @@
                                  {
                                      "barcode":  "PC2PSM02MGR000L",
                                      "outbound_name":  "TECH SWEAT 헤비쭈리 쇼츠_M/GREY_L",
-                                     "stock_qty":  5
+                                     "stock_qty":  3
                                  },
                                  {
                                      "barcode":  "PB1SSM01ORG0XXL",
@@ -3712,17 +3788,12 @@
                                  {
                                      "barcode":  "PC2TSM02BLK02XL",
                                      "outbound_name":  "퀵드라이 세비오버핏 백로고 티셔츠_BLACK_2XL",
-                                     "stock_qty":  2
+                                     "stock_qty":  58
                                  },
                                  {
                                      "barcode":  "PB2PSM06BLUXXXL",
                                      "outbound_name":  "ICE LITE 멀티쇼츠_BLUE_XXXL",
                                      "stock_qty":  15
-                                 },
-                                 {
-                                     "barcode":  "PE1SSM01LGR000S",
-                                     "outbound_name":  "퀵드라이 메쉬 러닝싱글렛 라이트그레이 S",
-                                     "stock_qty":  39
                                  },
                                  {
                                      "barcode":  "P213TSU04BRK00S",
@@ -3772,17 +3843,17 @@
                                  {
                                      "barcode":  "PD2TSM06DGR03XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-3XL",
-                                     "stock_qty":  39
+                                     "stock_qty":  38
                                  },
                                  {
                                      "barcode":  "PC2SSM02BLK000M",
                                      "outbound_name":  "ICE LITE 초냉감 러닝 나시_BLACK_M",
-                                     "stock_qty":  22
+                                     "stock_qty":  21
                                  },
                                  {
                                      "barcode":  "PB1TSM01WHT00XL",
                                      "outbound_name":  "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XL",
-                                     "stock_qty":  79
+                                     "stock_qty":  78
                                  },
                                  {
                                      "barcode":  "PB1PLM03KHA00XL",
@@ -3802,7 +3873,7 @@
                                  {
                                      "barcode":  "PE2TSM04OLV02XL",
                                      "outbound_name":  "퀵드라이 B.B.B 티셔츠 올리브 2XL",
-                                     "stock_qty":  22
+                                     "stock_qty":  21
                                  },
                                  {
                                      "barcode":  "PB4THM01BLK0XXL",
@@ -3817,7 +3888,7 @@
                                  {
                                      "barcode":  "PD2SSM02PNK000L",
                                      "outbound_name":  "퀵드라이 짐나시_핑크-L",
-                                     "stock_qty":  67
+                                     "stock_qty":  64
                                  },
                                  {
                                      "barcode":  "PC4TMM04BLK000L",
@@ -3827,12 +3898,12 @@
                                  {
                                      "barcode":  "PB2PSM05BLK00XL",
                                      "outbound_name":  "ICE LITE 테크 6\" 데일리 쇼츠_BLACK_XL",
-                                     "stock_qty":  17
+                                     "stock_qty":  15
                                  },
                                  {
                                      "barcode":  "PC2TMM01BLK000M",
                                      "outbound_name":  "ICE LITE 세미오버핏 맨투맨_BLACK_M",
-                                     "stock_qty":  36
+                                     "stock_qty":  32
                                  },
                                  {
                                      "barcode":  "PB4PLM02BLK000M",
@@ -3857,7 +3928,7 @@
                                  {
                                      "barcode":  "PA3STM01WHT00XL",
                                      "outbound_name":  "KINTERRA 숄더-업 탱크_WHITE_XL",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PD2TSM03BLU03XL",
@@ -3882,7 +3953,7 @@
                                  {
                                      "barcode":  "PA3SSM01BLK00XL",
                                      "outbound_name":  "KINTERRA 벤치프레스 빈티지 그래픽 나시_BLACK_XL",
-                                     "stock_qty":  9
+                                     "stock_qty":  8
                                  },
                                  {
                                      "barcode":  "P213TMU06CHA0XL",
@@ -3892,11 +3963,16 @@
                                  {
                                      "barcode":  "PD2TSM02WHT000M",
                                      "outbound_name":  "_채코제에디션 초냉감 트래블러티셔츠_화이트-M",
-                                     "stock_qty":  42
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "PB1PLM04LGR000L",
                                      "outbound_name":  "ICE LITE 카고 조거_L/GREY_L",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2PGU01BLK000S",
+                                     "outbound_name":  "펜타플렉스 로고 하프타이즈 S",
                                      "stock_qty":  0
                                  },
                                  {
@@ -3927,12 +4003,12 @@
                                  {
                                      "barcode":  "PD2TSM05CHA04XL",
                                      "outbound_name":  "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-4XL",
-                                     "stock_qty":  2
+                                     "stock_qty":  1
                                  },
                                  {
                                      "barcode":  "PD2TSM08KGR000L",
                                      "outbound_name":  "_채코제에디션퀵드라이 그린퓨처 티셔츠_카키그레이-L",
-                                     "stock_qty":  50
+                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "PA3PLM04KHA00XL",
@@ -3965,11 +4041,6 @@
                                      "stock_qty":  0
                                  },
                                  {
-                                     "barcode":  "PE1SSM01WHT000S",
-                                     "outbound_name":  "퀵드라이 메쉬 러닝싱글렛 화이트 S",
-                                     "stock_qty":  40
-                                 },
-                                 {
                                      "barcode":  "PC2SSM01GRN00XL",
                                      "outbound_name":  "퀵드라이 투톤 그래픽 나시_GREEN_XL",
                                      "stock_qty":  9
@@ -3977,12 +4048,12 @@
                                  {
                                      "barcode":  "PA3TSM01CRM00XL",
                                      "outbound_name":  "MESH-ON 파워리프팅 롱티(하프 슬리브)_CREAM_XL",
-                                     "stock_qty":  73
+                                     "stock_qty":  72
                                  },
                                  {
                                      "barcode":  "PC2TSM01WHT000M",
                                      "outbound_name":  "퀵드라이 세미오버핏 아치로고 티셔츠_WHITE_M",
-                                     "stock_qty":  1
+                                     "stock_qty":  47
                                  },
                                  {
                                      "barcode":  "PA3PLM03BLK000L",
@@ -4012,7 +4083,7 @@
                                  {
                                      "barcode":  "PE1PSM01BLK000M",
                                      "outbound_name":  "퀵드라이 메쉬 러닝쇼츠 블랙 M",
-                                     "stock_qty":  60
+                                     "stock_qty":  59
                                  },
                                  {
                                      "barcode":  "PD2TSM06BLU000M",
@@ -4037,12 +4108,12 @@
                                  {
                                      "barcode":  "PE2TSM03CHA02XL",
                                      "outbound_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 차콜 2XL",
-                                     "stock_qty":  27
+                                     "stock_qty":  24
                                  },
                                  {
                                      "barcode":  "PC2TSM03BLU000M",
                                      "outbound_name":  "ICE LITE 초냉감 세미오버핏 티셔츠_BLUE_M",
-                                     "stock_qty":  10
+                                     "stock_qty":  9
                                  },
                                  {
                                      "barcode":  "PD2SSM02PNK03XL",
@@ -4077,7 +4148,7 @@
                                  {
                                      "barcode":  "PD2TSM06BLU00XL",
                                      "outbound_name":  "퀵드라이 마운틴 세미오버핏 반팔티_라이트블루-XL",
-                                     "stock_qty":  1
+                                     "stock_qty":  50
                                  },
                                  {
                                      "barcode":  "P212THU50WGR00M",
@@ -4155,6 +4226,11 @@
                                      "stock_qty":  0
                                  },
                                  {
+                                     "barcode":  "PE2PGU01BLK000L",
+                                     "outbound_name":  "펜타플렉스 로고 하프타이즈 L",
+                                     "stock_qty":  0
+                                 },
+                                 {
                                      "barcode":  "PC4TMM02VKH02XL",
                                      "outbound_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨_VINTAGE KHAKI_2XL",
                                      "stock_qty":  15
@@ -4162,7 +4238,7 @@
                                  {
                                      "barcode":  "PD2SSM01DGR02XL",
                                      "outbound_name":  "퀵드라이 베이직 나시_다크그린-2XL",
-                                     "stock_qty":  45
+                                     "stock_qty":  41
                                  },
                                  {
                                      "barcode":  "PA3PLM04KHA000M",
@@ -4202,6 +4278,11 @@
                                  {
                                      "barcode":  "PC4PLM01VKH000M",
                                      "outbound_name":  "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)_VINTAGE KHAKI_M",
+                                     "stock_qty":  0
+                                 },
+                                 {
+                                     "barcode":  "PE2PGU01BLK000M",
+                                     "outbound_name":  "펜타플렉스 로고 하프타이즈 M",
                                      "stock_qty":  0
                                  },
                                  {
