@@ -75,6 +75,26 @@ rows_json = json.dumps(rows, **JSON_KWARGS)
 historical_daily_json = json.dumps(historical_daily, **JSON_KWARGS)
 manual_sales_json = json.dumps(manual_sales_updates, **JSON_KWARGS)
 
+# ★ 2026 일일판매정리(4월).xlsx 첫 시트의 몰별 월 목표 매출.
+# 기타몰은 별도 목표가 없는 유통사(애슬러, 롯데온, ABC마트, 러너블, 기타 등)의 합산 목표다.
+SALES_TARGET_DEFAULTS = {
+    "2026": {
+        "01": {"자사몰": 15795630, "무신사": 5748871.5, "글로리어스워커": 7000000, "4XR": 2246880, "29cm": 405144, "기타몰": 500000},
+        "02": {"자사몰": 11808300, "무신사": 9469110, "글로리어스워커": 2000000, "4XR": 2849376, "29cm": 287642, "기타몰": 0},
+        "03": {"자사몰": 17273160, "무신사": 11052276, "글로리어스워커": 7000000, "4XR": 3664470, "29cm": 143630, "기타몰": 1000000},
+        "04": {"자사몰": 58495000, "무신사": 24174517.5, "글로리어스워커": 10000000, "4XR": 3177560, "29cm": 458166, "기타몰": 1000000},
+        "05": {"자사몰": 62507425, "무신사": 41056875, "글로리어스워커": 8000000, "4XR": 4450720, "29cm": 145800, "기타몰": 1000000},
+        "06": {"자사몰": 65453788.8, "무신사": 65725290, "글로리어스워커": 10000000, "4XR": 4857200, "29cm": 1277366, "기타몰": 1000000},
+        "07": {"자사몰": 62175808, "무신사": 56030015, "글로리어스워커": 10000000, "4XR": 3932488, "29cm": 850544, "기타몰": 1000000},
+        "08": {"자사몰": 85804550, "무신사": 41865787.5, "글로리어스워커": 0, "4XR": 3654300, "29cm": 188274, "기타몰": 500000},
+        "09": {"자사몰": 28801750, "무신사": 19924535, "글로리어스워커": 0, "4XR": 3088000, "29cm": 200648, "기타몰": 0},
+        "10": {"자사몰": 20721180, "무신사": 17174784, "글로리어스워커": 0, "4XR": 1803060, "29cm": 118380, "기타몰": 0},
+        "11": {"자사몰": 21936980, "무신사": 21668370, "글로리어스워커": 10000000, "4XR": 664800, "29cm": 705814, "기타몰": 1000000},
+        "12": {"자사몰": 16000000, "무신사": 16000000, "글로리어스워커": 750000, "4XR": 750000, "29cm": 600000, "기타몰": 0},
+    }
+}
+sales_target_defaults_json = json.dumps(SALES_TARGET_DEFAULTS, **JSON_KWARGS)
+
 # 2026 플래니트 예산.xlsx > 2025 실매출 > 월별 합계(row 32) 기준.
 # GitHub Actions 환경에서도 재생성 가능하도록 기준값은 스크립트에 고정한다.
 PREV_YEAR_MONTHLY = [
@@ -239,6 +259,18 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 .toolbar input::placeholder{{color:var(--ink3);}}
 .btn-sm{{height:34px;padding:0 14px;background:var(--panel);border:1px solid var(--border2);border-radius:7px;font-size:12px;font-weight:600;color:var(--ink2);cursor:pointer;font-family:'Pretendard',sans-serif;transition:all 0.15s;white-space:nowrap;}}
 .btn-sm:hover{{background:var(--bg);color:var(--ink);}}
+.target-panel{{margin-top:14px;}}
+.target-panel-actions{{display:flex;align-items:center;gap:8px;margin-left:auto;}}
+.target-sync{{font-size:11px;color:var(--ink3);}}
+.target-editor{{display:none;background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:14px;margin:0 0 14px;}}
+.target-editor.active{{display:block;}}
+.target-editor-head{{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}}
+.target-editor-title{{font-size:14px;font-weight:800;color:var(--ink);}}
+.target-editor-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}}
+.target-editor-field{{display:flex;flex-direction:column;gap:5px;font-size:11px;font-weight:700;color:var(--ink2);}}
+.target-editor-field input{{width:100%;height:36px;border:1px solid var(--border2);border-radius:7px;background:#fff;padding:0 10px;font:12px 'DM Mono',monospace;color:var(--ink);}}
+.target-editor-foot{{display:flex;justify-content:flex-end;gap:8px;margin-top:12px;}}
+.target-rate{{font-weight:800;}}
 
 /* TABLE */
 .table-wrap{{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}}
@@ -352,6 +384,9 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
   .nav-label{{font-size:13px;}}
   .nav-sub{{font-size:10px;}}
   .kpis{{grid-template-columns:1fr 1fr;}}
+  .target-editor-grid{{grid-template-columns:1fr;}}
+  .target-panel .panel-hd{{align-items:flex-start;gap:8px;}}
+  .target-panel-actions{{width:100%;margin-left:0;justify-content:space-between;}}
 }}
 </style>
 </head>
@@ -569,6 +604,49 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       </div>
       <div class="foot">2024/2025는 예산 파일의 실매출 월합계 기준이며, 2026은 현재 업로드된 일별 판매 데이터 기준입니다.</div>
     </div>
+
+    <div class="panel target-panel">
+      <div class="panel-hd">
+        <div><span class="panel-title">월별 목표 매출 달성</span><span class="panel-meta">몰별 목표 · 실적 · 달성률</span></div>
+        <div class="target-panel-actions">
+          <span class="target-sync" id="targetSyncStatus">엑셀 원본 목표</span>
+          <button class="btn-sm" id="targetEditBtn" type="button">목표 수정</button>
+        </div>
+      </div>
+      <div class="toolbar">
+        <select id="targetYear"></select>
+        <select id="targetMonth">
+          <option value="">전체 월</option>
+          <option value="01">1월</option><option value="02">2월</option><option value="03">3월</option>
+          <option value="04">4월</option><option value="05">5월</option><option value="06">6월</option>
+          <option value="07">7월</option><option value="08">8월</option><option value="09">9월</option>
+          <option value="10">10월</option><option value="11">11월</option><option value="12">12월</option>
+        </select>
+      </div>
+      <div class="target-editor" id="targetEditor">
+        <div class="target-editor-head">
+          <div><div class="target-editor-title" id="targetEditorTitle">월 목표 수정</div><div class="panel-meta">수정값은 모든 대시보드 사용자에게 동일하게 적용됩니다.</div></div>
+        </div>
+        <div class="target-editor-grid" id="targetEditorGrid"></div>
+        <div class="target-editor-foot">
+          <button class="btn-sm" id="targetEditCancel" type="button">취소</button>
+          <button class="todo-btn primary" id="targetEditSave" type="button">저장</button>
+        </div>
+      </div>
+      <div class="sum-strip">
+        <div class="sum-card"><div class="sum-label" id="targetGoalLabel">목표 매출</div><div class="sum-value" id="targetGoalSales">0</div></div>
+        <div class="sum-card"><div class="sum-label" id="targetActualLabel">실매출</div><div class="sum-value" id="targetActualSales">0</div></div>
+        <div class="sum-card"><div class="sum-label">목표 달성률</div><div class="sum-value" id="targetAchievement">-</div></div>
+      </div>
+      <div class="chart-box" style="height:280px;margin-bottom:14px"><canvas id="targetChart"></canvas></div>
+      <div class="table-wrap" style="max-height:390px">
+        <table>
+          <thead><tr><th id="targetScopeHead">월</th><th class="num">목표 매출</th><th class="num">실매출</th><th class="num">차이</th><th class="num">달성률</th></tr></thead>
+          <tbody id="targetRows"></tbody>
+        </table>
+      </div>
+      <div class="foot">목표는 전달받은 2026 일일판매정리 첫 시트 기준입니다. 기타몰 실적은 별도 목표가 없는 유통사의 합산입니다.</div>
+    </div>
   </div>
 
   <!-- CALENDAR TAB -->
@@ -700,6 +778,10 @@ const HISTORICAL_MONTHLY = {historical_monthly_json};
 const HISTORICAL_DAILY = {historical_daily_json};
 const HISTORICAL_DAILY_MONTHLY = {historical_daily_monthly_json};
 const MANUAL_SALES = {manual_sales_json};
+const SALES_TARGET_DEFAULTS = {sales_target_defaults_json};
+const SALES_TARGET_GROUPS = ['자사몰','무신사','글로리어스워커','4XR','29cm','기타몰'];
+const SALES_TARGET_DIRECT_RETAILERS = new Set(SALES_TARGET_GROUPS.filter(name=>name!=='기타몰'));
+const SALES_TARGET_LOCAL_KEY = 'plaknitSalesTargets.v1';
 const BARCODE_YEAR_LABELS = {{A:'2022',B:'2023',C:'2024',D:'2025',E:'2026',F:'2027',G:'2028'}};
 const REORDER_ALLOWED_YEAR_CODES = new Set(['D','E']); // 바코드 연도 D/E(2025/2026) 상품만 리오더 알림 대상
 
@@ -1250,6 +1332,212 @@ initCompareControls();
   document.getElementById(id).addEventListener('change',renderCompare);
 }});
 
+// 월별 목표 매출 --------------------------------------------------------
+let salesTargets = loadSalesTargetsLocal();
+let targetChartInst = null;
+
+function mergeSalesTargetRows(base, rows) {{
+  (rows || []).forEach(row=>{{
+    const year = String(row.year || '');
+    const month = String(row.month || '').padStart(2,'0');
+    const retailer = String(row.retailer || '');
+    if (!year || !month || !SALES_TARGET_GROUPS.includes(retailer)) return;
+    if (!base[year]) base[year] = {{}};
+    if (!base[year][month]) base[year][month] = {{}};
+    base[year][month][retailer] = num(row.target_amount);
+  }});
+  return base;
+}}
+
+function loadSalesTargetsLocal() {{
+  const base = JSON.parse(JSON.stringify(SALES_TARGET_DEFAULTS));
+  try {{
+    const saved = JSON.parse(localStorage.getItem(SALES_TARGET_LOCAL_KEY) || '[]');
+    if (Array.isArray(saved)) mergeSalesTargetRows(base, saved);
+  }} catch(e) {{}}
+  return base;
+}}
+
+function flattenSalesTargets() {{
+  const rows = [];
+  Object.entries(salesTargets).forEach(([year, months])=>{{
+    Object.entries(months || {{}}).forEach(([month, retailers])=>{{
+      SALES_TARGET_GROUPS.forEach(retailer=>rows.push({{
+        year:Number(year), month:Number(month), retailer,
+        target_amount:num(retailers?.[retailer])
+      }}));
+    }});
+  }});
+  return rows;
+}}
+
+function saveSalesTargetsLocal() {{
+  localStorage.setItem(SALES_TARGET_LOCAL_KEY, JSON.stringify(flattenSalesTargets()));
+}}
+
+function targetValue(year, month, retailer) {{
+  return num(salesTargets?.[String(year)]?.[String(month).padStart(2,'0')]?.[retailer]);
+}}
+
+function targetDailyData(year, retailer) {{
+  if (String(year) === '2026') return buildDailyMap(retailer);
+  return buildHistoricalDailyMap(String(year), retailer);
+}}
+
+function targetActualValue(year, month, retailer) {{
+  const monthPrefix = `${{year}}-${{String(month).padStart(2,'0')}}`;
+  const sumDaily = rows => rows.filter(row=>row.date.startsWith(monthPrefix)).reduce((sum,row)=>sum+num(row.payment),0);
+  if (retailer !== '기타몰') return sumDaily(targetDailyData(year, retailer));
+  const all = sumDaily(targetDailyData(year, ''));
+  const direct = [...SALES_TARGET_DIRECT_RETAILERS].reduce((sum,name)=>sum+sumDaily(targetDailyData(year, name)),0);
+  return all - direct;
+}}
+
+function targetRate(actual, goal) {{
+  if (goal > 0) return actual / goal * 100;
+  return actual === 0 ? 0 : null;
+}}
+
+function targetRowsForSelection(year, selectedMonth) {{
+  if (selectedMonth) return SALES_TARGET_GROUPS.map(retailer=>{{
+    const goal = targetValue(year, selectedMonth, retailer);
+    const actual = targetActualValue(year, selectedMonth, retailer);
+    return {{label:retailer, goal, actual, diff:actual-goal, rate:targetRate(actual,goal)}};
+  }});
+  return Array.from({{length:12}},(_,idx)=>String(idx+1).padStart(2,'0')).map(month=>{{
+    const goal = SALES_TARGET_GROUPS.reduce((sum,retailer)=>sum+targetValue(year,month,retailer),0);
+    const actual = SALES_TARGET_GROUPS.reduce((sum,retailer)=>sum+targetActualValue(year,month,retailer),0);
+    return {{label:`${{Number(month)}}월`, goal, actual, diff:actual-goal, rate:targetRate(actual,goal)}};
+  }});
+}}
+
+function renderSalesTargets() {{
+  const year = document.getElementById('targetYear').value || '2026';
+  const selectedMonth = document.getElementById('targetMonth').value;
+  const rows = targetRowsForSelection(year, selectedMonth);
+  const goal = rows.reduce((sum,row)=>sum+row.goal,0);
+  const actual = rows.reduce((sum,row)=>sum+row.actual,0);
+  const achievement = targetRate(actual,goal);
+  const scope = selectedMonth ? `${{Number(selectedMonth)}}월` : '전체 월';
+  document.getElementById('targetGoalLabel').textContent = `${{year}}년 ${{scope}} 목표 매출`;
+  document.getElementById('targetActualLabel').textContent = `${{year}}년 ${{scope}} 실매출`;
+  document.getElementById('targetGoalSales').textContent = fmt(goal);
+  document.getElementById('targetActualSales').textContent = fmt(actual);
+  document.getElementById('targetAchievement').textContent = achievement === null ? '-' : pct(achievement);
+  document.getElementById('targetAchievement').style.color = achievement !== null && achievement >= 100 ? 'var(--teal)' : 'var(--amber)';
+  document.getElementById('targetScopeHead').textContent = selectedMonth ? '유통사' : '월';
+
+  if (targetChartInst) targetChartInst.destroy();
+  targetChartInst = new Chart(document.getElementById('targetChart'), {{
+    type:'bar',
+    data:{{labels:rows.map(row=>row.label),datasets:[
+      {{label:'목표 매출',data:rows.map(row=>row.goal),backgroundColor:'rgba(100,116,139,.16)',borderColor:'#64748b',borderWidth:1.5,borderRadius:5,yAxisID:'y'}},
+      {{label:'실매출',data:rows.map(row=>row.actual),backgroundColor:'rgba(59,130,246,.20)',borderColor:'#3b82f6',borderWidth:1.5,borderRadius:5,yAxisID:'y'}},
+      {{type:'line',label:'달성률',data:rows.map(row=>row.rate),borderColor:'#10b981',backgroundColor:'#10b981',borderWidth:2,pointRadius:3,tension:.25,yAxisID:'y1'}}
+    ]}},
+    options:{{responsive:true,maintainAspectRatio:false,plugins:{{legend:{{display:true,position:'bottom'}},tooltip:{{...ttip,callbacks:{{label:ctx=>ctx.dataset.yAxisID==='y1' ? ` ${{ctx.dataset.label}}: ${{ctx.raw===null?'-':pct(ctx.raw)}}` : ` ${{ctx.dataset.label}}: ${{fmt(ctx.raw)}}`}}}}}},scales:{{x:scl.x,y:scl.y,y1:{{position:'right',grid:{{drawOnChartArea:false}},ticks:{{callback:value=>value+'%'}}}}}}}}
+  }});
+
+  document.getElementById('targetRows').innerHTML = rows.map(row=>`<tr>
+    <td class="td-main">${{row.label}}</td>
+    <td class="num">${{fmt(row.goal)}}</td>
+    <td class="num">${{fmt(row.actual)}}</td>
+    <td class="num" style="color:${{row.diff>=0?'var(--teal)':'var(--red)'}}">${{fmt(row.diff)}}</td>
+    <td class="num target-rate" style="color:${{row.rate!==null&&row.rate>=100?'var(--teal)':'var(--amber)'}}">${{row.rate===null?'-':pct(row.rate)}}</td>
+  </tr>`).join('');
+}}
+
+function initSalesTargetControls() {{
+  const years = Array.from(new Set([...compareYears,...Object.keys(salesTargets)])).sort();
+  const yearSelect = document.getElementById('targetYear');
+  yearSelect.innerHTML = years.map(year=>`<option value="${{year}}">${{year}}년</option>`).join('');
+  yearSelect.value = years.includes('2026') ? '2026' : years[years.length-1];
+}}
+
+function openSalesTargetEditor() {{
+  const year = document.getElementById('targetYear').value || '2026';
+  let month = document.getElementById('targetMonth').value;
+  if (!month) {{
+    const now = new Date();
+    month = String(String(now.getFullYear()) === year ? now.getMonth()+1 : 1).padStart(2,'0');
+    document.getElementById('targetMonth').value = month;
+    renderSalesTargets();
+  }}
+  document.getElementById('targetEditorTitle').textContent = `${{year}}년 ${{Number(month)}}월 목표 수정`;
+  document.getElementById('targetEditor').dataset.year = year;
+  document.getElementById('targetEditor').dataset.month = month;
+  document.getElementById('targetEditorGrid').innerHTML = SALES_TARGET_GROUPS.map(retailer=>`
+    <label class="target-editor-field">${{retailer}}
+      <input type="number" min="0" step="1" data-target-retailer="${{retailer}}" value="${{targetValue(year,month,retailer)}}">
+    </label>`).join('');
+  document.getElementById('targetEditor').classList.add('active');
+}}
+
+function closeSalesTargetEditor() {{
+  document.getElementById('targetEditor').classList.remove('active');
+}}
+
+async function saveSalesTargetRemote(rows) {{
+  if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
+  const res = await fetch(`${{TODO_SUPABASE_REST}}/sales_targets?on_conflict=year,month,retailer`, {{
+    method:'POST',
+    headers:{{...TODO_HEADERS,Prefer:'resolution=merge-duplicates,return=representation'}},
+    body:JSON.stringify(rows)
+  }});
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}}
+
+async function submitSalesTargetEditor() {{
+  const editor = document.getElementById('targetEditor');
+  const year = editor.dataset.year;
+  const month = editor.dataset.month;
+  const rows = Array.from(editor.querySelectorAll('[data-target-retailer]')).map(input=>({{
+    year:Number(year),month:Number(month),retailer:input.dataset.targetRetailer,target_amount:Math.max(0,num(input.value))
+  }}));
+  if (!salesTargets[year]) salesTargets[year] = {{}};
+  if (!salesTargets[year][month]) salesTargets[year][month] = {{}};
+  rows.forEach(row=>salesTargets[year][month][row.retailer]=row.target_amount);
+  saveSalesTargetsLocal();
+  const button = document.getElementById('targetEditSave');
+  button.disabled = true;
+  document.getElementById('targetSyncStatus').textContent = '저장 중';
+  try {{
+    await saveSalesTargetRemote(rows);
+    document.getElementById('targetSyncStatus').textContent = 'Supabase 동기화 완료';
+  }} catch(e) {{
+    document.getElementById('targetSyncStatus').textContent = '이 브라우저에 저장됨';
+    console.warn('Supabase sales target save failed. Local fallback is active.', e);
+  }} finally {{
+    button.disabled = false;
+  }}
+  closeSalesTargetEditor();
+  renderSalesTargets();
+}}
+
+async function refreshSalesTargetsRemote() {{
+  try {{
+    if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
+    const res = await fetch(`${{TODO_SUPABASE_REST}}/sales_targets?select=year,month,retailer,target_amount&order=year.asc,month.asc`, {{headers:TODO_HEADERS}});
+    if (!res.ok) throw new Error(await res.text());
+    mergeSalesTargetRows(salesTargets, await res.json());
+    saveSalesTargetsLocal();
+    document.getElementById('targetSyncStatus').textContent = 'Supabase 동기화';
+    renderSalesTargets();
+  }} catch(e) {{
+    document.getElementById('targetSyncStatus').textContent = '엑셀 원본 목표';
+    console.warn('Supabase sales target load failed. Embedded defaults are active.', e);
+  }}
+}}
+
+initSalesTargetControls();
+renderSalesTargets();
+document.getElementById('targetYear').addEventListener('change',renderSalesTargets);
+document.getElementById('targetMonth').addEventListener('change',()=>{{closeSalesTargetEditor();renderSalesTargets();}});
+document.getElementById('targetEditBtn').addEventListener('click',openSalesTargetEditor);
+document.getElementById('targetEditCancel').addEventListener('click',closeSalesTargetEditor);
+document.getElementById('targetEditSave').addEventListener('click',submitSalesTargetEditor);
+
 let dcInst = null;
 let calRetailer = '';
 let calYear = '2026';
@@ -1697,7 +1985,7 @@ function hasTodoSupabaseConfig() {{
 async function ensureTodoSupabaseConfig() {{
   if (hasTodoSupabaseConfig()) return true;
   try {{
-    const res = await fetch('/api/supabase-config', {{cache:'no-store'}});
+    const res = await fetch('/api/dashboard-config', {{cache:'no-store'}});
     if (!res.ok) throw new Error(await res.text());
     const cfg = await res.json();
     TODO_SUPABASE_PROJECT = (cfg.url || cfg.projectUrl || '').replace(/\\/$/, '');
@@ -2116,6 +2404,7 @@ document.getElementById('todoFile').addEventListener('change',e=>{{document.getE
 todoItems = loadTodoItems();
 renderTodo();
 refreshTodoFromSupabase();
+refreshSalesTargetsRemote();
 
 // ?? NAV TABS ???????????????????????????????????????????????
 function activateTab(tab) {{
@@ -2128,7 +2417,7 @@ function activateTab(tab) {{
   const mobileToggle = document.getElementById('mobileNavToggle');
   if (mobileToggle && nav) mobileToggle.textContent = nav.querySelector('.nav-label')?.textContent?.trim() || '메뉴';
   if (window.location.hash !== `#${{tab}}`) history.replaceState(null, '', `#${{tab}}`);
-  if(tab==='compare')   renderCompare();
+  if(tab==='compare')   {{renderCompare();renderSalesTargets();}}
   if(tab==='calendar')  renderDaily();
   if(tab==='retailer')  renderRetailer();
   if(tab==='detail')    renderDetail();
