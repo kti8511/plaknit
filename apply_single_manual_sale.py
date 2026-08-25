@@ -61,7 +61,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    rows = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
     matches = [
         row
         for row in rows
@@ -107,7 +107,7 @@ def main():
     row["avg_unit"] = int(round(row["payment"] / row["qty"])) if row["qty"] else 0
     append_or_merge_daily(row, args.date, args.qty, args.payment, args.payment, max(args.qty, 0))
 
-    manual = json.loads(MANUAL_FILE.read_text(encoding="utf-8"))
+    manual = json.loads(MANUAL_FILE.read_text(encoding="utf-8-sig"))
     manual = update_manual(
         manual,
         args.date,

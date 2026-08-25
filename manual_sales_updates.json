@@ -14843,5 +14843,96 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-08-24",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 524630,
+        "qty": 15,
+        "orders": 13
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지",
+            "qty": 2,
+            "payment": 70020
+          },
+          {
+            "name": "퀵드라이 우먼즈 멀티포켓쇼츠 블랙",
+            "qty": 1,
+            "payment": 56940
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 31590
+          },
+          {
+            "name": "멀티 스포츠 타월",
+            "qty": 1,
+            "payment": 12080
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 0,
+            "payment": 1530
+          }
+        ],
+        "payment": 172160,
+        "qty": 5,
+        "orders": 4
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 피그먼트 오버핏 반팔티_라이트그레이-XL",
+            "qty": 1,
+            "payment": 27120
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트-M",
+            "qty": 1,
+            "payment": 33918
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36553
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 나시_블랙-L",
+            "qty": 1,
+            "payment": 17930
+          }
+        ],
+        "payment": 152071,
+        "qty": 5,
+        "orders": 5
+      },
+      {
+        "retailer": "글로리어스워커",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 1,
+            "payment": 59000
+          }
+        ],
+        "payment": 59000,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]

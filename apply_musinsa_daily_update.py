@@ -121,7 +121,7 @@ def append_daily(row, day, item):
 
 
 def update_manual(day, items):
-    manual = json.loads(MANUAL_FILE.read_text(encoding="utf-8"))
+    manual = json.loads(MANUAL_FILE.read_text(encoding="utf-8-sig"))
     by_date = {entry["date"]: entry for entry in manual}
     entry = by_date.setdefault(day, {"date": day, "retailers": []})
     retailers = entry.setdefault("retailers", [])
@@ -142,7 +142,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    rows = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
     items = [{**item, "name": normalize_name(item["name"])} for item in DAILY_ITEMS]
     remove_existing_day(rows, args.date)
     index = build_name_index(rows)
