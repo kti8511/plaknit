@@ -15007,5 +15007,89 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-08-26",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 681800,
+        "qty": 27,
+        "orders": 15
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠_블랙-S",
+            "qty": 1,
+            "payment": 26780
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 38700
+          }
+        ],
+        "payment": 102030,
+        "qty": 3,
+        "orders": 3
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 46140
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 34110
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+            "qty": 1,
+            "payment": 30510
+          }
+        ],
+        "payment": 110760,
+        "qty": 3,
+        "orders": 3
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "KINTERRA 퀵 드라이 오버핏 반팔티_BLACK_XXXL",
+            "qty": 2,
+            "payment": 69800
+          }
+        ],
+        "qty": 2,
+        "payment": 69800,
+        "orders": 1
+      },
+      {
+        "retailer": "글로리어스워커",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
+            "qty": 1,
+            "payment": 59000
+          }
+        ],
+        "qty": 1,
+        "payment": 59000,
+        "orders": 1
+      }
+    ]
   }
 ]
