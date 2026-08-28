@@ -15091,5 +15091,101 @@
         "orders": 1
       }
     ]
+  },
+  {
+    "date": "2026-08-27",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 253500,
+        "qty": 13,
+        "orders": 6
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 2,
+            "payment": 73100
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-S",
+            "qty": 2,
+            "payment": 77400
+          }
+        ],
+        "payment": 150500,
+        "qty": 4,
+        "orders": 4
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "TECH SWEAT 7인치 카고 반바지",
+            "qty": 2,
+            "payment": 69360
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 2,
+            "payment": 68720
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 1,
+            "payment": 37530
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠",
+            "qty": 1,
+            "payment": 34900
+          },
+          {
+            "name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드",
+            "qty": -1,
+            "payment": -43450
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": -2,
+            "payment": -75850
+          }
+        ],
+        "payment": 91210,
+        "qty": 3,
+        "orders": 2
+      },
+      {
+        "retailer": "글로리어스워커",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
+            "qty": 1,
+            "payment": 38000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-3XL",
+            "qty": 1,
+            "payment": 38000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 1,
+            "payment": 38000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 1,
+            "payment": 38000
+          }
+        ],
+        "qty": 4,
+        "payment": 152000,
+        "orders": 4
+      }
+    ]
   }
 ]
