@@ -134402,11 +134402,11 @@
         "name":  "ICE LITE 세미오버핏 셔켓",
         "color":  "블랙",
         "size":  "3XL",
-        "qty":  37,
-        "gross":  1014601,
-        "payment":  1014601,
-        "avg_unit":  27422,
-        "orders":  24,
+        "qty":  36,
+        "gross":  976601,
+        "payment":  976601,
+        "avg_unit":  27128,
+        "orders":  23,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -134450,13 +134450,6 @@
                           "gross":  9500,
                           "payment":  9500,
                           "orders":  0
-                      },
-                      {
-                          "date":  "2026-08-27",
-                          "qty":  1,
-                          "gross":  38000,
-                          "payment":  38000,
-                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -134473,11 +134466,11 @@
         "name":  "ICE LITE 세미오버핏 셔켓",
         "color":  "블랙",
         "size":  "L",
-        "qty":  92,
-        "gross":  3162332,
-        "payment":  3162332,
-        "avg_unit":  34373,
-        "orders":  78,
+        "qty":  91,
+        "gross":  3124332,
+        "payment":  3124332,
+        "avg_unit":  34333,
+        "orders":  77,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -134534,13 +134527,6 @@
                           "qty":  1,
                           "gross":  59000,
                           "payment":  59000,
-                          "orders":  1
-                      },
-                      {
-                          "date":  "2026-08-27",
-                          "qty":  1,
-                          "gross":  38000,
-                          "payment":  38000,
                           "orders":  1
                       }
                   ],
@@ -134643,11 +134629,11 @@
         "name":  "ICE LITE 세미오버핏 셔켓",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  144,
-        "gross":  4894165,
-        "payment":  4894165,
-        "avg_unit":  33987,
-        "orders":  122,
+        "qty":  143,
+        "gross":  4856165,
+        "payment":  4856165,
+        "avg_unit":  33959,
+        "orders":  121,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -134718,13 +134704,6 @@
                           "qty":  1,
                           "gross":  59000,
                           "payment":  59000,
-                          "orders":  1
-                      },
-                      {
-                          "date":  "2026-08-27",
-                          "qty":  1,
-                          "gross":  38000,
-                          "payment":  38000,
                           "orders":  1
                       }
                   ],

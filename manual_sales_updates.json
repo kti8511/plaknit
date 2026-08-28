@@ -15165,26 +15165,11 @@
             "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
             "qty": 1,
             "payment": 38000
-          },
-          {
-            "name": "ICE LITE 세미오버핏 셔켓_블랙-3XL",
-            "qty": 1,
-            "payment": 38000
-          },
-          {
-            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
-            "qty": 1,
-            "payment": 38000
-          },
-          {
-            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
-            "qty": 1,
-            "payment": 38000
           }
         ],
-        "qty": 4,
-        "payment": 152000,
-        "orders": 4
+        "qty": 1,
+        "payment": 38000,
+        "orders": 1
       }
     ]
   }
