@@ -191,6 +191,9 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .gantt-row{display:grid;grid-template-columns:210px 1fr;min-height:48px;border-bottom:1px solid #edf2f7;}
 .gantt-row:last-child{border-bottom:0;}
 .gantt-task-name{padding:12px 14px;font-size:13px;display:flex;gap:8px;align-items:center;min-width:0;}
+.gantt-task-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
+.gantt-task-delete{width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;margin-left:auto;flex:0 0 auto;border:1px solid #fecaca;background:#fff;color:#b91c1c;border-radius:6px;font-size:18px;line-height:1;cursor:pointer;}
+.gantt-task-delete:hover{background:#fef2f2;} .gantt-task-delete:disabled{cursor:wait;opacity:.6;}
 .gantt-row{cursor:pointer;}
 .gantt-row:hover .gantt-task-name,.gantt-row:hover .gantt-timeline{background:#f8fafc;}
 .gantt-dot{width:9px;height:9px;border-radius:50%;background:#94a3b8;flex:0 0 auto;}
@@ -211,6 +214,8 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .todo-list tbody tr:hover td{background:#f8fafc;}
 .todo-row-actions{display:flex;gap:6px;justify-content:flex-end;}
 .todo-row-actions button{border:0;background:#eef2ff;color:#1e40af;border-radius:6px;padding:6px 8px;cursor:pointer;font-weight:700;}
+.todo-row-actions button[data-delete]{background:#fef2f2;color:#b91c1c;}
+.todo-row-actions button:disabled{cursor:wait;opacity:.6;}
 .todo-side{position:sticky;top:86px;}
 .todo-deadline{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:var(--shadow);}
 .todo-deadline h3{margin:0 0 10px;font-size:14px;color:#ef4444;}
@@ -284,7 +289,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </a>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-08-31 14:59</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-08-31 15:51</div>
     </div>
   </div>
 </header>
@@ -2059,9 +2064,28 @@ async function deleteTodoRemote(id) {
   if (!(await ensureTodoSupabaseConfig())) throw new Error('Supabase config is missing.');
   const res = await fetch(`${TODO_SUPABASE_REST}/todos?id=eq.${encodeURIComponent(id)}`, {
     method: 'DELETE',
-    headers: TODO_HEADERS
+    headers: {...TODO_HEADERS, Prefer:'return=representation'}
   });
   if (!res.ok) throw new Error(await res.text());
+  const deleted = await res.json();
+  if (!Array.isArray(deleted) || !deleted.some(row=>String(row.id) === String(id))) {
+    throw new Error('태스크 삭제 결과를 확인할 수 없습니다.');
+  }
+}
+async function deleteTodoItem(id, button) {
+  const item = todoItems.find(todo=>String(todo.id) === String(id));
+  if (!item) return;
+  if (!confirm(`'${item.task}' 태스크만 삭제하시겠습니까?
+프로젝트의 다른 태스크는 유지됩니다.`)) return;
+  if (button) button.disabled = true;
+  try {
+    await deleteTodoRemote(item.id);
+  } catch(e) {
+    console.warn('Supabase todo delete failed. Local delete applied.', e);
+  }
+  todoItems = todoItems.filter(todo=>String(todo.id) !== String(item.id));
+  saveTodoItems();
+  renderTodo();
 }
 async function deleteTodoProjectRemote(project) {
   const remoteItems = (await fetchTodoRemote()).filter(item=>item.project === project);
@@ -2141,7 +2165,11 @@ function renderTodoGantt() {
         const left = Math.max(0, Math.min(100, daysBetween(range.start, item.start || range.start) / span * 100));
         const width = Math.max(4, Math.min(100-left, (Math.max(1, daysBetween(item.start || range.start, item.end || item.start || range.end)+1) / span * 100)));
         return `<div class="gantt-row" data-open-todo="${item.id}">
-          <div class="gantt-task-name"><span class="gantt-dot ${todoStatusClass(item.status)}"></span><span title="${item.memo || ''}">${item.task}</span></div>
+          <div class="gantt-task-name">
+            <span class="gantt-dot ${todoStatusClass(item.status)}"></span>
+            <span class="gantt-task-label" title="${item.memo || ''}">${item.task}</span>
+            <button class="gantt-task-delete" type="button" data-delete-todo="${item.id}" title="이 태스크만 삭제" aria-label="이 태스크만 삭제">&times;</button>
+          </div>
           <div class="gantt-timeline">
             <div class="gantt-today"></div>
             <div class="gantt-bar ${todoStatusClass(item.status)}" style="left:${left}%;width:${width}%">${item.owner || todoStatusText[item.status]}</div>
@@ -2151,6 +2179,10 @@ function renderTodoGantt() {
     </section>
   `).join('') || '<div class="panel">등록된 일정이 없습니다.</div>';
   el.querySelectorAll('[data-open-todo]').forEach(node=>node.addEventListener('click',()=>openTodoForm(node.dataset.openTodo)));
+  el.querySelectorAll('[data-delete-todo]').forEach(button=>button.addEventListener('click',async event=>{
+    event.stopPropagation();
+    await deleteTodoItem(button.dataset.deleteTodo, button);
+  }));
   el.querySelectorAll('[data-delete-project]').forEach(button=>button.addEventListener('click',async event=>{
     event.stopPropagation();
     const entry = projectEntries[Number(button.dataset.deleteProject)];
@@ -2185,16 +2217,9 @@ function renderTodoList() {
   body.querySelectorAll('[data-open-todo]').forEach(row=>row.addEventListener('click',()=>openTodoForm(row.dataset.openTodo)));
   body.querySelectorAll('a').forEach(link=>link.addEventListener('click',e=>e.stopPropagation()));
   body.querySelectorAll('[data-edit]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();openTodoForm(btn.dataset.edit);}));
-  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',async e=>{e.stopPropagation();
-    const id = btn.dataset.delete;
-    try {
-      await deleteTodoRemote(id);
-    } catch(e) {
-      console.warn('Supabase todo delete failed. Local delete applied.', e);
-    }
-    todoItems = todoItems.filter(i=>i.id !== id);
-    saveTodoItems();
-    renderTodo();
+  body.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',async event=>{
+    event.stopPropagation();
+    await deleteTodoItem(btn.dataset.delete, btn);
   }));
 }
 function renderTodoDeadline() {
