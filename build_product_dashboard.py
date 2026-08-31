@@ -242,6 +242,7 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 
 /* SUM STRIP */
 .sum-strip{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;}}
+.detail-period-summary{{grid-template-columns:repeat(6,minmax(0,1fr));}}
 .sum-card{{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}}
 .sum-label{{font-size:11px;color:var(--ink3);font-weight:500;}}
 .sum-value{{font-size:19px;font-weight:800;color:var(--ink);margin-top:3px;font-family:'DM Mono',monospace;}}
@@ -257,6 +258,9 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 .toolbar input,.toolbar select{{height:34px;border:1px solid var(--border2);border-radius:7px;background:var(--panel);color:var(--ink);font-size:13px;padding:0 10px;font-family:'Pretendard',sans-serif;outline:none;min-width:140px;transition:border-color 0.15s,box-shadow 0.15s;}}
 .toolbar input:focus,.toolbar select:focus{{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,0.1);}}
 .toolbar input::placeholder{{color:var(--ink3);}}
+.detail-date-range{{display:flex;align-items:center;gap:6px;}}
+.detail-date-range input{{min-width:142px;}}
+.detail-date-separator{{font-size:12px;color:var(--ink3);}}
 .btn-sm{{height:34px;padding:0 14px;background:var(--panel);border:1px solid var(--border2);border-radius:7px;font-size:12px;font-weight:600;color:var(--ink2);cursor:pointer;font-family:'Pretendard',sans-serif;transition:all 0.15s;white-space:nowrap;}}
 .btn-sm:hover{{background:var(--bg);color:var(--ink);}}
 .target-panel{{margin-top:14px;}}
@@ -275,7 +279,7 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 /* TABLE */
 .table-wrap{{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}}
 table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
-.detail-table{{table-layout:fixed;min-width:1510px;}}
+.detail-table{{table-layout:fixed;min-width:1630px;}}
 .detail-table th:nth-child(3),.detail-table td.standard-name-cell{{width:var(--standard-name-col-width);}}
 .standard-name-cell{{max-width:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
 .resizable-th{{position:relative;padding-right:18px;}}
@@ -366,7 +370,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 ::-webkit-scrollbar{{width:5px;height:5px;}} ::-webkit-scrollbar-track{{background:transparent;}}
 ::-webkit-scrollbar-thumb{{background:var(--border2);border-radius:3px;}}
 
-@media(max-width:1200px){{.kpis{{grid-template-columns:repeat(3,1fr);}}.grid2,.grid2-eq,.charts-row{{grid-template-columns:1fr;}}}}
+@media(max-width:1200px){{.kpis{{grid-template-columns:repeat(3,1fr);}}.grid2,.grid2-eq,.charts-row{{grid-template-columns:1fr;}}.detail-period-summary{{grid-template-columns:repeat(3,minmax(0,1fr));}}}}
 @media(max-width:680px){{
   header{{overflow:visible;}}
   .header-top{{height:auto;min-height:52px;padding:8px 12px;gap:8px;flex-wrap:wrap;position:relative;}}
@@ -387,6 +391,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
   .target-editor-grid{{grid-template-columns:1fr;}}
   .target-panel .panel-hd{{align-items:flex-start;gap:8px;}}
   .target-panel-actions{{width:100%;margin-left:0;justify-content:space-between;}}
+  .detail-period-summary{{grid-template-columns:repeat(2,minmax(0,1fr));}}
+  #q{{width:100%;}}
+  .detail-date-range{{width:100%;}}
+  .detail-date-range input{{flex:1;min-width:0;}}
 }}
 </style>
 </head>
@@ -728,16 +736,25 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
   <!-- DETAIL TAB -->
   <div id="detail" class="tab-panel">
     <div class="panel">
-      <div class="panel-hd"><span class="panel-title">상품별 매출</span></div>
+      <div class="panel-hd"><span class="panel-title">상품별 매출</span><span class="panel-meta" id="detailPeriodMeta">전체 기간</span></div>
       <div class="toolbar">
         <input id="q" placeholder="상품명 · 상품번호 검색"/>
+        <div class="detail-date-range">
+          <input type="date" id="detailDateStart" aria-label="상품 매출 시작일"/>
+          <span class="detail-date-separator">~</span>
+          <input type="date" id="detailDateEnd" aria-label="상품 매출 종료일"/>
+        </div>
+        <button class="btn-sm" id="clearDetailDate" type="button">기간 초기화</button>
         <select id="seasonFilter"><option value="">전체 시즌</option></select>
         <select id="categoryLargeFilter"><option value="">전체 복종(대)</option></select>
         <select id="categorySmallFilter"><option value="">전체 복종(소)</option></select>
         <select id="sortBy"><option value="payment">금액순</option><option value="qty">수량순</option><option value="weeklyRate">판매율순</option><option value="name">상품명순</option></select>
       </div>
-      <div class="sum-strip">
+      <div class="sum-strip detail-period-summary">
+        <div class="sum-card"><div class="sum-label">기간 판매수량</div><div class="sum-value" id="detailPeriodQty">0</div></div>
+        <div class="sum-card"><div class="sum-label">기간 실판매금액</div><div class="sum-value" id="detailPeriodPayment">0</div></div>
         <div class="sum-card"><div class="sum-label">전체 출고가능 재고</div><div class="sum-value" id="detailStockQty">0</div></div>
+        <div class="sum-card"><div class="sum-label">기간 재고 소진율</div><div class="sum-value" id="detailPeriodStockRate">-</div></div>
         <div class="sum-card"><div class="sum-label">전체 재고 소진율</div><div class="sum-value" id="detailStockRate">-</div></div>
         <div class="sum-card"><div class="sum-label">주간 상품 판매율</div><div class="sum-value" id="detailWeeklyRate">-</div></div>
       </div>
@@ -751,10 +768,11 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
             <tr>
               <th class="sortable-th" data-detail-sort="alert" style="width:72px">알림</th><th class="sortable-th" data-detail-sort="sku" style="width:120px">바코드</th><th class="sortable-th resizable-th" data-detail-sort="name" id="standardNameHeader">표준상품명<span class="col-resizer" id="standardNameResizer"></span></th>
               <th class="sortable-th" data-detail-sort="year">연도</th><th class="sortable-th" data-detail-sort="season">시즌</th><th class="sortable-th" data-detail-sort="category">복종</th>
-              <th class="sortable-th num" data-detail-sort="qty">판매수량</th>
+              <th class="sortable-th num" data-detail-sort="qty">기간 판매수량</th>
               <th class="sortable-th num" data-detail-sort="weeklyQty">주간 판매수량</th>
               <th class="sortable-th num" data-detail-sort="weeklyRate">주간 판매율</th>
               <th class="sortable-th num" data-detail-sort="stockQty">현재고</th>
+              <th class="sortable-th num" data-detail-sort="periodStockRate">기간 재고 소진율</th>
               <th class="sortable-th num" data-detail-sort="stockRate">전체 재고 소진율</th>
               <th class="sortable-th num" data-detail-sort="gross">정상가금액</th>
               <th class="sortable-th num" data-detail-sort="payment">실판매금액</th>
@@ -1650,6 +1668,14 @@ function initDetailFilters() {{
   fill('seasonFilter', '전체 시즌', uniqSorted(rawRows.map(r=>r.season)));
   fill('categoryLargeFilter', '전체 복종(대)', uniqSorted(rawRows.map(r=>r.category_large)));
   fill('categorySmallFilter', '전체 복종(소)', uniqSorted(rawRows.map(r=>r.category_small)));
+  const availableDates = uniqSorted(rawRows.flatMap(r=>(r.daily||[]).map(d=>d.date)));
+  if (availableDates.length) {{
+    ['detailDateStart','detailDateEnd'].forEach(id=>{{
+      const el = document.getElementById(id);
+      el.min = availableDates[0];
+      el.max = availableDates[availableDates.length - 1];
+    }});
+  }}
 }}
 
 let detailTableSort = {{key:'payment', dir:'desc'}};
@@ -1657,7 +1683,9 @@ function detailAlertText(row) {{
   return !row.stock_known ? '재고확인' : row.reorder_reasons.length ? '확인' : '정상';
 }}
 function detailDiscountValue(row) {{
-  return row.validGross > 0 && row.validPayment <= row.validGross ? (1 - row.validPayment / row.validGross) * 100 : -1;
+  return row.period_valid_gross > 0 && row.period_valid_payment <= row.period_valid_gross
+    ? (1 - row.period_valid_payment / row.period_valid_gross) * 100
+    : -1;
 }}
 function detailSortValue(row, key) {{
   if (key === 'alert') return detailAlertText(row);
@@ -1666,14 +1694,15 @@ function detailSortValue(row, key) {{
   if (key === 'year') return (row.years || []).join(', ');
   if (key === 'season') return (row.seasons || []).join(', ');
   if (key === 'category') return row.categoryLarge.concat(row.categorySmall).filter(v=>v && v !== '-').join(' / ');
-  if (key === 'qty') return Number(row.qty || 0);
+  if (key === 'qty') return Number(row.period_qty || 0);
   if (key === 'weeklyQty') return Number(row.weekly_qty || 0);
   if (key === 'weeklyRate') return Number(row.weekly_rate || 0);
   if (key === 'stockQty') return Number(row.stock_qty || 0);
+  if (key === 'periodStockRate') return Number(row.period_stock_rate || 0);
   if (key === 'stockRate') return Number(row.stock_rate || 0);
-  if (key === 'gross') return Number(row.gross || 0);
-  if (key === 'payment') return Number(row.payment || 0);
-  if (key === 'avgUnit') return Number(row.avg_unit || 0);
+  if (key === 'gross') return Number(row.period_gross || 0);
+  if (key === 'payment') return Number(row.period_payment || 0);
+  if (key === 'avgUnit') return Number(row.period_avg_unit || 0);
   if (key === 'discount') return detailDiscountValue(row);
   return '';
 }}
@@ -1695,6 +1724,9 @@ function updateDetailSortMarks() {{
 
 function renderDetail() {{
   const q   = (document.getElementById('q').value||'').toLowerCase();
+  const detailStart = document.getElementById('detailDateStart').value;
+  const detailEnd = document.getElementById('detailDateEnd').value;
+  const hasDetailPeriod = Boolean(detailStart || detailEnd);
   const seasonFilter = document.getElementById('seasonFilter').value;
   const categoryLargeFilter = document.getElementById('categoryLargeFilter').value;
   const categorySmallFilter = document.getElementById('categorySmallFilter').value;
@@ -1794,16 +1826,54 @@ function renderDetail() {{
     }};
   }});
 
+  const allDetailDates = uniqSorted(rows.flatMap(r=>(r.daily||[]).map(d=>d.date)));
+  const effectiveStart = detailStart || allDetailDates[0] || '';
+  const effectiveEnd = detailEnd || allDetailDates[allDetailDates.length - 1] || '';
+  document.getElementById('detailPeriodMeta').textContent = effectiveStart && effectiveEnd
+    ? `${{effectiveStart}} ~ ${{effectiveEnd}}`
+    : '전체 기간';
+  rows.forEach(r=>{{
+    if (!hasDetailPeriod) {{
+      r.period_qty = Number(r.qty || 0);
+      r.period_gross = Number(r.gross || 0);
+      r.period_payment = Number(r.payment || 0);
+      r.period_orders = Number(r.orders || 0);
+      r.period_valid_gross = Number(r.validGross || 0);
+      r.period_valid_payment = Number(r.validPayment || 0);
+    }} else {{
+      const periodDaily = (r.daily||[]).filter(d=>(!detailStart || d.date>=detailStart) && (!detailEnd || d.date<=detailEnd));
+      r.period_qty = periodDaily.reduce((a,d)=>a + Number(d.qty || 0), 0);
+      r.period_gross = periodDaily.reduce((a,d)=>a + Number(d.gross || 0), 0);
+      r.period_payment = periodDaily.reduce((a,d)=>a + Number(d.payment || 0), 0);
+      r.period_orders = periodDaily.reduce((a,d)=>a + Number(d.orders || 0), 0);
+      const validPeriodDaily = periodDaily.filter(d=>validDiscount(d.gross, d.payment) !== null);
+      r.period_valid_gross = validPeriodDaily.reduce((a,d)=>a + Number(d.gross || 0), 0);
+      r.period_valid_payment = validPeriodDaily.reduce((a,d)=>a + Number(d.payment || 0), 0);
+    }}
+    r.period_avg_unit = r.period_qty ? r.period_payment / r.period_qty : 0;
+    const periodSold = Math.max(0, Number(r.period_qty || 0));
+    const stockBase = Math.max(0, Number(r.stock_qty || 0));
+    r.period_stock_rate = periodSold + stockBase > 0 ? periodSold / (periodSold + stockBase) * 100 : 0;
+  }});
+
   if (q) rows = rows.filter(r=>(r.searchText||'').includes(q));
+  if (hasDetailPeriod) rows = rows.filter(r=>r.period_qty !== 0 || r.period_payment !== 0 || r.period_orders !== 0);
 
   const detailDates = buildDailyMap('').map(d=>d.date);
   const detailCutoff = detailDates.length >= 7 ? detailDates[detailDates.length-7] : detailDates[0];
   const filteredQty = rows.reduce((a,r)=>a + Number(r.qty || 0), 0);
+  const filteredPeriodQty = rows.reduce((a,r)=>a + Number(r.period_qty || 0), 0);
+  const filteredPeriodPayment = rows.reduce((a,r)=>a + Number(r.period_payment || 0), 0);
   const filteredStock = rows.reduce((a,r)=>a + Math.max(0, Number(r.stock_qty || 0)), 0);
   const weeklyQty = rows.reduce((sum,r)=>sum + (r.daily||[]).filter(d=>!detailCutoff || d.date>=detailCutoff).reduce((a,d)=>a + Number(d.qty || 0), 0), 0);
   const stockRate = filteredQty + filteredStock ? filteredQty / (filteredQty + filteredStock) * 100 : null;
+  const periodSold = Math.max(0, filteredPeriodQty);
+  const periodStockRate = periodSold + filteredStock ? periodSold / (periodSold + filteredStock) * 100 : null;
   const weeklyRate = weeklyQty + filteredStock ? weeklyQty / (weeklyQty + filteredStock) * 100 : null;
+  document.getElementById('detailPeriodQty').textContent = fmt(filteredPeriodQty);
+  document.getElementById('detailPeriodPayment').textContent = fmt(filteredPeriodPayment);
   document.getElementById('detailStockQty').textContent = fmt(filteredStock);
+  document.getElementById('detailPeriodStockRate').textContent = periodStockRate === null ? '-' : pct(periodStockRate);
   document.getElementById('detailStockRate').textContent = stockRate === null ? '-' : pct(stockRate);
   document.getElementById('detailWeeklyRate').textContent = weeklyRate === null ? '-' : pct(weeklyRate);
 
@@ -1842,7 +1912,7 @@ function renderDetail() {{
     <th><select id="tableYearFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.years)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
     <th><select id="tableSeasonFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.seasons)).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
     <th><select id="tableCategoryFilter"><option value="">전체</option>${{uniqSorted(rows.flatMap(r=>r.categoryLarge.concat(r.categorySmall))).map(v=>`<option value="${{v}}">${{v}}</option>`).join('')}}</select></th>
-    <th colspan="9"></th>`;
+    <th colspan="10"></th>`;
 
   const tableFilters = {{
     alert:'',
@@ -1876,15 +1946,16 @@ function renderDetail() {{
     el.addEventListener('change', applyTableFilters);
   }});
 
-  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="15" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
+  if (!rows.length) {{ tbody.innerHTML='<tr><td colspan="16" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>'; return; }}
 
 function drawDetailRows(displayRows) {{
   if (!displayRows.length) {{
-    tbody.innerHTML='<tr><td colspan="15" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
+    tbody.innerHTML='<tr><td colspan="16" style="text-align:center;color:var(--ink3);padding:28px">검색 결과 없음</td></tr>';
     return;
   }}
   tbody.innerHTML = displayRows.map(r=>{{
-    const disc    = r.validGross > 0 && r.validPayment <= r.validGross ? (1 - r.validPayment / r.validGross) * 100 : null;
+    const discValue = detailDiscountValue(r);
+    const disc = discValue >= 0 ? discValue : null;
     const stockQty= r.stock_qty ?? '-';
     const weeklyQty= r.weekly_qty ?? '-';
     const alertB  = !r.stock_known ? 'badge-amber' : r.reorder_reasons.length ? 'badge-red' : 'badge-green';
@@ -1901,14 +1972,15 @@ function drawDetailRows(displayRows) {{
       <td><span class="badge badge-gray">${{(r.years||[]).join(', ') || '-'}}</span></td>
       <td><span class="badge badge-blue">${{r.seasons.join(', ')}}</span></td>
       <td><span class="badge badge-indigo">${{r.categoryLarge.concat(r.categorySmall).filter(v=>v && v !== '-').join(' / ') || '-'}}</span></td>
-      <td class="num">${{fmt(r.qty)}}</td>
+      <td class="num">${{fmt(r.period_qty)}}</td>
       <td class="num">${{weeklyQty!=='-'?fmt(weeklyQty):'-'}}</td>
       <td class="num" style="color:${{r.weekly_rate>=7?'var(--red)':r.weekly_rate>=4?'var(--amber)':'var(--ink2)'}}">${{r.weekly_rate>0?pct(r.weekly_rate):'-'}}</td>
       <td class="num">${{stockQty!=='-'?fmt(stockQty):'-'}}</td>
+      <td class="num" style="color:${{r.period_stock_rate>=20?'var(--red)':r.period_stock_rate>=12?'var(--amber)':'var(--ink2)'}}">${{r.period_stock_rate>0?pct(r.period_stock_rate):'-'}}</td>
       <td class="num" style="color:${{r.stock_rate>=20?'var(--red)':r.stock_rate>=12?'var(--amber)':'var(--ink2)'}}">${{r.stock_rate>0?pct(r.stock_rate):'-'}}</td>
-      <td class="num">${{fmt(r.gross)}}</td>
-      <td class="num" style="color:var(--blue2);font-weight:600">${{fmt(r.payment)}}</td>
-      <td class="num">${{fmt(r.avg_unit)}}</td>
+      <td class="num">${{fmt(r.period_gross)}}</td>
+      <td class="num" style="color:var(--blue2);font-weight:600">${{fmt(r.period_payment)}}</td>
+      <td class="num">${{fmt(r.period_avg_unit)}}</td>
       <td class="num" style="color:${{disc!==null&&disc>50?'var(--red)':disc!==null&&disc>30?'var(--amber)':'var(--ink2)'}}">${{disc===null?'-':pct(disc)}}</td>
     </tr>`;
   }}).join('');
@@ -1919,6 +1991,22 @@ initDetailFilters();
 ['q','seasonFilter','categoryLargeFilter','categorySmallFilter'].forEach(id=>{{
   document.getElementById(id).addEventListener('input',renderDetail);
   document.getElementById(id).addEventListener('change',renderDetail);
+}});
+['detailDateStart','detailDateEnd'].forEach(id=>{{
+  document.getElementById(id).addEventListener('change',()=>{{
+    const start = document.getElementById('detailDateStart');
+    const end = document.getElementById('detailDateEnd');
+    if (start.value && end.value && start.value > end.value) {{
+      if (id === 'detailDateStart') end.value = start.value;
+      else start.value = end.value;
+    }}
+    renderDetail();
+  }});
+}});
+document.getElementById('clearDetailDate').addEventListener('click', ()=>{{
+  document.getElementById('detailDateStart').value = '';
+  document.getElementById('detailDateEnd').value = '';
+  renderDetail();
 }});
 document.getElementById('sortBy').addEventListener('change', e=>{{
   const value = e.target.value;
