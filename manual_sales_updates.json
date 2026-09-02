@@ -15783,5 +15783,71 @@
         "orders": 4
       }
     ]
+  },
+  {
+    "date": "2026-09-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "items": [],
+        "payment": 543200,
+        "qty": 17,
+        "orders": 9
+      },
+      {
+        "retailer": "29cm",
+        "items": [
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+            "qty": 2,
+            "payment": 38930
+          },
+          {
+            "name": "퀵드라이 코어 로고 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 26462
+          }
+        ],
+        "payment": 65392,
+        "qty": 3,
+        "orders": 2
+      },
+      {
+        "retailer": "무신사",
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 48410
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 36390
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": -2,
+            "payment": -19800
+          }
+        ],
+        "payment": 65000,
+        "qty": 0,
+        "orders": 1
+      },
+      {
+        "retailer": "4XR",
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠_BLACK_4XL",
+            "qty": 1,
+            "payment": 37900
+          }
+        ],
+        "payment": 37900,
+        "qty": 1,
+        "orders": 1
+      }
+    ]
   }
 ]
