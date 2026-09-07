@@ -139386,5 +139386,32 @@
         "standard_name":  "퀵드라이 메쉬 러닝쇼츠_블랙-XL",
         "received_qty":  0,
         "stock_qty":  0
+    },
+    {
+        "retailer":  "ABC마트",
+        "mall_no":  "",
+        "name":  "스포츠 쿠션업 심볼 크루삭스",
+        "color":  "화이트",
+        "size":  "",
+        "qty":  1,
+        "gross":  8800,
+        "payment":  6900,
+        "avg_unit":  6900,
+        "orders":  1,
+        "source_type":  "상품",
+        "daily":  [
+                      {
+                          "date":  "2026-09-05",
+                          "qty":  1,
+                          "gross":  8800,
+                          "payment":  6900,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "미매칭",
+        "match_sku":  "",
+        "standard_name":  "스포츠 쿠션업 심볼 크루삭스_화이트",
+        "received_qty":  0,
+        "stock_qty":  0
     }
 ]

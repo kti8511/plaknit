@@ -16201,6 +16201,19 @@
         "payment": 412700,
         "orders": 6,
         "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 1,
+        "payment": 6900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "스포츠 쿠션업 심볼 크루삭스_화이트",
+            "qty": 1,
+            "payment": 6900
+          }
+        ]
       }
     ]
   },
