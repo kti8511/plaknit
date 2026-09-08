@@ -16370,6 +16370,42 @@
             "payment": -77840
           }
         ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 1,
+        "payment": 59000,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
+            "qty": 1,
+            "payment": 59000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "retailers": [
+      {
+        "retailer": "글로리어스워커",
+        "qty": 2,
+        "payment": 118000,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-2XL",
+            "qty": 1,
+            "payment": 59000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 1,
+            "payment": 59000
+          }
+        ]
       }
     ]
   }
