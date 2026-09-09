@@ -16406,6 +16406,57 @@
             "payment": 59000
           }
         ]
+      },
+      {
+        "retailer": "자사몰",
+        "qty": 9,
+        "payment": 245900,
+        "orders": 7,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "payment": 63326,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠_블랙-M",
+            "qty": 1,
+            "payment": 26776
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "payment": 35800,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 35800
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "qty": 1,
+        "payment": 39900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_블랙-L(30~32)",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
       }
     ]
   }
