@@ -16459,5 +16459,86 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 9,
+        "payment": 282100,
+        "orders": 6,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 6,
+        "payment": 232900,
+        "orders": 6,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "QUICKDRY 러닝 롱슬리브_블랙-2XL",
+            "qty": 1,
+            "payment": 50150
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "payment": 126210,
+        "orders": 2,
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 3,
+            "payment": 114130
+          },
+          {
+            "name": "멀티 스포츠 타월",
+            "qty": 1,
+            "payment": 12080
+          }
+        ]
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 1,
+        "payment": 29900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티_차콜-XL",
+            "qty": 1,
+            "payment": 29900
+          }
+        ]
+      }
+    ]
   }
 ]
