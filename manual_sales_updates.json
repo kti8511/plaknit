@@ -16540,5 +16540,71 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 12,
+        "payment": 393400,
+        "orders": 5,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "payment": 96450,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 메쉬 러닝쇼츠 워시드카키-XL",
+            "qty": 1,
+            "payment": 59900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 2,
+        "payment": 77440,
+        "orders": 2,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 44540
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 32900
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 2,
+        "payment": 118000,
+        "orders": 2,
+        "items": [
+          {
+            "name": "ICE LITE 루즈핏 카고쇼츠_블랙-3XL",
+            "qty": 1,
+            "payment": 59000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-2XL",
+            "qty": 1,
+            "payment": 59000
+          }
+        ]
+      }
+    ]
   }
 ]
