@@ -16834,5 +16834,96 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 16,
+        "payment": 329360,
+        "orders": 10,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 5,
+        "payment": 182749,
+        "orders": 5,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-L",
+            "qty": 1,
+            "payment": 36549
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "payment": 23050,
+        "orders": 5,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
+            "qty": 1,
+            "payment": 54340
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 49480
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 5,
+            "payment": 47340
+          },
+          {
+            "name": "KINTERRA 벤치프레스 빈티지 그래픽 나시",
+            "qty": -1,
+            "payment": -9320
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 레드",
+            "qty": -2,
+            "payment": -118790
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "qty": 2,
+        "payment": 79800,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 릴렉스드 조거_블랙-2XL(34~36)",
+            "qty": 2,
+            "payment": 79800
+          }
+        ]
+      }
+    ]
   }
 ]
