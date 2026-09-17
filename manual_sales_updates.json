@@ -17021,5 +17021,132 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 16,
+        "payment": 344940,
+        "orders": 6,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "payment": 108635,
+        "orders": 4,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_라이트그레이-M",
+            "qty": 1,
+            "payment": 27120
+          },
+          {
+            "name": "타이다잉 러닝삭스_블랙",
+            "qty": 1,
+            "payment": 8415
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 10,
+        "payment": 185400,
+        "orders": 4,
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 7,
+            "payment": 68430
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 44160
+          },
+          {
+            "name": "퀵드라이 메쉬 러닝쇼츠 블랙",
+            "qty": 1,
+            "payment": 44100
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠",
+            "qty": 1,
+            "payment": 28710
+          }
+        ]
+      },
+      {
+        "retailer": "러너블",
+        "qty": 1,
+        "payment": 39900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 와플메쉬 투인원 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 1,
+        "payment": 55818,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-XL",
+            "qty": 1,
+            "payment": 55818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "retailers": [
+      {
+        "retailer": "ABC마트",
+        "qty": 4,
+        "payment": 159600,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-M",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-L",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-2XL",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
+      }
+    ]
   }
 ]
