@@ -17146,6 +17146,188 @@
             "payment": 39900
           }
         ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 1,
+        "payment": 25420,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지_멜란지 그레이-M",
+            "qty": 1,
+            "payment": 25420
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 16,
+        "payment": 158260,
+        "orders": 3,
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 8,
+            "payment": 77580
+          },
+          {
+            "name": "멀티 스포츠 타월",
+            "qty": 7,
+            "payment": 52270
+          },
+          {
+            "name": "ICE LITE 멀티쇼츠(이너내장)",
+            "qty": 1,
+            "payment": 28410
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 1,
+        "payment": 72010,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 릴렉스드 조거_네이비-XXL",
+            "qty": 1,
+            "payment": 72010
+          }
+        ]
+      },
+      {
+        "retailer": "자사몰",
+        "qty": 11,
+        "payment": 301100,
+        "orders": 6,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "retailers": [
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "payment": 84830,
+        "orders": 3,
+        "items": [
+          {
+            "name": "스포츠 러닝 크루삭스_라임",
+            "qty": 1,
+            "payment": 5865
+          },
+          {
+            "name": "스포츠 러닝 크루삭스_핑크",
+            "qty": 1,
+            "payment": 5865
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-S",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": -1,
+        "payment": 14120,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 5,
+            "payment": 47280
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크",
+            "qty": 1,
+            "payment": 19110
+          },
+          {
+            "name": "멀티 스포츠 타월",
+            "qty": -7,
+            "payment": -52270
+          }
+        ]
+      },
+      {
+        "retailer": "자사몰",
+        "qty": 17,
+        "payment": 413160,
+        "orders": 8,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "retailers": [
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "payment": 47120,
+        "orders": 2,
+        "items": [
+          {
+            "name": "타이다잉 러닝삭스_블랙",
+            "qty": 1,
+            "payment": 8420
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 38700
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 10,
+        "payment": 222860,
+        "orders": 5,
+        "items": [
+          {
+            "name": "ICE LITE 멀티쇼츠(이너내장)",
+            "qty": 2,
+            "payment": 54540
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": 5,
+            "payment": 48640
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 48000
+          },
+          {
+            "name": "퀵드라이 우먼즈 멀티포켓쇼츠 라벤더",
+            "qty": 1,
+            "payment": 43750
+          },
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠 라벤더",
+            "qty": 1,
+            "payment": 27930
+          }
+        ]
+      },
+      {
+        "retailer": "자사몰",
+        "qty": 18,
+        "payment": 390600,
+        "orders": 7,
+        "items": []
       }
     ]
   }
