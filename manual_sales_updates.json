@@ -17432,6 +17432,29 @@
             "payment": 55000
           }
         ]
+      },
+      {
+        "retailer": "기타",
+        "qty": 0,
+        "payment": 9262800,
+        "orders": 3,
+        "items": [
+          {
+            "name": "KSPO 9월 단체주문",
+            "qty": 0,
+            "payment": 6000000
+          },
+          {
+            "name": "성포고 9월 단체주문",
+            "qty": 0,
+            "payment": 3000000
+          },
+          {
+            "name": "아테네 9월 단체주문",
+            "qty": 0,
+            "payment": 262800
+          }
+        ]
       }
     ]
   }

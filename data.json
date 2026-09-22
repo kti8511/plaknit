@@ -142593,5 +142593,89 @@
         "standard_name":  "스웻프리 싱글렛 (다크포그)-XS",
         "received_qty":  0,
         "stock_qty":  0
+    },
+    {
+        "retailer":  "기타",
+        "mall_no":  "",
+        "name":  "KSPO 9월 단체주문",
+        "color":  "",
+        "size":  "",
+        "qty":  0,
+        "gross":  0,
+        "payment":  6000000,
+        "orders":  1,
+        "avg_unit":  0,
+        "source_type":  "단체주문",
+        "daily":  [
+                      {
+                          "date":  "2026-09-21",
+                          "qty":  0,
+                          "gross":  0,
+                          "payment":  6000000,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "미매칭",
+        "match_sku":  "",
+        "standard_name":  "KSPO 9월 단체주문",
+        "received_qty":  0,
+        "stock_qty":  0,
+        "note":  "사용자 확정 매출. 상품 수량 및 정가 미제공; 수량과 재고 집계 제외."
+    },
+    {
+        "retailer":  "기타",
+        "mall_no":  "",
+        "name":  "성포고 9월 단체주문",
+        "color":  "",
+        "size":  "",
+        "qty":  0,
+        "gross":  0,
+        "payment":  3000000,
+        "orders":  1,
+        "avg_unit":  0,
+        "source_type":  "단체주문",
+        "daily":  [
+                      {
+                          "date":  "2026-09-21",
+                          "qty":  0,
+                          "gross":  0,
+                          "payment":  3000000,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "미매칭",
+        "match_sku":  "",
+        "standard_name":  "성포고 9월 단체주문",
+        "received_qty":  0,
+        "stock_qty":  0,
+        "note":  "사용자 확정 매출. 상품 수량 및 정가 미제공; 수량과 재고 집계 제외."
+    },
+    {
+        "retailer":  "기타",
+        "mall_no":  "",
+        "name":  "아테네 9월 단체주문",
+        "color":  "",
+        "size":  "",
+        "qty":  0,
+        "gross":  0,
+        "payment":  262800,
+        "orders":  1,
+        "avg_unit":  0,
+        "source_type":  "단체주문",
+        "daily":  [
+                      {
+                          "date":  "2026-09-21",
+                          "qty":  0,
+                          "gross":  0,
+                          "payment":  262800,
+                          "orders":  1
+                      }
+                  ],
+        "match_status":  "미매칭",
+        "match_sku":  "",
+        "standard_name":  "아테네 9월 단체주문",
+        "received_qty":  0,
+        "stock_qty":  0,
+        "note":  "사용자 확정 매출. 상품 수량 및 정가 미제공; 수량과 재고 집계 제외."
     }
 ]
