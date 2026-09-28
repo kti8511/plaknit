@@ -278,7 +278,10 @@ main{{padding:20px 20px 48px;max-width:1600px;margin:0 auto;}}
 
 /* TABLE */
 .table-wrap{{border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:500px;}}
+.monthly-growth-total td{{position:sticky;bottom:0;background:#f1f5f9;font-weight:700;border-top:2px solid var(--border);z-index:1;}}
 table{{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px;}}
+.monthly-growth-table{{min-width:0;}}
+@media(max-width:480px){{.monthly-growth-table th,.monthly-growth-table td{{padding:9px 5px;font-size:11px;}}.monthly-growth-total td:first-child{{white-space:normal;}}}}
 .detail-table{{table-layout:fixed;min-width:1630px;}}
 .detail-table th:nth-child(3),.detail-table td.standard-name-cell{{width:var(--standard-name-col-width);}}
 .standard-name-cell{{max-width:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
@@ -482,9 +485,10 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       <div class="panel-hd"><span class="panel-title">월별 전년 대비 매출 신장률</span><span class="panel-meta">2026 vs 2025 실매출</span></div>
       <div class="chart-box" style="height:190px;margin-bottom:12px"><canvas id="monthlyGrowthChart"></canvas></div>
       <div class="table-wrap" style="max-height:240px">
-        <table>
+        <table class="monthly-growth-table">
           <thead><tr><th>월</th><th class="num">2026 매출</th><th class="num">2025 매출</th><th class="num">신장률</th></tr></thead>
           <tbody id="monthlyGrowthRows"></tbody>
+          <tfoot id="monthlyGrowthTotal" class="monthly-growth-total"></tfoot>
         </table>
       </div>
     </div>
@@ -1235,6 +1239,18 @@ const scl  = {{x:{{grid:{{color:'#e2e6ed'}},ticks:{{maxRotation:0}}}},y:{{grid:{
       <td class="num" style="color:${{(r.growth ?? 0)>=0?'var(--teal)':'var(--red)'}}">${{r.growth===null?'-':pct(r.growth)}}</td>
     </tr>
   `).join('');
+
+  const cumulativeCurrent = monthlyRows.reduce((sum, row) => sum + row.current, 0);
+  const cumulativePrevious = monthlyRows.reduce((sum, row) => sum + row.prev, 0);
+  const cumulativeGrowth = cumulativePrevious ? (cumulativeCurrent - cumulativePrevious) / cumulativePrevious * 100 : null;
+  const cumulativePeriod = monthlyRows.length ? ` (${{monthlyRows[0].month}}~${{monthlyRows[monthlyRows.length - 1].month}}월)` : '';
+  document.getElementById('monthlyGrowthTotal').innerHTML = `
+    <tr>
+      <td class="td-main">누적 합계${{cumulativePeriod}}</td>
+      <td class="num">${{fmt(cumulativeCurrent)}}</td>
+      <td class="num">${{fmt(cumulativePrevious)}}</td>
+      <td class="num" style="color:${{cumulativeGrowth === null ? 'inherit' : cumulativeGrowth >= 0 ? 'var(--teal)' : 'var(--red)'}}">${{cumulativeGrowth === null ? '-' : pct(cumulativeGrowth)}}</td>
+    </tr>`;
 
   const allDates = allDaily.map(d=>d.date);
   const cutoff   = allDates.length >= 7 ? allDates[allDates.length-7] : allDates[0];
