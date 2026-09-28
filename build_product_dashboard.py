@@ -873,7 +873,7 @@ function cleanDetailText(value) {{
 }}
 function normalizeDetailSize(size) {{
   size = String(size || '').toUpperCase();
-  return size === 'F' ? 'FREE' : size;
+  return ({{F:'FREE', XXL:'2XL', XXXL:'3XL'}})[size] || size;
 }}
 function detailSizeFromValue(value) {{
   const text = cleanDetailText(value).replace(/[()]/g, ' ').toUpperCase();
@@ -896,6 +896,7 @@ function detailSize(row) {{
 function detailProductNameFromText(value) {{
   let name = cleanDetailText(value);
   if (!name) return '';
+  if (name.startsWith('ICE LITE 초냉감 러닝 나시')) name = name.replace(' (싱글렛)', '').replace('(싱글렛)', '');
   name = name
     .replace(/[_-](4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)$/i, '')
     .replace(/\\s+(4XL|3XL|2XL|XXXL|XXL|XL|XS|FREE|F|S|M|L)$/i, '')
@@ -906,7 +907,8 @@ function detailProductNameFromText(value) {{
 }}
 function detailColor(row) {{
   const explicit = cleanDetailText(row.color);
-  if (explicit) return explicit;
+  const colors = {{BLACK:'블랙', WHITE:'화이트', LIGHTGREY:'라이트그레이', LIGHTGRAY:'라이트그레이', NAVY:'네이비', CHARCOAL:'차콜', VINTAGEKHAKI:'빈티지카키', DEEPCHARCOAL:'딥차콜'}};
+  if (explicit) return colors[explicit.replace(/\\s+/g, '').toUpperCase()] || explicit;
   const code = String(row.match_sku || row.stock_barcode || '').toUpperCase();
   if (code.includes('WHT')) return '화이트';
   if (code.includes('BLK')) return '블랙';
@@ -947,6 +949,7 @@ function detailStockKey(row, groupKey) {{
     `${{groupKey}}|${{cleanDetailText(row.standard_name || row.name)}}|${{cleanDetailText(row.color)}}|${{cleanDetailText(row.size)}}|${{Number(row.stock_qty || 0)}}`;
 }}
 function detailStockMatchesGroup(row, groupInfo) {{
+  if (row.stock_match_exact && row.stock_barcode) return true;
   const groupProductKey = detailGroupKeyText(groupInfo.product);
   const groupSize = groupInfo.size;
   const displayProductKey = detailGroupKeyText(detailProductName(row));
@@ -1793,7 +1796,7 @@ function renderDetail() {{
     const stockQty = Math.max(0, Number(r.stock_qty || 0));
     const stockKey = detailStockKey(r, key);
     const stockMatches = detailStockMatchesGroup(r, groupInfo);
-    if (r.match_sku && stockMatches) g.matchSkus.add(r.match_sku);
+    if (stockMatches && (r.match_sku || r.stock_barcode)) g.matchSkus.add(r.stock_match_exact ? r.stock_barcode : (r.match_sku || r.stock_barcode));
     [groupInfo.label, groupInfo.product, groupInfo.size, r.name, r.color, r.size].forEach(v=>addDetailSearchPart(g, v));
     if (stockMatches) [r.standard_name, r.stock_name, r.stock_barcode, r.match_sku].forEach(v=>addDetailSearchPart(g, v));
     g.retailers.add(r.retailer || '-');

@@ -4,6 +4,7 @@
 )
 
 $ErrorActionPreference = 'Stop'
+$optionRules = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'stock_option_matches.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 
 function Normalize([object]$value) {
   $text = ''
@@ -385,6 +386,39 @@ foreach ($item in $data) {
     if ($matchedByName.Count -gt 0) {
       $stockRow = [pscustomobject]@{ barcode = ''; outbound_name = $matchedByName[0].outbound_name; stock_qty = $matchedByName[0].stock_qty }
       $matchKey = Normalize-Name $stockRow.outbound_name
+    }
+  }
+
+  $item.PSObject.Properties.Remove('stock_match_exact')
+  foreach ($rule in $optionRules) {
+    if ((Normalize $item.name) -eq (Normalize $rule.name) -and (Normalize $item.color) -eq (Normalize $rule.color) -and (Normalize $item.size) -eq (Normalize $rule.size)) {
+      $exact = @($stockRows | Where-Object { (Normalize $_.outbound_name) -eq (Normalize $rule.stock_name) })
+      $stockRow = $null
+      $matchKey = $null
+      if ($exact.Count -eq 1) {
+        $stockRow = $exact[0]
+        $matchKey = Normalize $stockRow.barcode
+        Set-ObjProp $item 'stock_match_exact' $true
+      }
+      break
+    }
+  }
+  if ((Normalize $item.name).Replace('(싱글렛)', '') -eq (Normalize 'ICE LITE 초냉감 러닝 나시')) {
+    $singletColors = @{ '블랙'='BLACK'; 'BLACK'='BLACK'; '라이트그레이'='LIGHTGREY'; 'LIGHTGREY'='LIGHTGREY'; 'LIGHTGRAY'='LIGHTGREY' }
+    $singletColor = $singletColors[(Normalize $item.color)]
+    $singletSize = Normalize $item.size
+    if ($singletSize -eq 'XXL') { $singletSize = '2XL' }
+    if ($singletSize -eq 'XXXL') { $singletSize = '3XL' }
+    $stockRow = $null
+    $matchKey = $null
+    if ($singletColor -and $singletSize) {
+      $singletKey = Normalize ("ICE LITE 초냉감 러닝 나시_{0}_{1}" -f $singletColor, $singletSize)
+      $singletMatches = @($stockRows | Where-Object { (Normalize $_.outbound_name) -eq $singletKey })
+      if ($singletMatches.Count -eq 1) {
+        $stockRow = $singletMatches[0]
+        Set-ObjProp $item 'stock_match_exact' $true
+        $matchKey = Normalize $stockRow.barcode
+      }
     }
   }
 

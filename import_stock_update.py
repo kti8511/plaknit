@@ -140,13 +140,30 @@ def load_stock_rows(path: Path) -> list[dict]:
     return rows
 
 
+def match_running_singlet(item, stock_rows):
+    base = 'ICE LITE 초냉감 러닝 나시'
+    if normalize(item.get('name')).replace('(싱글렛)', '') != normalize(base):
+        return False, None
+    color = {'블랙': 'BLACK', 'BLACK': 'BLACK', '라이트그레이': 'LIGHTGREY',
+             'LIGHTGREY': 'LIGHTGREY', 'LIGHTGRAY': 'LIGHTGREY'}.get(normalize(item.get('color')))
+    size = {'XXL': '2XL', 'XXXL': '3XL'}.get(normalize(item.get('size')), normalize(item.get('size')))
+    key = normalize(f'{base}_{color}_{size}') if color and size else ''
+    matches = [r for r in stock_rows if key and normalize(r['outbound_name']) == key]
+    if len(matches) != 1:
+        return True, None
+    row = dict(matches[0])
+    row['used_keys'] = [normalize(row['barcode']), normalize(row['outbound_name'])]
+    return True, row
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("stock_file", nargs="?", help="재고조회(기본) 엑셀 파일 경로")
     args = parser.parse_args()
 
     stock_file = Path(args.stock_file) if args.stock_file else latest_stock_file()
-    data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    data = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
+    option_rules = json.loads((ROOT / 'stock_option_matches.json').read_text(encoding='utf-8'))
     stock_rows = load_stock_rows(stock_file)
 
     merged_by_name: dict[str, dict] = {}
@@ -260,6 +277,22 @@ def main() -> None:
                     "stock_qty": matched_by_name[0]["stock_qty"],
                 }
                 match_key = normalize_name(stock_row["outbound_name"])
+
+        item.pop('stock_match_exact', None)
+        for rule in option_rules:
+            if all(normalize(item.get(k)) == normalize(rule.get(k)) for k in ('name', 'color', 'size')):
+                exact = [r for r in stock_rows if normalize(r['outbound_name']) == normalize(rule['stock_name'])]
+                stock_row = exact[0] if len(exact) == 1 else None
+                match_key = normalize(stock_row['barcode']) if stock_row else None
+                if stock_row:
+                    item['stock_match_exact'] = True
+                break
+        is_singlet, singlet_stock = match_running_singlet(item, stock_rows)
+        if is_singlet:
+            stock_row = singlet_stock
+            match_key = normalize(stock_row['barcode']) if stock_row else None
+            if stock_row:
+                item['stock_match_exact'] = True
 
         if stock_row:
             item["stock_qty"] = stock_row["stock_qty"]

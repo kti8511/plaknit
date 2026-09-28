@@ -1,8 +1,8 @@
 {
   "stock_file": "C:\\Users\\user\\Desktop\\재고조회(기본)_2026-09-28_130050.xlsx",
-  "data_rows": 1586,
+  "data_rows": 1587,
   "stock_rows": 1013,
-  "matched_data_rows": 1467,
+  "matched_data_rows": 1491,
   "unmatched_data_rows": [
     {
       "retailer": "자사몰",
@@ -27,14 +27,6 @@
       "name": "ESSENTIAL HEAT 소프트 기모 심플 조거팬츠",
       "color": "블랙",
       "size": "M"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK000L",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
-      "name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) 백멜란지그레이",
-      "color": "",
-      "size": "L"
     },
     {
       "retailer": "자사몰",
@@ -78,14 +70,6 @@
     },
     {
       "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK000L",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
-      "name": "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨 빈티지카키",
-      "color": "",
-      "size": "L"
-    },
-    {
-      "retailer": "자사몰",
       "match_sku": "PC4PLM03BLK000L",
       "standard_name": "ESSENTIAL HEAT 소프트 기모 심플 조거팬츠_BLACK_L",
       "name": "ESSENTIAL HEAT 소프트 기모 심플 조거팬츠",
@@ -103,34 +87,10 @@
     {
       "retailer": "자사몰",
       "match_sku": "PB2PSM01BLK00XL",
-      "standard_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 딥차콜-XL",
-      "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 딥차콜",
-      "color": "",
-      "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK00XL",
       "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_XL",
       "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 딥차콜",
       "color": "",
       "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK000L",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
-      "name": "TECH SWEAT 세미오버핏 후드 블랙",
-      "color": "",
-      "size": "2XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK000L",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
-      "name": "TECH SWEAT 세미오버핏 그래픽 맨투맨 블랙",
-      "color": "",
-      "size": "2XL"
     },
     {
       "retailer": "자사몰",
@@ -139,22 +99,6 @@
       "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키",
       "color": "",
       "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK00XL",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_XL",
-      "name": "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨 빈티지카키",
-      "color": "",
-      "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "PB2PSM01BLK000L",
-      "standard_name": "TECH SWEAT 벌룬 쇼츠_BLACK_L",
-      "name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) 백멜란지그레이",
-      "color": "",
-      "size": "2XL"
     },
     {
       "retailer": "자사몰",
@@ -229,22 +173,6 @@
       "size": ""
     },
     {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-XL",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠",
-      "color": "차콜",
-      "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-M",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "M"
-    },
-    {
       "retailer": "무신사",
       "match_sku": "",
       "standard_name": "ICE LITE 벌크업 쇼츠",
@@ -301,20 +229,12 @@
       "size": "M"
     },
     {
-      "retailer": "29cm",
+      "retailer": "애슬러",
       "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트-M",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트",
-      "color": "",
+      "standard_name": "ICE LITE 초냉감 러닝 나시_라이트그레이-M",
+      "name": "ICE LITE 초냉감 러닝 나시",
+      "color": "라이트그레이",
       "size": "M"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-2XL",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠",
-      "color": "차콜",
-      "size": "2XL"
     },
     {
       "retailer": "자사몰",
@@ -437,14 +357,6 @@
       "size": ""
     },
     {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠",
-      "color": "차콜",
-      "size": "M"
-    },
-    {
       "retailer": "29cm",
       "match_sku": "",
       "standard_name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_라이트카키-2XL",
@@ -487,14 +399,6 @@
     {
       "retailer": "자사몰",
       "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
       "standard_name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_블랙-L",
       "name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
       "color": "블랙",
@@ -517,36 +421,12 @@
       "size": "XL"
     },
     {
-      "retailer": "29cm",
-      "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-L",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠",
-      "color": "차콜",
-      "size": "L"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-L",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "L"
-    },
-    {
       "retailer": "4XR",
       "match_sku": "",
       "standard_name": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티_라이트카키-2XL",
       "name": "KINTERRA 퀵 드라이 스포츠 머슬핏 반팔티",
       "color": "라이트카키",
       "size": "2XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트-L",
-      "name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트",
-      "color": "",
-      "size": "L"
     },
     {
       "retailer": "자사몰",
@@ -559,26 +439,10 @@
     {
       "retailer": "자사몰",
       "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-2XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "2XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
       "standard_name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)_크림-M",
       "name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)",
       "color": "크림",
       "size": "M"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "라이트그레이",
-      "size": "XL"
     },
     {
       "retailer": "자사몰",
@@ -594,14 +458,6 @@
       "standard_name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)_크림-2XL",
       "name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)",
       "color": "크림",
-      "size": "2XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-2XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "라이트그레이",
       "size": "2XL"
     },
     {
@@ -635,14 +491,6 @@
       "name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)",
       "color": "블랙",
       "size": "2XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키-3XL",
-      "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키",
-      "color": "",
-      "size": "3XL"
     },
     {
       "retailer": "자사몰",
@@ -683,14 +531,6 @@
       "name": "TECH SWEAT 7인치 카고 반바지",
       "color": "멜란지그레이",
       "size": "XL"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-S",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "S"
     },
     {
       "retailer": "자사몰",
@@ -771,14 +611,6 @@
       "name": "TECH SWEAT 7인치 카고 반바지",
       "color": "멜란지그레이",
       "size": "3XL"
-    },
-    {
-      "retailer": "롯데온",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "XL"
     },
     {
       "retailer": "자사몰",
@@ -885,14 +717,6 @@
       "size": ""
     },
     {
-      "retailer": "29cm",
-      "match_sku": "",
-      "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
-      "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
-      "color": "블랙",
-      "size": "XL"
-    },
-    {
       "retailer": "자사몰",
       "match_sku": "",
       "standard_name": "MESH-ON 파워리프팅 롱티 (화이트) (하프 슬리브)_크림-XL",
@@ -913,14 +737,6 @@
       "match_sku": "",
       "standard_name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키-M",
       "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키",
-      "color": "",
-      "size": "M"
-    },
-    {
-      "retailer": "자사몰",
-      "match_sku": "",
-      "standard_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키-M",
-      "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키",
       "color": "",
       "size": "M"
     },
@@ -958,11 +774,6 @@
     }
   ],
   "unmatched_stock_rows": [
-    {
-      "barcode": "PC2SSM02LGR000L",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
-      "stock_qty": 44
-    },
     {
       "barcode": "PD2TSM09BLK000M",
       "outbound_name": "ICE LITE 쿨메쉬 베이직 반팔티_블랙-M",
@@ -1199,19 +1010,9 @@
       "stock_qty": 17
     },
     {
-      "barcode": "PC2SSM02BLK02XL",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_BLACK_2XL",
-      "stock_qty": 4
-    },
-    {
       "barcode": "PA3TLM01BLK000L",
       "outbound_name": "MESH-ON 파워리프팅 롱티(롱 슬리브)_BLACK_L",
       "stock_qty": 18
-    },
-    {
-      "barcode": "PC4TMM02DCH00XL",
-      "outbound_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_DEEP CHARCOAL_XL",
-      "stock_qty": 6
     },
     {
       "barcode": "PD2TSM01WHT03XL",
@@ -1439,11 +1240,6 @@
       "stock_qty": 8
     },
     {
-      "barcode": "PC4TMM01VKH000L",
-      "outbound_name": "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨_VINTAGE KHAKI_L",
-      "stock_qty": 15
-    },
-    {
       "barcode": "PB2PSM04CHA0XXL",
       "outbound_name": "ICE LITE 투인원 쇼츠_BLACK+CHARCOAL_XXL",
       "stock_qty": 28
@@ -1457,11 +1253,6 @@
       "barcode": "PC2TSM01NVY000M",
       "outbound_name": "퀵드라이 세미오버핏 아치로고 티셔츠_NAVY_M",
       "stock_qty": 23
-    },
-    {
-      "barcode": "PC4TMM05WGR02XL",
-      "outbound_name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) W/GREY_2XL",
-      "stock_qty": 9
     },
     {
       "barcode": "PE2TSM02BLU00XL",
@@ -1694,11 +1485,6 @@
       "stock_qty": 47
     },
     {
-      "barcode": "PC2SSM02LGR02XL",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_LIGHT GREY_2XL",
-      "stock_qty": 4
-    },
-    {
       "barcode": "PD2TSM07WHT03XL",
       "outbound_name": "퀵드라이 백레터링 세미오버핏 반팔티_화이트-3XL",
       "stock_qty": 37
@@ -1757,11 +1543,6 @@
       "barcode": "PA3TLM01CRM0XXL",
       "outbound_name": "MESH-ON 파워리프팅 롱티(롱 슬리브)_CREAM_XXL",
       "stock_qty": 61
-    },
-    {
-      "barcode": "PE2TSM03CBT000M",
-      "outbound_name": "퀵드라이 RUNNER'S FEET 티셔츠 코발트 M",
-      "stock_qty": 14
     },
     {
       "barcode": "PB1OAM01MGR000M",
@@ -1827,11 +1608,6 @@
       "barcode": "PD2PLM02BLK03XL",
       "outbound_name": "ICE LITE 시그니처 조거_블랙-3XL",
       "stock_qty": 13
-    },
-    {
-      "barcode": "PB4TMM03BLK0XXL",
-      "outbound_name": "TECH SWEAT 세미오버핏 그래픽 맨투맨_BLACK_XXL",
-      "stock_qty": 23
     },
     {
       "barcode": "PD2TSM05BLU03XL",
@@ -2054,11 +1830,6 @@
       "stock_qty": 76
     },
     {
-      "barcode": "PC2SSM02LGR00XL",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_LIGHT GREY_XL",
-      "stock_qty": 22
-    },
-    {
       "barcode": "PB1SSM01RED00XL",
       "outbound_name": "KINTERRA 퀵 드라이 스포츠 나시_RED_XL",
       "stock_qty": 25
@@ -2119,11 +1890,6 @@
       "stock_qty": 1
     },
     {
-      "barcode": "PC4TMM01VKH00XL",
-      "outbound_name": "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨_VINTAGE KHAKI_XL",
-      "stock_qty": 10
-    },
-    {
       "barcode": "PC2STM01RED000L",
       "outbound_name": "퀵드라이 9 탱크_RED_L",
       "stock_qty": 5
@@ -2142,11 +1908,6 @@
       "barcode": "PD2SSM01DGR000M",
       "outbound_name": "퀵드라이 베이직 나시_다크그린-M",
       "stock_qty": 69
-    },
-    {
-      "barcode": "PC4TMM05WGR000L",
-      "outbound_name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) W/GREY_L",
-      "stock_qty": 25
     },
     {
       "barcode": "PD2SSM01DGR00XL",
@@ -2359,11 +2120,6 @@
       "stock_qty": 3
     },
     {
-      "barcode": "PC4TMM02VKH000M",
-      "outbound_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_VINTAGE KHAKI_M",
-      "stock_qty": 1
-    },
-    {
       "barcode": "PC2TSM02BLK04XL",
       "outbound_name": "퀵드라이 세비오버핏 백로고 티셔츠_BLACK_4XL",
       "stock_qty": 33
@@ -2377,11 +2133,6 @@
       "barcode": "PD2PSM02KGR00XL",
       "outbound_name": "ICE LITE 와플메쉬 투인원 쇼츠_카키그레이-XL",
       "stock_qty": 22
-    },
-    {
-      "barcode": "PC4TMM02VKH03XL",
-      "outbound_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_VINTAGE KHAKI_3XL",
-      "stock_qty": 12
     },
     {
       "barcode": "PA3SSM01LGR0XXL",
@@ -2647,11 +2398,6 @@
       "barcode": "PC4TMM01DCH000M",
       "outbound_name": "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨_DEEP CHARCOAL_M",
       "stock_qty": 1
-    },
-    {
-      "barcode": "PC2SSM02BLK00XL",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_BLACK_XL",
-      "stock_qty": 67
     },
     {
       "barcode": "PC2SSM01BLK02XL",
@@ -3134,11 +2880,6 @@
       "stock_qty": 32
     },
     {
-      "barcode": "PC2SSM02BLK000M",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_BLACK_M",
-      "stock_qty": 17
-    },
-    {
       "barcode": "PB1TSM01WHT00XL",
       "outbound_name": "KINTERRA 퀵 드라이 오버핏 반팔티_WHITE_XL",
       "stock_qty": 77
@@ -3159,19 +2900,9 @@
       "stock_qty": 55
     },
     {
-      "barcode": "PC2SSM02BLK000S",
-      "outbound_name": "ICE LITE 초냉감 러닝 나시_BLACK_S",
-      "stock_qty": 28
-    },
-    {
       "barcode": "PE2TSM04OLV02XL",
       "outbound_name": "퀵드라이 B.B.B 티셔츠 올리브 2XL",
       "stock_qty": 21
-    },
-    {
-      "barcode": "PB4THM01BLK0XXL",
-      "outbound_name": "TECH SWEAT 세미오버핏 후드_BLACK_XXL",
-      "stock_qty": 1
     },
     {
       "barcode": "PD2TSM06DGR00XL",
@@ -3202,11 +2933,6 @@
       "barcode": "PB2PSM04CHA00XL",
       "outbound_name": "ICE LITE 투인원 쇼츠_BLACK+CHARCOAL_XL",
       "stock_qty": 15
-    },
-    {
-      "barcode": "PE2TSM03CHA02XL",
-      "outbound_name": "퀵드라이 RUNNER'S FEET 티셔츠 차콜 2XL",
-      "stock_qty": 22
     },
     {
       "barcode": "PD2TSM05LGR000L",

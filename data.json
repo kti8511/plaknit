@@ -47154,12 +47154,13 @@
         "match_sku":  "PB2PSM01BLK000L",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  25,
+        "stock_barcode":  "PC4TMM05WGR000L",
+        "stock_name":  "TECH SWEAT 크루 그래픽 맨투맨(기모버전) W/GREY_L",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "글로리어스워커",
@@ -60314,12 +60315,13 @@
         "match_sku":  "PB2PSM01BLK000L",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  15,
+        "stock_barcode":  "PC4TMM01VKH000L",
+        "stock_name":  "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨_VINTAGE KHAKI_L",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -64413,12 +64415,13 @@
         "match_sku":  "PB2PSM01BLK00XL",
         "standard_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨 딥차콜-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  6,
+        "stock_barcode":  "PC4TMM02DCH00XL",
+        "stock_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨_DEEP CHARCOAL_XL",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -64717,12 +64720,13 @@
         "match_sku":  "PB2PSM01BLK000L",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  1,
+        "stock_barcode":  "PB4THM01BLK0XXL",
+        "stock_name":  "TECH SWEAT 세미오버핏 후드_BLACK_XXL",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -82317,12 +82321,13 @@
         "match_sku":  "PB2PSM01BLK000L",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  23,
+        "stock_barcode":  "PB4TMM03BLK0XXL",
+        "stock_name":  "TECH SWEAT 세미오버핏 그래픽 맨투맨_BLACK_XXL",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -83516,12 +83521,13 @@
         "match_sku":  "PB2PSM01BLK00XL",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  10,
+        "stock_barcode":  "PC4TMM01VKH00XL",
+        "stock_name":  "TECH SWEAT 피그먼트 프론트 그래픽 맨투맨_VINTAGE KHAKI_XL",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -85344,12 +85350,13 @@
         "match_sku":  "PB2PSM01BLK000L",
         "standard_name":  "TECH SWEAT 벌룬 쇼츠_BLACK_L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  "",
+        "stock_qty":  9,
+        "stock_barcode":  "PC4TMM05WGR02XL",
+        "stock_name":  "TECH SWEAT 크루 그래픽 맨투맨(기모버전) W/GREY_2XL",
         "season":  "2",
         "category_large":  "P",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -88613,7 +88620,8 @@
         "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_L",
         "season":  "2",
         "category_large":  "S",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "4XR",
@@ -94369,12 +94377,13 @@
         "match_sku":  "PB1PLM02BLK000L",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
         "received_qty":  0,
-        "stock_qty":  21,
-        "stock_barcode":  "PB1PLM02BLK000L",
-        "stock_name":  "ICE LITE 벌룬 조거_BLACK_L",
+        "stock_qty":  67,
+        "stock_barcode":  "PC2SSM02BLK00XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_XL",
         "season":  "1",
         "category_large":  "P",
-        "category_small":  "L"
+        "category_small":  "L",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "4XR",
@@ -99106,12 +99115,13 @@
         "match_sku":  "PB1PLM02BLK000L",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-M",
         "received_qty":  0,
-        "stock_qty":  21,
-        "stock_barcode":  "PB1PLM02BLK000L",
-        "stock_name":  "ICE LITE 벌룬 조거_BLACK_L",
+        "stock_qty":  17,
+        "stock_barcode":  "PC2SSM02BLK000M",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_M",
         "season":  "1",
         "category_large":  "P",
-        "category_small":  "L"
+        "category_small":  "L",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -103779,7 +103789,8 @@
         "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_L",
         "gross":  287920,
         "payment":  287920,
-        "avg_unit":  10283
+        "avg_unit":  10283,
+        "stock_match_exact":  true
     },
     {
         "retailer":  "무신사",
@@ -104284,7 +104295,8 @@
         "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_L",
         "season":  "2",
         "category_large":  "S",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "29cm",
@@ -109578,9 +109590,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠_차콜-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  28,
+        "stock_barcode":  "PE2TSM03CHA00XL",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 차콜 XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -109677,9 +109690,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-M",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  17,
+        "stock_barcode":  "PC2SSM02BLK000M",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_M",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "무신사",
@@ -114589,9 +114603,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠 코발트-M",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  14,
+        "stock_barcode":  "PE2TSM03CBT000M",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 코발트 M",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -115141,15 +115156,16 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시_라이트그레이-2XL",
         "received_qty":  0,
-        "stock_qty":  44,
-        "stock_barcode":  "",
-        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
+        "stock_qty":  4,
+        "stock_barcode":  "PC2SSM02LGR02XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_2XL",
         "season":  "",
         "category_large":  "",
         "category_small":  "",
         "gross_sales":  34900,
         "payment_sales":  34900,
-        "avg_unit_price":  34900
+        "avg_unit_price":  34900,
+        "stock_match_exact":  true
     },
     {
         "retailer":  "애슬러",
@@ -115211,9 +115227,9 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시_라이트그레이-M",
         "received_qty":  0,
-        "stock_qty":  44,
+        "stock_qty":  0,
         "stock_barcode":  "",
-        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
+        "stock_name":  "",
         "season":  "",
         "category_large":  "",
         "category_small":  "",
@@ -115246,15 +115262,16 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시_블랙-M",
         "received_qty":  0,
-        "stock_qty":  44,
-        "stock_barcode":  "",
-        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
+        "stock_qty":  17,
+        "stock_barcode":  "PC2SSM02BLK000M",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_M",
         "season":  "",
         "category_large":  "",
         "category_small":  "",
         "gross_sales":  15600,
         "payment_sales":  15600,
-        "avg_unit_price":  15600
+        "avg_unit_price":  15600,
+        "stock_match_exact":  true
     },
     {
         "retailer":  "무신사",
@@ -115946,9 +115963,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠_차콜-2XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  22,
+        "stock_barcode":  "PE2TSM03CHA02XL",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 차콜 2XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -120139,9 +120157,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  35,
+        "stock_barcode":  "PE2TSM03CHA000M",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 차콜 M",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -123788,9 +123807,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  67,
+        "stock_barcode":  "PC2SSM02BLK00XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -125306,9 +125326,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠_차콜-L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  41,
+        "stock_barcode":  "PE2TSM03CHA000L",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 차콜 L",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "29cm",
@@ -126375,9 +126396,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  89,
+        "stock_barcode":  "PC2SSM02BLK000L",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_L",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -127205,9 +127227,10 @@
         "match_sku":  "",
         "standard_name":  "퀵드라이 RUNNER`S FEET 티셔츠 코발트-L",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  23,
+        "stock_barcode":  "PE2TSM03CBT000L",
+        "stock_name":  "퀵드라이 RUNNER\u0027S FEET 티셔츠 코발트 L",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -127626,9 +127649,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-2XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  4,
+        "stock_barcode":  "PC2SSM02BLK02XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_2XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -128250,9 +128274,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  22,
+        "stock_barcode":  "PC2SSM02LGR00XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -129809,9 +129834,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-2XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  4,
+        "stock_barcode":  "PC2SSM02LGR02XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_2XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -131597,9 +131623,10 @@
         "match_sku":  "",
         "standard_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키-3XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  12,
+        "stock_barcode":  "PC4TMM02VKH03XL",
+        "stock_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨_VINTAGE KHAKI_3XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -132781,9 +132808,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-S",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  28,
+        "stock_barcode":  "PC2SSM02BLK000S",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -134201,12 +134229,13 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시_블랙-2XL",
         "received_qty":  0,
-        "stock_qty":  44,
-        "stock_barcode":  "",
-        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
+        "stock_qty":  4,
+        "stock_barcode":  "PC2SSM02BLK02XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_2XL",
         "season":  "2",
         "category_large":  "S",
-        "category_small":  "S"
+        "category_small":  "S",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -137101,9 +137130,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_name":  "",
-        "stock_barcode":  ""
+        "stock_qty":  67,
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_XL",
+        "stock_barcode":  "PC2SSM02BLK00XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -142746,9 +142776,10 @@
         "match_sku":  "",
         "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-XL",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  67,
+        "stock_barcode":  "PC2SSM02BLK00XL",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_BLACK_XL",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "29cm",
@@ -143630,9 +143661,10 @@
         "match_sku":  "",
         "standard_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키-M",
         "received_qty":  0,
-        "stock_qty":  0,
-        "stock_barcode":  "",
-        "stock_name":  ""
+        "stock_qty":  1,
+        "stock_barcode":  "PC4TMM02VKH000M",
+        "stock_name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨_VINTAGE KHAKI_M",
+        "stock_match_exact":  true
     },
     {
         "retailer":  "자사몰",
@@ -144382,5 +144414,29 @@
         "stock_qty":  18,
         "stock_barcode":  "",
         "stock_name":  "ICE LITE 릴렉스드 조거_KHAKI_L"
+    },
+    {
+        "retailer":  "",
+        "mall_no":  "",
+        "name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+        "color":  "라이트그레이",
+        "size":  "L",
+        "qty":  0,
+        "gross":  0,
+        "payment":  0,
+        "avg_unit":  0,
+        "orders":  0,
+        "source_type":  "재고",
+        "daily":  [
+
+                  ],
+        "match_status":  "매칭완료",
+        "match_sku":  "",
+        "standard_name":  "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-L",
+        "received_qty":  0,
+        "stock_qty":  44,
+        "stock_barcode":  "PC2SSM02LGR000L",
+        "stock_name":  "ICE LITE 초냉감 러닝 나시_LIGHT GREY_L",
+        "stock_match_exact":  true
     }
 ]
