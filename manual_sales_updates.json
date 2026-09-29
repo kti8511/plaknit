@@ -18132,5 +18132,101 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-09-28",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 12,
+        "payment": 419000,
+        "orders": 6,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "payment": 73100,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 26,
+        "payment": 372290,
+        "orders": 9,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 17,
+            "payment": 164730
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": 9,
+            "payment": 89100
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 3,
+            "payment": 66020
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지",
+            "qty": 1,
+            "payment": 42100
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 2,
+            "payment": 38820
+          },
+          {
+            "name": "퀵드라이 크롭 WALK 티셔츠",
+            "qty": 1,
+            "payment": 31990
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+            "qty": -1,
+            "payment": -8700
+          },
+          {
+            "name": "ICE LITE 초냉감 탱크",
+            "qty": -7,
+            "payment": -67670
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 1,
+        "payment": 41300,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_블랙-XL",
+            "qty": 1,
+            "payment": 41300
+          }
+        ]
+      }
+    ]
   }
 ]
