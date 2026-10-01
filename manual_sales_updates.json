@@ -18351,5 +18351,137 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 14,
+        "payment": 335900,
+        "orders": 8,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 3,
+        "payment": 72085,
+        "orders": 3,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 LLWP 티셔츠 블루-M",
+            "qty": 1,
+            "payment": 27120
+          },
+          {
+            "name": "타이다잉 러닝삭스_블랙",
+            "qty": 1,
+            "payment": 8415
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 31,
+        "payment": 453020,
+        "orders": 10,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 15,
+            "payment": 146520
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": 6,
+            "payment": 57420
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
+            "qty": 1,
+            "payment": 47410
+          },
+          {
+            "name": "QUICKDRY 러닝 롱슬리브 웜그레이",
+            "qty": 1,
+            "payment": 32640
+          },
+          {
+            "name": "ICE LITE 쿨메쉬 베이직 반팔티",
+            "qty": 1,
+            "payment": 26780
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 23340
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+            "qty": 1,
+            "payment": 21400
+          },
+          {
+            "name": "퀵드라이 베이직 나시",
+            "qty": 2,
+            "payment": 19800
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 17910
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 1,
+        "payment": 79000,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_블랙-XL",
+            "qty": 1,
+            "payment": 79000
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "qty": 1,
+        "payment": 39900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_블랙-L",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 1,
+        "payment": 110670,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 워시드카키-L",
+            "qty": 1,
+            "payment": 110670
+          }
+        ]
+      }
+    ]
   }
 ]
