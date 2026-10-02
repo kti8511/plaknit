@@ -18483,5 +18483,88 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 20,
+        "payment": 451000,
+        "orders": 10,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 1,
+        "payment": 36551,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지-L",
+            "qty": 1,
+            "payment": 36551
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 28,
+        "payment": 417520,
+        "orders": 10,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 18,
+            "payment": 178200
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
+            "qty": 2,
+            "payment": 53570
+          },
+          {
+            "name": "퀵드라이 투인원 러닝쇼츠 그레이",
+            "qty": 1,
+            "payment": 48470
+          },
+          {
+            "name": "[2PACK] 초냉감 트래블러 티셔츠",
+            "qty": 1,
+            "payment": 46060
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓",
+            "qty": 1,
+            "payment": 38710
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+            "qty": 3,
+            "payment": 29700
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 28100
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 18910
+          },
+          {
+            "name": "퀵드라이 메쉬 러닝쇼츠 블랙",
+            "qty": -1,
+            "payment": -44100
+          }
+        ]
+      }
+    ]
   }
 ]
