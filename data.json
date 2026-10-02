@@ -144725,7 +144725,7 @@
     {
         "retailer":  "기타",
         "mall_no":  "",
-        "name":  "성포고 9월 단체주문",
+        "name":  "성포고 10월 단체주문",
         "color":  "",
         "size":  "",
         "qty":  0,
@@ -144736,7 +144736,7 @@
         "source_type":  "단체주문",
         "daily":  [
                       {
-                          "date":  "2026-09-21",
+                          "date":  "2026-10-01",
                           "qty":  0,
                           "gross":  0,
                           "payment":  3000000,
@@ -144745,7 +144745,7 @@
                   ],
         "match_status":  "미매칭",
         "match_sku":  "",
-        "standard_name":  "성포고 9월 단체주문",
+        "standard_name":  "성포고 10월 단체주문",
         "received_qty":  0,
         "stock_qty":  0,
         "note":  "사용자 확정 매출. 상품 수량 및 정가 미제공; 수량과 재고 집계 제외.",
