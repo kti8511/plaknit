@@ -18927,5 +18927,83 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-06",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 23,
+        "payment": 491800,
+        "orders": 9,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "payment": 148180,
+        "orders": 3,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 38700
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-S",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 1,
+            "payment": 33915
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브_블랙-S",
+            "qty": 1,
+            "payment": 39015
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 17,
+        "payment": 226750,
+        "orders": 4,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 15,
+            "payment": 148500
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 2,
+            "payment": 39800
+          },
+          {
+            "name": "ICE LITE 시그니처 조거",
+            "qty": 1,
+            "payment": 29310
+          },
+          {
+            "name": "퀵드라이 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 28440
+          },
+          {
+            "name": "리플렉티브 심볼 볼캡",
+            "qty": 1,
+            "payment": 19400
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티",
+            "qty": -3,
+            "payment": -38700
+          }
+        ]
+      }
+    ]
   }
 ]
