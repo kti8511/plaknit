@@ -19338,5 +19338,68 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-12",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 16,
+        "payment": 371800,
+        "orders": 5,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "payment": 52822,
+        "orders": 2,
+        "items": [
+          {
+            "name": "KINTERRA 베이직 릴렉스 롱슬리브_블랙-XL",
+            "qty": 1,
+            "payment": 26042
+          },
+          {
+            "name": "ICE LITE 우먼즈 데일리쇼츠_블랙-S",
+            "qty": 1,
+            "payment": 26780
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": -2,
+        "payment": -16010,
+        "orders": -1,
+        "items": [
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 47410
+          },
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨",
+            "qty": 1,
+            "payment": 40260
+          },
+          {
+            "name": "ICE LITE 시그니처 조거",
+            "qty": -1,
+            "payment": -23000
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨",
+            "qty": -1,
+            "payment": -29900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+            "qty": -2,
+            "payment": -50780
+          }
+        ]
+      }
+    ]
   }
 ]

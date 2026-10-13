@@ -18242,11 +18242,11 @@
         "name":  "ICE LITE 시그니처 조거",
         "color":  "블랙",
         "size":  "M",
-        "qty":  25,
-        "gross":  751600,
-        "payment":  1084173,
-        "avg_unit":  43367,
-        "orders":  13,
+        "qty":  24,
+        "gross":  728600,
+        "payment":  1061173,
+        "avg_unit":  44216,
+        "orders":  12,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -18941,6 +18941,13 @@
                           "gross":  59210,
                           "payment":  59210,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  -1,
+                          "gross":  -23000,
+                          "payment":  -23000,
+                          "orders":  -1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -22786,11 +22793,11 @@
         "name":  "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
         "color":  "빈티지차콜",
         "size":  "XL",
-        "qty":  27,
-        "gross":  506960,
-        "payment":  751105,
-        "avg_unit":  27819,
-        "orders":  10,
+        "qty":  25,
+        "gross":  456180,
+        "payment":  700325,
+        "avg_unit":  28013,
+        "orders":  9,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -23478,6 +23485,13 @@
                           "gross":  26910,
                           "payment":  26910,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  -2,
+                          "gross":  -50780,
+                          "payment":  -50780,
+                          "orders":  -1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -23962,11 +23976,11 @@
         "name":  "퀵드라이 투인원 러닝쇼츠",
         "color":  "그레이",
         "size":  "L",
-        "qty":  3,
-        "gross":  267000,
-        "payment":  227398,
-        "avg_unit":  75799,
-        "orders":  5,
+        "qty":  4,
+        "gross":  351000,
+        "payment":  260225,
+        "avg_unit":  65056,
+        "orders":  6,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -24017,6 +24031,13 @@
                           "gross":  -89000,
                           "payment":  -25748,
                           "orders":  0
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  84000,
+                          "payment":  32827,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -25833,11 +25854,11 @@
         "name":  "PENTAFLEX 러닝 레깅스",
         "color":  "",
         "size":  "XL",
-        "qty":  8,
-        "gross":  712000,
-        "payment":  322918,
-        "avg_unit":  40365,
-        "orders":  6,
+        "qty":  9,
+        "gross":  781000,
+        "payment":  349883,
+        "avg_unit":  38876,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -25880,6 +25901,13 @@
                           "qty":  1,
                           "gross":  89000,
                           "payment":  41900,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  69000,
+                          "payment":  26965,
                           "orders":  1
                       }
                   ],
@@ -53055,11 +53083,11 @@
         "name":  "퀵드라이 벤틸레이션 러닝탑",
         "color":  "그레이",
         "size":  "L",
-        "qty":  5,
-        "gross":  395000,
-        "payment":  285192,
-        "avg_unit":  57038,
-        "orders":  6,
+        "qty":  6,
+        "gross":  479000,
+        "payment":  318018,
+        "avg_unit":  53003,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -53109,6 +53137,13 @@
                           "qty":  1,
                           "gross":  79000,
                           "payment":  35975,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  84000,
+                          "payment":  32826,
                           "orders":  1
                       }
                   ],
@@ -63783,11 +63818,11 @@
         "name":  "퀵드라이 메쉬 윈드브레이커 워시드블랙",
         "color":  "",
         "size":  "L",
-        "qty":  6,
-        "gross":  714000,
-        "payment":  353653,
-        "avg_unit":  58942,
-        "orders":  4,
+        "qty":  7,
+        "gross":  833000,
+        "payment":  400157,
+        "avg_unit":  57165,
+        "orders":  5,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -63830,6 +63865,13 @@
                           "qty":  1,
                           "gross":  119000,
                           "payment":  61396,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  119000,
+                          "payment":  46504,
                           "orders":  1
                       }
                   ],
@@ -74725,11 +74767,11 @@
         "name":  "ICE LITE 릴렉스드 조거",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  4,
-        "gross":  303200,
-        "payment":  160738,
-        "avg_unit":  40184,
-        "orders":  5,
+        "qty":  6,
+        "gross":  454800,
+        "payment":  219982,
+        "avg_unit":  36664,
+        "orders":  7,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -74759,6 +74801,13 @@
                           "gross":  75800,
                           "payment":  65452,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  2,
+                          "gross":  151600,
+                          "payment":  59244,
+                          "orders":  2
                       }
                   ],
         "match_status":  "매칭완료",
@@ -76261,11 +76310,11 @@
         "name":  "TECH SWEAT 피그먼트 백 그래픽 맨투맨",
         "color":  "딥차콜",
         "size":  "XL",
-        "qty":  4,
-        "gross":  178700,
-        "payment":  193083,
-        "avg_unit":  48271,
-        "orders":  3,
+        "qty":  3,
+        "gross":  148800,
+        "payment":  163183,
+        "avg_unit":  54394,
+        "orders":  2,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -76904,6 +76953,13 @@
                           "gross":  29900,
                           "payment":  29900,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  -1,
+                          "gross":  -29900,
+                          "payment":  -29900,
+                          "orders":  -1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -101764,11 +101820,11 @@
         "name":  "ICE LITE 릴렉스드 조거",
         "color":  "블랙",
         "size":  "L",
-        "qty":  10,
-        "gross":  758000,
-        "payment":  354787,
-        "avg_unit":  35479,
-        "orders":  10,
+        "qty":  11,
+        "gross":  833800,
+        "payment":  384409,
+        "avg_unit":  34946,
+        "orders":  11,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -101846,6 +101902,13 @@
                           "qty":  1,
                           "gross":  75800,
                           "payment":  47909,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  75800,
+                          "payment":  29622,
                           "orders":  1
                       }
                   ],
@@ -105079,8 +105142,8 @@
         "name":  "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠",
         "color":  "",
         "size":  "",
-        "qty":  62,
-        "orders":  58,
+        "qty":  63,
+        "orders":  59,
         "gross_sales":  98310,
         "payment_sales":  98310,
         "avg_unit_price":  49155,
@@ -105456,15 +105519,22 @@
                           "gross":  74030,
                           "payment":  74030,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  47410,
+                          "payment":  47410,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
         "match_sku":  "",
         "standard_name":  "[2PACK] 퀵드라이 세미오버핏 백로고 티셔츠_블랙, 화이트-L",
         "stock_qty":  0,
-        "gross":  3509510,
-        "payment":  2856330,
-        "avg_unit":  46070,
+        "gross":  3556920,
+        "payment":  2903740,
+        "avg_unit":  46091,
         "stock_barcode":  "",
         "stock_name":  ""
     },
@@ -107738,11 +107808,11 @@
         "name":  "TECH SWEAT 벌크업 맨투맨",
         "color":  "블랙",
         "size":  "L",
-        "qty":  46,
-        "gross":  531860,
-        "payment":  531860,
-        "avg_unit":  11562,
-        "orders":  10,
+        "qty":  47,
+        "gross":  572120,
+        "payment":  572120,
+        "avg_unit":  12173,
+        "orders":  11,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -107813,6 +107883,13 @@
                           "qty":  1,
                           "gross":  25420,
                           "payment":  25420,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  40260,
+                          "payment":  40260,
                           "orders":  1
                       }
                   ],
@@ -115404,11 +115481,11 @@
         "name":  "ICE LITE 우먼즈 데일리쇼츠",
         "color":  "블랙",
         "size":  "S",
-        "qty":  4,
-        "gross":  148500,
-        "payment":  126593,
-        "avg_unit":  31648,
-        "orders":  4,
+        "qty":  5,
+        "gross":  180000,
+        "payment":  153373,
+        "avg_unit":  30675,
+        "orders":  5,
         "source_type":  "단품",
         "daily":  [
                       {
@@ -115434,6 +115511,13 @@
                       },
                       {
                           "date":  "2026-08-26",
+                          "qty":  1,
+                          "gross":  31500,
+                          "payment":  26780,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
                           "qty":  1,
                           "gross":  31500,
                           "payment":  26780,
@@ -120370,11 +120454,11 @@
         "name":  "퀵드라이 세미오버핏 그래픽 티셔츠",
         "color":  "화이트",
         "size":  "L",
-        "qty":  6,
-        "gross":  238800,
-        "payment":  135683,
-        "avg_unit":  22614,
-        "orders":  1,
+        "qty":  7,
+        "gross":  278600,
+        "payment":  151237,
+        "avg_unit":  21605,
+        "orders":  2,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -120418,6 +120502,13 @@
                           "gross":  39800,
                           "payment":  14734,
                           "orders":  0
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  39800,
+                          "payment":  15554,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -121628,11 +121719,11 @@
         "name":  "퀵드라이 RUNNER`S FEET 티셔츠",
         "color":  "차콜",
         "size":  "M",
-        "qty":  10,
-        "gross":  590000,
-        "payment":  374836,
-        "avg_unit":  37484,
-        "orders":  10,
+        "qty":  11,
+        "gross":  649000,
+        "payment":  397893,
+        "avg_unit":  36172,
+        "orders":  11,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -121703,6 +121794,13 @@
                           "qty":  1,
                           "gross":  59000,
                           "payment":  26868,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  59000,
+                          "payment":  23057,
                           "orders":  1
                       }
                   ],
@@ -125969,11 +126067,11 @@
         "name":  "퀵드라이 베이직 나시",
         "color":  "블랙",
         "size":  "2XL",
-        "qty":  9,
-        "gross":  351000,
-        "payment":  154208,
-        "avg_unit":  17134,
-        "orders":  6,
+        "qty":  15,
+        "gross":  585000,
+        "payment":  245653,
+        "avg_unit":  16377,
+        "orders":  12,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -126010,6 +126108,13 @@
                           "gross":  117000,
                           "payment":  56043,
                           "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  6,
+                          "gross":  234000,
+                          "payment":  91445,
+                          "orders":  6
                       }
                   ],
         "match_status":  "매칭완료",
@@ -137447,11 +137552,11 @@
         "name":  "스포츠 쿠션업 크루삭스 올인원 PACK",
         "color":  "화이트 화이트 화이트 블랙",
         "size":  "",
-        "qty":  2,
-        "gross":  70400,
-        "payment":  29179,
-        "avg_unit":  14590,
-        "orders":  0,
+        "qty":  3,
+        "gross":  105600,
+        "payment":  42935,
+        "avg_unit":  14312,
+        "orders":  1,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -137460,6 +137565,13 @@
                           "gross":  70400,
                           "payment":  29179,
                           "orders":  0
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  35200,
+                          "payment":  13756,
+                          "orders":  1
                       }
                   ],
         "match_status":  "매칭완료",
@@ -146706,11 +146818,11 @@
         "name":  "KINTERRA 베이직 릴렉스 롱슬리브",
         "color":  "블랙",
         "size":  "XL",
-        "qty":  1,
-        "gross":  31000,
-        "payment":  26350,
-        "orders":  1,
-        "avg_unit":  26350,
+        "qty":  2,
+        "gross":  62000,
+        "payment":  52392,
+        "orders":  2,
+        "avg_unit":  26196,
         "source_type":  "상품",
         "daily":  [
                       {
@@ -146718,6 +146830,13 @@
                           "qty":  1,
                           "gross":  31000,
                           "payment":  26350,
+                          "orders":  1
+                      },
+                      {
+                          "date":  "2026-10-12",
+                          "qty":  1,
+                          "gross":  31000,
+                          "payment":  26042,
                           "orders":  1
                       }
                   ],
