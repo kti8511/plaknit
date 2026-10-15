@@ -19504,5 +19504,171 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-14",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 0,
+        "gross": -291800,
+        "payment": -211540,
+        "orders": 3,
+        "items": [
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_코발트-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_라이트카키-XL",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-2XL",
+            "qty": 1,
+            "payment": 14560
+          },
+          {
+            "name": "ESSENTIAL HEAT 더블레이어 기모 집업_블랙-L",
+            "qty": -1,
+            "payment": -79000
+          },
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 워시드블랙_L",
+            "qty": -1,
+            "payment": -59000
+          },
+          {
+            "name": "[1+1] TECH SWEAT 크루 그래픽 맨투맨(기모버전)_블랙 백멜란지그레이-L",
+            "qty": -1,
+            "payment": -95800
+          },
+          {
+            "name": "[SET] TECH SWEAT 피그먼트 백 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠_상의 딥차콜 L / 하의 딥차콜 L",
+            "qty": -1,
+            "payment": -79000
+          },
+          {
+            "name": "배송비 및 반품배송비 정산",
+            "qty": 0,
+            "payment": 15000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 105310,
+        "payment": 105310,
+        "orders": 1,
+        "items": [
+          {
+            "name": "[2PACK] ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 86190
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 44540
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티",
+            "qty": -1,
+            "payment": -25420
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "gross": 234000,
+        "payment": 196561,
+        "orders": 4,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 빈티지 후드집업_네이비-2XL",
+            "qty": 1,
+            "payment": 108360
+          },
+          {
+            "name": "KINTERRA 베이직 릴렉스 롱슬리브_화이트-L",
+            "qty": 1,
+            "payment": 26041
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-S",
+            "qty": 1,
+            "payment": 36120
+          },
+          {
+            "name": "KINTERRA 베이직 릴렉스 롱슬리브_차콜-L",
+            "qty": 1,
+            "payment": 26040
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "qty": 1,
+        "gross": 44900,
+        "payment": 44900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 릴렉스드 반바지_블랙-2XL",
+            "qty": 1,
+            "payment": 44900
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
