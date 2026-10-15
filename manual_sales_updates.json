@@ -19670,5 +19670,226 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 17,
+        "gross": 985000,
+        "payment": 448160,
+        "orders": 8,
+        "items": [
+          {
+            "name": "ICE LITE 오버핏 맨투맨_라이트카키-XL",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-XL",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티_블랙-3XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "퀵드라이 5MILE 티셔츠_라이트그레이-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_코발트-2XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-2XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_라이트그레이-XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "퀵드라이 코어 로고 티셔츠_화이트-L",
+            "qty": 1,
+            "payment": 29400
+          },
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨_블랙-XL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_크림-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "TECH SWEAT 벌룬 트레이닝 팬츠_블랙-L",
+            "qty": 3,
+            "payment": 89700
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락_블랙-XL",
+            "qty": 1,
+            "payment": 35900
+          },
+          {
+            "name": "ICE LITE 버뮤다쇼츠_블랙-XL",
+            "qty": 3,
+            "payment": 89700
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠_차콜-L",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-2XL",
+            "qty": -3,
+            "payment": -59700
+          },
+          {
+            "name": "환불 검토: 셔링 티셔츠 화이트 L / MESH-ON 롱티 크림 L (상품별 금액 미확정)",
+            "qty": -2,
+            "payment": -58900
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -7940
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 18000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": -2,
+        "gross": 2010,
+        "payment": 2010,
+        "orders": -1,
+        "items": [
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+            "qty": 1,
+            "payment": 44910
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티",
+            "qty": -1,
+            "payment": -19110
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": -2,
+            "payment": -23790
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "gross": 72900,
+        "payment": 61240,
+        "orders": 2,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-XL",
+            "qty": 1,
+            "payment": 25120
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 36120
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
+        "orders": 1,
+        "items": [
+          {
+            "name": "Quickdry Ventilation Running Top_Grey-XL",
+            "qty": 1,
+            "payment": 79000
+          }
+        ]
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
