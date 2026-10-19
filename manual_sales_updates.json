@@ -19891,5 +19891,428 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 11,
+        "gross": 640600,
+        "payment": 338640,
+        "orders": 7,
+        "items": [
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_코발트-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_블랙-XXL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "ICE LITE 릴렉스드 조거_블랙-XXL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (화이트) (롱 슬리브)_크림-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-S",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_코발트-L",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 29000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 9000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -13000
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-XXL",
+            "qty": -1,
+            "payment": -14560
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 1,
+        "gross": 43000,
+        "payment": 36120,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-L",
+            "qty": 1,
+            "payment": 36120
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 4,
+        "gross": 246000,
+        "payment": 125600,
+        "orders": 3,
+        "items": [
+          {
+            "name": "PENTAFLEX 러닝 레깅스_XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-L",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 34830,
+        "payment": 34830,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 34830
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-10-18",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 14,
+        "gross": 844400,
+        "payment": 319020,
+        "orders": 5,
+        "items": [
+          {
+            "name": "ICE LITE 쿨메쉬 베이직 반팔티_화이트-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "ICE LITE 쿨메쉬 베이직 반팔티_카키-M",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "퀵드라이 LLWP 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜-L",
+            "qty": 2,
+            "payment": 23800
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-L",
+            "qty": 2,
+            "payment": 23800
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-L",
+            "qty": 2,
+            "payment": 29120
+          },
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨_블랙-L",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-L",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "퀵드라이 메쉬 러닝쇼츠_워시드블랙-M",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -8000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "gross": 152250,
+        "payment": 152250,
+        "orders": 4,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 1,
+            "payment": 49480
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 1,
+            "payment": 35200
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 34360
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 1,
+            "payment": 33210
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 1,
+        "gross": 19900,
+        "payment": 16720,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-XXL",
+            "qty": 1,
+            "payment": 16720
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
