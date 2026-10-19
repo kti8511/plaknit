@@ -151,6 +151,24 @@ td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--ink2);vert
 .sortable-th:hover{color:var(--ink2);background:#f1f5f9;}
 tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
 .num{text-align:right;font-family:'DM Mono',monospace;font-size:12px;}
+.daily-items{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);}
+.daily-items-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
+.daily-items h3{margin:0;font-size:14px;font-weight:700;letter-spacing:0;}
+.daily-items-meta{font-size:12px;color:var(--ink3);}
+.daily-items .toolbar{margin-bottom:10px;}
+.daily-items .toolbar[hidden]{display:none;}
+.daily-items .toolbar input{flex:1;min-width:180px;}
+.daily-items-table{min-width:720px;table-layout:fixed;}
+.daily-items-table th,.daily-items-table td{letter-spacing:0;}
+.daily-items-table th:nth-child(1){width:110px;}
+.daily-items-table th:nth-child(2){width:34%;}
+.daily-items-table th:nth-child(3){width:100px;}
+.daily-items-table th:nth-child(4){width:90px;}
+.daily-items-table td:nth-child(2){white-space:normal;overflow-wrap:anywhere;}
+.daily-items-kind{display:block;font-size:11px;color:var(--ink3);font-weight:400;margin-top:3px;}
+.daily-items-table tfoot td{position:sticky;bottom:0;background:#f8fafc;font-weight:700;border-top:1px solid var(--border);}
+.daily-items-negative{color:var(--red);}
+@media(max-width:600px){.daily-items .toolbar input,.daily-items .toolbar select{width:100%;min-width:0;}.daily-items .toolbar{align-items:stretch;}}
 .td-main{color:var(--ink);font-weight:600;} .td-mono{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--ink3);}
 
 /* BADGE */
@@ -292,7 +310,7 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
       </a>
     </nav>
     <div class="header-right">
-      <div class="status-chip"><div class="live-dot"></div>2026-10-19 00:51</div>
+      <div class="status-chip"><div class="live-dot"></div>2026-10-19 10:40</div>
     </div>
   </div>
 </header>
@@ -560,6 +578,27 @@ tr:last-child td{border-bottom:none;} tr:hover td{background:#fafbfd;}
           <tbody id="dailyRows"></tbody>
         </table>
       </div>
+      <section class="daily-items" aria-labelledby="dailyItemsTitle">
+        <div class="daily-items-head">
+          <h3 id="dailyItemsTitle">기간 상품·사이즈별 판매내역</h3>
+          <span class="daily-items-meta" id="dailyItemsMeta" aria-live="polite"></span>
+        </div>
+        <div class="toolbar" id="dailyItemsControls">
+          <input id="dailyItemSearch" type="search" placeholder="상품·색상·사이즈 검색" aria-label="판매내역 검색"/>
+          <select id="dailyItemSort" aria-label="판매내역 정렬">
+            <option value="qty">판매수량 많은 순</option>
+            <option value="payment">매출 높은 순</option>
+            <option value="name">상품명 순</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table class="daily-items-table">
+            <thead><tr><th>유통사</th><th>상품</th><th>색상</th><th>사이즈</th><th class="num">판매수량</th><th class="num">매출</th></tr></thead>
+            <tbody id="dailyItemRows"></tbody>
+            <tfoot id="dailyItemTotals"></tfoot>
+          </table>
+        </div>
+      </section>
     </div>
   </div>
 
@@ -1434,12 +1473,94 @@ document.getElementById('targetEditSave').addEventListener('click',submitSalesTa
 let dcInst = null;
 let calRetailer = '';
 let calYear = '2026';
+let calItemRows = [];
+
+function buildDailyItemRows(retailer, start, end, year) {
+  if (year !== '2026') return [];
+  const included = date => date.startsWith(year + '-') && (!start || date >= start) && (!end || date <= end);
+  const groups = new Map();
+  const existing = new Map();
+  const add = (row, qty, payment, kind = 'product') => {
+    if (!qty && !payment) return;
+    const value = {retailer:row.retailer || '미확인',name:row.name || '상품 미확인',color:row.color || '',size:row.size || '',kind};
+    const key = JSON.stringify([value.retailer,value.name,value.color,value.size,kind]);
+    if (!groups.has(key)) groups.set(key, {...value,qty:0,payment:0});
+    const group = groups.get(key);
+    group.qty += qty;
+    group.payment += payment;
+  };
+  rawRows.forEach(row => {
+    if (retailer && row.retailer !== retailer) return;
+    (row.daily || []).forEach(day => {
+      if (!included(day.date)) return;
+      const key = JSON.stringify([day.date,row.retailer || '']);
+      if (!existing.has(key)) existing.set(key, {qty:0,payment:0});
+      const totals = existing.get(key);
+      totals.qty += Number(day.qty || 0);
+      totals.payment += Number(day.payment || 0);
+      const kind = row.source_type === '정산조정' || row.match_status === '비상품' ? 'adjustment' : 'product';
+      add(row, Number(day.qty || 0), Number(day.payment || 0), kind);
+    });
+  });
+  MANUAL_SALES.forEach(day => {
+    if (!included(day.date)) return;
+    (day.retailers || []).forEach(row => {
+      if (retailer && row.retailer !== retailer) return;
+      const key = JSON.stringify([day.date,row.retailer || '']);
+      const totals = existing.get(key);
+      let qty = totals ? totals.qty : 0;
+      let payment = totals ? totals.payment : 0;
+      if (!totals) {
+        (row.items || []).forEach(source => {
+          const q = Number(source.qty || 0), p = Number(source.payment || 0);
+          add({...source,retailer:row.retailer}, q, p, 'unverified');
+          qty += q;
+          payment += p;
+        });
+      }
+      // Only the unexplained remainder is shown; never duplicate or allocate manual totals.
+      const targetQty = row.qty === undefined ? qty : Number(row.qty || 0);
+      const targetPayment = Math.max(Number(row.payment || 0), totals ? totals.payment : 0);
+      add({retailer:row.retailer,name:'상품 상세 미확인'}, targetQty - qty, targetPayment - payment, 'unverified');
+    });
+  });
+  return Array.from(groups.values()).filter(row => row.qty || row.payment);
+}
+
+function escapeDailyItemText(value) {
+  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+}
+
+function renderDailyItems() {
+  const query = document.getElementById('dailyItemSearch').value.trim().toLocaleLowerCase();
+  const sort = document.getElementById('dailyItemSort').value;
+  const rows = calItemRows.filter(row => [row.retailer,row.name,row.color,row.size].join(' ').toLocaleLowerCase().includes(query));
+  rows.sort((a,b) => (sort === 'name' ? 0 : Number(b[sort]) - Number(a[sort])) || a.name.localeCompare(b.name,'ko') || a.size.localeCompare(b.size));
+  const historical = calYear !== '2026';
+  document.getElementById('dailyItemsControls').hidden = historical;
+  document.getElementById('dailyItemsMeta').textContent = historical ? '상세 자료 없음' : `${fmt(rows.length)}개 항목`;
+  const empty = historical ? `${calYear}년 상품·사이즈 상세 자료 없음` : query ? '검색 결과 없음' : '선택 기간 판매내역 없음';
+  document.getElementById('dailyItemRows').innerHTML = rows.length ? rows.map(row => {
+    const option = value => escapeDailyItemText(value || (row.kind === 'adjustment' ? '-' : '미확인'));
+    const tag = row.kind === 'adjustment' ? '배송비·쿠폰 등 정산조정' : row.kind === 'unverified' ? '상세 확인 필요' : '';
+    return `<tr>
+      <td>${escapeDailyItemText(row.retailer)}</td>
+      <td class="td-main">${escapeDailyItemText(row.name)}${tag ? `<span class="daily-items-kind">${tag}</span>` : ''}</td>
+      <td>${option(row.color)}</td><td>${option(row.size)}</td>
+      <td class="num ${row.qty < 0 ? 'daily-items-negative' : ''}">${fmt(row.qty)}</td>
+      <td class="num ${row.payment < 0 ? 'daily-items-negative' : ''}">${fmt(row.payment)}</td>
+    </tr>`;
+  }).join('') : `<tr><td colspan="6" style="text-align:center;padding:24px;color:var(--ink3)">${empty}</td></tr>`;
+  document.getElementById('dailyItemTotals').innerHTML = rows.length ? `<tr><td colspan="4">조회 합계</td><td class="num">${fmt(rows.reduce((sum,row)=>sum+row.qty,0))}</td><td class="num">${fmt(rows.reduce((sum,row)=>sum+row.payment,0))}</td></tr>` : '';
+}
 
 function renderDaily() {
   const s = document.getElementById('dateStart').value;
   const e = document.getElementById('dateEnd').value;
   const allDaily = calYear === '2026' ? buildDailyMap(calRetailer) : buildHistoricalDailyMap(calYear, calRetailer);
   const f = allDaily.filter(d=>(!s||d.date>=s)&&(!e||d.date<=e));
+  calItemRows = buildDailyItemRows(calRetailer, s, e, calYear);
+  renderDailyItems();
 
   document.getElementById('dayPayment').textContent = fmt(f.reduce((a,d)=>a+d.payment,0));
   document.getElementById('dayOrders').textContent  = calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.orders,0)) : '-';
@@ -1480,6 +1601,8 @@ document.getElementById('calYear').addEventListener('change', e => {
 });
 document.getElementById('dateStart').addEventListener('change', renderDaily);
 document.getElementById('dateEnd').addEventListener('change', renderDaily);
+document.getElementById('dailyItemSearch').addEventListener('input', renderDailyItems);
+document.getElementById('dailyItemSort').addEventListener('change', renderDailyItems);
 document.getElementById('clearDate').addEventListener('click', () => {
   document.getElementById('calYear').value = '2026';
   calYear = '2026';
