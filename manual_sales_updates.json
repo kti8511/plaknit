@@ -20314,5 +20314,271 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 20,
+        "gross": 1213200,
+        "payment": 588340,
+        "orders": 6,
+        "items": [
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_베이지-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-XL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_그레이-XL",
+            "qty": 1,
+            "payment": 49000
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_블랙-XL",
+            "qty": 1,
+            "payment": 49000
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_화이트-L",
+            "qty": 2,
+            "payment": 39800
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_화이트-XL",
+            "qty": 3,
+            "payment": 59700
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_베이지-L",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_블랙-XL",
+            "qty": 2,
+            "payment": 39800
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "[1+1] KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브_화이트 / 화이트-XL / XL",
+            "qty": 2,
+            "payment": 96000
+          },
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠_블랙-XL",
+            "qty": 1,
+            "payment": 75000
+          },
+          {
+            "name": "TECH SWEAT 베이직 조거팬츠_블랙-XL",
+            "qty": 1,
+            "payment": 69000
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑_블랙-2XL",
+            "qty": 1,
+            "payment": 79000
+          },
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커_블랙-2XL",
+            "qty": 1,
+            "payment": 119000
+          },
+          {
+            "name": "퀵드라이 B.B.B 티셔츠_차콜-L",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-L",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "당일 결제·전체취소 주문수",
+            "qty": 0,
+            "payment": 0
+          },
+          {
+            "name": "회원등급(직원) 주문 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -171000
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -3000
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜-L",
+            "qty": -1,
+            "payment": -11900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-L",
+            "qty": -1,
+            "payment": -11900
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-L",
+            "qty": -1,
+            "payment": -14560
+          },
+          {
+            "name": "완료 환불 배송비",
+            "qty": 0,
+            "payment": -3000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 9,
+        "gross": 365280,
+        "payment": 365280,
+        "orders": 7,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": 2,
+            "payment": 84210
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 2,
+            "payment": 77050
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 2,
+            "payment": 73800
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 54750
+          },
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨",
+            "qty": 1,
+            "payment": 38700
+          },
+          {
+            "name": "퀵드라이 베이직 릴렉스 롱슬리브",
+            "qty": 1,
+            "payment": 36770
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "gross": 237100,
+        "payment": 202992,
+        "orders": 3,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 36552
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-M",
+            "qty": 1,
+            "payment": 36552
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_블랙-M",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨_멜란지그레이-XL",
+            "qty": 1,
+            "payment": 51589
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_딥차콜-XL",
+            "qty": 1,
+            "payment": 58469
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-XXL",
+            "qty": -1,
+            "payment": -16720
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 1,
+        "gross": 41900,
+        "payment": 41900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브_화이트-3XL",
+            "qty": 1,
+            "payment": 41900
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
