@@ -20580,5 +20580,245 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 17,
+        "gross": 1014200,
+        "payment": 509300,
+        "orders": 7,
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-L",
+            "qty": 1,
+            "payment": 65600
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜-XL",
+            "qty": 1,
+            "payment": 59200
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜-L",
+            "qty": 1,
+            "payment": 59200
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-XL",
+            "qty": 1,
+            "payment": 65600
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠_차콜-2XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XXL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XXL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 하프집_XL",
+            "qty": 1,
+            "payment": 65000
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브_라이트블루-M",
+            "qty": 1,
+            "payment": 36900
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브_블랙-2XL",
+            "qty": 1,
+            "payment": 36900
+          },
+          {
+            "name": "ICE LITE 릴렉스드 조거_블랙-XL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "ICE LITE 와이드 카고팬츠_블랙-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ICE LITE 초냉감 PLNT 세미오버핏 반팔티_라이트블루-M",
+            "qty": 1,
+            "payment": 21900
+          },
+          {
+            "name": "[채코제에디션] 초냉감 트래블러티셔츠_화이트-M",
+            "qty": 1,
+            "payment": 21900
+          },
+          {
+            "name": "퀵드라이 B.B.B 티셔츠_차콜-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "회원등급(직원) 주문 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -124800
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -5000
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+            "qty": -2,
+            "payment": -16400
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 6,
+        "gross": 203780,
+        "payment": 203780,
+        "orders": 4,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨_블랙-L",
+            "qty": 2,
+            "payment": 76400
+          },
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠_블랙-4XL",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-L",
+            "qty": 1,
+            "payment": 30900
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스_블랙-F",
+            "qty": 1,
+            "payment": 6680
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": -1,
+        "gross": -42800,
+        "payment": -25180,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠_화이트-S",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-S",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "퀵드라이 RUNNERS FEET 티셔츠_차콜-M",
+            "qty": -1,
+            "payment": -33915
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브_블랙-S",
+            "qty": -1,
+            "payment": -39015
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠_세이지-M",
+            "qty": -1,
+            "payment": -36550
+          },
+          {
+            "name": "완료 반품 회수·추가 배송비 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": 11200
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
