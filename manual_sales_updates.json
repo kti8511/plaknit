@@ -20820,5 +20820,134 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 5,
+        "gross": 290800,
+        "payment": 129300,
+        "orders": 3,
+        "items": [
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_블랙-XL",
+            "qty": 1,
+            "payment": 16500
+          },
+          {
+            "name": "[1+1] 퀵드라이 코어 로고 티셔츠_블랙 블랙-L",
+            "qty": 0,
+            "payment": 0
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-M",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙_블랙-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 화이트_화이트-M",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-L",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 3000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "gross": 79640,
+        "payment": 79640,
+        "orders": 2,
+        "items": [
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-L",
+            "qty": 4,
+            "payment": 71640
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 화이트_화이트-L",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "KINTERRA 벤치프레스 빈티지 그래픽 나시",
+            "qty": -1,
+            "payment": -31900
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]

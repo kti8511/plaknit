@@ -120603,10 +120603,10 @@
     "name": "ICE LITE 세미오버핏 맨투맨",
     "color": "블랙",
     "size": "M",
-    "qty": 16,
-    "gross": 956800,
-    "payment": 422257,
-    "avg_unit": 26391,
+    "qty": 17,
+    "gross": 1016600,
+    "payment": 434157,
+    "avg_unit": 25539,
     "orders": 13,
     "source_type": "상품",
     "daily": [
@@ -120693,6 +120693,13 @@
         "gross": 119600,
         "payment": 48231,
         "orders": 2
+      },
+      {
+        "date": "2026-10-21",
+        "qty": 1,
+        "gross": 59800,
+        "payment": 11900,
+        "orders": 0
       }
     ],
     "match_status": "매칭완료",
@@ -123443,6 +123450,13 @@
         "qty": 2,
         "gross": 168000,
         "payment": 86011,
+        "orders": 0
+      },
+      {
+        "date": "2026-10-21",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
         "orders": 0
       }
     ],
@@ -126589,11 +126603,11 @@
     "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)",
     "color": "블랙",
     "size": "L",
-    "qty": 7,
-    "gross": 406000,
-    "payment": 171248,
-    "avg_unit": 24464,
-    "orders": 10,
+    "qty": 8,
+    "gross": 464000,
+    "payment": 191148,
+    "avg_unit": 23894,
+    "orders": 11,
     "source_type": "상품",
     "daily": [
       {
@@ -126654,6 +126668,13 @@
       },
       {
         "date": "2026-10-19",
+        "qty": 1,
+        "gross": 58000,
+        "payment": 19900,
+        "orders": 1
+      },
+      {
+        "date": "2026-10-21",
         "qty": 1,
         "gross": 58000,
         "payment": 19900,
@@ -127575,10 +127596,10 @@
     "name": "KINTERRA 벤치프레스 빈티지 그래픽 나시",
     "color": "",
     "size": "",
-    "qty": 15,
-    "gross": 225440,
-    "payment": 225440,
-    "avg_unit": 15029,
+    "qty": 14,
+    "gross": 193540,
+    "payment": 193540,
+    "avg_unit": 13824,
     "orders": 8,
     "source_type": "상품",
     "daily": [
@@ -127679,6 +127700,13 @@
         "gross": 31900,
         "payment": 31900,
         "orders": 1
+      },
+      {
+        "date": "2026-10-21",
+        "qty": -1,
+        "gross": -31900,
+        "payment": -31900,
+        "orders": 0
       }
     ],
     "match_status": "매칭완료",
@@ -139571,11 +139599,11 @@
     "name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
     "color": "블랙",
     "size": "XL",
-    "qty": 1,
-    "gross": 55000,
-    "payment": 29223,
-    "avg_unit": 29223,
-    "orders": 0,
+    "qty": 2,
+    "gross": 110000,
+    "payment": 45723,
+    "avg_unit": 22862,
+    "orders": 1,
     "source_type": "상품",
     "daily": [
       {
@@ -139584,6 +139612,13 @@
         "gross": 55000,
         "payment": 29223,
         "orders": 0
+      },
+      {
+        "date": "2026-10-21",
+        "qty": 1,
+        "gross": 55000,
+        "payment": 16500,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -148848,7 +148883,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": 51000,
+    "payment": 54000,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -148893,6 +148928,13 @@
         "qty": 0,
         "gross": 0,
         "payment": 6000,
+        "orders": 0
+      },
+      {
+        "date": "2026-10-21",
+        "qty": 0,
+        "gross": 0,
+        "payment": 3000,
         "orders": 0
       }
     ],
@@ -150415,5 +150457,113 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 블랙",
+    "color": "블랙",
+    "size": "M",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 39000,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-10-21",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 39000,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 블랙_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39000
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "color": "화이트",
+    "size": "M",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 39000,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-10-21",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 39000,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트_화이트-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39000
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 탱크",
+    "color": "화이트",
+    "size": "L",
+    "qty": 4,
+    "gross": 71640,
+    "payment": 71640,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-10-21",
+        "qty": 4,
+        "gross": 71640,
+        "payment": 71640,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 17910
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "color": "화이트",
+    "size": "L",
+    "qty": 1,
+    "gross": 39900,
+    "payment": 39900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-10-21",
+        "qty": 1,
+        "gross": 39900,
+        "payment": 39900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트_화이트-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
   }
 ]
