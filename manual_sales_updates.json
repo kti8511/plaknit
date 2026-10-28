@@ -21768,5 +21768,154 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 8,
+        "gross": 426000,
+        "payment": 194500,
+        "orders": 6,
+        "items": [
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "퀵드라이 크롭 CHILL 티셔츠_L",
+            "qty": 1,
+            "payment": 39200
+          },
+          {
+            "name": "ICE LITE 시그니처 조거_블랙-M",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-3XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "[채코제 에디션] 초냉감 밸런스탱크_다크 그레이-M",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_카키그레이-M",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜_차콜-L",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 12000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -8000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 6,
+        "gross": 213280,
+        "payment": 213280,
+        "orders": 5,
+        "items": [
+          {
+            "name": "ICE LITE 오버핏 맨투맨_차콜 / 라이트카키-XXL 1개 / XXXL 1개",
+            "qty": 2,
+            "payment": 57150
+          },
+          {
+            "name": "ICE LITE 2 in 1 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 48410
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝팬츠_2XL",
+            "qty": 1,
+            "payment": 47920
+          },
+          {
+            "name": "QUICKDRY 러닝 롱슬리브 웜그레이_웜그레이-XL",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_라이트카키-L",
+            "qty": 1,
+            "payment": 19900
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
