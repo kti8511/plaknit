@@ -21917,5 +21917,197 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 15,
+        "gross": 1110600,
+        "payment": 366550,
+        "orders": 6,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-L",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-M",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 2,
+            "payment": 19800
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "[SET] TECH SWEAT 피그먼트 프론트 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠_상의 딥차콜 / 하의 딥차콜-상의 M / 하의 M",
+            "qty": 1,
+            "payment": 59900
+          },
+          {
+            "name": "[SET] TECH SWEAT 피그먼트 백 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠_상의 빈티지카키 / 하의 빈티지카키-상의 M / 하의 M",
+            "qty": 1,
+            "payment": 59900
+          },
+          {
+            "name": "TECH SWEAT 7인치 카고 반바지_블랙-XL",
+            "qty": 2,
+            "payment": 59800
+          },
+          {
+            "name": "TECH SWEAT 7인치 카고 반바지_멜란지그레이-XL",
+            "qty": 3,
+            "payment": 89700
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 코발트_코발트-M",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 12000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -17950
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "gross": 150260,
+        "payment": 150260,
+        "orders": 3,
+        "items": [
+          {
+            "name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전)_멜란지 그레이-L",
+            "qty": 1,
+            "payment": 42070
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-L",
+            "qty": 1,
+            "payment": 29980
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-L",
+            "qty": 1,
+            "payment": 38310
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨_블랙-XXL",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 21720,
+        "payment": 18910,
+        "orders": 1,
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 맨투맨 (세미오버핏)_빈티지차콜-XL",
+            "qty": 1,
+            "payment": 44820
+          },
+          {
+            "name": "KINTERRA 베이직 릴렉스 롱슬리브_차콜-L",
+            "qty": -1,
+            "payment": -25910
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 3,
+        "gross": 119700,
+        "payment": 119700,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거_블랙-2XL(34~36)",
+            "qty": 3,
+            "payment": 119700
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 2,
+        "gross": 174000,
+        "payment": 158000,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 딥차콜_딥차콜-L",
+            "qty": 1,
+            "payment": 80816
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 딥차콜_딥차콜-L",
+            "qty": 1,
+            "payment": 77184
+          }
+        ]
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
