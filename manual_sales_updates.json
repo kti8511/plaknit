@@ -22831,5 +22831,150 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-02",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 3,
+        "gross": 193000,
+        "payment": 71700,
+        "orders": 2,
+        "items": [
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠 멜란지그레이_멜란지그레이-L",
+            "qty": 1,
+            "payment": 45900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 2,
+        "gross": 77370,
+        "payment": 77370,
+        "orders": 3,
+        "items": [
+          {
+            "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠_블랙, 네이비-L",
+            "qty": 1,
+            "payment": 55010
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_딥차콜-M",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)_딥차콜-M",
+            "qty": 1,
+            "payment": 38710
+          },
+          {
+            "name": "퀵드라이 백그래픽 롱슬리브_블랙-XXL",
+            "qty": 1,
+            "payment": 28110
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜 / 블랙-L (신규 차콜1/블랙1, 통계 순수량1)",
+            "qty": 1,
+            "payment": 17550
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": -3,
+            "payment": -101910
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 3,
+        "gross": 138100,
+        "payment": 117385,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 블랙_블랙-M",
+            "qty": 1,
+            "payment": 53720
+          },
+          {
+            "name": "퀵드라이 LLWP 티셔츠 블루_블루-M",
+            "qty": 1,
+            "payment": 27115
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지_세이지-M",
+            "qty": 1,
+            "payment": 36550
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]

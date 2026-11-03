@@ -102854,11 +102854,11 @@
     "name": "TECH SWEAT 헤비쭈리 쇼츠",
     "color": "멜란지그레이",
     "size": "L",
-    "qty": 8,
-    "gross": 472000,
-    "payment": 180693,
-    "avg_unit": 22587,
-    "orders": 7,
+    "qty": 9,
+    "gross": 531000,
+    "payment": 190593,
+    "avg_unit": 21177,
+    "orders": 8,
     "source_type": "단품",
     "daily": [
       {
@@ -102909,6 +102909,13 @@
         "gross": 59000,
         "payment": 9900,
         "orders": 0
+      },
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -102929,10 +102936,10 @@
     "name": "TECH SWEAT 헤비쭈리 쇼츠",
     "color": "블랙",
     "size": "L",
-    "qty": 9,
-    "gross": 531000,
-    "payment": 169163,
-    "avg_unit": 18796,
+    "qty": 10,
+    "gross": 590000,
+    "payment": 179063,
+    "avg_unit": 17906,
     "orders": 8,
     "source_type": "단품",
     "daily": [
@@ -102991,6 +102998,13 @@
         "gross": 118000,
         "payment": 19800,
         "orders": 1
+      },
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 0
       }
     ],
     "match_status": "매칭완료",
@@ -150407,7 +150421,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": 129000,
+    "payment": 135000,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -150512,6 +150526,13 @@
       },
       {
         "date": "2026-10-31",
+        "qty": 0,
+        "gross": 0,
+        "payment": 6000,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-02",
         "qty": 0,
         "gross": 0,
         "payment": 6000,
@@ -151246,9 +151267,9 @@
     "name": "ICE LITE 오버핏 맨투맨",
     "color": "",
     "size": "",
-    "qty": 4,
-    "gross": 148060,
-    "payment": 148060,
+    "qty": 1,
+    "gross": 46150,
+    "payment": 46150,
     "orders": 1,
     "daily": [
       {
@@ -151271,6 +151292,13 @@
         "gross": 39900,
         "payment": 39900,
         "orders": 0
+      },
+      {
+        "date": "2026-11-02",
+        "qty": -3,
+        "gross": -101910,
+        "payment": -101910,
+        "orders": 0
       }
     ],
     "source_type": "상품",
@@ -151279,7 +151307,7 @@
     "standard_name": "ICE LITE 오버핏 맨투맨",
     "received_qty": 0,
     "stock_qty": 0,
-    "avg_unit": 37015,
+    "avg_unit": 46150,
     "stock_barcode": "",
     "stock_name": ""
   },
@@ -152567,16 +152595,23 @@
     "name": "퀵드라이 백그래픽 롱슬리브",
     "color": "블랙",
     "size": "XXL",
-    "qty": 1,
-    "gross": 28430,
-    "payment": 28430,
-    "orders": 1,
+    "qty": 2,
+    "gross": 56540,
+    "payment": 56540,
+    "orders": 2,
     "daily": [
       {
         "date": "2026-10-22",
         "qty": 1,
         "gross": 28430,
         "payment": 28430,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 28110,
+        "payment": 28110,
         "orders": 1
       }
     ],
@@ -152586,7 +152621,7 @@
     "standard_name": "퀵드라이 백그래픽 롱슬리브_블랙-XXL",
     "received_qty": 0,
     "stock_qty": 7,
-    "avg_unit": 28430,
+    "avg_unit": 28270,
     "stock_barcode": "PD2TLM01BLK02XL",
     "stock_name": "퀵드라이 백그래픽 롱슬리브_블랙-2XL",
     "stock_match_exact": true
@@ -155965,5 +156000,222 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 39950
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 와이드 스트레이트 팬츠 멜란지그레이",
+    "color": "멜란지그레이",
+    "size": "L",
+    "qty": 1,
+    "gross": 75000,
+    "payment": 45900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 75000,
+        "payment": 45900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 와이드 스트레이트 팬츠 멜란지그레이_멜란지그레이-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 45900
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠",
+    "color": "블랙, 네이비",
+    "size": "L",
+    "qty": 1,
+    "gross": 55010,
+    "payment": 55010,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 55010,
+        "payment": 55010,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[2PACK] 퀵드라이 세미오버핏 아치로고 티셔츠_블랙, 네이비-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 55010
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨",
+    "color": "딥차콜",
+    "size": "M",
+    "qty": 1,
+    "gross": 39900,
+    "payment": 39900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 39900,
+        "payment": 39900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨_딥차콜-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+    "color": "딥차콜",
+    "size": "M",
+    "qty": 1,
+    "gross": 38710,
+    "payment": 38710,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 38710,
+        "payment": 38710,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)_딥차콜-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 38710
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 세미오버핏 맨투맨",
+    "color": "차콜 / 블랙",
+    "size": "L (신규 차콜1/블랙1, 통계 순수량1)",
+    "qty": 1,
+    "gross": 17550,
+    "payment": 17550,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 17550,
+        "payment": 17550,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ICE LITE 세미오버핏 맨투맨_차콜 / 블랙-L (신규 차콜1/블랙1, 통계 순수량1)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "sales_option_allocation": "신규 차콜L1/블랙L1, 통계 순수량1. 차이 원인과 옵션별 금액 미확인, 양수/음수 옵션 배분 제외.",
+    "avg_unit": 17550
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
+    "color": "블랙",
+    "size": "M",
+    "qty": 1,
+    "gross": 63200,
+    "payment": 53720,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 63200,
+        "payment": 53720,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 53720
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 LLWP 티셔츠 블루",
+    "color": "블루",
+    "size": "M",
+    "qty": 1,
+    "gross": 31900,
+    "payment": 27115,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 31900,
+        "payment": 27115,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 LLWP 티셔츠 블루_블루-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 27115
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 세이지",
+    "color": "세이지",
+    "size": "M",
+    "qty": 1,
+    "gross": 43000,
+    "payment": 36550,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-02",
+        "qty": 1,
+        "gross": 43000,
+        "payment": 36550,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 셔링 티셔츠 세이지_세이지-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 36550
   }
 ]
