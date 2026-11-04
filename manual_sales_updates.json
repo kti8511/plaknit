@@ -22976,5 +22976,125 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-03",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 3,
+        "gross": 318000,
+        "payment": 198500,
+        "orders": 3,
+        "items": [
+          {
+            "name": "[SET] TECH SWEAT 세미 오버핏 백 그래픽 맨투맨 + 와이드 스트레이트 팬츠_블랙-상의 XL / 하의 XL",
+            "qty": 1,
+            "payment": 75000
+          },
+          {
+            "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_L",
+            "qty": 1,
+            "payment": 79000
+          },
+          {
+            "name": "퀵드라이 메쉬 우먼즈 투인원 쇼츠 블랙_블랙-M",
+            "qty": 1,
+            "payment": 44500
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 5,
+        "gross": 150730,
+        "payment": 150730,
+        "orders": 5,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙 / 차콜-블랙 XL 1개 / 차콜 L 1개 / 블랙 L 2개",
+            "qty": 4,
+            "payment": 111910
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨_블랙-L",
+            "qty": 1,
+            "payment": 38820
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)_딥차콜-M",
+            "qty": 0,
+            "payment": 0
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": -1,
+        "gross": -110670,
+        "payment": -104670,
+        "orders": 0,
+        "items": [
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 워시드카키_워시드카키-L",
+            "qty": -1,
+            "payment": -110670
+          },
+          {
+            "name": "환불 반품배송비 유보 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": 6000
+          }
+        ]
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]

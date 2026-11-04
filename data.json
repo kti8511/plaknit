@@ -155187,16 +155187,23 @@
     "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠",
     "color": "",
     "size": "L",
-    "qty": 1,
-    "gross": 79000,
-    "payment": 69000,
-    "orders": 1,
+    "qty": 2,
+    "gross": 158000,
+    "payment": 148000,
+    "orders": 2,
     "daily": [
       {
         "date": "2026-10-31",
         "qty": 1,
         "gross": 79000,
         "payment": 69000,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-03",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
         "orders": 1
       }
     ],
@@ -155206,7 +155213,7 @@
     "standard_name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_L",
     "received_qty": 0,
     "stock_qty": 0,
-    "avg_unit": 69000
+    "avg_unit": 74000
   },
   {
     "retailer": "자사몰",
@@ -156091,7 +156098,7 @@
     "qty": 1,
     "gross": 38710,
     "payment": 38710,
-    "orders": 0,
+    "orders": 1,
     "daily": [
       {
         "date": "2026-11-02",
@@ -156099,6 +156106,13 @@
         "gross": 38710,
         "payment": 38710,
         "orders": 0
+      },
+      {
+        "date": "2026-11-03",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 1
       }
     ],
     "source_type": "상품",
@@ -156217,5 +156231,168 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 36550
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "[SET] TECH SWEAT 세미 오버핏 백 그래픽 맨투맨 + 와이드 스트레이트 팬츠",
+    "color": "블랙",
+    "size": "상의 XL / 하의 XL",
+    "qty": 1,
+    "gross": 150000,
+    "payment": 75000,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": 1,
+        "gross": 150000,
+        "payment": 75000,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[SET] TECH SWEAT 세미 오버핏 백 그래픽 맨투맨 + 와이드 스트레이트 팬츠_블랙-상의 XL / 하의 XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 75000
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 메쉬 우먼즈 투인원 쇼츠 블랙",
+    "color": "블랙",
+    "size": "M",
+    "qty": 1,
+    "gross": 89000,
+    "payment": 44500,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 44500,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 메쉬 우먼즈 투인원 쇼츠 블랙_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 44500
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 세미오버핏 맨투맨",
+    "color": "블랙 / 차콜",
+    "size": "블랙 XL 1개 / 차콜 L 1개 / 블랙 L 2개",
+    "qty": 4,
+    "gross": 111910,
+    "payment": 111910,
+    "orders": 3,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": 4,
+        "gross": 111910,
+        "payment": 111910,
+        "orders": 3
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ICE LITE 세미오버핏 맨투맨_블랙 / 차콜-블랙 XL 1개 / 차콜 L 1개 / 블랙 L 2개",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "sales_option_allocation": "옵션별 수량 확인, 합산 금액 보존, 옵션별 금액 미배분.",
+    "avg_unit": 27978
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 38820,
+    "payment": 38820,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": 1,
+        "gross": 38820,
+        "payment": 38820,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 38820
+  },
+  {
+    "retailer": "애슬러",
+    "mall_no": "",
+    "name": "퀵드라이 메쉬 윈드브레이커 워시드카키",
+    "color": "워시드카키",
+    "size": "L",
+    "qty": -1,
+    "gross": -110670,
+    "payment": -110670,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": -1,
+        "gross": -110670,
+        "payment": -110670,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 메쉬 윈드브레이커 워시드카키_워시드카키-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 110670
+  },
+  {
+    "retailer": "애슬러",
+    "mall_no": "",
+    "name": "환불 반품배송비 유보 (상품별 배분 제외)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 6000,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-03",
+        "qty": 0,
+        "gross": 0,
+        "payment": 6000,
+        "orders": 0
+      }
+    ],
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "standard_name": "환불 반품배송비 유보 (상품별 배분 제외)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 0
   }
 ]
