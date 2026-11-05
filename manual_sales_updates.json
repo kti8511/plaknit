@@ -23241,5 +23241,139 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-05",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": -5,
+        "gross": -279600,
+        "payment": -99600,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 하프집_M",
+            "qty": 1,
+            "payment": 65000
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_라이트그레이-3XL",
+            "qty": -1,
+            "payment": -19900
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-3XL",
+            "qty": -1,
+            "payment": -19900
+          },
+          {
+            "name": "퀵드라이 세미 오버핏 티셔츠_블랙-3XL",
+            "qty": -1,
+            "payment": -15900
+          },
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_블랙-3XL",
+            "qty": -1,
+            "payment": -29900
+          },
+          {
+            "name": "[1+1] KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브_옵션 1: 화이트 XL / 옵션 2: 화이트 XL",
+            "qty": -2,
+            "payment": -96000
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 12000
+          },
+          {
+            "name": "완료 환불 주문서 쿠폰 복원 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": 5000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 2,
+        "gross": 72800,
+        "payment": 72800,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 초냉감 프론트그래픽 오버핏 반팔티_카키 그레이-XXXL",
+            "qty": 1,
+            "payment": 41280
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티_다크 그린 1개 / 블랙 1개 (색상별 금액 배분 제외)-XXXXL",
+            "qty": 2,
+            "payment": 73020
+          },
+          {
+            "name": "TECH SWEAT 벌크업 맨투맨",
+            "qty": -1,
+            "payment": -41500
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
