@@ -23096,5 +23096,150 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-04",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 9,
+        "gross": 655800,
+        "payment": 293410,
+        "orders": 5,
+        "items": [
+          {
+            "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨 블랙_블랙-M",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-3XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-3XL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 벌룬 트레이닝 팬츠_블랙-XXL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 딥차콜_딥차콜-2XL",
+            "qty": 1,
+            "payment": 35000
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키_빈티지카키-2XL",
+            "qty": 1,
+            "payment": 35000
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-XXL",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_2XL",
+            "qty": 1,
+            "payment": 79000
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 9000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -3990
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 67720,
+        "payment": 67720,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨_블랙-XL",
+            "qty": 1,
+            "payment": 67720
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 1,
+        "gross": 39900,
+        "payment": 39900,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-XL(32~34)",
+            "qty": 1,
+            "payment": 39900
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]

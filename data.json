@@ -102936,11 +102936,11 @@
     "name": "TECH SWEAT 헤비쭈리 쇼츠",
     "color": "블랙",
     "size": "L",
-    "qty": 10,
-    "gross": 590000,
-    "payment": 179063,
-    "avg_unit": 17906,
-    "orders": 8,
+    "qty": 11,
+    "gross": 649000,
+    "payment": 188963,
+    "avg_unit": 17178,
+    "orders": 9,
     "source_type": "단품",
     "daily": [
       {
@@ -103005,6 +103005,13 @@
         "gross": 59000,
         "payment": 9900,
         "orders": 0
+      },
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -131833,11 +131840,11 @@
     "name": "TECH SWEAT 헤비쭈리 쇼츠",
     "color": "블랙",
     "size": "3XL",
-    "qty": 3,
-    "gross": 177000,
-    "payment": 53733,
-    "avg_unit": 17911,
-    "orders": 3,
+    "qty": 4,
+    "gross": 236000,
+    "payment": 63633,
+    "avg_unit": 15908,
+    "orders": 4,
     "source_type": "상품",
     "daily": [
       {
@@ -131856,6 +131863,13 @@
       },
       {
         "date": "2026-10-27",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-04",
         "qty": 1,
         "gross": 59000,
         "payment": 9900,
@@ -132957,10 +132971,10 @@
     "name": "TECH SWEAT 헤비쭈리 쇼츠",
     "color": "멜란지그레이",
     "size": "3XL",
-    "qty": 3,
-    "gross": 177000,
-    "payment": 55097,
-    "avg_unit": 18366,
+    "qty": 4,
+    "gross": 236000,
+    "payment": 64997,
+    "avg_unit": 16249,
     "orders": 3,
     "source_type": "상품",
     "daily": [
@@ -132984,6 +132998,13 @@
         "gross": 59000,
         "payment": 9900,
         "orders": 1
+      },
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 0
       }
     ],
     "match_status": "매칭완료",
@@ -147066,15 +147087,22 @@
     "name": "ICE LITE 벌룬 조거",
     "color": "차콜",
     "size": "XL(32~34)",
-    "qty": 1,
-    "gross": 39900,
-    "payment": 39900,
-    "orders": 1,
+    "qty": 2,
+    "gross": 79800,
+    "payment": 79800,
+    "orders": 2,
     "avg_unit": 39900,
     "source_type": "상품",
     "daily": [
       {
         "date": "2026-09-16",
+        "qty": 1,
+        "gross": 39900,
+        "payment": 39900,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-04",
         "qty": 1,
         "gross": 39900,
         "payment": 39900,
@@ -150308,7 +150336,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": -137400,
+    "payment": -141390,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -150403,6 +150431,13 @@
         "gross": 0,
         "payment": -19540,
         "orders": 0
+      },
+      {
+        "date": "2026-11-04",
+        "qty": 0,
+        "gross": 0,
+        "payment": -3990,
+        "orders": 0
       }
     ],
     "match_status": "비상품",
@@ -150421,7 +150456,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": 135000,
+    "payment": 144000,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -150536,6 +150571,13 @@
         "qty": 0,
         "gross": 0,
         "payment": 6000,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-04",
+        "qty": 0,
+        "gross": 0,
+        "payment": 9000,
         "orders": 0
       }
     ],
@@ -155248,13 +155290,20 @@
     "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 딥차콜",
     "color": "딥차콜",
     "size": "2XL",
-    "qty": 1,
-    "gross": 85000,
-    "payment": 35000,
+    "qty": 2,
+    "gross": 170000,
+    "payment": 70000,
     "orders": 0,
     "daily": [
       {
         "date": "2026-10-31",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 35000,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-04",
         "qty": 1,
         "gross": 85000,
         "payment": 35000,
@@ -156394,5 +156443,167 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨 블랙",
+    "color": "블랙",
+    "size": "M",
+    "qty": 1,
+    "gross": 75000,
+    "payment": 39900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 75000,
+        "payment": 39900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨 블랙_블랙-M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌룬 트레이닝 팬츠",
+    "color": "블랙",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 65800,
+    "payment": 29900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 65800,
+        "payment": 29900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 벌룬 트레이닝 팬츠_블랙-XXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 29900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키",
+    "color": "빈티지카키",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 85000,
+    "payment": 35000,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 35000,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 빈티지카키_빈티지카키-2XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 35000
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "color": "빈티지차콜",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 89000,
+    "payment": 39900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 89000,
+        "payment": 39900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-XXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠",
+    "color": "",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 79000,
+    "payment": 79000,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 79000,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_2XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 79000
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 1,
+    "gross": 67720,
+    "payment": 67720,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-04",
+        "qty": 1,
+        "gross": 67720,
+        "payment": 67720,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨_블랙-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 67720
   }
 ]
