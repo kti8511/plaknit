@@ -111619,10 +111619,10 @@
     "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
     "color": "블랙",
     "size": "M",
-    "qty": 10,
-    "gross": 410000,
-    "payment": 148766,
-    "avg_unit": 14877,
+    "qty": 9,
+    "gross": 369000,
+    "payment": 138866,
+    "avg_unit": 15430,
     "orders": 7,
     "source_type": "상품",
     "daily": [
@@ -111709,6 +111709,13 @@
         "gross": 41000,
         "payment": 9900,
         "orders": 1
+      },
+      {
+        "date": "2026-11-09",
+        "qty": -1,
+        "gross": -41000,
+        "payment": -9900,
+        "orders": 0
       }
     ],
     "match_status": "매칭완료",
@@ -126331,11 +126338,11 @@
     "name": "퀵드라이 마운틴 세미오버핏 반팔티",
     "color": "라이트그레이",
     "size": "XL",
-    "qty": 8,
-    "gross": 318400,
-    "payment": 91505,
-    "avg_unit": 11438,
-    "orders": 9,
+    "qty": 9,
+    "gross": 358200,
+    "payment": 111405,
+    "avg_unit": 12378,
+    "orders": 10,
     "source_type": "상품",
     "daily": [
       {
@@ -126421,6 +126428,13 @@
         "gross": 39800,
         "payment": 44613,
         "orders": 1
+      },
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 19900,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -126438,11 +126452,11 @@
     "name": "ICE LITE 세미오버핏 맨투맨",
     "color": "블랙",
     "size": "L",
-    "qty": 7,
-    "gross": 418600,
-    "payment": 609127,
-    "avg_unit": 87018,
-    "orders": 4,
+    "qty": 8,
+    "gross": 478400,
+    "payment": 621027,
+    "avg_unit": 77628,
+    "orders": 5,
     "source_type": "상품",
     "daily": [
       {
@@ -126500,6 +126514,13 @@
         "gross": -59800,
         "payment": -11900,
         "orders": 0
+      },
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 59800,
+        "payment": 11900,
+        "orders": 1
       }
     ],
     "match_status": "매칭완료",
@@ -130257,10 +130278,10 @@
     "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)",
     "color": "블랙",
     "size": "XL",
-    "qty": 10,
-    "gross": 580000,
-    "payment": 278638,
-    "avg_unit": 27864,
+    "qty": 11,
+    "gross": 638000,
+    "payment": 298538,
+    "avg_unit": 27140,
     "orders": 9,
     "source_type": "상품",
     "daily": [
@@ -130315,6 +130336,13 @@
       },
       {
         "date": "2026-10-15",
+        "qty": 1,
+        "gross": 58000,
+        "payment": 19900,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-09",
         "qty": 1,
         "gross": 58000,
         "payment": 19900,
@@ -135162,11 +135190,11 @@
     "name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)",
     "color": "블랙",
     "size": "2XL",
-    "qty": 2,
-    "gross": 110000,
-    "payment": 47459,
-    "avg_unit": 23730,
-    "orders": 2,
+    "qty": 3,
+    "gross": 165000,
+    "payment": 63959,
+    "avg_unit": 21320,
+    "orders": 3,
     "source_type": "상품",
     "daily": [
       {
@@ -135181,6 +135209,13 @@
         "qty": 1,
         "gross": 55000,
         "payment": 23071,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 55000,
+        "payment": 16500,
         "orders": 1
       }
     ],
@@ -149566,11 +149601,11 @@
     "name": "TECH SWEAT 벌크업 후디 아노락",
     "color": "",
     "size": "",
-    "qty": 1,
-    "gross": 69350,
-    "payment": 69350,
+    "qty": 0,
+    "gross": 25950,
+    "payment": 25950,
     "orders": 3,
-    "avg_unit": 69350,
+    "avg_unit": 0,
     "source_type": "상품",
     "daily": [
       {
@@ -149613,6 +149648,13 @@
         "qty": -1,
         "gross": -41670,
         "payment": -41670,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-09",
+        "qty": -1,
+        "gross": -43400,
+        "payment": -43400,
         "orders": 0
       }
     ],
@@ -150378,7 +150420,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": -156390,
+    "payment": -161390,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -150494,6 +150536,13 @@
         "gross": 0,
         "payment": -10000,
         "orders": 0
+      },
+      {
+        "date": "2026-11-09",
+        "qty": 0,
+        "gross": 0,
+        "payment": -5000,
+        "orders": 0
       }
     ],
     "match_status": "비상품",
@@ -150512,7 +150561,7 @@
     "size": "",
     "qty": 0,
     "gross": 0,
-    "payment": 168000,
+    "payment": 177000,
     "orders": 0,
     "avg_unit": 0,
     "source_type": "정산조정",
@@ -150655,6 +150704,13 @@
         "qty": 0,
         "gross": 0,
         "payment": 6000,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-09",
+        "qty": 0,
+        "gross": 0,
+        "payment": 9000,
         "orders": 0
       }
     ],
@@ -151386,9 +151442,9 @@
     "name": "ICE LITE 오버핏 맨투맨",
     "color": "",
     "size": "",
-    "qty": 1,
-    "gross": 46150,
-    "payment": 46150,
+    "qty": 0,
+    "gross": 17720,
+    "payment": 17720,
     "orders": 1,
     "daily": [
       {
@@ -151418,6 +151474,13 @@
         "gross": -101910,
         "payment": -101910,
         "orders": 0
+      },
+      {
+        "date": "2026-11-09",
+        "qty": -1,
+        "gross": -28430,
+        "payment": -28430,
+        "orders": 0
       }
     ],
     "source_type": "상품",
@@ -151426,7 +151489,7 @@
     "standard_name": "ICE LITE 오버핏 맨투맨",
     "received_qty": 0,
     "stock_qty": 0,
-    "avg_unit": 46150,
+    "avg_unit": 0,
     "stock_barcode": "",
     "stock_name": ""
   },
@@ -156859,9 +156922,9 @@
     "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키",
     "color": "빈티지카키",
     "size": "L",
-    "qty": 2,
-    "gross": 178000,
-    "payment": 59800,
+    "qty": 1,
+    "gross": 89000,
+    "payment": 29900,
     "orders": 1,
     "daily": [
       {
@@ -156870,6 +156933,13 @@
         "gross": 178000,
         "payment": 59800,
         "orders": 1
+      },
+      {
+        "date": "2026-11-09",
+        "qty": -1,
+        "gross": -89000,
+        "payment": -29900,
+        "orders": 0
       }
     ],
     "source_type": "상품",
@@ -157237,13 +157307,20 @@
     "name": "TECH SWEAT 페이서스 웜업팬츠",
     "color": "",
     "size": "S",
-    "qty": 1,
-    "gross": 85000,
-    "payment": 68000,
-    "orders": 1,
+    "qty": 2,
+    "gross": 170000,
+    "payment": 136000,
+    "orders": 2,
     "daily": [
       {
         "date": "2026-11-08",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 68000,
+        "orders": 1
+      },
+      {
+        "date": "2026-11-09",
         "qty": 1,
         "gross": 85000,
         "payment": 68000,
@@ -157338,5 +157415,302 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 42200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 페이서스 웜업팬츠",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 85000,
+    "payment": 68000,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 68000,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 페이서스 웜업팬츠_L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 68000
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 탱크",
+    "color": "블랙",
+    "size": "XXXL",
+    "qty": 2,
+    "gross": 82000,
+    "payment": 16400,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 2,
+        "gross": 82000,
+        "payment": 16400,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XXXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 8200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 스웻쇼츠 레드",
+    "color": "레드",
+    "size": "L",
+    "qty": 1,
+    "gross": 69000,
+    "payment": 39900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 39900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 스웻쇼츠 레드_레드-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜",
+    "color": "차콜",
+    "size": "L",
+    "qty": 1,
+    "gross": 69000,
+    "payment": 39900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 69000,
+        "payment": 39900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜_차콜-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 39900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜",
+    "color": "차콜",
+    "size": "XL",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 29900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 29900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜_차콜-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 29900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 매출 환불 배송비",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": -3000,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 0,
+        "gross": 0,
+        "payment": -3000,
+        "orders": 0
+      }
+    ],
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "standard_name": "일별 매출 환불 배송비",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 페이서스 웜업팬츠",
+    "color": "",
+    "size": "S",
+    "qty": 1,
+    "gross": 60590,
+    "payment": 60590,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 60590,
+        "payment": 60590,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 페이서스 웜업팬츠_S",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 60590
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "스포츠 쿠션업 로고 크루삭스",
+    "color": "화이트",
+    "size": "F",
+    "qty": 2,
+    "gross": 15740,
+    "payment": 15740,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 2,
+        "gross": 15740,
+        "payment": 15740,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "스포츠 쿠션업 로고 크루삭스_화이트-F",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 7870
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌크업 후디 아노락",
+    "color": "멜란지그레이",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 49900,
+    "payment": 49900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 49900,
+        "payment": 49900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 벌크업 후디 아노락_멜란지그레이-XXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 49900
+  },
+  {
+    "retailer": "4XR",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌크업 후디 아노락",
+    "color": "블랙",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 49900,
+    "payment": 49900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 49900,
+        "payment": 49900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 벌크업 후디 아노락_블랙-XXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 49900
+  },
+  {
+    "retailer": "롯데온",
+    "mall_no": "",
+    "name": "TECH SWEAT 페이서스 웜업팬츠",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 85000,
+    "payment": 45370,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-09",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 45370,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 페이서스 웜업팬츠_L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 45370
   }
 ]

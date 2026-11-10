@@ -23753,5 +23753,196 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-09",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 9,
+        "gross": 531600,
+        "payment": 291500,
+        "orders": 6,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_L",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(하프 슬리브)_블랙-2XL",
+            "qty": 1,
+            "payment": 16500
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XXXL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_블랙-L",
+            "qty": 1,
+            "payment": 11900
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_라이트그레이-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "MESH-ON 파워리프팅 롱티 (블랙)(롱 슬리브)_블랙-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 레드_레드-L",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 스웻쇼츠 차콜_차콜-L",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "퀵드라이 RUNNER`S FEET 티셔츠 차콜_차콜-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_S",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-M",
+            "qty": -1,
+            "payment": -9900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨 빈티지카키_빈티지카키-L",
+            "qty": -1,
+            "payment": -29900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 9000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -5000
+          },
+          {
+            "name": "일별 매출 환불 배송비",
+            "qty": 0,
+            "payment": -3000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 4500,
+        "payment": 4500,
+        "orders": 2,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_S",
+            "qty": 1,
+            "payment": 60590
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스_화이트-F",
+            "qty": 2,
+            "payment": 15740
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": -1,
+            "payment": -28430
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락",
+            "qty": -1,
+            "payment": -43400
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 2,
+        "gross": 99800,
+        "payment": 99800,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락_멜란지그레이-XXL",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락_블랙-XXL",
+            "qty": 1,
+            "payment": 49900
+          }
+        ]
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 1,
+        "gross": 85000,
+        "payment": 45370,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_L",
+            "qty": 1,
+            "payment": 45370
+          }
+        ]
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
