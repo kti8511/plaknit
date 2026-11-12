@@ -24149,5 +24149,185 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-11",
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 9,
+        "gross": 780000,
+        "payment": 456800,
+        "orders": 6,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_L",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_L",
+            "qty": 1,
+            "payment": 69000
+          },
+          {
+            "name": "ESSENTIAL HEAT 올인원 러닝탑_L",
+            "qty": 1,
+            "payment": 87200
+          },
+          {
+            "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠_M",
+            "qty": 1,
+            "payment": 69000
+          },
+          {
+            "name": "[1+1] KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브_블랙 / 화이트-3XL / 3XL",
+            "qty": 1,
+            "payment": 48000
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-M",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-M",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 후드집업 차콜_차콜-XL",
+            "qty": 1,
+            "payment": 69900
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠 딥차콜_딥차콜-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -10000
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": -1,
+        "gross": -3170,
+        "payment": -3170,
+        "orders": 1,
+        "items": [
+          {
+            "name": "ICE LITE 카고 조거_블랙-XXL",
+            "qty": 1,
+            "payment": 75440
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+            "qty": -1,
+            "payment": -38710
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 백 그래픽 맨투맨",
+            "qty": -1,
+            "payment": -39900
+          }
+        ]
+      },
+      {
+        "retailer": "29cm",
+        "qty": 6,
+        "gross": 327950,
+        "payment": 278758,
+        "orders": 5,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 화이트_화이트-L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝팬츠_M",
+            "qty": 1,
+            "payment": 57078
+          },
+          {
+            "name": "퀵드라이 우먼즈 멀티포켓쇼츠 라벤더_라벤더-M",
+            "qty": 1,
+            "payment": 50915
+          },
+          {
+            "name": "퀵드라이 우먼즈 베이직 티셔츠 화이트_화이트-L",
+            "qty": 1,
+            "payment": 25415
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_XL",
+            "qty": 1,
+            "payment": 57800
+          },
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠_블랙-XL",
+            "qty": 1,
+            "payment": 51000
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
