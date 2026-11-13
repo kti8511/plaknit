@@ -24332,10 +24332,8 @@
   },
   {
     "date": "2026-11-12",
-    "status": "partial",
-    "excluded_retailers": [
-      "무신사"
-    ],
+    "status": "sales_updated",
+    "excluded_retailers": [],
     "retailers": [
       {
         "retailer": "자사몰",
@@ -24503,6 +24501,38 @@
         "payment": 0,
         "orders": 0,
         "items": []
+      },
+      {
+        "retailer": "무신사",
+        "qty": 4,
+        "payment": 135600,
+        "orders": 0,
+        "gross": 0,
+        "orders_verified": false,
+        "gross_verified": false,
+        "source": "대표님 제공 상품별 매출 이미지의 표시 금액",
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+            "qty": 1,
+            "payment": 38710
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+            "qty": 1,
+            "payment": 37910
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 1,
+            "payment": 29670
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+            "qty": 1,
+            "payment": 29310
+          }
+        ]
       }
     ]
   }

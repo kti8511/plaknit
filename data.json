@@ -150833,11 +150833,11 @@
     "name": "ICE LITE 세미오버핏 맨투맨",
     "color": "",
     "size": "",
-    "qty": 0,
+    "qty": 1,
     "gross": 53260,
-    "payment": 53260,
+    "payment": 82930,
     "orders": 1,
-    "avg_unit": 0,
+    "avg_unit": 82930,
     "source_type": "상품",
     "daily": [
       {
@@ -150853,6 +150853,13 @@
         "gross": 77050,
         "payment": 77050,
         "orders": 2
+      },
+      {
+        "date": "2026-11-12",
+        "qty": 1,
+        "gross": 0,
+        "payment": 29670,
+        "orders": 0
       }
     ],
     "match_status": "? 검토필요",
@@ -158280,9 +158287,9 @@
     "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
     "color": "",
     "size": "",
-    "qty": -1,
+    "qty": 0,
     "gross": -38310,
-    "payment": -38310,
+    "payment": 400,
     "orders": 0,
     "daily": [
       {
@@ -158290,6 +158297,13 @@
         "qty": -1,
         "gross": -38310,
         "payment": -38310,
+        "orders": 0
+      },
+      {
+        "date": "2026-11-12",
+        "qty": 1,
+        "gross": 0,
+        "payment": 38710,
         "orders": 0
       }
     ],
@@ -158299,7 +158313,7 @@
     "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
     "received_qty": 0,
     "stock_qty": 0,
-    "avg_unit": 38310
+    "avg_unit": 0
   },
   {
     "retailer": "29cm",
@@ -158867,5 +158881,59 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 59900
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 0,
+    "payment": 37910,
+    "orders": 0,
+    "avg_unit": 37910,
+    "daily": [
+      {
+        "date": "2026-11-12",
+        "qty": 1,
+        "gross": 0,
+        "payment": 37910,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+    "received_qty": 0,
+    "stock_qty": 0
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+    "color": "",
+    "size": "",
+    "qty": 1,
+    "gross": 0,
+    "payment": 29310,
+    "orders": 0,
+    "avg_unit": 29310,
+    "daily": [
+      {
+        "date": "2026-11-12",
+        "qty": 1,
+        "gross": 0,
+        "payment": 29310,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 백레터링 세미오버핏 반팔티",
+    "received_qty": 0,
+    "stock_qty": 0
   }
 ]
