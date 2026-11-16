@@ -24535,5 +24535,327 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-11-13",
+    "status": "partial",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 177600,
+        "gross": 428000,
+        "orders": 3,
+        "qty_verified": false,
+        "items_verified": false,
+        "items": []
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 0,
+        "payment": 49770,
+        "orders": 2,
+        "items": [
+          {
+            "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨",
+            "qty": 1,
+            "payment": 38310
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+            "qty": -1,
+            "payment": -28440
+          }
+        ],
+        "gross_verified": false,
+        "options_verified": false
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "status": "partial",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 277600,
+        "gross": 588800,
+        "orders": 4,
+        "qty_verified": false,
+        "items_verified": false,
+        "items": []
+      },
+      {
+        "retailer": "무신사",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "gross": 110150,
+        "payment": 91235,
+        "orders": 2,
+        "items": [
+          {
+            "name": "퀵드라이 셔링 티셔츠 세이지_L",
+            "qty": 1,
+            "payment": 36550
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 후드_L",
+            "qty": 1,
+            "payment": 54685
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-11-15",
+    "status": "partial",
+    "excluded_retailers": [
+      "롯데온"
+    ],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 613400,
+        "gross": 990700,
+        "orders": 9,
+        "qty_verified": false,
+        "items_verified": false,
+        "items": []
+      },
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 0,
+        "payment": 63980,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠",
+            "qty": 1,
+            "payment": 63980
+          }
+        ],
+        "gross_verified": false,
+        "options_verified": false
+      },
+      {
+        "retailer": "29cm",
+        "qty": 10,
+        "gross": 457420,
+        "payment": 386258,
+        "orders": 6,
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 후드_블랙-XL",
+            "qty": 1,
+            "payment": 43000
+          },
+          {
+            "name": "퀵드라이 RUNNERS FEET 티셔츠 코발트_XL",
+            "qty": 1,
+            "payment": 34318
+          },
+          {
+            "name": "ICE LITE 데일리 쇼츠_블랙-M",
+            "qty": 1,
+            "payment": 25500
+          },
+          {
+            "name": "퀵드라이 셔링 티셔츠 블랙_M",
+            "qty": 1,
+            "payment": 34400
+          },
+          {
+            "name": "TECH SWEAT 피그먼트 후드집업 레드_S",
+            "qty": 1,
+            "payment": 87720
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-L",
+            "qty": 1,
+            "payment": 42832
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-XL",
+            "qty": 1,
+            "payment": 42835
+          },
+          {
+            "name": "ICE LITE 릴렉스드 조거_카키-XL",
+            "qty": 1,
+            "payment": 33661
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-L",
+            "qty": 1,
+            "payment": 16780
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-L",
+            "qty": 1,
+            "payment": 25212
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]
