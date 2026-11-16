@@ -24546,9 +24546,36 @@
         "payment": 177600,
         "gross": 428000,
         "orders": 3,
-        "qty_verified": false,
-        "items_verified": false,
-        "items": []
+        "qty_verified": true,
+        "items_verified": true,
+        "items": [
+          {
+            "name": "[SET] 퀵드라이 벤틸레이션 러닝탑 + 투인원 러닝쇼츠_브라운-상의 XL / 하의 L",
+            "qty": 1,
+            "payment": 79900
+          },
+          {
+            "name": "[채코제 에디션] 초냉감 밸런스탱크_다크 그레이-XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "[채코제에디션] 초냉감 트래블러티셔츠_다크그레이-XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "[SET] TECH SWEAT 피그먼트 프론트 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠_빈티지카키-상의 2XL / 하의 2XL",
+            "qty": 1,
+            "payment": 52900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 9000
+          }
+        ],
+        "qty": 4
       },
       {
         "retailer": "무신사",
@@ -24644,9 +24671,66 @@
         "payment": 277600,
         "gross": 588800,
         "orders": 4,
-        "qty_verified": false,
-        "items_verified": false,
-        "items": []
+        "qty_verified": true,
+        "items_verified": true,
+        "items": [
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 블랙_블랙-XL",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "TECH SWEAT 벌룬 트레이닝 팬츠_블랙-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ESSENTIAL HEAT 소프트 기모 맨투맨_블랙-XL",
+            "qty": 1,
+            "payment": 49900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-XL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-L",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-L",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_XL",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠 블랙_블랙-L",
+            "qty": 1,
+            "payment": 45900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 6000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -3000
+          }
+        ],
+        "qty": 10
       },
       {
         "retailer": "무신사",
@@ -24737,9 +24821,76 @@
         "payment": 613400,
         "gross": 990700,
         "orders": 9,
-        "qty_verified": false,
-        "items_verified": false,
-        "items": []
+        "qty_verified": true,
+        "items_verified": true,
+        "items": [
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠 블랙_블랙-M",
+            "qty": 1,
+            "payment": 45900
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-L",
+            "qty": 1,
+            "payment": 27900
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_M",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_카키그레이-L",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "ICE LITE 세미오버핏 셔켓_베이지-L",
+            "qty": 1,
+            "payment": 39000
+          },
+          {
+            "name": "ESSENTIAL HEAT 올인원 러닝탑 X 명코치_XL",
+            "qty": 1,
+            "payment": 76300
+          },
+          {
+            "name": "[1+1] KINTERRA 퀵드라이 베이직 릴렉스 롱슬리브_차콜 / 블랙-XL / XL",
+            "qty": 1,
+            "payment": 48000
+          },
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 블랙_블랙-XL",
+            "qty": 2,
+            "payment": 118000
+          },
+          {
+            "name": "퀵드라이 마운틴 세미오버핏 반팔티_다크그레이-XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "펜타플렉스 로고 하프타이즈_L",
+            "qty": 1,
+            "payment": 60000
+          },
+          {
+            "name": "ESSENTIAL HEAT 올인원 러닝탑_L",
+            "qty": 1,
+            "payment": 87200
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 9000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -20800
+          }
+        ],
+        "qty": 12
       },
       {
         "retailer": "무신사",
