@@ -24811,10 +24811,8 @@
   },
   {
     "date": "2026-11-15",
-    "status": "partial",
-    "excluded_retailers": [
-      "롯데온"
-    ],
+    "status": "sales_updated",
+    "excluded_retailers": [],
     "retailers": [
       {
         "retailer": "자사몰",
@@ -24964,6 +24962,228 @@
             "name": "ICE LITE 세미오버핏 맨투맨_차콜-L",
             "qty": 1,
             "payment": 25212
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "status": "sales_updated",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 11,
+        "gross": 634100,
+        "payment": 234960,
+        "orders": 7,
+        "items": [
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_멜란지그레이-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "TECH SWEAT 베이직 조거팬츠 블랙_블랙-L",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "퀵드라이 세미 오버핏 티셔츠_블랙-XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "퀵드라이 세미 오버핏 티셔츠_화이트-XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_M",
+            "qty": 1,
+            "payment": 68000
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠_블랙-2XL",
+            "qty": 1,
+            "payment": 19900
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_블랙-XXL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "ICE LITE 벌룬 조거_차콜-XXL",
+            "qty": 1,
+            "payment": 25900
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-XL",
+            "qty": 1,
+            "payment": 14560
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-XXL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_차콜그레이-XXL",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XXL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 15000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -6000
+          },
+          {
+            "name": "퀵드라이 피그먼트 세미오버핏 반팔티_라이트그레이-L",
+            "qty": -1,
+            "payment": -27900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-L",
+            "qty": -1,
+            "payment": -8200
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 5,
+        "gross": 0,
+        "payment": 161340,
+        "orders": 3,
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-L",
+            "qty": 2,
+            "payment": 76620
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 맨투맨 (세미오버핏)_빈티지차콜-L",
+            "qty": 1,
+            "payment": 38310
+          },
+          {
+            "name": "ICE LITE 쿨메쉬 베이직 반팔티_블랙-L",
+            "qty": 1,
+            "payment": 26510
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 머슬핏 반팔티_라이트카키-L",
+            "qty": 1,
+            "payment": 19900
+          }
+        ],
+        "gross_verified": false
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 10900,
+        "payment": 12870,
+        "orders": 1,
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-L",
+            "qty": 1,
+            "payment": 43180
+          },
+          {
+            "name": "퀵드라이 RUNNERS FEET 티셔츠 코발트_코발트-L",
+            "qty": -1,
+            "payment": -35910
+          },
+          {
+            "name": "반품 배송비 정산 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": 5600
+          }
+        ]
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 2,
+        "gross": 170000,
+        "payment": 86820,
+        "orders": 2,
+        "items": [
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_L",
+            "qty": 1,
+            "payment": 43410
+          },
+          {
+            "name": "TECH SWEAT 페이서스 웜업팬츠_S",
+            "qty": 1,
+            "payment": 43410
           }
         ]
       },
