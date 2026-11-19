@@ -25421,5 +25421,206 @@
         "items": []
       }
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "status": "sales_updated",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "qty": 18,
+        "gross": 1245600,
+        "payment": 542590,
+        "orders": 7,
+        "items": [
+          {
+            "name": "ESSENTIAL HEAT 올인원 러닝탑_S",
+            "qty": 1,
+            "payment": 87200
+          },
+          {
+            "name": "퀵드라이 퍼포먼스 롱슬리브 블랙_S",
+            "qty": 2,
+            "payment": 73800
+          },
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠 블랙_M",
+            "qty": 1,
+            "payment": 45900
+          },
+          {
+            "name": "TECH SWEAT 페이서스 빈티지 후드집업 차콜_S",
+            "qty": 1,
+            "payment": 77400
+          },
+          {
+            "name": "TECH SWEAT 페이서스 빈티지 후드집업 네이비_L",
+            "qty": 1,
+            "payment": 77400
+          },
+          {
+            "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-S",
+            "qty": 2,
+            "payment": 19800
+          },
+          {
+            "name": "[4차 리오더] [SET] ESSENTIAL HEAT 기모 러닝 후드+ 팬츠_후드 XL 팬츠 XL",
+            "qty": 1,
+            "payment": 118500
+          },
+          {
+            "name": "퀵드라이 베이직 나시_다크그린-XL",
+            "qty": 1,
+            "payment": 7800
+          },
+          {
+            "name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+            "qty": 1,
+            "payment": 9900
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-XL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+            "qty": 1,
+            "payment": 8200
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XL",
+            "qty": 2,
+            "payment": 16400
+          },
+          {
+            "name": "TECH SWEAT 벌크업 후디 아노락_멜란지그레이-XL",
+            "qty": 1,
+            "payment": 29900
+          },
+          {
+            "name": "ICE LITE 초냉감 오버핏 티셔츠_블랙-XL",
+            "qty": 1,
+            "payment": 13500
+          },
+          {
+            "name": "퀵드라이 세미오버핏 백로고 티셔츠_카키-3XL",
+            "qty": 1,
+            "payment": 15900
+          },
+          {
+            "name": "일별 매출 배송비",
+            "qty": 0,
+            "payment": 3000
+          },
+          {
+            "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": -70210
+          }
+        ]
+      },
+      {
+        "retailer": "무신사",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "29cm",
+        "qty": 4,
+        "gross": 218190,
+        "payment": 189480,
+        "orders": 5,
+        "items": [
+          {
+            "name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드_M",
+            "qty": 1,
+            "payment": 40673
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨_멜란지그레이-L",
+            "qty": 1,
+            "payment": 36660
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨_블랙-XXL",
+            "qty": 1,
+            "payment": 38957
+          },
+          {
+            "name": "퀵드라이 메쉬 윈드브레이커 워시드카키_M",
+            "qty": 1,
+            "payment": 65570
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 후드_L",
+            "qty": 1,
+            "payment": 55740
+          },
+          {
+            "name": "퀵드라이 벤틸레이션 러닝탑 블랙_M",
+            "qty": -1,
+            "payment": -53720
+          },
+          {
+            "name": "반품 배송비 정산 (상품별 배분 제외)",
+            "qty": 0,
+            "payment": 5600
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "4XR",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "롯데온",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ]
   }
 ]

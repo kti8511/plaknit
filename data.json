@@ -161993,5 +161993,653 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 24820
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 올인원 러닝탑",
+    "color": "",
+    "size": "S",
+    "qty": 1,
+    "gross": 109000,
+    "payment": 87200,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 109000,
+        "payment": 87200,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ESSENTIAL HEAT 올인원 러닝탑_S",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 87200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 퍼포먼스 롱슬리브 블랙",
+    "color": "",
+    "size": "S",
+    "qty": 2,
+    "gross": 130000,
+    "payment": 73800,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 2,
+        "gross": 130000,
+        "payment": 73800,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 퍼포먼스 롱슬리브 블랙_S",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 36900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 와이드 스트레이트 팬츠 블랙",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 75000,
+    "payment": 45900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 75000,
+        "payment": 45900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 와이드 스트레이트 팬츠 블랙_M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 45900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 페이서스 빈티지 후드집업 차콜",
+    "color": "",
+    "size": "S",
+    "qty": 1,
+    "gross": 129000,
+    "payment": 77400,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 129000,
+        "payment": 77400,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 페이서스 빈티지 후드집업 차콜_S",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 77400
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 페이서스 빈티지 후드집업 네이비",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 129000,
+    "payment": 77400,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 129000,
+        "payment": 77400,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 페이서스 빈티지 후드집업 네이비_L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 77400
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ICE LITE 초냉감 러닝 나시 (싱글렛)",
+    "color": "블랙",
+    "size": "S",
+    "qty": 2,
+    "gross": 82000,
+    "payment": 19800,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 2,
+        "gross": 82000,
+        "payment": 19800,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ICE LITE 초냉감 러닝 나시 (싱글렛)_블랙-S",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 9900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "[4차 리오더] [SET] ESSENTIAL HEAT 기모 러닝 후드+ 팬츠",
+    "color": "",
+    "size": "후드 XL 팬츠 XL",
+    "qty": 1,
+    "gross": 158000,
+    "payment": 118500,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 158000,
+        "payment": 118500,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[4차 리오더] [SET] ESSENTIAL HEAT 기모 러닝 후드+ 팬츠_후드 XL 팬츠 XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 118500
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 베이직 나시",
+    "color": "다크그린",
+    "size": "XL",
+    "qty": 1,
+    "gross": 39000,
+    "payment": 7800,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 39000,
+        "payment": 7800,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 베이직 나시_다크그린-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 7800
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 헤비쭈리 쇼츠",
+    "color": "블랙",
+    "size": "L",
+    "qty": 1,
+    "gross": 59000,
+    "payment": 9900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 9900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 헤비쭈리 쇼츠_블랙-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 9900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 탱크",
+    "color": "차콜",
+    "size": "XL",
+    "qty": 1,
+    "gross": 41000,
+    "payment": 8200,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 41000,
+        "payment": 8200,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 탱크_차콜-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 8200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 탱크",
+    "color": "화이트",
+    "size": "XL",
+    "qty": 1,
+    "gross": 41000,
+    "payment": 8200,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 41000,
+        "payment": 8200,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 탱크_화이트-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 8200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 탱크",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 2,
+    "gross": 82000,
+    "payment": 16400,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 2,
+        "gross": 82000,
+        "payment": 16400,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 탱크_블랙-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 8200
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌크업 후디 아노락",
+    "color": "멜란지그레이",
+    "size": "XL",
+    "qty": 1,
+    "gross": 86800,
+    "payment": 29900,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 86800,
+        "payment": 29900,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 벌크업 후디 아노락_멜란지그레이-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 29900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "ICE LITE 초냉감 오버핏 티셔츠",
+    "color": "블랙",
+    "size": "XL",
+    "qty": 1,
+    "gross": 45000,
+    "payment": 13500,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 45000,
+        "payment": 13500,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ICE LITE 초냉감 오버핏 티셔츠_블랙-XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 13500
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+    "color": "카키",
+    "size": "3XL",
+    "qty": 1,
+    "gross": 39800,
+    "payment": 15900,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 39800,
+        "payment": 15900,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 세미오버핏 백로고 티셔츠_카키-3XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 15900
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 매출 배송비",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 3000,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 0,
+        "gross": 0,
+        "payment": 3000,
+        "orders": 0
+      }
+    ],
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "standard_name": "일별 매출 배송비",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 0
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": -70210,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 0,
+        "gross": 0,
+        "payment": -70210,
+        "orders": 0
+      }
+    ],
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "standard_name": "주문서 쿠폰 할인 (상품별 배분 제외)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 0
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 49000,
+    "payment": 40673,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 49000,
+        "payment": 40673,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "TECH SWEAT 우먼즈 피그먼트 스웻쇼츠 레드_M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 40673
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨",
+    "color": "멜란지그레이",
+    "size": "L",
+    "qty": 1,
+    "gross": 43120,
+    "payment": 36660,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 43120,
+        "payment": 36660,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨_멜란지그레이-L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 36660
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨",
+    "color": "블랙",
+    "size": "XXL",
+    "qty": 1,
+    "gross": 43120,
+    "payment": 38957,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 43120,
+        "payment": 38957,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "[헤비쮸리] TECH SWEAT 세미 오버핏 맨투맨_블랙-XXL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 38957
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 메쉬 윈드브레이커 워시드카키",
+    "color": "",
+    "size": "M",
+    "qty": 1,
+    "gross": 79000,
+    "payment": 65570,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 79000,
+        "payment": 65570,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 메쉬 윈드브레이커 워시드카키_M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 65570
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 기모 러닝 후드",
+    "color": "",
+    "size": "L",
+    "qty": 1,
+    "gross": 67150,
+    "payment": 55740,
+    "orders": 1,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 1,
+        "gross": 67150,
+        "payment": 55740,
+        "orders": 1
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝 후드_L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 55740
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "퀵드라이 벤틸레이션 러닝탑 블랙",
+    "color": "",
+    "size": "M",
+    "qty": -1,
+    "gross": -63200,
+    "payment": -53720,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": -1,
+        "gross": -63200,
+        "payment": -53720,
+        "orders": 0
+      }
+    ],
+    "source_type": "상품",
+    "match_status": "? 검토필요",
+    "match_sku": "",
+    "standard_name": "퀵드라이 벤틸레이션 러닝탑 블랙_M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 53720
+  },
+  {
+    "retailer": "29cm",
+    "mall_no": "",
+    "name": "반품 배송비 정산 (상품별 배분 제외)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 5600,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-18",
+        "qty": 0,
+        "gross": 0,
+        "payment": 5600,
+        "orders": 0
+      }
+    ],
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "standard_name": "반품 배송비 정산 (상품별 배분 제외)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "avg_unit": 0
   }
 ]
