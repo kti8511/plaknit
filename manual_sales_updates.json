@@ -25844,5 +25844,273 @@
       "글로리어스워커 20261119-0000078 3XL 1개 35,400원은 대표님 확정 금액.",
       "자사몰 과거 주문 완료 취소 50,500원·6개는 19일에만 반영. 배송비·주문쿠폰 별도."
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "status": "partial",
+    "excluded_retailers": [
+      "자사몰",
+      "롯데온",
+      "4XR"
+    ],
+    "retailers": [
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 0,
+        "payment": 38710,
+        "orders": 1,
+        "items": [
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)_빈티지차콜-XL",
+            "qty": 1,
+            "payment": 38710
+          }
+        ],
+        "gross_verified": false,
+        "source": "과세 순매출 확인. 정상가 미확인, gross=0은 미집계 자리값."
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ],
+    "gross_verified": false,
+    "gross_unverified_retailers": [
+      "무신사"
+    ],
+    "notes": [
+      "대표님 2026-11-23 지시로 취합 검증된 6개 채널 우선 운영 반영.",
+      "4XR 인증 대기. 자사몰·롯데온은 로그인 후 조회 연결 실패로 원본 미검증. 미확인 채널은 0원 확정 아님.",
+      "무신사 상품별 과세와 주문 옵션 대조. 정상가·확인되지 않은 색상은 추정하지 않음.",
+      "29cm 주문별 실판매액 반영, 처리완료 환불·취소·반품 0건. 쿠폰 이중 차감 없음."
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "status": "partial",
+    "excluded_retailers": [
+      "자사몰",
+      "롯데온",
+      "4XR"
+    ],
+    "retailers": [
+      {
+        "retailer": "무신사",
+        "qty": 1,
+        "gross": 0,
+        "payment": 37550,
+        "orders": 1,
+        "items": [
+          {
+            "name": "TECH SWEAT 와이드 스트레이트 팬츠_블랙-M",
+            "qty": 1,
+            "payment": 37550
+          }
+        ],
+        "gross_verified": false,
+        "source": "과세 순매출 확인. 정상가 미확인, gross=0은 미집계 자리값."
+      },
+      {
+        "retailer": "29cm",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ],
+    "gross_verified": false,
+    "gross_unverified_retailers": [
+      "무신사"
+    ],
+    "notes": [
+      "대표님 2026-11-23 지시로 취합 검증된 6개 채널 우선 운영 반영.",
+      "4XR 인증 대기. 자사몰·롯데온은 로그인 후 조회 연결 실패로 원본 미검증. 미확인 채널은 0원 확정 아님.",
+      "무신사 상품별 과세와 주문 옵션 대조. 정상가·확인되지 않은 색상은 추정하지 않음.",
+      "29cm 주문별 실판매액 반영, 처리완료 환불·취소·반품 0건. 쿠폰 이중 차감 없음."
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "status": "partial",
+    "excluded_retailers": [
+      "자사몰",
+      "롯데온",
+      "4XR"
+    ],
+    "retailers": [
+      {
+        "retailer": "무신사",
+        "qty": 6,
+        "gross": 0,
+        "payment": 192190,
+        "orders": 5,
+        "items": [
+          {
+            "name": "ICE LITE 벌크업 맨투맨_블랙-XL",
+            "qty": 1,
+            "payment": 19810
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티_화이트-XXXL",
+            "qty": 1,
+            "payment": 19470
+          },
+          {
+            "name": "TECH SWEAT 세미오버핏 백그래픽 맨투맨_블랙-2XL",
+            "qty": 1,
+            "payment": 30100
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝팬츠_L",
+            "qty": 2,
+            "payment": 102910
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨_차콜-XL",
+            "qty": 1,
+            "payment": 19900
+          }
+        ],
+        "gross_verified": false,
+        "source": "과세 순매출 확인. 정상가 미확인, gross=0은 미집계 자리값."
+      },
+      {
+        "retailer": "29cm",
+        "qty": 2,
+        "gross": 154350,
+        "payment": 144280,
+        "orders": 2,
+        "items": [
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 후드_M",
+            "qty": 1,
+            "payment": 57080
+          },
+          {
+            "name": "ESSENTIAL HEAT 올인원 러닝탑_S",
+            "qty": 1,
+            "payment": 87200
+          }
+        ]
+      },
+      {
+        "retailer": "글로리어스워커",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "애슬러",
+        "qty": 1,
+        "gross": 59000,
+        "payment": 54971,
+        "orders": 1,
+        "items": [
+          {
+            "name": "퀵드라이 B.B.B 티셔츠 레드_레드-L",
+            "qty": 1,
+            "payment": 54971
+          }
+        ]
+      },
+      {
+        "retailer": "ABC마트",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      },
+      {
+        "retailer": "러너블",
+        "qty": 0,
+        "gross": 0,
+        "payment": 0,
+        "orders": 0,
+        "items": []
+      }
+    ],
+    "gross_verified": false,
+    "gross_unverified_retailers": [
+      "무신사"
+    ],
+    "notes": [
+      "대표님 2026-11-23 지시로 취합 검증된 6개 채널 우선 운영 반영.",
+      "4XR 인증 대기. 자사몰·롯데온은 로그인 후 조회 연결 실패로 원본 미검증. 미확인 채널은 0원 확정 아님.",
+      "무신사 상품별 과세와 주문 옵션 대조. 정상가·확인되지 않은 색상은 추정하지 않음.",
+      "29cm 주문별 실판매액 반영, 처리완료 환불·취소·반품 0건. 쿠폰 이중 차감 없음."
+    ]
   }
 ]

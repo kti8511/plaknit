@@ -27,7 +27,7 @@ data.json 구조:
   }
 ]
 """
-import json, datetime, os, pathlib
+import json, datetime, os, pathlib, html
 
 DATA_FILE = pathlib.Path("data.json")
 HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
@@ -74,6 +74,16 @@ JSON_KWARGS = {"ensure_ascii": False, "separators": (",", ":")}
 rows_json = json.dumps(rows, **JSON_KWARGS)
 historical_daily_json = json.dumps(historical_daily, **JSON_KWARGS)
 manual_sales_json = json.dumps(manual_sales_updates, **JSON_KWARGS)
+pending_sales = [day for day in manual_sales_updates if day.get("excluded_retailers")]
+sales_coverage_notice = ""
+if pending_sales:
+    pending_labels = [day["date"] + " (" + ", ".join(day["excluded_retailers"]) + ")" for day in pending_sales]
+    sales_coverage_notice = (
+        '<div id="salesCoverageNotice" role="status" style="margin-bottom:16px;padding:10px 14px;'
+        'border-left:3px solid #b45309;background:#fff7ed;color:#78350f;line-height:1.6">'
+        '<strong>부분 반영 매출</strong> · 미확인 채널은 0원으로 확정하지 않았습니다.<br>'
+        + html.escape("미확인: " + " / ".join(pending_labels)) + '</div>'
+    )
 
 # ★ 2026 일일판매정리(4월).xlsx 첫 시트의 몰별 월 목표 매출.
 # 기타몰은 별도 목표가 없는 유통사(애슬러, 롯데온, ABC마트, 러너블, 기타 등)의 합산 목표다.
@@ -465,6 +475,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
 </header>
 
 <main>
+{sales_coverage_notice}
   <div class="page-hd">
     <div class="page-title">상품DATA 운영 대시보드</div>
     <div class="page-date">전체 유통사 통합 판매 데이터 기준 · 상품DATA 표준명으로 통합</div>
@@ -1708,12 +1719,14 @@ function renderDaily() {{
   const e = document.getElementById('dateEnd').value;
   const allDaily = calYear === '2026' ? buildDailyMap(calRetailer) : buildHistoricalDailyMap(calYear, calRetailer);
   const f = allDaily.filter(d=>(!s||d.date>=s)&&(!e||d.date<=e));
+  const unverifiedOnly = calYear === '2026' && calRetailer && !f.length && MANUAL_SALES.some(day =>
+    (!s||day.date>=s)&&(!e||day.date<=e)&&(day.excluded_retailers||[]).includes(calRetailer));
   calItemRows = buildDailyItemRows(calRetailer, s, e, calYear);
   renderDailyItems();
 
-  document.getElementById('dayPayment').textContent = fmt(f.reduce((a,d)=>a+d.payment,0));
-  document.getElementById('dayOrders').textContent  = calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.orders,0)) : '-';
-  document.getElementById('dayQty').textContent     = calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.qty,0)) : '-';
+  document.getElementById('dayPayment').textContent = unverifiedOnly ? '미확인' : fmt(f.reduce((a,d)=>a+d.payment,0));
+  document.getElementById('dayOrders').textContent  = unverifiedOnly ? '미확인' : calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.orders,0)) : '-';
+  document.getElementById('dayQty').textContent     = unverifiedOnly ? '미확인' : calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.qty,0)) : '-';
 
   if (dcInst) dcInst.destroy();
   dcInst = new Chart(document.getElementById('dailyChart'),{{
