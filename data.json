@@ -163639,5 +163639,98 @@
     "received_qty": 0,
     "stock_qty": 0,
     "avg_unit": 54971
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 725800,
+    "payment": 483700,
+    "orders": 6,
+    "avg_unit": 0,
+    "source_type": "일별집계",
+    "match_status": "상세대사대기",
+    "match_sku": "",
+    "standard_name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "qty_verified": false,
+    "items_verified": false,
+    "source_note": "qty=0은 미집계 자리값. 상품 판매수량 0 확정 아님. 2026-11-23 Cafe24 통계 > 매출분석 > 일별 매출, 10:00업데이트. 적립금·예치금·네이버포인트 포함 모두 체크 확인. 표시된 대상 날짜별 순매출을 기준으로 확정. 오늘23일 환불은 이번 대상일에서 제외.",
+    "daily": [
+      {
+        "date": "2026-11-20",
+        "qty": 0,
+        "gross": 725800,
+        "payment": 483700,
+        "orders": 6,
+        "qty_verified": false
+      }
+    ]
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 1147400,
+    "payment": 668460,
+    "orders": 8,
+    "avg_unit": 0,
+    "source_type": "일별집계",
+    "match_status": "상세대사대기",
+    "match_sku": "",
+    "standard_name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "qty_verified": false,
+    "items_verified": false,
+    "source_note": "qty=0은 미집계 자리값. 상품 판매수량 0 확정 아님. 2026-11-23 Cafe24 통계 > 매출분석 > 일별 매출, 10:00업데이트. 적립금·예치금·네이버포인트 포함 모두 체크 확인. 표시된 대상 날짜별 순매출을 기준으로 확정. 오늘23일 환불은 이번 대상일에서 제외.",
+    "daily": [
+      {
+        "date": "2026-11-21",
+        "qty": 0,
+        "gross": 1147400,
+        "payment": 668460,
+        "orders": 8,
+        "qty_verified": false
+      }
+    ]
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 996800,
+    "payment": 562210,
+    "orders": 8,
+    "avg_unit": 0,
+    "source_type": "일별집계",
+    "match_status": "상세대사대기",
+    "match_sku": "",
+    "standard_name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "qty_verified": false,
+    "items_verified": false,
+    "source_note": "qty=0은 미집계 자리값. 상품 판매수량 0 확정 아님. 2026-11-23 Cafe24 통계 > 매출분석 > 일별 매출, 10:00업데이트. 적립금·예치금·네이버포인트 포함 모두 체크 확인. 표시된 대상 날짜별 순매출을 기준으로 확정. 오늘23일 환불은 이번 대상일에서 제외.",
+    "daily": [
+      {
+        "date": "2026-11-22",
+        "qty": 0,
+        "gross": 996800,
+        "payment": 562210,
+        "orders": 8,
+        "qty_verified": false
+      }
+    ]
   }
 ]

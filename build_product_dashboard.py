@@ -75,6 +75,7 @@ rows_json = json.dumps(rows, **JSON_KWARGS)
 historical_daily_json = json.dumps(historical_daily, **JSON_KWARGS)
 manual_sales_json = json.dumps(manual_sales_updates, **JSON_KWARGS)
 pending_sales = [day for day in manual_sales_updates if day.get("excluded_retailers")]
+pending_details = [day["date"] + " (" + r["retailer"] + ")" for day in manual_sales_updates for r in day.get("retailers", []) if r.get("qty_verified") is False]
 sales_coverage_notice = ""
 if pending_sales:
     pending_labels = [day["date"] + " (" + ", ".join(day["excluded_retailers"]) + ")" for day in pending_sales]
@@ -84,6 +85,9 @@ if pending_sales:
         '<strong>부분 반영 매출</strong> · 미확인 채널은 0원으로 확정하지 않았습니다.<br>'
         + html.escape("미확인: " + " / ".join(pending_labels)) + '</div>'
     )
+if pending_details:
+    detail_notice = html.escape("순매출 확정 / 상품·수량 상세 대사 대기: " + " / ".join(pending_details))
+    sales_coverage_notice += '<div role="status" style="margin-bottom:16px;line-height:1.6;color:#78350f">' + detail_notice + '</div>'
 
 # ★ 2026 일일판매정리(4월).xlsx 첫 시트의 몰별 월 목표 매출.
 # 기타몰은 별도 목표가 없는 유통사(애슬러, 롯데온, ABC마트, 러너블, 기타 등)의 합산 목표다.
@@ -1658,7 +1662,7 @@ function buildDailyItemRows(retailer, start, end, year) {{
       const totals = existing.get(key);
       totals.qty += Number(day.qty || 0);
       totals.payment += Number(day.payment || 0);
-      const kind = row.source_type === '정산조정' || row.match_status === '비상품' ? 'adjustment' : 'product';
+      const kind = row.items_verified === false ? 'unverified' : row.source_type === '정산조정' || row.match_status === '비상품' ? 'adjustment' : 'product';
       add(row, Number(day.qty || 0), Number(day.payment || 0), kind);
     }});
   }});
@@ -1707,11 +1711,11 @@ function renderDailyItems() {{
       <td>${{escapeDailyItemText(row.retailer)}}</td>
       <td class="td-main">${{escapeDailyItemText(row.name)}}${{tag ? `<span class="daily-items-kind">${{tag}}</span>` : ''}}</td>
       <td>${{option(row.color)}}</td><td>${{option(row.size)}}</td>
-      <td class="num ${{row.qty < 0 ? 'daily-items-negative' : ''}}">${{fmt(row.qty)}}</td>
+      <td class="num ${{row.qty < 0 ? 'daily-items-negative' : ''}}">${{row.kind === 'unverified' && !row.qty ? '미확인' : fmt(row.qty)}}</td>
       <td class="num ${{row.payment < 0 ? 'daily-items-negative' : ''}}">${{fmt(row.payment)}}</td>
     </tr>`;
   }}).join('') : `<tr><td colspan="6" style="text-align:center;padding:24px;color:var(--ink3)">${{empty}}</td></tr>`;
-  document.getElementById('dailyItemTotals').innerHTML = rows.length ? `<tr><td colspan="4">조회 합계</td><td class="num">${{fmt(rows.reduce((sum,row)=>sum+row.qty,0))}}</td><td class="num">${{fmt(rows.reduce((sum,row)=>sum+row.payment,0))}}</td></tr>` : '';
+  document.getElementById('dailyItemTotals').innerHTML = rows.length ? `<tr><td colspan="4">조회 합계</td><td class="num">${{rows.some(row=>row.kind === 'unverified' && !row.qty) ? '미확인 포함' : fmt(rows.reduce((sum,row)=>sum+row.qty,0))}}</td><td class="num">${{fmt(rows.reduce((sum,row)=>sum+row.payment,0))}}</td></tr>` : '';
 }}
 
 function renderDaily() {{
@@ -1721,12 +1725,14 @@ function renderDaily() {{
   const f = allDaily.filter(d=>(!s||d.date>=s)&&(!e||d.date<=e));
   const unverifiedOnly = calYear === '2026' && calRetailer && !f.length && MANUAL_SALES.some(day =>
     (!s||day.date>=s)&&(!e||day.date<=e)&&(day.excluded_retailers||[]).includes(calRetailer));
+  const qtyPendingForDate = date => MANUAL_SALES.some(day => day.date === date && (day.retailers||[]).some(row =>
+    (!calRetailer || row.retailer === calRetailer) && row.qty_verified === false));
   calItemRows = buildDailyItemRows(calRetailer, s, e, calYear);
   renderDailyItems();
 
   document.getElementById('dayPayment').textContent = unverifiedOnly ? '미확인' : fmt(f.reduce((a,d)=>a+d.payment,0));
   document.getElementById('dayOrders').textContent  = unverifiedOnly ? '미확인' : calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.orders,0)) : '-';
-  document.getElementById('dayQty').textContent     = unverifiedOnly ? '미확인' : calYear === '2026' ? fmt(f.reduce((a,d)=>a+d.qty,0)) : '-';
+  document.getElementById('dayQty').textContent     = unverifiedOnly ? '미확인' : calYear === '2026' ? f.some(d=>qtyPendingForDate(d.date)) ? '미확인 포함' : fmt(f.reduce((a,d)=>a+d.qty,0)) : '-';
 
   if (dcInst) dcInst.destroy();
   dcInst = new Chart(document.getElementById('dailyChart'),{{
@@ -1743,7 +1749,7 @@ function renderDaily() {{
         <td class="num">${{fmt(d.payment)}}</td>
         <td class="num">${{calYear === '2026' ? fmt(d.gross) : '-'}}</td>
         <td class="num">${{calYear === '2026' ? fmt(d.orders) : '-'}}</td>
-        <td class="num">${{calYear === '2026' ? fmt(d.qty) : '-'}}</td>
+        <td class="num">${{calYear === '2026' ? qtyPendingForDate(d.date) ? '미확인' : fmt(d.qty) : '-'}}</td>
         <td class="num">${{calYear === '2026' && d.orders ? fmt(d.payment/d.orders) : '-'}}</td>
       </tr>`).join('');
 }}
