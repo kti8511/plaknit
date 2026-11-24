@@ -26433,5 +26433,168 @@
       "롯데온 통합주문조회: 주문접수일 2026-11-17~23, 주문진행단계 전체, 조회 결과 0건. 대표님 지정 기준으로 해당 일자 0원.",
       "자사몰 결제일 기준 주문상품 및 원본 옵션 반영. 세트는 1개, 배송비와 주문쿠폰은 별도."
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "status": "net_verified",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 429710,
+        "gross": 865700,
+        "orders": 5,
+        "qty_verified": false,
+        "items_verified": false,
+        "items": [],
+        "source": "Cafe24 통계 > 매출분석 > 일별 매출",
+        "report": {
+          "date": "2026-11-23",
+          "channel": "자사몰",
+          "source": "Cafe24 통계 > 매출분석 > 일별 매출",
+          "included": [
+            "적립금",
+            "예치금",
+            "네이버포인트"
+          ],
+          "orders": 5,
+          "lines": 10,
+          "gross": 865700,
+          "shipping": 18000,
+          "discount": 341200,
+          "coupon": 22280,
+          "paid": 520220,
+          "refund": 90510,
+          "net": 429710,
+          "item_reconciliation": "pending"
+        }
+      },
+      {
+        "retailer": "무신사",
+        "payment": 286790,
+        "qty": 16,
+        "orders_verified": false,
+        "gross_verified": false,
+        "items": [
+          {
+            "name": "퀵드라이 세미 오버핏 티셔츠",
+            "qty": 4,
+            "payment": 97490
+          },
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 4,
+            "payment": 76950
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+            "qty": 1,
+            "payment": 39900
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+            "qty": 1,
+            "payment": 35550
+          },
+          {
+            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+            "qty": 1,
+            "payment": 21600
+          },
+          {
+            "name": "스포츠 쿠션업 심볼 크루삭스",
+            "qty": 4,
+            "payment": 19980
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 1,
+            "payment": 19610
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스",
+            "qty": 1,
+            "payment": 5020
+          },
+          {
+            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+            "qty": -1,
+            "payment": -29310
+          }
+        ],
+        "source": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건"
+      },
+      {
+        "retailer": "29cm",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "전체 주문 조회, 주문일 11/18~24 및 매출리포트 PLAKNIT 11/23 단일 조회: 결제완료 0건 0원, 처리완료 환불 0건 0원"
+      },
+      {
+        "retailer": "러너블",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "파트너어드민 판매 현황 최근 1개월 전체 주문상태 0건, 최근 3개월 취소·반품·교환 각 0건"
+      },
+      {
+        "retailer": "애슬러",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "주문관리 최근 주문 11/22. 취소 검색 0건. 반품 8/24~11/24 기존 5건, 최근 처리 11/03으로 변동 없음"
+      },
+      {
+        "retailer": "4XR",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "주문통합 리스트 주문일 11/17~24 유일한 주문은 11/19. 취소/반품 통계 11/23 여섯 열 모두 0"
+      },
+      {
+        "retailer": "ABC마트",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "상품 매출 통계 11/23 임직원 포함 0/0. 1년 클레임 이전 9건 동일, 최근 접수 9/21 및 교환발송 10/16"
+      },
+      {
+        "retailer": "롯데온",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "통합주문조회, 주문접수일 2026-11-22~24 전체 조회 후 총 0건"
+      },
+      {
+        "retailer": "글로리어스워커",
+        "payment": 0,
+        "orders": 0,
+        "qty": 0,
+        "gross": 0,
+        "items": [],
+        "source": "영업관리 전체 주문 조회 11/17~23 및 11/23~24 주문 없음. 환불완료일 11/17~24 주문일 전체 기간 포함 조회 결과 없음."
+      }
+    ],
+    "gross_verified": false,
+    "gross_unverified_retailers": [
+      "무신사"
+    ],
+    "notes": [
+      "9개 채널 순매출 확인. 자사몰 상품별 수량 및 무신사 주문 수·옵션은 미확정. 주문 수는 확인분만 집계.",
+      "자사몰 환불 및 무신사 음수 반품은 이미 차감됨."
+    ]
   }
 ]
