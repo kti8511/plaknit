@@ -165005,5 +165005,36 @@
     "source_type": "상품",
     "source_product_code": "PD2TSM07",
     "match_status": "옵션대사대기"
+  },
+  {
+    "retailer": "자사몰",
+    "mall_no": "",
+    "name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "standard_name": "일별 순매출 합계 (상품 상세 대사 대기)",
+    "color": "",
+    "size": "",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 0,
+    "source_note": "일별 매출, 포인트 3종 포함. 상품 상세 대사 전 수량은 미집계.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "payment": 159700,
+        "qty": 0,
+        "orders": 3,
+        "gross": 355800,
+        "qty_verified": false
+      }
+    ],
+    "qty": 0,
+    "gross": 355800,
+    "payment": 159700,
+    "orders": 3,
+    "qty_verified": false,
+    "items_verified": false,
+    "source_type": "일별집계",
+    "match_status": "상세대사대기"
   }
 ]

@@ -26596,5 +26596,54 @@
       "9개 채널 순매출 확인. 자사몰 상품별 수량 및 무신사 주문 수·옵션은 미확정. 주문 수는 확인분만 집계.",
       "자사몰 환불 및 무신사 음수 반품은 이미 차감됨."
     ]
+  },
+  {
+    "date": "2026-11-24",
+    "status": "partial",
+    "excluded_retailers": [
+      "무신사",
+      "29cm",
+      "글로리어스워커",
+      "4XR",
+      "애슬러",
+      "롯데온",
+      "ABC마트"
+    ],
+    "retailers": [
+      {
+        "retailer": "자사몰",
+        "payment": 159700,
+        "gross": 355800,
+        "orders": 3,
+        "qty_verified": false,
+        "items_verified": false,
+        "items": [],
+        "source": "카페24 일별 매출",
+        "report": {
+          "date": "2026-11-24",
+          "orders": 3,
+          "lines": 4,
+          "gross": 355800,
+          "shipping": 3000,
+          "discount": 194100,
+          "coupon": 5000,
+          "paid": 159700,
+          "refund": 0,
+          "net": 159700
+        }
+      },
+      {
+        "retailer": "러너블",
+        "payment": 0,
+        "gross": 0,
+        "orders": 0,
+        "qty": 0,
+        "items": [],
+        "source": "최근 1개월 전체 판매 상태 0건, 최근 3개월 취소·반품·교환 0건"
+      }
+    ],
+    "notes": [
+      "11월 25일 예외: 확인된 채널만 반영한 부분합. 미확인 채널은 0원이 아님. 자사몰 상품 상세 대사 중."
+    ]
   }
 ]
