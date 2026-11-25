@@ -165092,36 +165092,33 @@
   "option_quantities": []
 },
   {
-    "retailer": "자사몰",
-    "mall_no": "",
-    "name": "일별 순매출 합계 (상품 상세 대사 대기)",
-    "standard_name": "일별 순매출 합계 (상품 상세 대사 대기)",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 0,
-    "source_note": "일별 매출, 포인트 3종 포함. 상품 상세 대사 전 수량은 미집계.",
-    "daily": [
-      {
-        "date": "2026-11-24",
-        "payment": 159700,
-        "qty": 0,
-        "orders": 3,
-        "gross": 355800,
-        "qty_verified": false
-      }
-    ],
-    "qty": 0,
-    "gross": 355800,
-    "payment": 159700,
-    "orders": 3,
-    "qty_verified": false,
-    "items_verified": false,
-    "source_type": "일별집계",
-    "match_status": "상세대사대기"
-  },
+  "retailer": "자사몰",
+  "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠",
+  "standard_name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠 2XL",
+  "mall_no": "",
+  "color": "",
+  "size": "2XL",
+  "qty": 1,
+  "gross": 79000,
+  "payment": 69000,
+  "orders": 1,
+  "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도.",
+  "source_type": "상품",
+  "match_status": "검토필요",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 69000,
+  "daily": [
+    {
+      "date": "2026-11-24",
+      "qty": 1,
+      "gross": 79000,
+      "payment": 69000,
+      "orders": 1
+    }
+  ]
+},
   {
     "retailer": "무신사",
     "mall_no": "",
@@ -165691,5 +165688,176 @@
         "qty": 0
       }
     ]
+  },
+  {
+    "retailer": "자사몰",
+    "name": "TECH SWEAT 7인치 카고 반바지",
+    "standard_name": "TECH SWEAT 7인치 카고 반바지 멜란지그레이 L",
+    "mall_no": "",
+    "color": "멜란지그레이",
+    "size": "L",
+    "qty": 1,
+    "gross": 57800,
+    "payment": 0,
+    "orders": 1,
+    "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도. 주문 결제 67,800원은 합산 행에 반영.",
+    "source_type": "상품",
+    "match_status": "검토필요",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": 1,
+        "gross": 57800,
+        "payment": 0,
+        "orders": 1
+      }
+    ],
+    "payment_verified": false
+  },
+  {
+    "retailer": "자사몰",
+    "name": "[SET] TECH SWEAT 피그먼트 백 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠",
+    "standard_name": "[SET] TECH SWEAT 피그먼트 백 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠 상의 딥차콜 L / 하의 딥차콜 L",
+    "mall_no": "",
+    "color": "",
+    "size": "상의 딥차콜 L / 하의 딥차콜 L",
+    "qty": 1,
+    "gross": 174000,
+    "payment": 0,
+    "orders": 0,
+    "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도. 같은 주문 결제금액을 개별 상품에 배분하지 않음.",
+    "source_type": "상품",
+    "match_status": "검토필요",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": 1,
+        "gross": 174000,
+        "payment": 0,
+        "orders": 0
+      }
+    ],
+    "payment_verified": false
+  },
+  {
+    "retailer": "자사몰",
+    "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+    "standard_name": "ICE LITE 초냉감 세미오버핏 티셔츠 라이트그레이 2XL",
+    "mall_no": "",
+    "color": "라이트그레이",
+    "size": "2XL",
+    "qty": 1,
+    "gross": 45000,
+    "payment": 19900,
+    "orders": 1,
+    "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도.",
+    "source_type": "상품",
+    "match_status": "검토필요",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 19900,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": 1,
+        "gross": 45000,
+        "payment": 19900,
+        "orders": 1
+      }
+    ]
+  },
+  {
+    "retailer": "자사몰",
+    "name": "카고 반바지·맨투맨 세트 주문 결제액 (개별 배분 제외)",
+    "standard_name": "카고 반바지·맨투맨 세트 주문 결제액 (개별 배분 제외)",
+    "mall_no": "",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 67800,
+    "orders": 0,
+    "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도.",
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": 0,
+        "gross": 0,
+        "payment": 67800,
+        "orders": 0
+      }
+    ]
+  },
+  {
+    "retailer": "자사몰",
+    "name": "일별 매출 배송비",
+    "standard_name": "일별 매출 배송비",
+    "mall_no": "",
+    "color": "",
+    "size": "",
+    "qty": 0,
+    "gross": 0,
+    "payment": 3000,
+    "orders": 0,
+    "source_note": "결제일 기준 전체 주문 조회 > 품목주문별. 배송비는 별도.",
+    "source_type": "정산조정",
+    "match_status": "비상품",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": 0,
+        "gross": 0,
+        "payment": 3000,
+        "orders": 0
+      }
+    ]
+  },
+  {
+    "retailer": "29cm",
+    "name": "ICE LITE 데일리 쇼츠",
+    "standard_name": "ICE LITE 데일리 쇼츠 블랙 M",
+    "mall_no": "",
+    "color": "블랙",
+    "size": "M",
+    "qty": -1,
+    "gross": -30000,
+    "payment": -25500,
+    "orders": 0,
+    "source_note": "11/24 반품 완료. 기존 11/15 실판매액 25,500원 환입. 리포트 판매가기준 30,000원, 주문 쿠폰 4,500원. 적립금 선할인 120원과 배송비 중복 차감 제외.",
+    "source_type": "상품",
+    "match_status": "검토필요",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 25500,
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "qty": -1,
+        "gross": -30000,
+        "payment": -25500,
+        "orders": 0
+      }
+    ],
+    "source_order": "ORD20261115-4489690"
   }
 ]

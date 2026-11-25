@@ -26669,12 +26669,10 @@
   "date": "2026-11-24",
   "status": "partial",
   "excluded_retailers": [
-    "29cm",
     "글로리어스워커",
     "4XR",
     "애슬러",
-    "롯데온",
-    "ABC마트"
+    "롯데온"
   ],
   "retailers": [
     {
@@ -26682,9 +26680,42 @@
       "payment": 159700,
       "gross": 355800,
       "orders": 3,
-      "qty_verified": false,
-      "items_verified": false,
-      "items": [],
+      "qty_verified": true,
+      "items_verified": true,
+      "items": [
+        {
+          "name": "[4차 리오더] ESSENTIAL HEAT 기모 러닝팬츠 2XL",
+          "qty": 1,
+          "payment": 69000
+        },
+        {
+          "name": "TECH SWEAT 7인치 카고 반바지 멜란지그레이 L",
+          "qty": 1,
+          "payment": 0,
+          "payment_verified": false
+        },
+        {
+          "name": "[SET] TECH SWEAT 피그먼트 백 그래픽 맨투맨 + 피그먼트 소프트 빈티지 조거팬츠 상의 딥차콜 L / 하의 딥차콜 L",
+          "qty": 1,
+          "payment": 0,
+          "payment_verified": false
+        },
+        {
+          "name": "ICE LITE 초냉감 세미오버핏 티셔츠 라이트그레이 2XL",
+          "qty": 1,
+          "payment": 19900
+        },
+        {
+          "name": "카고 반바지·맨투맨 세트 주문 결제액 (개별 배분 제외)",
+          "qty": 0,
+          "payment": 67800
+        },
+        {
+          "name": "일별 매출 배송비",
+          "qty": 0,
+          "payment": 3000
+        }
+      ],
       "source": "카페24 일별 매출",
       "report": {
         "date": "2026-11-24",
@@ -26697,7 +26728,8 @@
         "paid": 159700,
         "refund": 0,
         "net": 159700
-      }
+      },
+      "qty": 4
     },
     {
       "retailer": "러너블",
@@ -26896,10 +26928,34 @@
           ]
         }
       ]
+    },
+    {
+      "retailer": "29cm",
+      "payment": -25500,
+      "qty": -1,
+      "gross": -30000,
+      "orders": 0,
+      "items": [
+        {
+          "name": "ICE LITE 데일리 쇼츠 블랙 M",
+          "qty": -1,
+          "payment": -25500
+        }
+      ],
+      "source": "11/24 반품 완료. 기존 11/15 실판매액 25,500원 환입. 리포트 판매가기준 30,000원, 주문 쿠폰 4,500원. 적립금 선할인 120원과 배송비 중복 차감 제외."
+    },
+    {
+      "retailer": "ABC마트",
+      "payment": 0,
+      "qty": 0,
+      "gross": 0,
+      "orders": 0,
+      "items": [],
+      "source": "11/24 상품매출통계 임직원 포함 0/0. 10/25~11/25 클레임 접수·완료 모두 0건."
     }
   ],
   "notes": [
-    "11월 25일 예외: 확인된 채널만 반영한 부분합. 미확인 채널은 0원이 아님. 자사몰 상품 상세 대사 중."
+    "확인한 5개 채널 부분합. 미확인 4개 채널 제외. 자사몰 상품 4개, 무신사 유효 주문 13건·16개."
   ]
 }
 ]
