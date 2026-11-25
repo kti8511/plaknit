@@ -26667,10 +26667,8 @@
 },
   {
   "date": "2026-11-24",
-  "status": "partial",
-  "excluded_retailers": [
-    "4XR"
-  ],
+  "status": "sales_updated",
+  "excluded_retailers": [],
   "retailers": [
     {
       "retailer": "자사몰",
@@ -26976,10 +26974,19 @@
       "payment": 0,
       "items": [],
       "source": "공급사 전체 주문 조회: 주문일 11/24~25 0건. 환불 관리: 환불완료일 11/18~25 0건."
+    },
+    {
+      "retailer": "4XR",
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "payment": 0,
+      "items": [],
+      "source": "11월 24일 주문 조회 0건. 해당일 환불 없음은 대표님 확인."
     }
   ],
   "notes": [
-    "8개 채널 확인. 4XR은 환불 미확인으로 합계에서 제외."
+    "9개 채널 순매출 확정."
   ]
 }
 ]
