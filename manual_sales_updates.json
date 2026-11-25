@@ -26435,215 +26435,471 @@
     ]
   },
   {
-    "date": "2026-11-23",
-    "status": "net_verified",
-    "excluded_retailers": [],
-    "retailers": [
-      {
-        "retailer": "자사몰",
-        "payment": 429710,
-        "gross": 865700,
-        "orders": 5,
-        "qty_verified": false,
-        "items_verified": false,
-        "items": [],
+  "date": "2026-11-23",
+  "status": "net_verified",
+  "excluded_retailers": [],
+  "retailers": [
+    {
+      "retailer": "자사몰",
+      "payment": 429710,
+      "gross": 865700,
+      "orders": 5,
+      "qty_verified": false,
+      "items_verified": false,
+      "items": [],
+      "source": "Cafe24 통계 > 매출분석 > 일별 매출",
+      "report": {
+        "date": "2026-11-23",
+        "channel": "자사몰",
         "source": "Cafe24 통계 > 매출분석 > 일별 매출",
-        "report": {
-          "date": "2026-11-23",
-          "channel": "자사몰",
-          "source": "Cafe24 통계 > 매출분석 > 일별 매출",
-          "included": [
-            "적립금",
-            "예치금",
-            "네이버포인트"
-          ],
-          "orders": 5,
-          "lines": 10,
-          "gross": 865700,
-          "shipping": 18000,
-          "discount": 341200,
-          "coupon": 22280,
-          "paid": 520220,
-          "refund": 90510,
-          "net": 429710,
-          "item_reconciliation": "pending"
-        }
-      },
-      {
-        "retailer": "무신사",
-        "payment": 286790,
-        "qty": 16,
-        "orders_verified": false,
-        "gross_verified": false,
-        "items": [
-          {
-            "name": "퀵드라이 세미 오버핏 티셔츠",
-            "qty": 4,
-            "payment": 97490
-          },
-          {
-            "name": "ICE LITE 세미오버핏 맨투맨",
-            "qty": 4,
-            "payment": 76950
-          },
-          {
-            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-            "qty": 1,
-            "payment": 39900
-          },
-          {
-            "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
-            "qty": 1,
-            "payment": 35550
-          },
-          {
-            "name": "퀵드라이 세미오버핏 백로고 티셔츠",
-            "qty": 1,
-            "payment": 21600
-          },
-          {
-            "name": "스포츠 쿠션업 심볼 크루삭스",
-            "qty": 4,
-            "payment": 19980
-          },
-          {
-            "name": "ICE LITE 벌크업 맨투맨",
-            "qty": 1,
-            "payment": 19610
-          },
-          {
-            "name": "스포츠 쿠션업 로고 크루삭스",
-            "qty": 1,
-            "payment": 5020
-          },
-          {
-            "name": "퀵드라이 백레터링 세미오버핏 반팔티",
-            "qty": -1,
-            "payment": -29310
-          }
+        "included": [
+          "적립금",
+          "예치금",
+          "네이버포인트"
         ],
-        "source": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건"
-      },
-      {
-        "retailer": "29cm",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "전체 주문 조회, 주문일 11/18~24 및 매출리포트 PLAKNIT 11/23 단일 조회: 결제완료 0건 0원, 처리완료 환불 0건 0원"
-      },
-      {
-        "retailer": "러너블",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "파트너어드민 판매 현황 최근 1개월 전체 주문상태 0건, 최근 3개월 취소·반품·교환 각 0건"
-      },
-      {
-        "retailer": "애슬러",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "주문관리 최근 주문 11/22. 취소 검색 0건. 반품 8/24~11/24 기존 5건, 최근 처리 11/03으로 변동 없음"
-      },
-      {
-        "retailer": "4XR",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "주문통합 리스트 주문일 11/17~24 유일한 주문은 11/19. 취소/반품 통계 11/23 여섯 열 모두 0"
-      },
-      {
-        "retailer": "ABC마트",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "상품 매출 통계 11/23 임직원 포함 0/0. 1년 클레임 이전 9건 동일, 최근 접수 9/21 및 교환발송 10/16"
-      },
-      {
-        "retailer": "롯데온",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "통합주문조회, 주문접수일 2026-11-22~24 전체 조회 후 총 0건"
-      },
-      {
-        "retailer": "글로리어스워커",
-        "payment": 0,
-        "orders": 0,
-        "qty": 0,
-        "gross": 0,
-        "items": [],
-        "source": "영업관리 전체 주문 조회 11/17~23 및 11/23~24 주문 없음. 환불완료일 11/17~24 주문일 전체 기간 포함 조회 결과 없음."
+        "orders": 5,
+        "lines": 10,
+        "gross": 865700,
+        "shipping": 18000,
+        "discount": 341200,
+        "coupon": 22280,
+        "paid": 520220,
+        "refund": 90510,
+        "net": 429710,
+        "item_reconciliation": "pending"
       }
-    ],
-    "gross_verified": false,
-    "gross_unverified_retailers": [
-      "무신사"
-    ],
-    "notes": [
-      "9개 채널 순매출 확인. 자사몰 상품별 수량 및 무신사 주문 수·옵션은 미확정. 주문 수는 확인분만 집계.",
-      "자사몰 환불 및 무신사 음수 반품은 이미 차감됨."
-    ]
-  },
-  {
-    "date": "2026-11-24",
-    "status": "partial",
-    "excluded_retailers": [
-      "무신사",
-      "29cm",
-      "글로리어스워커",
-      "4XR",
-      "애슬러",
-      "롯데온",
-      "ABC마트"
-    ],
-    "retailers": [
-      {
-        "retailer": "자사몰",
-        "payment": 159700,
-        "gross": 355800,
-        "orders": 3,
-        "qty_verified": false,
-        "items_verified": false,
-        "items": [],
-        "source": "카페24 일별 매출",
-        "report": {
-          "date": "2026-11-24",
-          "orders": 3,
-          "lines": 4,
-          "gross": 355800,
-          "shipping": 3000,
-          "discount": 194100,
-          "coupon": 5000,
-          "paid": 159700,
-          "refund": 0,
-          "net": 159700
+    },
+    {
+      "retailer": "무신사",
+      "payment": 286790,
+      "qty": 16,
+      "orders": 10,
+      "gross_verified": false,
+      "orders_verified": true,
+      "source": "상품별 매출통계 과세·주문 내역 대조",
+      "items": [
+        {
+          "name": "퀵드라이 세미 오버핏 티셔츠 화이트 L",
+          "qty": 4,
+          "payment": 97490,
+          "option_quantities": [
+            {
+              "color": "화이트",
+              "size": "L",
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 세미오버핏 맨투맨 블랙 XL 2개 / 블랙 M 1개 / 차콜 XL 1개",
+          "qty": 4,
+          "payment": 76950,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "XL",
+              "qty": 2
+            },
+            {
+              "color": "블랙",
+              "size": "M",
+              "qty": 1
+            },
+            {
+              "color": "차콜",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직) 빈티지차콜 XXL",
+          "qty": 1,
+          "payment": 39900,
+          "option_quantities": [
+            {
+              "color": "빈티지차콜",
+              "size": "XXL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨 블랙 M",
+          "qty": 1,
+          "payment": 35550,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "퀵드라이 세미오버핏 백로고 티셔츠 화이트 M",
+          "qty": 1,
+          "payment": 21600,
+          "option_quantities": [
+            {
+              "color": "화이트",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "스포츠 쿠션업 심볼 크루삭스 화이트 F",
+          "qty": 4,
+          "payment": 19980,
+          "option_quantities": [
+            {
+              "color": "화이트",
+              "size": "F",
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 벌크업 맨투맨 블랙 XL",
+          "qty": 1,
+          "payment": 19610,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "스포츠 쿠션업 로고 크루삭스 화이트 F",
+          "qty": 1,
+          "payment": 5020,
+          "option_quantities": [
+            {
+              "color": "화이트",
+              "size": "F",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+          "qty": -1,
+          "payment": -29310,
+          "option_quantities": []
         }
-      },
-      {
-        "retailer": "러너블",
-        "payment": 0,
-        "gross": 0,
-        "orders": 0,
-        "qty": 0,
-        "items": [],
-        "source": "최근 1개월 전체 판매 상태 0건, 최근 3개월 취소·반품·교환 0건"
+      ]
+    },
+    {
+      "retailer": "29cm",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "전체 주문 조회, 주문일 11/18~24 및 매출리포트 PLAKNIT 11/23 단일 조회: 결제완료 0건 0원, 처리완료 환불 0건 0원"
+    },
+    {
+      "retailer": "러너블",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "파트너어드민 판매 현황 최근 1개월 전체 주문상태 0건, 최근 3개월 취소·반품·교환 각 0건"
+    },
+    {
+      "retailer": "애슬러",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "주문관리 최근 주문 11/22. 취소 검색 0건. 반품 8/24~11/24 기존 5건, 최근 처리 11/03으로 변동 없음"
+    },
+    {
+      "retailer": "4XR",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "주문통합 리스트 주문일 11/17~24 유일한 주문은 11/19. 취소/반품 통계 11/23 여섯 열 모두 0"
+    },
+    {
+      "retailer": "ABC마트",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "상품 매출 통계 11/23 임직원 포함 0/0. 1년 클레임 이전 9건 동일, 최근 접수 9/21 및 교환발송 10/16"
+    },
+    {
+      "retailer": "롯데온",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "통합주문조회, 주문접수일 2026-11-22~24 전체 조회 후 총 0건"
+    },
+    {
+      "retailer": "글로리어스워커",
+      "payment": 0,
+      "orders": 0,
+      "qty": 0,
+      "gross": 0,
+      "items": [],
+      "source": "영업관리 전체 주문 조회 11/17~23 및 11/23~24 주문 없음. 환불완료일 11/17~24 주문일 전체 기간 포함 조회 결과 없음."
+    }
+  ],
+  "gross_verified": false,
+  "gross_unverified_retailers": [
+    "무신사"
+  ],
+  "notes": [
+    "9개 채널 순매출 확인. 자사몰 상품별 수량 미확정. 무신사 과거 주문 반품 1개 옵션 대기.",
+    "자사몰 환불 및 무신사 음수 반품은 이미 차감됨."
+  ]
+},
+  {
+  "date": "2026-11-24",
+  "status": "partial",
+  "excluded_retailers": [
+    "29cm",
+    "글로리어스워커",
+    "4XR",
+    "애슬러",
+    "롯데온",
+    "ABC마트"
+  ],
+  "retailers": [
+    {
+      "retailer": "자사몰",
+      "payment": 159700,
+      "gross": 355800,
+      "orders": 3,
+      "qty_verified": false,
+      "items_verified": false,
+      "items": [],
+      "source": "카페24 일별 매출",
+      "report": {
+        "date": "2026-11-24",
+        "orders": 3,
+        "lines": 4,
+        "gross": 355800,
+        "shipping": 3000,
+        "discount": 194100,
+        "coupon": 5000,
+        "paid": 159700,
+        "refund": 0,
+        "net": 159700
       }
-    ],
-    "notes": [
-      "11월 25일 예외: 확인된 채널만 반영한 부분합. 미확인 채널은 0원이 아님. 자사몰 상품 상세 대사 중."
-    ]
-  }
+    },
+    {
+      "retailer": "러너블",
+      "payment": 0,
+      "gross": 0,
+      "orders": 0,
+      "qty": 0,
+      "items": [],
+      "source": "최근 1개월 전체 판매 상태 0건, 최근 3개월 취소·반품·교환 0건"
+    },
+    {
+      "retailer": "무신사",
+      "payment": 549320,
+      "qty": 16,
+      "orders": 13,
+      "gross_verified": false,
+      "orders_verified": true,
+      "source": "상품별 매출통계 과세·주문 내역 대조",
+      "items": [
+        {
+          "name": "ESSENTIAL HEAT 올인원 러닝탑 M",
+          "qty": 1,
+          "payment": 78480,
+          "option_quantities": [
+            {
+              "color": "",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 시그니처 조거 블랙 L",
+          "qty": 2,
+          "payment": 59800,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "L",
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 세미오버핏 맨투맨 블랙 XL 1개 / 차콜 XL 1개 / 블랙 M 1개",
+          "qty": 3,
+          "payment": 59230,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "XL",
+              "qty": 1
+            },
+            {
+              "color": "차콜",
+              "size": "XL",
+              "qty": 1
+            },
+            {
+              "color": "블랙",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "ESSENTIAL HEAT 기모 러닝팬츠 XL",
+          "qty": 1,
+          "payment": 57820,
+          "option_quantities": [
+            {
+              "color": "",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "ESSENTIAL HEAT 더블레이어 기모 집업 블랙 XL",
+          "qty": 1,
+          "payment": 50830,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "퀵드라이 셔링 티셔츠 블랙 블랙 M",
+          "qty": 1,
+          "payment": 35190,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "퀵드라이 셔링 티셔츠 화이트 화이트 M",
+          "qty": 1,
+          "payment": 34830,
+          "option_quantities": [
+            {
+              "color": "화이트",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "TECH SWEAT 벌룬 트레이닝 팬츠 블랙 L",
+          "qty": 1,
+          "payment": 32410,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "L",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직) 라이트카키 XL",
+          "qty": 1,
+          "payment": 30930,
+          "option_quantities": [
+            {
+              "color": "라이트카키",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 오버핏 맨투맨 차콜 XL",
+          "qty": 1,
+          "payment": 29460,
+          "option_quantities": [
+            {
+              "color": "차콜",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "QUICKDRY 러닝 롱슬리브 블랙 블랙 XL",
+          "qty": 1,
+          "payment": 26910,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "ICE LITE 베이직 팬츠 블랙 3XL",
+          "qty": 1,
+          "payment": 26780,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "3XL",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) 멜란지 그레이 M",
+          "qty": 1,
+          "payment": 26650,
+          "option_quantities": [
+            {
+              "color": "멜란지 그레이",
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티 블랙 L",
+          "qty": 0,
+          "payment": 0,
+          "option_quantities": [
+            {
+              "color": "블랙",
+              "size": "L",
+              "qty": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "11월 25일 예외: 확인된 채널만 반영한 부분합. 미확인 채널은 0원이 아님. 자사몰 상품 상세 대사 중."
+  ]
+}
 ]

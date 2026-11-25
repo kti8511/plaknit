@@ -164728,284 +164728,369 @@
     "match_status": "상세대사대기"
   },
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "퀵드라이 세미 오버핏 티셔츠",
-    "standard_name": "퀵드라이 세미 오버핏 티셔츠",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 24372,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 4,
-        "gross": 0,
-        "payment": 97490,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 4,
-    "gross": 0,
-    "payment": 97490,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PB4TSM01-2",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "퀵드라이 세미 오버핏 티셔츠",
+  "standard_name": "퀵드라이 세미 오버핏 티셔츠 화이트 L",
+  "color": "화이트",
+  "size": "L",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 24372,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 4,
+      "gross": 0,
+      "payment": 97490,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 1
+    }
+  ],
+  "qty": 4,
+  "gross": 0,
+  "payment": 97490,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PB4TSM01-2",
+  "match_status": "옵션대사대기",
+  "orders": 1,
+  "option_quantities": [
+    {
+      "color": "화이트",
+      "size": "L",
+      "qty": 4
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "ICE LITE 세미오버핏 맨투맨",
-    "standard_name": "ICE LITE 세미오버핏 맨투맨",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 19238,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 4,
-        "gross": 0,
-        "payment": 76950,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 4,
-    "gross": 0,
-    "payment": 76950,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PC2TMM01",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "ICE LITE 세미오버핏 맨투맨",
+  "standard_name": "ICE LITE 세미오버핏 맨투맨 블랙 XL 2개 / 블랙 M 1개 / 차콜 XL 1개",
+  "color": "",
+  "size": "블랙 XL 2개 / 블랙 M 1개 / 차콜 XL 1개",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 19238,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 4,
+      "gross": 0,
+      "payment": 76950,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 4
+    }
+  ],
+  "qty": 4,
+  "gross": 0,
+  "payment": 76950,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PC2TMM01",
+  "match_status": "옵션대사대기",
+  "orders": 4,
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "XL",
+      "qty": 2
+    },
+    {
+      "color": "블랙",
+      "size": "M",
+      "qty": 1
+    },
+    {
+      "color": "차콜",
+      "size": "XL",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-    "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 39900,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 1,
-        "gross": 0,
-        "payment": 39900,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 1,
-    "gross": 0,
-    "payment": 39900,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PB4PLM02",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+  "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직) 빈티지차콜 XXL",
+  "color": "빈티지차콜",
+  "size": "XXL",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 39900,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 1,
+      "gross": 0,
+      "payment": 39900,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 1
+    }
+  ],
+  "qty": 1,
+  "gross": 0,
+  "payment": 39900,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PB4PLM02",
+  "match_status": "옵션대사대기",
+  "orders": 1,
+  "option_quantities": [
+    {
+      "color": "빈티지차콜",
+      "size": "XXL",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
-    "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 35550,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 1,
-        "gross": 0,
-        "payment": 35550,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 1,
-    "gross": 0,
-    "payment": 35550,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PB4TMM01-1",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+  "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨 블랙 M",
+  "color": "블랙",
+  "size": "M",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 35550,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 1,
+      "gross": 0,
+      "payment": 35550,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 1
+    }
+  ],
+  "qty": 1,
+  "gross": 0,
+  "payment": 35550,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PB4TMM01-1",
+  "match_status": "옵션대사대기",
+  "orders": 1,
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "M",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "퀵드라이 세미오버핏 백로고 티셔츠",
-    "standard_name": "퀵드라이 세미오버핏 백로고 티셔츠",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 21600,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 1,
-        "gross": 0,
-        "payment": 21600,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 1,
-    "gross": 0,
-    "payment": 21600,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PC2TSM02",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "퀵드라이 세미오버핏 백로고 티셔츠",
+  "standard_name": "퀵드라이 세미오버핏 백로고 티셔츠 화이트 M",
+  "color": "화이트",
+  "size": "M",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 21600,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 1,
+      "gross": 0,
+      "payment": 21600,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 1
+    }
+  ],
+  "qty": 1,
+  "gross": 0,
+  "payment": 21600,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PC2TSM02",
+  "match_status": "옵션대사대기",
+  "orders": 1,
+  "option_quantities": [
+    {
+      "color": "화이트",
+      "size": "M",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "스포츠 쿠션업 심볼 크루삭스",
-    "standard_name": "스포츠 쿠션업 심볼 크루삭스",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 4995,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 4,
-        "gross": 0,
-        "payment": 19980,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 4,
-    "gross": 0,
-    "payment": 19980,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PA3AAA01",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "스포츠 쿠션업 심볼 크루삭스",
+  "standard_name": "스포츠 쿠션업 심볼 크루삭스 화이트 F",
+  "color": "화이트",
+  "size": "F",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 4995,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 4,
+      "gross": 0,
+      "payment": 19980,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 2
+    }
+  ],
+  "qty": 4,
+  "gross": 0,
+  "payment": 19980,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PA3AAA01",
+  "match_status": "옵션대사대기",
+  "orders": 2,
+  "option_quantities": [
+    {
+      "color": "화이트",
+      "size": "F",
+      "qty": 4
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "ICE LITE 벌크업 맨투맨",
-    "standard_name": "ICE LITE 벌크업 맨투맨",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 19610,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 1,
-        "gross": 0,
-        "payment": 19610,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 1,
-    "gross": 0,
-    "payment": 19610,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PB2PSM04",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "ICE LITE 벌크업 맨투맨",
+  "standard_name": "ICE LITE 벌크업 맨투맨 블랙 XL",
+  "color": "블랙",
+  "size": "XL",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 19610,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 1,
+      "gross": 0,
+      "payment": 19610,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 0
+    }
+  ],
+  "qty": 1,
+  "gross": 0,
+  "payment": 19610,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PB2PSM04",
+  "match_status": "옵션대사대기",
+  "orders": 0,
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "XL",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "스포츠 쿠션업 로고 크루삭스",
-    "standard_name": "스포츠 쿠션업 로고 크루삭스",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 5020,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": 1,
-        "gross": 0,
-        "payment": 5020,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": 1,
-    "gross": 0,
-    "payment": 5020,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PA3AAA02",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "스포츠 쿠션업 로고 크루삭스",
+  "standard_name": "스포츠 쿠션업 로고 크루삭스 화이트 F",
+  "color": "화이트",
+  "size": "F",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 5020,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": 1,
+      "gross": 0,
+      "payment": 5020,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 0
+    }
+  ],
+  "qty": 1,
+  "gross": 0,
+  "payment": 5020,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PA3AAA02",
+  "match_status": "옵션대사대기",
+  "orders": 0,
+  "option_quantities": [
+    {
+      "color": "화이트",
+      "size": "F",
+      "qty": 1
+    }
+  ]
+},
   {
-    "retailer": "무신사",
-    "mall_no": "",
-    "name": "퀵드라이 백레터링 세미오버핏 반팔티",
-    "standard_name": "퀵드라이 백레터링 세미오버핏 반팔티",
-    "color": "",
-    "size": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "match_sku": "",
-    "avg_unit": 29310,
-    "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
-    "daily": [
-      {
-        "date": "2026-11-23",
-        "qty": -1,
-        "gross": 0,
-        "payment": -29310,
-        "gross_verified": false,
-        "orders_verified": false
-      }
-    ],
-    "qty": -1,
-    "gross": 0,
-    "payment": -29310,
-    "gross_verified": false,
-    "orders_verified": false,
-    "source_type": "상품",
-    "source_product_code": "PD2TSM07",
-    "match_status": "옵션대사대기"
-  },
+  "retailer": "무신사",
+  "mall_no": "",
+  "name": "퀵드라이 백레터링 세미오버핏 반팔티",
+  "standard_name": "퀵드라이 백레터링 세미오버핏 반팔티",
+  "color": "",
+  "size": "",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "match_sku": "",
+  "avg_unit": 29310,
+  "source_note": "상품별매출통계, 매출일자 2026-11-23~23, 결제완료, 과세 열, 총 9/9건",
+  "daily": [
+    {
+      "date": "2026-11-23",
+      "qty": -1,
+      "gross": 0,
+      "payment": -29310,
+      "gross_verified": false,
+      "orders_verified": true,
+      "orders": 0
+    }
+  ],
+  "qty": -1,
+  "gross": 0,
+  "payment": -29310,
+  "gross_verified": false,
+  "orders_verified": true,
+  "source_type": "상품",
+  "source_product_code": "PD2TSM07",
+  "match_status": "옵션대사대기",
+  "orders": 0,
+  "option_quantities": []
+},
   {
     "retailer": "자사몰",
     "mall_no": "",
@@ -165036,5 +165121,575 @@
     "items_verified": false,
     "source_type": "일별집계",
     "match_status": "상세대사대기"
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 올인원 러닝탑",
+    "standard_name": "ESSENTIAL HEAT 올인원 러닝탑 M",
+    "color": "",
+    "size": "M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 78480,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 78480,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 78480,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "5011811866",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "",
+        "size": "M",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 시그니처 조거",
+    "standard_name": "ICE LITE 시그니처 조거 블랙 L",
+    "color": "블랙",
+    "size": "L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 29900,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 2,
+        "payment": 59800,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 2,
+    "gross": 0,
+    "payment": 59800,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PD2PLM02",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "L",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 세미오버핏 맨투맨",
+    "standard_name": "ICE LITE 세미오버핏 맨투맨 블랙 XL 1개 / 차콜 XL 1개 / 블랙 M 1개",
+    "color": "",
+    "size": "블랙 XL 1개 / 차콜 XL 1개 / 블랙 M 1개",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 19743,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 3,
+        "payment": 59230,
+        "orders": 3,
+        "orders_verified": true
+      }
+    ],
+    "qty": 3,
+    "gross": 0,
+    "payment": 59230,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PC2TMM01",
+    "match_status": "옵션대사대기",
+    "orders": 3,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "XL",
+        "qty": 1
+      },
+      {
+        "color": "차콜",
+        "size": "XL",
+        "qty": 1
+      },
+      {
+        "color": "블랙",
+        "size": "M",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠 XL",
+    "color": "",
+    "size": "XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 57820,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 57820,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 57820,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "5008410424",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "",
+        "size": "XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ESSENTIAL HEAT 더블레이어 기모 집업",
+    "standard_name": "ESSENTIAL HEAT 더블레이어 기모 집업 블랙 XL",
+    "color": "블랙",
+    "size": "XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 50830,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 50830,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 50830,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PC4OJM01",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 블랙",
+    "standard_name": "퀵드라이 셔링 티셔츠 블랙 블랙 M",
+    "color": "블랙",
+    "size": "M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 35190,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 35190,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 35190,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "5009825645",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "M",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "퀵드라이 셔링 티셔츠 화이트",
+    "standard_name": "퀵드라이 셔링 티셔츠 화이트 화이트 M",
+    "color": "화이트",
+    "size": "M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 34830,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 34830,
+        "orders": 0,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 34830,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "5009825644",
+    "match_status": "옵션대사대기",
+    "orders": 0,
+    "option_quantities": [
+      {
+        "color": "화이트",
+        "size": "M",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 벌룬 트레이닝 팬츠",
+    "standard_name": "TECH SWEAT 벌룬 트레이닝 팬츠 블랙 L",
+    "color": "블랙",
+    "size": "L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 32410,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 32410,
+        "orders": 0,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 32410,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PB1PLM01",
+    "match_status": "옵션대사대기",
+    "orders": 0,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "L",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직)",
+    "standard_name": "TECH SWEAT 피그먼트 소프트 빈티지 조거팬츠(베이직) 라이트카키 XL",
+    "color": "라이트카키",
+    "size": "XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 30930,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 30930,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 30930,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PC4PLM01",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "라이트카키",
+        "size": "XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 오버핏 맨투맨",
+    "standard_name": "ICE LITE 오버핏 맨투맨 차콜 XL",
+    "color": "차콜",
+    "size": "XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 29460,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 29460,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 29460,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PB1TMM02",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "차콜",
+        "size": "XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "QUICKDRY 러닝 롱슬리브 블랙",
+    "standard_name": "QUICKDRY 러닝 롱슬리브 블랙 블랙 XL",
+    "color": "블랙",
+    "size": "XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 26910,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 26910,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 26910,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "5008342568",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "ICE LITE 베이직 팬츠",
+    "standard_name": "ICE LITE 베이직 팬츠 블랙 3XL",
+    "color": "블랙",
+    "size": "3XL",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 26780,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 26780,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 26780,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PC2PLM01",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "3XL",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전)",
+    "standard_name": "TECH SWEAT 크루 그래픽 맨투맨(기모버전) 멜란지 그레이 M",
+    "color": "멜란지 그레이",
+    "size": "M",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 26650,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 1,
+        "payment": 26650,
+        "orders": 1,
+        "orders_verified": true
+      }
+    ],
+    "qty": 1,
+    "gross": 0,
+    "payment": 26650,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PC4TMM05",
+    "match_status": "옵션대사대기",
+    "orders": 1,
+    "option_quantities": [
+      {
+        "color": "멜란지 그레이",
+        "size": "M",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "retailer": "무신사",
+    "mall_no": "",
+    "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티 블랙 L",
+    "color": "블랙",
+    "size": "L",
+    "received_qty": 0,
+    "stock_qty": 0,
+    "match_sku": "",
+    "avg_unit": 0,
+    "source_note": "11월 24일 상품별 과세 및 전체 주문 내역. 상품별 금액을 옵션별로 임의 배분하지 않음.",
+    "daily": [
+      {
+        "date": "2026-11-24",
+        "gross_verified": false,
+        "gross": 0,
+        "qty": 0,
+        "payment": 0,
+        "orders": 0,
+        "orders_verified": true
+      }
+    ],
+    "qty": 0,
+    "gross": 0,
+    "payment": 0,
+    "gross_verified": false,
+    "orders_verified": true,
+    "source_type": "상품",
+    "source_product_code": "PB1TSM01",
+    "match_status": "옵션대사대기",
+    "orders": 0,
+    "option_quantities": [
+      {
+        "color": "블랙",
+        "size": "L",
+        "qty": 0
+      }
+    ]
   }
 ]
