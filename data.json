@@ -163965,34 +163965,37 @@
     "standard_name": "주문서 쿠폰 할인 (상품별 배분 제외)"
   },
   {
-    "retailer": "자사몰",
-    "mall_no": "",
-    "name": "완료 환불 (상품·수량 미확인)",
-    "color": "",
-    "size": "",
-    "qty": 0,
-    "gross": 0,
-    "payment": -6000,
-    "orders": 0,
-    "avg_unit": 0,
-    "source_type": "정산조정",
-    "match_status": "비상품",
-    "match_sku": "",
-    "received_qty": 0,
-    "stock_qty": 0,
-    "daily": [
-      {
-        "date": "2026-11-20",
-        "qty": 0,
-        "gross": 0,
-        "payment": -6000,
-        "orders": 0
-      }
-    ],
-    "standard_name": "완료 환불 (상품·수량 미확인)",
-    "qty_verified": false,
-    "items_verified": false
-  },
+  "retailer": "자사몰",
+  "mall_no": "",
+  "name": "배송비 추가결제 환불",
+  "color": "",
+  "size": "",
+  "qty": 0,
+  "gross": 0,
+  "payment": -6000,
+  "orders": 0,
+  "avg_unit": 0,
+  "source_type": "정산조정",
+  "match_status": "비상품",
+  "match_sku": "",
+  "received_qty": 0,
+  "stock_qty": 0,
+  "daily": [
+    {
+      "date": "2026-11-20",
+      "qty": 0,
+      "gross": 0,
+      "payment": -6000,
+      "orders": 0,
+      "qty_verified": true,
+      "items_verified": true
+    }
+  ],
+  "standard_name": "배송비 추가결제 환불",
+  "qty_verified": true,
+  "items_verified": true,
+  "source_note": "원본 주문20261110-0000042. 환불 상세 6000 = 6000(배송비추가결제). 상품 수량 차감 없음."
+},
   {
     "retailer": "자사몰",
     "mall_no": "",
@@ -166322,253 +166325,345 @@
   "payment_verified": true
 },
   {
-    "retailer": "무신사",
-    "name": "ICE LITE 세미오버핏 맨투맨",
-    "standard_name": "ICE LITE 세미오버핏 맨투맨",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 7,
-    "gross": 0,
-    "payment": 138040,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 7,
-        "gross": 0,
-        "payment": 138040,
-        "orders": 0
-      }
-    ],
-    "style_no": "PC2TMM01",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "ICE LITE 세미오버핏 맨투맨",
+  "standard_name": "ICE LITE 세미오버핏 맨투맨 차콜 XL 1개 / 차콜 L 2개 / 블랙 L 2개 / 블랙 XL 2개",
+  "color": "",
+  "size": "차콜 XL 1개 / 차콜 L 2개 / 블랙 L 2개 / 블랙 XL 2개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 7,
+  "gross": 0,
+  "payment": 138040,
+  "orders": 4,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 7,
+      "gross": 0,
+      "payment": 138040,
+      "orders": 4,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "PC2TMM01",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "",
+      "size": "차콜 XL",
+      "qty": 1
+    },
+    {
+      "color": "",
+      "size": "차콜 L",
+      "qty": 2
+    },
+    {
+      "color": "",
+      "size": "블랙 L",
+      "qty": 2
+    },
+    {
+      "color": "",
+      "size": "블랙 XL",
+      "qty": 2
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "ESSENTIAL HEAT 기모 러닝팬츠",
-    "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 2,
-    "gross": 0,
-    "payment": 99800,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 2,
-        "gross": 0,
-        "payment": 99800,
-        "orders": 0
-      }
-    ],
-    "style_no": "5008410424",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+  "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠 M 1개 / L 1개",
+  "color": "",
+  "size": "M 1개 / L 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 2,
+  "gross": 0,
+  "payment": 99800,
+  "orders": 3,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 2,
+      "gross": 0,
+      "payment": 99800,
+      "orders": 3,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "5008410424",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "",
+      "size": "M",
+      "qty": 1
+    },
+    {
+      "color": "",
+      "size": "L",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
-    "standard_name": "퀵드라이 벤틸레이션 러닝탑 브라운",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 1,
-    "gross": 0,
-    "payment": 38910,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 1,
-        "gross": 0,
-        "payment": 38910,
-        "orders": 0
-      }
-    ],
-    "style_no": "5009763157",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "퀵드라이 벤틸레이션 러닝탑 브라운",
+  "standard_name": "퀵드라이 벤틸레이션 러닝탑 브라운 브라운 XL 1개",
+  "color": "",
+  "size": "브라운 XL 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 1,
+  "gross": 0,
+  "payment": 38910,
+  "orders": 1,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 1,
+      "gross": 0,
+      "payment": 38910,
+      "orders": 1,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "5009763157",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "브라운",
+      "size": "XL",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
-    "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 1,
-    "gross": 0,
-    "payment": 35550,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 1,
-        "gross": 0,
-        "payment": 35550,
-        "orders": 0
-      }
-    ],
-    "style_no": "PB4TMM01-1",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨",
+  "standard_name": "[헤비쮸리] TECH SWEAT 세미오버핏 맨투맨 블랙 M 1개",
+  "color": "",
+  "size": "블랙 M 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 1,
+  "gross": 0,
+  "payment": 35550,
+  "orders": 1,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 1,
+      "gross": 0,
+      "payment": 35550,
+      "orders": 1,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "PB4TMM01-1",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "M",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "ICE LITE 벌룬 조거",
-    "standard_name": "ICE LITE 벌룬 조거",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 1,
-    "gross": 0,
-    "payment": 29460,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 1,
-        "gross": 0,
-        "payment": 29460,
-        "orders": 0
-      }
-    ],
-    "style_no": "PB1PLM02",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "ICE LITE 벌룬 조거",
+  "standard_name": "ICE LITE 벌룬 조거 블랙 L 1개",
+  "color": "",
+  "size": "블랙 L 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 1,
+  "gross": 0,
+  "payment": 29460,
+  "orders": 1,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 1,
+      "gross": 0,
+      "payment": 29460,
+      "orders": 1,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "PB1PLM02",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "L",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "KINTERRA 퀵드라이 스포츠 나시",
-    "standard_name": "KINTERRA 퀵드라이 스포츠 나시",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 1,
-    "gross": 0,
-    "payment": 24660,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 1,
-        "gross": 0,
-        "payment": 24660,
-        "orders": 0
-      }
-    ],
-    "style_no": "PA3SSM01-1",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "KINTERRA 퀵드라이 스포츠 나시",
+  "standard_name": "KINTERRA 퀵드라이 스포츠 나시 블루 L 1개",
+  "color": "",
+  "size": "블루 L 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 1,
+  "gross": 0,
+  "payment": 24660,
+  "orders": 1,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 1,
+      "gross": 0,
+      "payment": 24660,
+      "orders": 1,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "PA3SSM01-1",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "블루",
+      "size": "L",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "퀵드라이 세미 오버핏 티셔츠",
-    "standard_name": "퀵드라이 세미 오버핏 티셔츠",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": 1,
-    "gross": 0,
-    "payment": 24500,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": 1,
-        "gross": 0,
-        "payment": 24500,
-        "orders": 0
-      }
-    ],
-    "style_no": "PB4TSM01-2",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "퀵드라이 세미 오버핏 티셔츠",
+  "standard_name": "퀵드라이 세미 오버핏 티셔츠 블랙 M 1개",
+  "color": "",
+  "size": "블랙 M 1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": 1,
+  "gross": 0,
+  "payment": 24500,
+  "orders": 1,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": 1,
+      "gross": 0,
+      "payment": 24500,
+      "orders": 1,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "PB4TSM01-2",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "블랙",
+      "size": "M",
+      "qty": 1
+    }
+  ],
+  "items_verified": true
+},
   {
-    "retailer": "무신사",
-    "name": "ESSENTIAL HEAT 기모 러닝 후드",
-    "standard_name": "ESSENTIAL HEAT 기모 러닝 후드",
-    "color": "",
-    "size": "",
-    "mall_no": "",
-    "match_sku": "",
-    "stock_qty": 0,
-    "received_qty": 0,
-    "avg_unit": 0,
-    "match_status": "검토필요",
-    "gross_verified": false,
-    "qty": -1,
-    "gross": 0,
-    "payment": -45220,
-    "orders": 0,
-    "daily": [
-      {
-        "date": "2026-11-26",
-        "qty": -1,
-        "gross": 0,
-        "payment": -45220,
-        "orders": 0
-      }
-    ],
-    "style_no": "5008410417",
-    "orders_verified": false,
-    "options_verified": false,
-    "source_note": "상품별 매출통계 과세. 완료 반품 -45,220원 포함. 주문목록 15행 12고유 주문 확인. 러닝팬츠 판매 통계2개와 주문목록3개 차이 미대사."
-  },
+  "retailer": "무신사",
+  "name": "ESSENTIAL HEAT 기모 러닝 후드",
+  "standard_name": "ESSENTIAL HEAT 기모 러닝 후드 2XL -1개",
+  "color": "",
+  "size": "2XL -1개",
+  "mall_no": "",
+  "match_sku": "",
+  "stock_qty": 0,
+  "received_qty": 0,
+  "avg_unit": 0,
+  "match_status": "검토필요",
+  "gross_verified": false,
+  "qty": -1,
+  "gross": 0,
+  "payment": -45220,
+  "orders": 0,
+  "daily": [
+    {
+      "date": "2026-11-26",
+      "qty": -1,
+      "gross": 0,
+      "payment": -45220,
+      "orders": 0,
+      "orders_verified": true
+    }
+  ],
+  "style_no": "5008410417",
+  "orders_verified": true,
+  "options_verified": true,
+  "source_note": "11/26 주문 15행·12고유 주문 대사. 완료 클레임 원본 202611252338370009/470963871: 팬츠2XL1개, /470963870: 후드2XL1개, 11/26 06:31:41 환불완료. 팬츠 판매3개-반품1개=순2개. 통계에 이미 차감, 재차감 없음.",
+  "option_quantities": [
+    {
+      "color": "",
+      "size": "2XL",
+      "qty": -1
+    }
+  ],
+  "items_verified": true
+},
   {
     "retailer": "자사몰",
     "name": "ICE LITE 오버핏 맨투맨",
