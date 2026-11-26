@@ -26988,5 +26988,201 @@
   "notes": [
     "9개 채널 순매출 확정."
   ]
-}
+},
+  {
+    "date": "2026-11-25",
+    "status": "net_verified",
+    "excluded_retailers": [],
+    "retailers": [
+      {
+        "retailer": "ABC마트",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "상품매출통계 11/25 임직원 포함 [0/0]. 10/26~11/26 취소·교환·반품 접수 및 완료 각각 0건."
+      },
+      {
+        "retailer": "자사몰",
+        "payment": 156000,
+        "qty": 0,
+        "gross": 376000,
+        "orders": 3,
+        "items": [],
+        "source": "일별 매출 적립금·예치금·네이버포인트 모두 포함",
+        "qty_verified": false,
+        "items_verified": false
+      },
+      {
+        "retailer": "29cm",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "25일 전체 주문 조회 결과 없음. 매출 리포트 결제 0건, 처리완료 환불 0건/0원."
+      },
+      {
+        "retailer": "무신사",
+        "payment": 549820,
+        "qty": 23,
+        "gross": 0,
+        "orders": 18,
+        "items": [
+          {
+            "name": "ICE LITE 세미오버핏 맨투맨",
+            "qty": 9,
+            "payment": 177950,
+            "option_quantities": {
+              "블랙 : XL": 4,
+              "차콜 : XL": 1,
+              "블랙 : M": 2,
+              "차콜 : L": 1,
+              "블랙 : L": 1
+            }
+          },
+          {
+            "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+            "qty": 2,
+            "payment": 67830,
+            "option_quantities": {
+              "빈티지차콜 : L": 2
+            }
+          },
+          {
+            "name": "ICE LITE 벌룬 조거",
+            "qty": 2,
+            "payment": 59660,
+            "option_quantities": {
+              "차콜 : XXL": 1,
+              "블랙 : XXL": 1
+            }
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+            "qty": 1,
+            "payment": 45730,
+            "option_quantities": {
+              "2XL": 1
+            }
+          },
+          {
+            "name": "ESSENTIAL HEAT 기모 러닝 후드",
+            "qty": 1,
+            "payment": 45220,
+            "option_quantities": {
+              "2XL": 1
+            }
+          },
+          {
+            "name": "ICE LITE 카고 조거",
+            "qty": 1,
+            "payment": 29610,
+            "option_quantities": {
+              "XL : 블랙": 1
+            }
+          },
+          {
+            "name": "ICE LITE 오버핏 맨투맨",
+            "qty": 1,
+            "payment": 29600,
+            "option_quantities": {
+              "차콜 : XXL": 1
+            }
+          },
+          {
+            "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+            "qty": 1,
+            "payment": 25780,
+            "option_quantities": {
+              "블랙 : L": 1
+            }
+          },
+          {
+            "name": "ICE LITE 벌크업 맨투맨",
+            "qty": 1,
+            "payment": 19810,
+            "option_quantities": {
+              "블랙 : XL": 1
+            }
+          },
+          {
+            "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+            "qty": 1,
+            "payment": 19610,
+            "option_quantities": {
+              "블루 : M": 1
+            }
+          },
+          {
+            "name": "퀵드라이 투톤 그래픽 나시",
+            "qty": 1,
+            "payment": 17910,
+            "option_quantities": {
+              "화이트 : L": 1
+            }
+          },
+          {
+            "name": "스포츠 쿠션업 로고 크루삭스",
+            "qty": 2,
+            "payment": 11110,
+            "option_quantities": {
+              "화이트 : F": 2
+            }
+          }
+        ],
+        "source": "25일 상품별 매출통계 과세 합계, 12상품. 주문 목록 27행에서 결제오류 제외 및 상품 통계 수량과 옵션 대조. 환불완료 표시를 이중 차감하지 않음.",
+        "gross_verified": false
+      },
+      {
+        "retailer": "애슬러",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "8/26~11/26 주문 목록 최신 주문 11/22. 취소 조회 0건. 반품 5행 모두 과거 날짜. 최근 완료 1건은 대표님이 11/3으로 확정한 건."
+      },
+      {
+        "retailer": "러너블",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "11/26 파트너 대시보드 최근 1개월 신규주문·상품준비·배송준비·배송중·배송완료·배송보류 각 0건. 최근 3개월 클레임 취소·반품·교환 각 0건."
+      },
+      {
+        "retailer": "롯데온",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "11월 25일 매출 없음: 대표님 확인."
+      },
+      {
+        "retailer": "글로리어스워커",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "11월 25일 매출 없음: 대표님 확인."
+      },
+      {
+        "retailer": "4XR",
+        "payment": 0,
+        "qty": 0,
+        "gross": 0,
+        "orders": 0,
+        "items": [],
+        "source": "11월 25일 매출 없음: 대표님 확인."
+      }
+    ],
+    "notes": [
+      "순매출 확정. 자사몰 품목별 환불 대사는 미완료."
+    ]
+  }
 ]

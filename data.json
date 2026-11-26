@@ -165859,5 +165859,437 @@
       }
     ],
     "source_order": "ORD20261115-4489690"
+  },
+  {
+    "retailer": "자사몰",
+    "name": "자사몰 일별 순매출",
+    "standard_name": "자사몰 일별 순매출",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 0,
+    "gross": 376000,
+    "payment": 156000,
+    "orders": 3,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 0,
+        "gross": 376000,
+        "payment": 156000,
+        "orders": 3
+      }
+    ],
+    "qty_verified": false,
+    "items_verified": false,
+    "source_type": "정산조정",
+    "source_note": "결제 197,800원 - 환불 41,800원. 순수량 미확정."
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 세미오버핏 맨투맨",
+    "standard_name": "ICE LITE 세미오버핏 맨투맨",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 9,
+    "gross": 0,
+    "payment": 177950,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 9,
+        "gross": 0,
+        "payment": 177950,
+        "orders": 0
+      }
+    ],
+    "style_no": "PC2TMM01",
+    "source_note": "블랙 : XL 4개 / 차콜 : XL 1개 / 블랙 : M 2개 / 차콜 : L 1개 / 블랙 : L 1개",
+    "option_quantities": {
+      "블랙 : XL": 4,
+      "차콜 : XL": 1,
+      "블랙 : M": 2,
+      "차콜 : L": 1,
+      "블랙 : L": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "standard_name": "[헤비쮸리] TECH SWEAT 피그먼트 빈티지 조거팬츠 (베이직)",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 2,
+    "gross": 0,
+    "payment": 67830,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 2,
+        "gross": 0,
+        "payment": 67830,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB4PLM02",
+    "source_note": "빈티지차콜 : L 2개",
+    "option_quantities": {
+      "빈티지차콜 : L": 2
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 벌룬 조거",
+    "standard_name": "ICE LITE 벌룬 조거",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 2,
+    "gross": 0,
+    "payment": 59660,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 2,
+        "gross": 0,
+        "payment": 59660,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB1PLM02",
+    "source_note": "차콜 : XXL 1개 / 블랙 : XXL 1개",
+    "option_quantities": {
+      "차콜 : XXL": 1,
+      "블랙 : XXL": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ESSENTIAL HEAT 기모 러닝팬츠",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝팬츠",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 45730,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 45730,
+        "orders": 0
+      }
+    ],
+    "style_no": "5008410424",
+    "source_note": "2XL 1개",
+    "option_quantities": {
+      "2XL": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ESSENTIAL HEAT 기모 러닝 후드",
+    "standard_name": "ESSENTIAL HEAT 기모 러닝 후드",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 45220,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 45220,
+        "orders": 0
+      }
+    ],
+    "style_no": "5008410417",
+    "source_note": "2XL 1개",
+    "option_quantities": {
+      "2XL": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 카고 조거",
+    "standard_name": "ICE LITE 카고 조거",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 29610,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 29610,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB1PLM04",
+    "source_note": "XL : 블랙 1개",
+    "option_quantities": {
+      "XL : 블랙": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 오버핏 맨투맨",
+    "standard_name": "ICE LITE 오버핏 맨투맨",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 29600,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 29600,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB1TMM02",
+    "source_note": "차콜 : XXL 1개",
+    "option_quantities": {
+      "차콜 : XXL": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+    "standard_name": "KINTERRA 퀵드라이 스포츠 오버핏 반팔티",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 25780,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 25780,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB1TSM01",
+    "source_note": "블랙 : L 1개",
+    "option_quantities": {
+      "블랙 : L": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 벌크업 맨투맨",
+    "standard_name": "ICE LITE 벌크업 맨투맨",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 19810,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 19810,
+        "orders": 0
+      }
+    ],
+    "style_no": "PB2PSM04",
+    "source_note": "블랙 : XL 1개",
+    "option_quantities": {
+      "블랙 : XL": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+    "standard_name": "ICE LITE 초냉감 세미오버핏 티셔츠",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 19610,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 19610,
+        "orders": 0
+      }
+    ],
+    "style_no": "PC2TSM03",
+    "source_note": "블루 : M 1개",
+    "option_quantities": {
+      "블루 : M": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "퀵드라이 투톤 그래픽 나시",
+    "standard_name": "퀵드라이 투톤 그래픽 나시",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 1,
+    "gross": 0,
+    "payment": 17910,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 1,
+        "gross": 0,
+        "payment": 17910,
+        "orders": 0
+      }
+    ],
+    "style_no": "PC2SSM01",
+    "source_note": "화이트 : L 1개",
+    "option_quantities": {
+      "화이트 : L": 1
+    },
+    "orders_verified": false
+  },
+  {
+    "retailer": "무신사",
+    "name": "스포츠 쿠션업 로고 크루삭스",
+    "standard_name": "스포츠 쿠션업 로고 크루삭스",
+    "color": "",
+    "size": "",
+    "mall_no": "",
+    "match_sku": "",
+    "stock_qty": 0,
+    "received_qty": 0,
+    "avg_unit": 0,
+    "match_status": "검토필요",
+    "gross_verified": false,
+    "qty": 2,
+    "gross": 0,
+    "payment": 11110,
+    "orders": 0,
+    "daily": [
+      {
+        "date": "2026-11-25",
+        "qty": 2,
+        "gross": 0,
+        "payment": 11110,
+        "orders": 0
+      }
+    ],
+    "style_no": "PA3AAA02",
+    "source_note": "화이트 : F 2개",
+    "option_quantities": {
+      "화이트 : F": 2
+    },
+    "orders_verified": false
   }
 ]
