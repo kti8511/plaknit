@@ -96,7 +96,7 @@ def latest_stock_file() -> Path:
     return max(files, key=lambda p: p.stat().st_mtime)
 
 
-def load_stock_rows(path: Path) -> list[dict]:
+def load_stock_rows(path: Path, stock_column=None) -> list[dict]:
     wb = load_workbook(path, read_only=True, data_only=True)
     ws = wb.active
     headers = [
@@ -105,7 +105,10 @@ def load_stock_rows(path: Path) -> list[dict]:
     ]
     idx = {h: i for i, h in enumerate(headers)}
 
-    if "출고가능" in idx:
+    if stock_column is not None:
+        if stock_column not in idx:
+            raise ValueError(f"필수 컬럼 누락: {stock_column}")
+    elif "출고가능" in idx:
         stock_column = "출고가능"
     elif "현재고" in idx:
         stock_column = "현재고"
@@ -120,6 +123,8 @@ def load_stock_rows(path: Path) -> list[dict]:
     rows: list[dict] = []
     for row in ws.iter_rows(min_row=2, values_only=True):
         if not any(row):
+            continue
+        if "회사명" in idx and str(row[idx["회사명"]] or "").strip() == "합계":
             continue
         barcode = str(row[idx["바코드"]] or "").strip()
         outbound_name = str(row[idx["출고상품명"]] or "").strip()
@@ -159,12 +164,13 @@ def match_running_singlet(item, stock_rows):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("stock_file", nargs="?", help="재고조회(기본) 엑셀 파일 경로")
+    parser.add_argument("--stock-column", choices=["총재고", "출고가능", "현재고"], default=None)
     args = parser.parse_args()
 
     stock_file = Path(args.stock_file) if args.stock_file else latest_stock_file()
     data = json.loads(DATA_FILE.read_text(encoding="utf-8-sig"))
     option_rules = json.loads((ROOT / 'stock_option_matches.json').read_text(encoding='utf-8'))
-    stock_rows = load_stock_rows(stock_file)
+    stock_rows = load_stock_rows(stock_file, args.stock_column)
 
     merged_by_name: dict[str, dict] = {}
     for r in stock_rows:
@@ -332,6 +338,7 @@ def main() -> None:
         json.dumps(
             {
                 "stock_file": str(stock_file),
+                "stock_column": args.stock_column or "auto",
                 "data_rows": len(data),
                 "stock_rows": len(stock_rows),
                 "matched_data_rows": matched,

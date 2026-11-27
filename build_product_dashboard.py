@@ -27,7 +27,7 @@ data.json 구조:
   }
 ]
 """
-import json, datetime, os, pathlib, html
+import json, datetime, os, pathlib, html, shutil
 
 DATA_FILE = pathlib.Path("data.json")
 HISTORICAL_DAILY_FILE = pathlib.Path("historical_daily.json")
@@ -437,6 +437,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
   .detail-date-range input{{flex:1;min-width:0;}}
 }}
 </style>
+<link rel="stylesheet" href="/product_inventory.css"/>
 </head>
 <body>
 <header>
@@ -816,7 +817,7 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
       <div class="sum-strip detail-period-summary">
         <div class="sum-card"><div class="sum-label">기간 판매수량</div><div class="sum-value" id="detailPeriodQty">0</div></div>
         <div class="sum-card"><div class="sum-label">기간 실판매금액</div><div class="sum-value" id="detailPeriodPayment">0</div></div>
-        <div class="sum-card"><div class="sum-label">전체 출고가능 재고</div><div class="sum-value" id="detailStockQty">0</div></div>
+        <div class="sum-card"><div class="sum-label">조회 상품 재고</div><div class="sum-value" id="detailStockQty">0</div></div>
         <div class="sum-card"><div class="sum-label">기간 재고 소진율</div><div class="sum-value" id="detailPeriodStockRate">-</div></div>
         <div class="sum-card"><div class="sum-label">전체 재고 소진율</div><div class="sum-value" id="detailStockRate">-</div></div>
         <div class="sum-card"><div class="sum-label">주간 상품 판매율</div><div class="sum-value" id="detailWeeklyRate">-</div></div>
@@ -848,6 +849,25 @@ tr:last-child td{{border-bottom:none;}} tr:hover td{{background:#fafbfd;}}
         </table>
       </div>
     </div>
+    <section class="inventory-flow" id="inventoryFlow" aria-labelledby="inventoryFlowTitle">
+      <div class="flow-heading">
+        <h3 id="inventoryFlowTitle">상품별 입출고 · 판매 · 현재고</h3>
+        <span class="flow-meta" id="flowAsOf">재고 원본 확인 중</span>
+      </div>
+      <div class="flow-tools">
+        <label>상품 / SKU<input id="flowProduct" list="flowOptions" placeholder="상품명 · 바코드 선택" autocomplete="off"/><datalist id="flowOptions"></datalist></label>
+        <label>시작일<input type="date" id="flowStart"/></label>
+        <label>종료일<input type="date" id="flowEnd"/></label>
+      </div>
+      <div class="flow-heading flow-meta"><span id="flowPeriod"></span><span id="flowSku"></span></div>
+      <div class="table-wrap">
+        <table aria-label="선택 상품 입출고 및 판매 수량">
+          <thead><tr><th>상품</th><th>기간 입고</th><th>기간 출고</th><th>마케팅 출고</th><th>기간 순판매</th><th>현재고 (총재고)</th><th>출고가능</th><th>출고지시</th><th>출고작업중</th></tr></thead>
+          <tbody id="flowRows"><tr><td colspan="9">재고 원본 확인 중</td></tr></tbody>
+        </table>
+      </div>
+      <div class="flow-meta" id="flowSource"></div>
+    </section>
   </div>
 </main>
 
@@ -2734,10 +2754,15 @@ const initialTab = location.hash.replace('#','');
 if (document.getElementById(initialTab)) activateTab(initialTab);
 renderDaily();
 </script>
+<script src="/product_inventory.js"></script>
 </body>
 </html>"""
 
 OUT_FILE.write_text(html, encoding="utf-8")
 PUBLIC_OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 PUBLIC_OUT_FILE.write_text(html, encoding="utf-8")
+for asset in ("product_inventory.js", "product_inventory.css", "inventory_snapshot.json", "inventory_movements.json"):
+    source = pathlib.Path(asset)
+    if source.exists():
+        shutil.copyfile(source, PUBLIC_OUT_FILE.parent / asset)
 print(f"✅ index.html 생성 완료 ({OUT_FILE.stat().st_size:,} bytes)")

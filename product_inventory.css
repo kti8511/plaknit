@@ -1,0 +1,14 @@
+.inventory-flow{margin-top:24px;border-top:1px solid #e5e7eb;padding-top:20px}
+.inventory-flow h3{font-size:16px;margin:0}
+.inventory-flow .flow-heading{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.inventory-flow .flow-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:14px}
+.inventory-flow label{display:grid;gap:5px;font-size:12px;color:#4b5563}
+.inventory-flow label:first-child{flex:1;min-width:240px;max-width:660px}
+.inventory-flow input{min-height:36px;border:1px solid #d1d5db;border-radius:4px;padding:6px 10px;background:white;max-width:100%;box-sizing:border-box;font:inherit}
+.inventory-flow .flow-meta{font-size:12px;color:#6b7280;line-height:1.6;overflow-wrap:anywhere}
+.inventory-flow th,.inventory-flow td{padding:11px 12px;white-space:nowrap;text-align:right}
+.inventory-flow th:first-child,.inventory-flow td:first-child{text-align:left}
+.inventory-flow .flow-state{color:#92400e;font-size:12px}
+.inventory-flow .flow-stock{font-weight:600;color:#047857}
+.inventory-flow .table-wrap{overflow-x:auto}
+@media(max-width:600px){.inventory-flow .flow-tools label{min-width:0}.inventory-flow .flow-tools label:first-child{flex-basis:100%}.inventory-flow input[type=date]{width:145px}}
